@@ -26,7 +26,8 @@ MainWindow.xib を開き、 "Push Button" をドラッグ&ドロップ
 
 ![image](https://raw.githubusercontent.com/hdknr/scriptogr.am/master/qiita/20141011-xamarin-mac-hello/4.png)
 
-~~~
+~~~objc:MainWindowController.h
+
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 
@@ -39,7 +40,8 @@ MainWindow.xib を開き、 "Push Button" をドラッグ&ドロップ
 @end
 ~~~
 
-~~~
+~~~ objc:MainWindowController.m
+
 #import "MainWindowController.h"
 
 @implementation MainWindowController
@@ -65,7 +67,8 @@ Peeko:HelloMac hide$ find . -name "*.m" -print
 - MainWindow.xibで編集したので、 MainWindow.designer.csファイルに自動的に作成される
 - ただし、CloseButtonがOutletで定義されるクラスは MainWindowsController(MainWindowsController.h/.m にOutlet定義したので)
 
-~~~
+~~~csharp:MainWindow.designer.cs
+
 using MonoMac.Foundation;
 using System.CodeDom.Compiler;
 
@@ -103,7 +106,8 @@ namespace HelloMac
 
 - 自動生成 されてます
 
-~~~
+~~~csharp:MainWindowController.cs
+
 		public new MainWindow Window {
 			get { return (MainWindow)base.Window; }
 		}
@@ -111,7 +115,10 @@ namespace HelloMac
 		
 ## 終了ボタン
 
-~~~ 
+- WindowDidLoad() をオーバーライド
+
+~~~csharp:MainWindowController.cs
+
 		public override void WindowDidLoad ()
 		{
 			this.CloseButton.Activated += (object sender, EventArgs e) => {
@@ -125,9 +132,10 @@ namespace HelloMac
 
 - CloseButtonをクリックすると MainWindowインスタンスがClose()される
 - がAppDelegateは行きているのでアプリケーションは終了しません
-- AppDelegate管理のWindowが閉じた時にAppDelegateを終了するようにする
+- AppDelegate管理のWindowが閉じた時にAppDelegateを終了するようにApplicationShouldTerminateAfterLastWindowClosedをオーバーライドしてtrueを返す
 
-~~~
+~~~csharp:AppDelegate.cs
+
 public override bool ApplicationShouldTerminateAfterLastWindowClosed (NSApplication sender)
 {
     return true;
