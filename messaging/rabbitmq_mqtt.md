@@ -1,8 +1,8 @@
-RabbitMQ
+RabbitMQ: MQTT プラグイン動作確認
 
-- [MQTT コトハジメ](https://gist.github.com/voluntas/8238751)
+- [MQTT コトハジメ](https://gist.github.com/voluntas/8238751) の写経
 
-# Debian Jessie Install
+# rabbitmq-server Debian Jessie Install
 
 ~~~
 vagrant@10:~$ sudo apt-get install rabbitmq-server
@@ -65,6 +65,12 @@ vagrant@10:~$ sudo vim /etc/hosts
 
 127.0.1.1       js1   
 ~~~
+
+~~~~
+vagrant@10:~$ sudo vim /etc/hostname
+
+js1
+~~~~
 
 ~~~
 vagrant@10:~$ sudo /etc/init.d/hostname.sh restart
@@ -130,7 +136,7 @@ Restarting rabbitmq-server (via systemctl): rabbitmq-server.service.
 # mqtt 設定
 
 - [こちら](http://www.rabbitmq.com/mqtt.html)
-
+- plugin有効にした時点で動いていると思われ
 
 ~~~
 [{rabbit,        [{tcp_listeners,    [5672]}]},
@@ -159,7 +165,7 @@ COMMAND  PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 beam    5651 rabbitmq   15u  IPv6  25954      0t0  TCP *:1883 (LISTEN)
 ~~~
 
-# paho-mqtt 
+# 動作確認: paho-mqtt 
 
 
 ~~~
@@ -201,8 +207,15 @@ my/topic/string 0 Hello Mon Oct 20 00:17:05 2014
 my/topic/string 0 Hello Mon Oct 20 00:17:05 2014
 ~~~
 
+### amq.topic Exchange
+
+- ルーティングキー : my.topic.string
+
+![image](https://raw.githubusercontent.com/hdknr/scriptogr.am/master/messaging/rabbitmq_mqtt.png)
+
 ## RabbitMQのマネージャから送信
 
+![image](https://raw.githubusercontent.com/hdknr/scriptogr.am/master/messaging/rabbitmq_mqtt_send.png)
 
 ~~~
 my/topic/string 0 ほげほげ
