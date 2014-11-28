@@ -7,14 +7,14 @@ PHP
 Compared to Python
 =======================
 
-.. list-table:: Quick Copare
+.. list-table:: Quick Compare
 
-    * - (item)
-      - Python
-      - PHP
+    *   - (item)
+        - Python
+        - PHP
 
-    * - Loop
-      - for in
+    *   - Loop
+        - for in
 
         .. code-block:: python
             
@@ -22,7 +22,7 @@ Compared to Python
             for i in a:
                 print a 
 
-      - foreach(){}
+        - foreach(){}
 
         .. code-block:: PHP
 
@@ -30,3 +30,8 @@ Compared to Python
             foreach($a as &$i){
                 echo "{$i}¥n";
             };
+
+    *   - 型
+        - type(obj) 
+        - `get_class <http://php.net/manual/ja/function.get-class.php>`_ ($obj)
+  
