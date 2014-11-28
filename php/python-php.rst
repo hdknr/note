@@ -1,17 +1,22 @@
-====
-PHP
-====
+========================
+PHP: Compared To Python
+========================
 
-.. image:: php.png
 
 Compared to Python
 =======================
 
 .. list-table:: Quick Compare
+    :widths: 10 45 45
 
     * - (item)
       - Python
+
+        .. image:: python.jpeg
+
       - PHP
+
+        .. image:: php.png
 
     * - Loop
       - for in
@@ -24,7 +29,7 @@ Compared to Python
 
       - foreach(){}
 
-        .. code-block:: PHP
+        .. code-block:: php
 
             $a = array(80, 100, 120);
             foreach($a as &$i){
