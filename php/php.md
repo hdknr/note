@@ -8,16 +8,17 @@ echo $p["dirname"];
 ```
 
 
-# Python
+# Compared to Python
 
 | | Python	| PHP	|
 |:-------------|:----------------| :-------------|
-| 型 | type(obj) | get_class(obj) |
-| [ループ](#Loop) | for i in collection | foreach($collection as &$i) |
+| 型 | type(obj) | [get_class](http://php.net/manual/ja/function.get-class.php)($obj) |
+| Loop |  for i in collection | foreach($collection as &$i) |
+
 
 ## Loop
 
-- python
+-  python
 
 ```
 a = [80, 100, 120]
