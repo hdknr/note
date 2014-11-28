@@ -124,6 +124,24 @@ Ubuntu:
        1    4    HTTP/ubuntu.openid.local@OPENID.LOCAL
 
 
+- あるいは
+
+```bash
+
+$ sudo -u www-data klist -k /etc/apache2/krb/abop.deb.keytab
+
+Keytab name: FILE:/etc/apache2/krb/abop.deb.keytab
+KVNO Principal
+---- --------------------------------------------------------------------------
+   3 HTTP/ubuntu.tact.local@TACT.LOCAL
+
+```
+
+
+# 初期化
+
+~~~
+
     $ sudo -u www-data kinit -k -t /etc/apache.krb5.http.keytab HTTP/ubuntu.openid.local@OPENID.LOCAL
 
     $ sudo -u www-data klist -e
@@ -134,7 +152,34 @@ Ubuntu:
     Valid starting       Expires              Service principal
     2014-07-18T16:13:44  2014-07-19T02:13:44  krbtgt/OPENID.LOCAL@OPENID.LOCAL
         renew until 2014-07-19T16:13:44, Etype (skey, tkt): arcfour-hmac, aes256-cts-hmac-sha1-96
-     
+
+~~~
+
+```bash
+
+$ ls -al /tmp/k*
+
+
+-rw------- 1 www-data www-data 1518 11月 13 19:14 /tmp/krb5cc_33
+
+```
+
+##  kinit: Permission denied while getting initial credentials
+
+このエラーがでたらキータブファイルの権限がおかしいです。 chown(www-data), chmod (400) を正しく
+   
+## kdestroy: チケットキャッシュクリア
+
+- 特定のチケットを指定してクリアできません
+
+```bash
+
+$ sudo -u www-data kdestroy
+
+$ sudo -u www-data klist -e
+
+klist: No credentials cache found (ticket cache FILE:/tmp/krb5cc_33)
+```
     
 # apache仮想サイト
 
@@ -166,19 +211,26 @@ Ubuntu:
         </Location>
 
     </VirtualHost>    
-    
-# IEの設定
+ 
+# 確認 
+ 
+## User Agent 
+ 
+### IEの設定
 
 * ![ローカルイントラネットに仮想ホストを追加すること](https://lh4.googleusercontent.com/-cqikesub0Ng/U8m5Bek1QVI/AAAAAAAAAiU/eapCt7F52dk/w746-h512-no/%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2588+2014-07-19+9.16.20.png)    
 * Windows 統合認証を有効にする
 
 
-# Firefox
+### Firefox
 
 * about:config
-* ![negotiate でURLを設定する](https://lh3.googleusercontent.com/-cATBYJ5g9Lo/U8m5cpO7MgI/AAAAAAAAAi4/r3DJl1JjlUY/w786-h321-no/%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2588+2014-07-19+9.18.32.png)
+* network.negotiate-auth.delegation-uris
+* network.negotiate-auth.trusted-uris
 
-# 確認
+![negotiate でURLを設定する](https://lh3.googleusercontent.com/-cATBYJ5g9Lo/U8m5cpO7MgI/AAAAAAAAAi4/r3DJl1JjlUY/w786-h321-no/%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2588+2014-07-19+9.18.32.png)
+
+## phpinfo() のページにアクセスしてみる
 
 * Active DirectoryにログインしたWindowsのデスクトップでアクセス
 * パスワード入力なしでアクセスできる
@@ -198,6 +250,7 @@ errors.logのデバッグメッセージ
      AH01626: authorization result of <RequireAny>: granted
 
 
-* phpinfo() に hide@OPENID.LOCAL で認証していることが表示されてる
+* `REMOTE_USER` に hide@OPENID.LOCAL で認証していることが表示されてる
+* `AUTH_TYPE` に `Negotiate` で認証されていることが表示されている
 
      

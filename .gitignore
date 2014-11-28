@@ -4,4 +4,6 @@ GET_STARTED.txt
 Icon*
 *~
 *.swp
+*.py
+*.sqlite3
 

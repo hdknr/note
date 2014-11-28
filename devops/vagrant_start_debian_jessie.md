@@ -137,6 +137,16 @@ Peeko:jssie1 hide$ vagrant halt
 ==> default: Attempting graceful shutdown of VM...
 ~~~
 
+#  vagrant package: ボックス化
+
+~~~
+Peeko:js1 hide$ vagrant package
+==> default: Attempting graceful shutdown of VM...
+==> default: Clearing any previously set forwarded ports...
+==> default: Exporting VM...
+==> default: Compressing package to: /Users/hide/Documents/Boxes/js1/package.box
+~~~
+
 # vagrant destroy: 削除
 
 ~~~
@@ -145,3 +155,24 @@ Peeko:jssie1 hide$ vagrant destroy
 ==> default: Destroying VM and associated drives...
 ~~~
 
+# vagrant box remove: box
+
+~~~
+(sandbox)Peeko:js2 hide$ vagrant box remove jessie 
+/Users/hide/Documents/Boxes/js2/Vagrantfile:5: warning: already initialized constant VAGRANTFILE_API_VERSION
+/Users/hide/Documents/Boxes/js2/Vagrantfile:5: warning: previous definition of VAGRANTFILE_API_VERSION was here
+Box 'jessie' (v0) with provider 'virtualbox' appears
+to still be in use by at least one Vagrant environment. Removing
+the box could corrupt the environment. We recommend destroying
+these environments first:
+
+default (ID: d64a687b041e4ad28e4d1796824f9a59)
+
+Are you sure you want to remove this box? [y/N] y
+Removing box 'jessie' (v0) with provider 'virtualbox'...
+~~~
+
+~~~
+(sandbox)Peeko:js2 hide$ vagrant box list
+There are no installed boxes! Use `vagrant box add` to add some.
+~~~

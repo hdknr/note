@@ -13,7 +13,7 @@ echo $p["dirname"];
 | | Python	| PHP	|
 |:-------------|:----------------| :-------------|
 | 型 | type(obj) | get_class(obj) |
-| [ループ](##Loop) | for i in collection | foreach($collection as &$i) |
+| [ループ](#Loop) | for i in collection | foreach($collection as &$i) |
 
 ## Loop
 
