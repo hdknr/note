@@ -40,3 +40,18 @@ Compared to Python
       - type(obj) 
       - `get_class <http://php.net/manual/ja/function.get-class.php>`_ ($obj)
   
+
+    * - デフォルト値設定
+
+      - or
+
+        .. code-block:: python
+
+            name =  request.POST['name'] or 'NAME'
+
+
+      - @ ?: 
+
+        .. code-block:: php
+            
+            $name = @$_POST['name'] ?: 'NAME';
