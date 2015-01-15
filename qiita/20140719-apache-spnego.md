@@ -254,3 +254,17 @@ errors.logのデバッグメッセージ
 * `AUTH_TYPE` に `Negotiate` で認証されていることが表示されている
 
      
+
+# その他
+
+## Unspecified GSS failure
+
+```
+[Thu Dec 04 10:05:24.479956 2014] [auth_kerb:error] [pid 34832] [client 192.168.10.220:58592] 
+gss_accept_sec_context() failed: Unspecified GSS failure.  
+Minor code may provide more information 
+(, Ticket not yet valid), referer: http://ubuntu.tact.local/abrp/
+
+```
+
+これはLinuxの時刻が著しくWindowsと違っていたため。 ntpdate などで合わせる。
