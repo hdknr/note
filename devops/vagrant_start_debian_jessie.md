@@ -8,6 +8,7 @@
 
 ~~~
 Peeko:Downloads hide$ vagrant box add jessie https://downloads.sourceforge.net/project/vagrantboxjessie/debian80.box
+
 ==> box: Adding box 'jessie' (v0) for provider: 
     box: Downloading: https://downloads.sourceforge.net/project/vagrantboxjessie/debian80.box
     box: Progress: 91% (Rate: 685k/s, Estimated time remaining: 0:00:41)

@@ -2,6 +2,7 @@
 
 - [CHH/phpenv](https://github.com/CHH/phpenv)
 - [Qiita](http://qiita.com/uchiko/items/5f1843d3d848de619fdf)
+- http://y-uti.hatenablog.jp/entry/2014/10/13/232540
 
 ## 前提
 
