@@ -65,7 +65,7 @@ $ pyenv global 2.7.8
 $ pip install django 
 ~~~
 
-## install dajngo ...
+## install django ...
 
 - requirements.txt
 - [django-bootstrap3](http://django-bootstrap3.readthedocs.org/en/latest/)
@@ -92,7 +92,7 @@ $ pip install -r requirements.txt
 - django のプロジェクト作成すみ
 - settings.py 
 
-~~~
+~~~py
 from django.conf import global_settings
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'medias/')
@@ -131,14 +131,16 @@ $ python manage.py collectstatic
 
 - Roleモデルの symbol フィールドにfontawesomeのclassを入れてる
 
-~~~
+~~~py
+
 >>> [ r.symbol for r in Role.objects.all()]
 [u'fa-building-o', u'fa-smile-o', u'fa-user', u'fa-users']
 ~~~
 
 - Role をModelChoiceFieldで参照するフォームでのレンダリングを派生クラスで
 
-~~~
+~~~py
+
 class IconModelChoiceField(forms.ModelChoiceField):   
                              
     def __init__(self, *args, **kwargs):                                            
@@ -155,12 +157,13 @@ class IconModelChoiceField(forms.ModelChoiceField):
         return super(IconModelChoiceField, self).label_from_instance(obj)           
 ~~~
 
-## ActionFrom
+## ActionForm
 
 - Roleを選択させます
 
-~~~
-class ActionExForm(ActionForm):                                                     
+~~~py
+
+class ActionForm(forms.ModelForm):                                                     
 
     initiator_role = IconModelChoiceField(                                       
         label=_('Initiator Role'), required=True,                                
@@ -171,7 +174,8 @@ class ActionExForm(ActionForm):
 
 - form
 
-~~~
+~~~html
+
   <div class="form-group">
     <label class="col-md-2 control-label" for="id_initiator_role">
     {{ form.initiator_role.label }}
@@ -185,7 +189,8 @@ class ActionExForm(ActionForm):
 
 - javascript
 
-~~~
+~~~js
+
 <script>
   $(function() {
     $("ul#id_initiator_role li").addClass("btn btn-default btn-xs");
@@ -196,4 +201,104 @@ class ActionExForm(ActionForm):
 
 - レンダリング
 
-![](./bootstrap3-radioselect.1.png)
+![](https://github.com/hdknr/scriptogr.am/raw/master/django/bootstrap3-radioselect.1.png)
+
+# こんな面倒くさいことしなくても...
+
+## forms.py
+
+- 標準のRadioSelect
+
+~~~py
+
+class ActionForm(forms.ModelForm):                                                  
+                                                                                    
+    class Meta:                                                                     
+         _STAKEHOLDER = {'class': 'stakeholder-selection', }                         
+        model = models.Action                                                       
+        widgets = dict(                                                             
+            initiator=forms.RadioSelect(attrs=_STAKEHOLDER),                        
+            target=forms.RadioSelect(attrs=_STAKEHOLDER),                           
+        ) 
+~~~
+
+## tamplate.html
+
+~~~js
+  
+  // ul.btn-group ui.btn.btn-default
+  $.each(
+    ['{{ form.initiator.auto_id }}',
+     '{{ form.target.auto_id }}' ], 
+    function(i, id){ 
+        $('ul#'+id).addClass('btn-group');
+        $('ul#'+id+ ' li').addClass('btn btn-default');
+    }
+  );
+
+  // 未選択を'?'アイコン
+  elm = $('.stakeholder-selection[value=""]:radio');
+  elm.parent().html(
+    document.getElementById(elm.attr('id')).outerHTML + 
+    '<i style="margin-left:10px" class="fa fa-question"></i>');
+
+　 // 選択肢はモデルに定義されているアイコン化
+  {% for stakeholder in action.usecase.assessment.stakeholder_set.all %}
+    elm = $('.stakeholder-selection[value="{{ stakeholder.id }}"]:radio');
+    elm.parent().html(
+        document.getElementById(elm.attr('id')).outerHTML + 
+        '<i style="margin-left:10px" class="fa {{ stakeholder.role.symbol }}"></i>');
+  {% endfor %} 
+~~~
+
+# bootstrap-select: アイコン付きドロップダウンの方がよくないか？
+
+- settings.py
+
+~~~py
+
+BOWER_INSTALLED_APPS = (
+	...
+    'bootstrap-select',     # option/select
+)
+~~~
+
+~~~
+$ python manage.py bower install
+$ python manage.py collectstatic
+~~~
+
+- forms.py
+
+~~~py
+
+class ActionForm(forms.ModelForm):                                               
+                                                                                 
+    class Meta:                                                                  
+        _STAKEHOLDER = {'class': 'selectpicker stakeholder-selection', }         
+        model = models.Action                                                    
+        exclude = ['description', 'diagram_text', ]                              
+        widgets = dict(      
+            initiator=forms.Select(attrs=_STAKEHOLDER),                          
+            target=forms.Select(attrs=_STAKEHOLDER),                             
+        )                                                                        
+
+
+~~~
+
+- templatehtml
+
+~~~html
+<link href="{{ STATIC_URL }}bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+<script src="{{ STATIC_URL }}bootstrap-select/js/bootstrap-select.js"></script>
+~~~
+~~~js
+
+  {% for stakeholder in action.usecase.assessment.stakeholder_set.all %}
+   $('.selectpicker.stakeholder-selection option[value="{{ stakeholder.id }}"]').attr(
+    'data-content', '<i class="fa {{ stakeholder.role.symbol }}"></i> {{ stakeholder}}');
+  {% endfor %} 
+
+~~~
+
+![](https://raw.githubusercontent.com/hdknr/scriptogr.am/35165bff32bb2273057b988e76d5da932ef47e75/django/bootstrap3-radioselect.dropdown.png)

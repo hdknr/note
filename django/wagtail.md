@@ -61,7 +61,7 @@
 - https://tabo.pe/projects/django-treebeard/docs/tip/
 
 
-# インストール
+## インストール
 
 ```
 (wagtail-torchbox)vagrant@precise32:~$ mkdir sandbox
@@ -115,3 +115,24 @@ Success! lafoglia is created
 
 ```
 
+
+## torchbox
+
+### データベース作成
+
+~~~
+$ psql -U postgres -h localhost
+
+postgres=# CREATE ROLE vagrant superuser;
+CREATE ROLE
+
+postgres=# ALTER ROLE vagrant WITH LOGIN;
+ALTER ROLE
+
+
+postgres=# CREATE DATABASE torchbox;
+CREATE DATABASE
+
+postgres=# ALTER DATABASE torchbox OWNER TO vagrant;                                                         
+ALTER DATABASE
+~~~
