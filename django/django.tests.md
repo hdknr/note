@@ -1,0 +1,39 @@
+## Django Testing
+
+- [Testing in Django](https://docs.djangoproject.com/en/1.8/topics/testing/)
+- [Testing tools](https://docs.djangoproject.com/en/1.8/topics/testing/tools/)
+- [Advanced testing topics](https://docs.djangoproject.com/en/1.8/topics/testing/advanced/)
+- [Python Test cases](https://docs.python.org/3/library/unittest.html#test-cases)
+
+### 実行
+
+- [Writing and running tests](https://docs.djangoproject.com/en/1.8/topics/testing/overview/)
+
+~~~
+$ ./manage.py test 
+~~~
+
+
+### `--keepdb` :データベースを削除させない
+
+
+
+## Content Type fixture
+
+- 作成
+
+~~~
+$ ./manage.py dumpdata contenttypes --indent 2
+~~~
+
+- content type なし
+
+~~~
+$ ./manage.py dumpdata --exclude contenttypes
+~~~
+
+## auth.permissionでハマるので
+
+~~~
+$ ./manage.py dumpdata --natural --exclude auth.permission --exclude contenttypes --indent 4  
+~~~
