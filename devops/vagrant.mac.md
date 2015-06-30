@@ -1,4 +1,4 @@
-# RubyGem でインストールされない
+## RubyGem でインストールされない
 
 ~~~
 Peeko:Downloads hide$ which ruby
@@ -117,7 +117,7 @@ Done installing documentation for vagrant after 0 seconds
 1 gem installed
 ~~~
 
-# パッケージインストーラでインストールする
+## パッケージインストーラでインストールする
 
 - http://www.vagrantup.com/downloads.html
 

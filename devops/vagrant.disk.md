@@ -2,7 +2,7 @@ VirtualBox: /homeをLVMにして増やす
 
 - Vagrant で作ったDebian Jessieの/homeを増やす
 
-# VMDK -> VDI (VBoxManage clonehd)
+## VMDK -> VDI (VBoxManage clonehd)
 
 
 ~~~
@@ -48,7 +48,7 @@ Peeko:js1_default_1413703213140_69014 hide$ VBoxManage modifyhd box-disk1.vdi --
 
 ~~~
 
-## VDIの内容(VboxManage showhdinfo)
+### VDIの内容(VboxManage showhdinfo)
 
 ~~~
 Peeko:js1_default_1413703213140_69014 hide$ VboxManage showhdinfo  box-disk1.vdi
@@ -63,7 +63,7 @@ Capacity:       30480 MBytes
 Size on disk:   2028 MBytes
 ~~~
 
-## VM一覧(VBoxManage list vms)
+### VM一覧(VBoxManage list vms)
 
 ~~~
 Peeko:js1_default_1413703213140_69014 hide$ VBoxManage  list vms
@@ -79,7 +79,7 @@ Peeko:js1_default_1413703213140_69014 hide$ VBoxManage  list vms
 
 ~~~
 
-## ストレージコントローラ確認(VBoxManage showvminfo)
+### ストレージコントローラ確認(VBoxManage showvminfo)
 
 ~~~
 Peeko:js1_default_1413703213140_69014 hide$ VBoxManage showvminfo js1_default_1413703213140_69014 | GREP_OPTIONS='' grep "Storage"
@@ -99,7 +99,7 @@ Storage Controller Bootable (1):        on
 ~~~
 
 
-## ディスク変更(VBoxManage storageattach)
+### ディスク変更(VBoxManage storageattach)
 
 ~~~
 Peeko:js1_default_1413703213140_69014 hide$ VBoxManage storageattach js1_default_1413703213140_69014 --storagectl "SATA Controller" --port 0 --device 0 --type hdd --medium box-disk1.vdi
@@ -115,7 +115,7 @@ SATA Controller (0, 0): /Users/hide/VirtualBox VMs/js1_default_1413703213140_690
 ~~~
 
 
-# 再起動(vagrant reload)
+## 再起動(vagrant reload)
 
 ~~~
 Peeko:js1 hide$ vagrant reload
@@ -144,7 +144,7 @@ Peeko:js1 hide$ vagrant reload
 
 ~~~
 
-## ssh(vagrant ssh)
+### ssh(vagrant ssh)
 
 ~~~
 Peeko:js1 hide$ vagrant ssh
@@ -159,9 +159,9 @@ permitted by applicable law.
 Last login: Sun Oct 19 07:20:38 2014 from 10.0.2.2
 ~~~
 
-# ディスクサイズを拡大
+## ディスクサイズを拡大
 
-## サイズが増えていることを確認(fdisk -l)
+### サイズが増えていることを確認(fdisk -l)
 
 - 32.0 GBになっています
 
@@ -189,7 +189,7 @@ Disk identifier: 0x5cdfd35b
 vagrant@10:~$ sudo su -
 
 root@10:~# fdisk /dev/sda
-~~~~~
+~~~
 
 - 削除
 
@@ -199,7 +199,6 @@ Partition number (1-5): 5
 
 Command (m for help): d
 Partition number (1-5): 2
-
 
 ~~~
 
@@ -232,6 +231,8 @@ First sector (19818496-62423039, default 19818496):
 Using default value 19818496
 Last sector, +sectors or +size{K,M,G} (19818496-62423039, default 62423039): +500M
 ~~~
+
+- 新規作成(/dev/sda6)
 
 ~~~
 Command (m for help): n
@@ -343,9 +344,9 @@ Disk identifier: 0x5cdfd35b
 /dev/sda6        20844544    62423039    20789248   8e  Linux LVM
 ~~~
 
-# LVM 設定
+## LVM 設定
 
-## lvm2
+### lvm2
 
 ~~~
 vagrant@10:~$ sudo apt-get update
@@ -418,7 +419,7 @@ root@10:~# pvdisplay /dev/sda6
   
 ~~~
 
-## ボリュームグループ作成(vgcreate)
+### ボリュームグループ作成(vgcreate)
 
 - PE(物理エクステント)を32Mbyteで作成
 
@@ -462,7 +463,7 @@ root@10:~# vgdisplay vg6
   VG UUID               sCvQgt-3z0r-LjsK-3fiP-ua5J-eWjK-3ifig0
 ~~~
 
-## 論理ボリューム作成(lvcreate)
+### 論理ボリューム作成(lvcreate)
 
 - 作成
 
@@ -507,7 +508,7 @@ root@10:~# lvscan
   
 ~~~
 
-## ext3ファイルシステム
+### ext3ファイルシステム
 
 
 ~~~
@@ -529,10 +530,10 @@ Writing superblocks and filesystem accounting information: done
 ~~~      
 
 
-# /home移動
+## /home移動
 
 
-## /mnt/home
+### /mnt/home
 
 ~~~
 root@10:~# mkdir /mnt/home
@@ -555,7 +556,7 @@ none                 500G  442G   58G  89% /vagrant
 
 ~~~
 
-## コピー
+### コピー
 
 - cp -ax コマンドは、/home の内容を /mnt/newpart に繰り返しコピーして、すべてのファイル属性を保存し、どのマウント・ポイントも越えたりしないようにします。
 
@@ -574,7 +575,7 @@ drwxr-xr-x 3 vagrant vagrant  4096 Oct 19 00:34 vagrant
 
 
 
-## 一度 /Usersで作る
+### 一度 /Usersで作る
 
 - 新しいマウントポイント
 
@@ -639,7 +640,7 @@ vagrant@10:~$ pwd
 /Users/vagrant
 ~~~
 
-## /home にマウントし直す
+### /home にマウントし直す
 
 - 一応バックアップとっておく
 
@@ -701,7 +702,7 @@ tmpfs                5.3M     0  5.3M   0% /run/lock
 /dev/mapper/vg6-lv6   21G   47M   20G   1% /home
 ~~~
 
-# Box化しておく
+## Box化しておく
 
 ~~~
 Peeko:js1 hide$ vagrant package

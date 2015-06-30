@@ -1,10 +1,10 @@
-# Vagrant:  Debian Jessie をインストール
+## Vagrant:  Debian Jessie をインストール
 
 - VirualBoxをインストールしていること
 - http://www.vagrantbox.es/
 
 
-# vagrant box add {{name}} :Debian Jessieのboxを追加
+## vagrant box add {{name}} :Debian Jessieのboxを追加
 
 ~~~
 Peeko:Downloads hide$ vagrant box add jessie https://downloads.sourceforge.net/project/vagrantboxjessie/debian80.box
@@ -16,7 +16,7 @@ Peeko:Downloads hide$ vagrant box add jessie https://downloads.sourceforge.net/p
 ==> box: Successfully added box 'jessie' (v0) for 'virtualbox'!    
 ~~~
 
-## vagrant list: 確認
+### vagrant list: 確認
 
 ~~~
 Peeko:Downloads hide$ vagrant box list
@@ -53,7 +53,7 @@ jessie (virtualbox, 0)
 ~~~    
 
 
-# vagrant init {{name}} : 作成
+## vagrant init {{name}} : 作成
 
 - ディレクトリ作成
 
@@ -79,7 +79,7 @@ Peeko:jssie1 hide$ tree .
 0 directories, 1 file
 ~~~
 
-## ホストオンリーアダプタを追加
+### ホストオンリーアダプタを追加
 
 ~~~
 Peeko:jssie1 hide$ vi Vagrantfile 
@@ -88,7 +88,7 @@ Peeko:jssie1 hide$ vi Vagrantfile
 
 ~~~
 
-# vagrant up: 起動
+## vagrant up: 起動
 
 ~~~
 Peeko:jssie1 hide$ vagrant up
@@ -116,7 +116,7 @@ Bringing machine 'default' up with 'virtualbox' provider...
     default: /vagrant => /Users/hide/Documents/Boxes/jssie1
 ~~~
 
-# vagrant ssh: 接続
+## vagrant ssh: 接続
 
 ~~~
 Peeko:jssie1 hide$ vagrant ssh
@@ -131,14 +131,14 @@ permitted by applicable law.
 Last login: Mon Aug 18 07:11:18 2014 from 10.0.2.2
 ~~~
 
-# vagrant halt: シャットダウン
+## vagrant halt: シャットダウン
 
 ~~~
 Peeko:jssie1 hide$ vagrant halt
 ==> default: Attempting graceful shutdown of VM...
 ~~~
 
-#  vagrant package: ボックス化
+##  vagrant package: ボックス化
 
 ~~~
 Peeko:js1 hide$ vagrant package
@@ -148,7 +148,7 @@ Peeko:js1 hide$ vagrant package
 ==> default: Compressing package to: /Users/hide/Documents/Boxes/js1/package.box
 ~~~
 
-# vagrant destroy: 削除
+## vagrant destroy: 削除
 
 ~~~
 Peeko:jssie1 hide$ vagrant destroy
@@ -156,7 +156,7 @@ Peeko:jssie1 hide$ vagrant destroy
 ==> default: Destroying VM and associated drives...
 ~~~
 
-# vagrant box remove: box
+## vagrant box remove: box
 
 ~~~
 (sandbox)Peeko:js2 hide$ vagrant box remove jessie 

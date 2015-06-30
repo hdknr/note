@@ -1,7 +1,7 @@
 - Debian Jessie を Packerで作ってみる
 - 途中
 
-# Packer インストール
+## Packer インストール
 
 - http://www.packer.io/downloads.html
 
