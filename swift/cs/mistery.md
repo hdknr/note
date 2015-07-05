@@ -1,0 +1,1 @@
+../../qiita/20140930-swift-mistery.md

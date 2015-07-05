@@ -1,0 +1,1 @@
+../../qiita/20141003-swift-subscript.md

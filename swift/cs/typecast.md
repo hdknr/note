@@ -1,0 +1,1 @@
+../../qiita/20141006-swift-typecast.md

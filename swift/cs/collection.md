@@ -1,0 +1,1 @@
+../../qiita/20140928-swift-collection.md

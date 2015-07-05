@@ -1,0 +1,1 @@
+../../qiita/20141001-swift-enum.md

@@ -1,0 +1,1 @@
+../../qiita/20141002-swift-methods.md

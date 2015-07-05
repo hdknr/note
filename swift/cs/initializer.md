@@ -1,0 +1,1 @@
+../../qiita/20141004-swift-initializer.md

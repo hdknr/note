@@ -1,0 +1,1 @@
+../../qiita/20141009-swift-generics.md
