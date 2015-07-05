@@ -6,4 +6,7 @@ Icon*
 *.swp
 *.py
 *.sqlite3
-
+*.o
+*.swiftdoc
+*.swiftmodule
+*.dylib
