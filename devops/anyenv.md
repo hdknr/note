@@ -101,3 +101,21 @@ ndenv:
 $ which npm
 /home/vagrant/.anyenv/envs/ndenv/shims/npm
 ~~~
+
+## pyenv: error: failed to download Python-2.7.10.tgz
+
+- OSが古いとエラーになる
+
+~~~
+$ pyenv install 2.7.10
+Downloading Python-2.7.10.tgz...
+-> https://www.python.org/ftp/python/2.7.10/Python-2.7.10.tgz
+error: failed to download Python-2.7.10.tgz
+
+BUILD FAILED (Ubuntu 8.04 using python-build 20150601-6-g22ecefd)
+~~~
+
+~~~
+$ export PYTHON_BUILD_MIRROR_URL="http://yyuu.github.io/pythons"
+~~~
+

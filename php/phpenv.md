@@ -237,3 +237,19 @@ remote: Total 34 (delta 5), reused 33 (delta 5)
 Unpacking objects: 100% (34/34), done.
 Checking connectivity... done.
 ```
+
+## prefix: ディレクトリの表示
+
+~~~
+$ phpenv help prefix
+Usage: phpenv prefix [<version>]
+
+Displays the directory where a PHP version is installed. If no
+version is given, `phpenv prefix' displays the location of the
+currently selected version.
+~~~
+
+~~~
+$ phpenv prefix
+/home/vagrant/.anyenv/envs/phpenv/versions/5.6.10
+~~~

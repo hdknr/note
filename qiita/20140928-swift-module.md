@@ -104,3 +104,8 @@ Peeko:sample hide$ xcrun -sdk iphonesimulator8.0 swift -I . -L . -lLogger hello.
 ~~~
 > Hello
 ~~~
+
+
+# リソース
+
+- [.soや.dylibや.aファイル、共有ライブラリなどについて調べてみた - kanonjiの日記](https://www.evernote.com/shard/s302/sh/2e0a0cd5-ed3b-4a8f-9993-5210383de2e7/f6f709ca125d30c2ab0d6c992b731897)

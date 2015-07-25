@@ -37,3 +37,15 @@ $ ./manage.py dumpdata --exclude contenttypes
 ~~~
 $ ./manage.py dumpdata --natural --exclude auth.permission --exclude contenttypes --indent 4  
 ~~~
+
+## 負荷テスト
+
+### locustio
+
+- [locust](http://locust.io/)
+
+~~~
+$ pip install locustio
+~~~
+
+- [Load testing django locustio](https://stackoverflow.com/questions/27261399/load-testing-django-locustio)

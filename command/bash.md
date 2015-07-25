@@ -122,3 +122,14 @@ echo  ${x//./-}
 1-2-3-4
 ```
 
+## OS判定
+
+~~~
+$ echo $OSTYPE
+linux-gnu
+~~~
+
+~~~
+$ echo $OSTYPE
+darwin14
+~~~

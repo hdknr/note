@@ -1,9 +1,78 @@
+## reset: pull したけど、一つ前にもどす
+
+~~~
+$ git reset --hard HEAD^
+~~~
+
 ## 削除してしまったファイルを戻す
 
 ```
 $ git checkout HEAD --  ../language/ja_jp.lang.py
 ```
 
+## Cannot get remote repository information.
+
+- gitが古すぎる (> <) 
+
+~~~
+$ git clone https://github.com/hdknr/bin.git
+Initialized empty Git repository in /home/ubuntu/bin/.git/
+Cannot get remote repository information.
+Perhaps git-update-server-info needs to be run there?
+
+$ git --version
+git version 1.5.4.3
+
+$ git clone git://github.com/hdknr/bin.git
+Initialized empty Git repository in /home/ubuntu/bin/.git/
+remote: Counting objects: 641, done.
+remote: Total 641 (delta 0), reused 0 (delta 0), pack-reused 641
+Receiving objects: 100% (641/641), 77.96 KiB, done.
+Resolving deltas: 100% (344/344), done.
+~~~
+
+## ソースからインストール
+- gettext, autoconf は必要
+
+~~~bash
+    # wget https://github.com/git/git/archive/master.zip
+    # unzip master
+    # cd git-master/
+    # autoconf
+    # ./configure --prefix=$HOME/local --with-curl=/usr/local --with-expat
+    # make all
+    # make install
+    # ~/local/bin/git --version
+~~~    
+
+- /usr/local いれるなら
+- 
+~~~
+$ sudo make prefix=/usr/local install
+~~~
+
+## fatal: Unable to find remote helper for 'https'
+
+~~~
+$ sudo apt-get install libcurl4-openssl-dev
+$ autoconf
+$ ./configure  --with-expat --with-curl 
+$ make && sudo make prefix=/usr/local install
+~~~
+
+## error setting certificate verify locations
+
+~~~
+fatal: unable to access 'https://github.com/riywo/anyenv/': error setting certificate verify locations:
+  CAfile: /etc/ssl/certs/ca-certificates.crt
+  CApath: none
+~~~
+
+とりあえず無視する
+
+~~~  
+$ export GIT_SSL_NO_VERIFY=true  
+~~~
 
 ## ブランチ作成 + push
 

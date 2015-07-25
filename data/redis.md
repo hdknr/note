@@ -87,6 +87,57 @@ After this operation, 543 kB of additional disk space will be used.
 Do you want to continue? [Y/n] y
 ~~~
 
+~~~
+$ sudo apt-get install redis-server
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  redis-server
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 308 kB of archives.
+After this operation, 873 kB of additional disk space will be used.
+Get:1 http://security.debian.org/ jessie/updates/main redis-server amd64 2:2.8.17-1+deb8u1 [308 kB]
+Fetched 308 kB in 6s (46.0 kB/s)                                                                                                                      
+Selecting previously unselected package redis-server.
+(Reading database ... 70513 files and directories currently installed.)
+Preparing to unpack .../redis-server_2%3a2.8.17-1+deb8u1_amd64.deb ...
+Unpacking redis-server (2:2.8.17-1+deb8u1) ...
+Processing triggers for systemd (215-17+deb8u1) ...
+Processing triggers for man-db (2.7.0.2-5) ...
+Setting up redis-server (2:2.8.17-1+deb8u1) ...
+adduser: Warning: The home directory `/var/lib/redis' does not belong to the user you are currently creating.
+Processing triggers for systemd (215-17+deb8u1) ...
+~~~
+
+- サーバー起動
+
+~~~
+s$ redis-server
+[4326] 23 Jul 05:54:02.855 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 2.8.17 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in stand alone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6379
+ |    `-._   `._    /     _.-'    |     PID: 4326
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[4326] 23 Jul 05:54:02.864 # Server started, Redis version 2.8.17
+[4326] 23 Jul 05:54:02.864 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+[4326] 23 Jul 05:54:02.865 * The server is now ready to accept connections on port 6379
+~~~
+
 ## 操作
 
 - キーの一覧

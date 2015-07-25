@@ -107,6 +107,33 @@ vagrant@10:~/projects$ dpkg -L nginx-full
 /lib/systemd/system/nginx.service
 ```
 
+## ディレクトリツリー
+
+~~~bash
+$ sudo tree /etc/nginx 
+/etc/nginx
+├── conf.d
+├── fastcgi.conf
+├── fastcgi_params
+├── koi-utf
+├── koi-win
+├── mime.types
+├── nginx.conf
+├── proxy_params
+├── scgi_params
+├── sites-available
+│   └── default
+├── sites-enabled
+│   ├── default -> /etc/nginx/sites-available/default
+│   └── wp.deb.conf -> /home/vagrant/projects/wordpress/nginx.conf
+├── snippets
+│   ├── fastcgi-php.conf
+│   └── snakeoil.conf
+├── uwsgi_params
+└── win-utf
+
+4 directories, 15 files
+~~~
 
 ## 仮想ホスト
 
