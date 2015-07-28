@@ -113,7 +113,7 @@ $ php catsample.php
 Mew Mew Mnew
 ~~~
 
-## composer : vencor/autoload.php
+## composer : vendor/autoload.php
 - composer を入れて、 composerの規約でモジュールおけばよい
 
 ~~~php

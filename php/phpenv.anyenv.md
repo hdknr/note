@@ -190,3 +190,14 @@ Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies
     with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies
     with Xdebug v2.3.3, Copyright (c) 2002-2015, by Derick Rethans
 ~~~
+
+## デフォルト configure オプション
+
+- $HOME/.anyenv/envs/phpenv/plugins/php-build/share/php-build/default_configure_options にあります
+
+
+### カレントディレクトリのphp.iniを読ませる
+
+~~~
+configure_option "--with-config-file-scan-dir=.;/root/.phpenv/versions/5.5.22/etc/conf.d"
+~~~
