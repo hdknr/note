@@ -78,7 +78,23 @@ $ sudo killall php-fpm
 
 - ソケットファイルをOSに合わせて、 php-fpmを再起動
 
+~~~bash
+$ grep "^socket" /etc/mysql/my.cnf | head -n 1 | sed -r "s/^[^/]+\//\//"
+
+/var/run/mysqld/mysqld.sock
+
 ~~~
+
+~~~bash
+$ vim $(phpenv prefix)/etc/php.ini
+~~~
+
+~~~bash
 $ grep mysqli.default_socket `phpenv prefix`/etc/php.ini
 
-mysqli.default_socket = /var/run/mysqld/mysqld.sock~~~
+mysqli.default_socket = /var/run/mysqld/mysqld.sock
+~~~
+
+~~~bash
+$ sudo killall php-fpm && sudo $(phpenv prefix)/sbin/php-fpm
+~~~
