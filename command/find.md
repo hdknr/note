@@ -31,3 +31,20 @@ sql
 txt
 ```
 
+## 大きいファイルを探す
+
+~~~bash
+$find / -type f -size +10000k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
+~~~
+
+## ディレクトリのみ表示
+
+~~~bash
+$ find . -maxdepth 1 -type d
+~~~
+
+## find -exec rm in Windows
+
+~~~bash
+C:\>for /F "usebackq" %i in  (`dir /s /b *.config`) do del %i
+~~~
