@@ -1,0 +1,1 @@
+- [PHPUnitで定数のテストをするときは@runInSeparateProcessで別プロセスに](http://qiita.com/suin/items/cd0a03ccc574382d9f15)
