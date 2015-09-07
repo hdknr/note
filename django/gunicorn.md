@@ -4,6 +4,8 @@
 
 - root でコマンド実行した結果、ログファイルが root で出来てしまっていない？
 - iniファイルで指定したuserの権限が不足していて、ログファイルに書き込めないで起動に失敗しているのでは。
+- `--preload` [オプション](https://gunicorn-docs.readthedocs.org/en/develop/configure.html#preload-app)で動かしてみると、Djangoのアプリのロード時のエラーがわかる
+- supervisrod のcommandにあるgunicornのパスがvirtualenvの元のことなる(のでPYPIのパッケージが不足しているとか)
 
 ## ログローテーション
 
