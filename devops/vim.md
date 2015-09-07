@@ -1,3 +1,7 @@
+## 正規表現
+
+- [Vimで使える正規表現](http://archiva.jp/web/tool/vim_regexps.html)
+
 ## 挿入モードになったらアンダーライン
 - .vimrc
 

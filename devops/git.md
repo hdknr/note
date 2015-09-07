@@ -1,18 +1,29 @@
-## reset: pull したけど、一つ前にもどす
+## 戻す
+
+
+### reset: pull したけど、一つ前にもどす
 
 ~~~
 $ git reset --hard HEAD^
 ~~~
 
-## 削除してしまったファイルを戻す
+### checkout: 削除してしまったファイルを戻す
 
-```
+~~~bash
 $ git checkout HEAD --  ../language/ja_jp.lang.py
-```
+~~~
+
+~~~bash
+$ git checkout -f
+~~~
+~~~bash
+$ git checkout -f ../lib
+~~~
+
 
 ## Cannot get remote repository information.
 
-- gitが古すぎる (> <) 
+- gitが古すぎる (> <)
 
 ~~~
 $ git clone https://github.com/hdknr/bin.git
@@ -43,10 +54,10 @@ Resolving deltas: 100% (344/344), done.
     # make all
     # make install
     # ~/local/bin/git --version
-~~~    
+~~~
 
 - /usr/local いれるなら
-- 
+-
 ~~~
 $ sudo make prefix=/usr/local install
 ~~~
@@ -56,7 +67,7 @@ $ sudo make prefix=/usr/local install
 ~~~
 $ sudo apt-get install libcurl4-openssl-dev
 $ autoconf
-$ ./configure  --with-expat --with-curl 
+$ ./configure  --with-expat --with-curl
 $ make && sudo make prefix=/usr/local install
 ~~~
 
