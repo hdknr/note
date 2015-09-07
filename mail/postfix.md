@@ -198,3 +198,12 @@ Sep  3 05:17:12 jessie postfix/cleanup[7630]: B9C9B8E5B5: message-id=<2015090305
 Sep  3 05:17:12 jessie postfix/bounce[7636]: 30D6A8E5AD: sender non-delivery notification: B9C9B8E5B5
 Sep  3 05:17:12 jessie postfix/qmgr[7275]: 30D6A8E5AD: removed
 ~~~
+
+
+## Resource
+
+### Postfix
+- [pipe](http://www.postfix.org/pipe.8.html)
+
+### Others
+- [Postfix/Mysql Virtual Mail How To](http://hostingsoftware.net/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=56)
