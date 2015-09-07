@@ -187,7 +187,7 @@ klist: No credentials cache found (ticket cache FILE:/tmp/krb5cc_33)
 
     <VirtualHost ubuntu.openid.local:80>
 
-        ServerAdmin admin@i-c-i.jp
+        ServerAdmin admin@test.jp
         ServerName  ubuntu.openid.local
         DocumentRoot /home/hdknr/apache/www
 
