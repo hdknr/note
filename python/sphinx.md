@@ -27,3 +27,13 @@ __ https://en.wikipedia.org/wiki/BSD_licenses#2-clause_license_.28.22Simplified_
 <li>Simplified BSD License: <a class="reference external" href="https://en.wikipedia.org/wiki/BSD_licenses#2-clause_license_.28.22Simplified_BSD_License.22_or_.22FreeBSD_License.22.29">2-clause license (&quot;Simplified BSD License&quot; or &quot;FreeBSD License&quot;)</a></li>
 </ul>
 ~~~
+
+
+## Autodoc
+
+- [Include documentation from docstrings](http://sphinx-doc.org/ext/autodoc.html)
+
+### デコレーター関数
+
+- [Python Sphinx autodoc and decorated members](https://stackoverflow.com/questions/3687046/python-sphinx-autodoc-and-decorated-members)
+- `automodule` だとdocstringがドキュメントされないので、個別に `autofunction` する
