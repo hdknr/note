@@ -16,14 +16,19 @@ $ ruby -e 'puts $:'
 /home/vagrant/.anyenv/envs/rbenv/versions/2.2.2/lib/ruby/2.2.0/x86_64-linux
 ~~~
 
-## require
+## ローディング
+
+- require
+- load
+
+### require
 
 - ロードパスからファイルを探してくる
 - 拡張ライブラリもロードできる
 - 拡張子.rb/.soを省略できる
 - 同じファイルは二度以上ロードしない
 
-## load
+### load
 
 - ロードパスからファイルを探してくる
 - ロードできるのはRubyプログラムだけ。
@@ -55,12 +60,12 @@ $ ruby -e 'puts $:'
 ## $LOADPATH
 
 ~~~bash
-$ cat hello.rb 
+$ cat hello.rb
 puts $LOAD_PATH
 ~~~
 
 ~~~bash
-$ ruby hello.rb 
+$ ruby hello.rb
 
 /home/vagrant/.anyenv/envs/rbenv/rbenv.d/exec/gem-rehash
 /home/vagrant/projects/helloruby
@@ -75,14 +80,14 @@ $ ruby hello.rb
 ~~~
 
 ~~~bash
-$ cat hello.rb 
+$ cat hello.rb
 $LOAD_PATH.push('/tmp')
 $LOAD_PATH.insert(0, '/var')
 puts $LOAD_PATH
 ~~~
 
 ~~~bash
-$ ruby hello.rb 
+$ ruby hello.rb
 /var
 /home/vagrant/.anyenv/envs/rbenv/rbenv.d/exec/gem-rehash
 /home/vagrant/projects/helloruby
@@ -111,7 +116,7 @@ irb(main):004:0>  Gem.find_files('animals')
 ### 名前空間
 
 ~~~
-$ cat animals.rb 
+$ cat animals.rb
 ~~~
 ~~~ruby
 class Cat
