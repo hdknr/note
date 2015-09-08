@@ -29,7 +29,7 @@ class OrderAdmin(admin.ModelAdmin):
         form_class = super(OrderAdmin, self).get_form(request, obj, **kwargs)
   	    ticket_id = request.REQUEST.get('ticket_id', None)
         form_class.base_fields['ticket'].initial = ticket_id and Ticket.objects.get(id=ticket_id)
-        return form_class 
+        return form_class
 ~~~
 
 ## templates/admin/tickets/ticket/change_form.html
@@ -39,5 +39,12 @@ class OrderAdmin(admin.ModelAdmin):
 - `<a href="history/">{% trans "History" %}</a>` の隣とか
 
 ~~~html
-<a href="{% url 'admin:tickets_order_add' %}?ticket_id={{ object_id }}">注文 </a><
+<a href="{% url 'admin:tickets_order_add' %}?ticket_id={{ object_id }}">注文 </a>
+~~~
+
+## こんなことをしなくても ?ticket={{ticket.id}} を加えればやってくれる
+
+
+~~~html
+<a href="{% url 'admin:tickets_order_add' %}?ticket={{ object_id }}">注文 </a>
 ~~~
