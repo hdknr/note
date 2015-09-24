@@ -38,13 +38,13 @@ SHOW FUNCTION STATUS;
 ```
 
 ```
-select name from mysql.proc 
+select name from mysql.proc
 ```
 
 - 詳細
 
 ```
-show create procedure _name_ 
+show create procedure _name_
 ```
 
 ## UPDATE文の更新件数
@@ -62,4 +62,17 @@ mysql> create user `vagrant`@`localhost` identified  by '';
 ~~~
 ~~~
 mysql> grant all privileges on *.* to 'vagrant'@'localhost' with grant option;
+~~~
+
+## 時刻
+
+~~~mysql
+SELECT UNIX_TIMESTAMP('2005-03-27 03:00:00');
+
++---------------------------------------+
+| UNIX_TIMESTAMP('2005-03-27 03:00:00') |
++---------------------------------------+
+|                            1111892400 |
++---------------------------------------+
+1 row in set (0.00 sec)
 ~~~
