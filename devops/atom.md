@@ -29,7 +29,7 @@ Options:
   Prefix an option with `no-` to set it to false such as --no-color to disable
   colored output.
 ~~~
-  
+
 ### vim
 
 - [vim-mode](https://github.com/atom/vim-mode)
@@ -37,4 +37,11 @@ Options:
 
 ~~~bash
 $ apm install vim-mode
+~~~
+
+- Windows
+
+~~~bash
+C:\Users\hdknr\AppData\Local\atom\bin>apm install vim-mode
+Installing vim-mode to C:\Users\hdknr\.atom\packages done
 ~~~
