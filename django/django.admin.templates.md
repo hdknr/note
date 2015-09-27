@@ -49,7 +49,7 @@ emailqueue/templates/
   <ul>
     <li> aaaa
     <li> bbbb
-    <li> ccc 
+    <li> ccc
   </ul>
 </div>
 {{ block.super }}
@@ -104,9 +104,9 @@ emailqueue/templates/
             form_template = self.add_form_template                                   
         else:                                                                        
             form_template = self.change_form_template                                
-                                                                                     
+
         request.current_app = self.admin_site.name                                   
-                                                                                     
+
         return TemplateResponse(request, form_template or [                          
             "admin/%s/%s/change_form.html" % (app_label, opts.model_name),           
             "admin/%s/change_form.html" % app_label,                                 
@@ -122,15 +122,15 @@ emailqueue/templates/
             list(self.get_fieldsets(request, obj)),                                  
             self.get_prepopulated_fields(request, obj),                              
             self.get_readonly_fields(request, obj),                                  
-            model_admin=self) 
-                                                                   
-        media = self.media + adminForm.media 
-          
+            model_admin=self)
+
+        media = self.media + adminForm.media
+
         inline_formsets = self.get_inline_formsets(
-        	request, formsets, inline_instances, obj) 
+        	request, formsets, inline_instances, obj)
         for inline_formset in inline_formsets:                                       
             media = media + inline_formset.media                                     
-            	
+
         context = dict(self.admin_site.each_context(request),                        
             title=(_('Add %s') if add else _('Change %s')) % force_text(opts.verbose_name),
             adminform=adminForm,                                                     
@@ -144,11 +144,11 @@ emailqueue/templates/
             errors=helpers.AdminErrorList(form, formsets),                           
             preserved_filters=self.get_preserved_filters(request),                   
         )                                                                            
-                                                                                     
+
         context.update(extra_context or {})                                          
-                                                                                     
+
         return self.render_change_form(
-        	request, context, add=add, 
+        	request, context, add=add,
         	change=not add, obj=obj, form_url=form_url)
 
 ~~~
@@ -175,10 +175,10 @@ class ModelAdmin(BaseModelAdmin):
         ]                                                                            
         if self.actions is not None:                                                 
             js.append('actions%s.js' % extra)
-                                                    
+
         if self.prepopulated_fields:                                                 
             js.extend(['urlify.js', 'prepopulate%s.js' % extra])
-                                 
+
         return forms.Media(
         	js=[static('admin/js/%s' % url) for url in js])           
 ~~~
@@ -207,7 +207,7 @@ class ModelAdmin(BaseModelAdmin):
 
 - [How can I override the “media” property of Django's ModelAdmin and make it dynamic?](https://stackoverflow.com/questions/23302175/how-can-i-override-the-media-property-of-djangos-modeladmin-and-make-it-dynam)
 
- 
+
 ~~~
 
 from django.contrib import admin
@@ -234,3 +234,46 @@ class MyModelAdmin(admin.ModelAdmin):
         media.add_js(js)
         return media
 ~~~        
+
+## レスポンシブ
+
+- [django-admin-bootstrap/django-admin-bootstrap](https://github.com/django-admin-bootstrap/django-admin-bootstrap)
+
+~~~
+$ pip install bootstrap-admin
+~~~
+
+### CSS, JSなどを追加
+
+~~~html
+{% extends "admin/change_list.html" %}
+{% load i18n %}
+
+{% block content %}
+<div class="local-menu" style="padding-bottom:5px" >
+<a href="{% url 'bulletins_default' %}" class="button">戻る</a>
+</div>
+
+{{ block.super }}
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super  }}
+<script src="{{ STATIC_URL }}theme/js/jquery-1.11.1.min.js"></script>
+<script src="{{ STATIC_URL }}theme/jqui/jquery-ui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(function(){
+ $("a.button").button();
+});
+</script>
+{% endblock %}
+
+
+{% block extrastyle %}
+  {{ block.super }}
+<link href="{{ STATIC_URL }}theme/css/font-awesome.min.css" rel="stylesheet">
+<link href="{{ STATIC_URL }}theme/jqui/jquery-ui.min.css" rel="stylesheet">
+<style type="text/css">
+</style>
+{% endblock %}
+~~~

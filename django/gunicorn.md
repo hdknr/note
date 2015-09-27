@@ -20,7 +20,7 @@ pidfile = os.path.join(LOGS, "gunicorn.pid")
 	- su user group で gunicron の起動ユーザーのファイル権限を指定する
 	- create はこれと同じ user group にする
 	- postrotate で `kill -USER1 $(cat pidffile)` させる([ドキュメント](https://gunicorn-docs.readthedocs.org/en/latest/deploy.html#logging))
-	
+
 ~~~
 /home/system/projects/mysite/web/logs/gunicorn.*.log {
         weekly
@@ -41,9 +41,15 @@ pidfile = os.path.join(LOGS, "gunicorn.pid")
 - ローテーションスクリプトファイルの権限は root にすること
 
 ~~~
-$ sudo logrotate -d etc/logrotate.d/gunicorn 
+$ sudo logrotate -d etc/logrotate.d/gunicorn
 
 Ignoring etc/logrotate.d/gunicorn because the file owner is wrong (should be root).
 ~~~
 
 - `/var/lib/logrotate/status` で確認
+
+~~~
+# grep guni /var/lib/logrotate/status
+"/home/system/projects/mysite/web/logs/gunicorn.access.log" 2015-9-17
+"/home/system/projects/mysite/web/logs/gunicorn.error.log" 2015-9-17
+~~~

@@ -4,7 +4,7 @@
 class RentalAdmin(admin.ModelAdmin):                                                
 
     form = RentalAdminForm                                                          
-                                                                                    
+
     def get_form(self, request, obj=None, **kwargs):                                
 		#  ここで何かする                                                                                    
         res = super(RentalAdmin, self).get_form(                                    
@@ -26,3 +26,8 @@ class RentalAdmin(admin.ModelAdmin):
 
 - [django-grappelli](http://django-grappelli.readthedocs.org/en/latest/index.html)
 - [django-adminactions](https://github.com/saxix/django-adminactions)
+
+
+## Read Only
+
+- [Readonly models in Django admin interface?](https://stackoverflow.com/questions/8265328/readonly-models-in-django-admin-interface)
