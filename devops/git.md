@@ -1,11 +1,6 @@
-## 戻す
+## git
 
-
-### reset: pull したけど、一つ前にもどす
-
-~~~
-$ git reset --hard HEAD^
-~~~
+- 戻す: [reset](./git.reset.md)
 
 ### checkout: 削除してしまったファイルを戻す
 
@@ -18,6 +13,16 @@ $ git checkout -f
 ~~~
 ~~~bash
 $ git checkout -f ../lib
+~~~
+
+## fatal: cannot do a partial commit during a merge.
+
+~~~bash
+$ git commit -a my_filename
+~~~
+
+~~~bash
+$ git commit -i file.txt -m "Merging file.txt"
 ~~~
 
 

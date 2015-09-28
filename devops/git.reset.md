@@ -1,3 +1,17 @@
+## reset
+
+- srcディレクトリを add したけど取り消す
+
+~~~bash
+$ git reset HEAD src
+~~~
+
+- pull したけど、一つ前にもどす
+
+~~~bash
+$ git reset --hard HEAD^
+~~~
+
 ## なかったことにして巻き戻す: git reset --hard コミットハッシュ
 
 ### ローカルを指定したコミットのところまで戻す
