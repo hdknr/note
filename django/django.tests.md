@@ -10,7 +10,7 @@
 - [Writing and running tests](https://docs.djangoproject.com/en/1.8/topics/testing/overview/)
 
 ~~~
-$ ./manage.py test 
+$ ./manage.py test
 ~~~
 
 
@@ -43,9 +43,14 @@ $ ./manage.py dumpdata --natural --exclude auth.permission --exclude contenttype
 ### locustio
 
 - [locust](http://locust.io/)
+- [locust docs](http://docs.locust.io/en/latest/index.html)
 
 ~~~
 $ pip install locustio
 ~~~
 
 - [Load testing django locustio](https://stackoverflow.com/questions/27261399/load-testing-django-locustio)
+
+### Funkload
+
+- [funkload](http://funkload.nuxeo.org/index.html)
