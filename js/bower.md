@@ -17,6 +17,7 @@ $ which npm
 
 ~~~
 $ npm install bower -g
+
 /home/vagrant/.anyenv/envs/ndenv/versions/0.12.0/bin/bower -> /home/vagrant/.anyenv/envs/ndenv/versions/0.12.0/lib/node_modules/bower/bin/bower
 bower@1.3.12 /home/vagrant/.anyenv/envs/ndenv/versions/0.12.0/lib/node_modules/bower
 ├── is-root@1.0.0
@@ -110,4 +111,4 @@ bootstrap#3.3.2 bower_components/bootstrap
 # Link
 
 - http://www.nishimiyahara.net/2014/03/21/171931
-- 
+-
