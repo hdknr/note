@@ -1,4 +1,9 @@
-GeoDjango: ルート上の位置補正
+GeoDjango: ルート上に位置補正(案)
+
+- 現在地がずれて報告されたときに、定られた経路上に補正したい
+- 経路からの距離をもとめて、報告位置からの円をつくる
+- 円と交わった線分の中心地を補正位置とする
+- 円の半径は得られた距離より広めにとって交わるようにする
 
 ## Station: 次の駅までの経路情報を持たせる
 
@@ -49,6 +54,7 @@ print shibuya.route.json
 [139.702828062268 01841009352677326], 020565, 35.67018248047786]]]}'
 ~~~
 
+![](https://raw.githubusercontent.com/hdknr/scriptogr.am/master/django/geodjango/geodjango.route.correction.route.png)
 
 - 神南小学校
 
@@ -57,6 +63,9 @@ jinsho = Place.objects.get(id=8)
 print jinsho.location.json
 {"type": "Point", "coordinates": [139.6980199665418, 35.66322098512026]}
 ~~~
+
+![](https://raw.githubusercontent.com/hdknr/scriptogr.am/master/django/geodjango/geodjango.route.correction.location.png)
+
 
 ## 経路中に補正する
 
@@ -69,7 +78,7 @@ d = shibuya.route.distance(jinsho.location)
 - 少し広めの円
 
 ~~~py
-circle = jinsho.location.buffer(d * 1.01)
+circle = jinsho.location.buffer(d + 0.00001)
 print type(circle)
 <class 'django.contrib.gis.geos.polygon.Polygon'>
 ~~~
@@ -88,3 +97,6 @@ print type(line)
 print line.centroid.json
 {"type": "Point", "coordinates": [139.69893397721165, 35.6647436800696]}
 ~~~
+
+![](https://raw.githubusercontent.com/hdknr/scriptogr.am/master/django/geodjango/geodjango.route.correction.corrected.png)
+
