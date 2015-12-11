@@ -1,7 +1,7 @@
 ## anyenv - install
 
 ~~~
-$ ~/bin/setup/anyenv.bash 
+$ ~/bin/setup/anyenv.bash
 Cloning into '/home/vagrant/.anyenv'...
 remote: Counting objects: 139, done.
 remote: Total 139 (delta 0), reused 0 (delta 0)
@@ -11,7 +11,7 @@ Checking connectivity... done.
 ~~~
 
 ~~~
-$ source ~/bin/env/anyenv.bash 
+$ source ~/bin/env/anyenv.bash
 ~~~
 
 ## list env
@@ -58,7 +58,7 @@ Please reload your profile (exec $SHELL -l) or open a new session.
 ~~~
 
 ~~~
-$ ndenv 
+$ ndenv
 ndenv 0.4.0
 Usage: ndenv <command> [<args>]
 
@@ -119,3 +119,10 @@ BUILD FAILED (Ubuntu 8.04 using python-build 20150601-6-g22ecefd)
 $ export PYTHON_BUILD_MIRROR_URL="http://yyuu.github.io/pythons"
 ~~~
 
+## pyenv global とかで切り替わらない
+
+- `~/.python-version` が存在する
+
+~~~bash
+$ rm -rf .python-version
+~~~

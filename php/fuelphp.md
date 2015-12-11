@@ -4,6 +4,7 @@
 - [FuelPHPをインストールし、ビルトインサーバで動作させる](http://qiita.com/uchiko/items/a5c2e45264963acc0e4a)
 - [FuelPHPで最初にやることあれこれ](http://qiita.com/goosys/items/afbb9e92c87eaf3c5318)
 - [FuelPHPことはじめ](http://qiita.com/redpanda/items/ac23794032197031d9dc)
+- [Getting Started with the Fuel PHP Framework](http://code.tutsplus.com/tutorials/getting-started-with-the-fuel-php-framework--net-21334)
 
 
 ## Install
@@ -34,3 +35,12 @@
 ## auth
 
 - [auth package](http://fuelphp.com/docs/packages/auth/intro.html)
+
+
+## REST
+
+- [Rest Controller](http://fuelphp.com/docs/general/controllers/rest.html)
+
+## URL
+
+- [Routing](http://fuelphp.com/docs/general/routing.html)

@@ -1,6 +1,6 @@
 ## ビルド
 - [ダウンロードページ](http://nginx.org/en/download.html) で確認
-	
+
 ~~~
 # curl http://nginx.org/download/nginx-1.9.2.tar.gz | tar xvfz -
 ~~~
@@ -8,7 +8,7 @@
 - [configureオプション](http://nginx.org/en/docs/configure.html)
 
 ~~~
-# ./confiture --prefix=/usr/local/nginx-1.9.2 --user=www-data --group=www-data --with-http_ssl_module --with-http_realip_module 
+# ./confiture --prefix=/usr/local/nginx-1.9.2 --user=www-data --group=www-data --with-http_ssl_module --with-http_realip_module
 ~~~
 
 ~~~
@@ -81,4 +81,16 @@ built by gcc 4.2.4 (Ubuntu 4.2.4-1ubuntu4)
 built with OpenSSL 0.9.8g 19 Oct 2007
 TLS SNI support enabled
 configure arguments: --prefix=/usr/local/nginx-1.9.2 --user=www-data --group=www-data --with-http_ssl_module --with-http_realip_module
+~~~
+
+
+# 502
+
+- [nginx リバースプロキシ設定時の502 Bad Gatewayエラーを解消する方法](http://www.crystalsnowman.com/?p=723)
+
+supervisor: reread & restart だけだとだめで、reload
+
+~~~
+# supervisorctl reread
+# supervisorctl reload
 ~~~

@@ -52,6 +52,11 @@ a library for fast & interactive maps.)
 - [PostGISのよく使う機能をまとめた](http://d.hatena.ne.jp/EulerDijkstra/20131008/1381190780)
 
 
+# サンプル
+
+- [lxdiyun/geodjango_google](https://github.com/lxdiyun/geodjango_google)
+- [cauethenorio/geodjango-gmaps-widget](https://github.com/cauethenorio/geodjango-gmaps-widget)
+
 # Database
 
 ## sqlite

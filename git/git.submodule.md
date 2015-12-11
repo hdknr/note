@@ -11,13 +11,13 @@ git-submodule - Initialize, update or inspect submodules
 
 ### add
 ~~~
-       git submodule [--quiet] add 
-       				 [-b <branch>] 
-       				 [-f|--force] 
+       git submodule [--quiet] add
+       				 [-b <branch>]
+       				 [-f|--force]
        				 [--name <name>]
-                     [--reference <repository>] 
-                     [--depth <depth>] 
-                     [--] <repository> 
+                     [--reference <repository>]
+                     [--depth <depth>]
+                     [--] <repository>
                      [<path>]
 ~~~
 
@@ -31,7 +31,7 @@ Receiving objects: 100% (37144/37144), 22.68 MiB | 2.50 MiB/s, done.
 Resolving deltas: 100% (26185/26185), done.
 Checking connectivity... done.
 
-$ git add .gitmodules 
+$ git add .gitmodules
 $ git add asset/jquery/
 
 $ git status
@@ -57,9 +57,9 @@ $ git commit -a -m "add jquery"
 ### status
 
 ~~~                     
-       git submodule [--quiet] status 
-       			    [--cached] 
-       			    [--recursive] 
+       git submodule [--quiet] status
+       			    [--cached]
+       			    [--recursive]
        			    [--] [<path>...]
 ~~~
 
@@ -82,35 +82,35 @@ submodule.asset/jquery.url=https://github.com/jquery/jquery.git
 ### init
 
 ~~~       			    
-       git submodule [--quiet] init 
+       git submodule [--quiet] init
        				 [--] [<path>...]
 ~~~
 
 ### deinit
 
 ~~~       
-       git submodule [--quiet] deinit 
+       git submodule [--quiet] deinit
        			     [-f|--force] [--] <path>...
 ~~~
 
 ### update
 
 ~~~       
-       git submodule [--quiet] update 
+       git submodule [--quiet] update
        			     [--init] [--remote] [-N|--no-fetch]
-                     [-f|--force] 
-                     [--rebase|--merge] 
+                     [-f|--force]
+                     [--rebase|--merge]
                      [--reference <repository>]
-                     [--depth <depth>] 
-                     [--recursive] [--] 
+                     [--depth <depth>]
+                     [--recursive] [--]
                      [<path>...]
 ~~~
 
 ### summary
 
 ~~~                     
-       git submodule [--quiet] summary 
-       				 [--cached|--files] 
+       git submodule [--quiet] summary
+       				 [--cached|--files]
        				 [(-n|--summary-limit) <n>]
                      [commit] [--] [<path>...]
 ~~~

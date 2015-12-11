@@ -156,6 +156,11 @@ $ vi $(phpenv prefix)/etc/php.ini
 date.timezone = "Asia/Tokyo"
 ~~~
 
+~~~bash
+$ php -r "echo ini_get('date.timezone'), \"\n\";"
+Asia/Tokyo
+~~~
+
 ~~~
 $ oil create hello
 fatal: destination path './hello' already exists and is not an empty directory.
@@ -195,27 +200,29 @@ Press Ctrl-C to quit.
 ~~~
 $ vi  fuel/app/config/development/db.php
 ~~~
-~~~
+~~~php
 <?php
 /**
  * The development database settings. These get merged with the global settings.
  */
 
 return array(
-        'default' => array(
-                'connection'  => array(
-                        'dsn'        => 'mysql:host=localhost;dbname=hello_fuel',
-                        'username'   => 'hello_fuel',
-                        'password'   => 'hello_fuel',
-                ),
-        ),
+  'default' => array(
+    'connection'  => array(
+      'dsn'        => 'mysql:host=localhost;dbname=hello_fuel',
+      'username'   => 'hello_fuel',
+      'password'   => 'hello_fuel',
+    ),
+  ),
 );
 ~~~
 
 ~~~
 $ vi fuel/app/config/config.php
 ~~~
-~~~
+~~~php
+<?php
+  ....
 'always_load'  => array(
   'packages'  => array(
   'orm',
@@ -225,17 +232,18 @@ $ vi fuel/app/config/config.php
 
 ## `post` アプリ
 
-~~~
+~~~bash
 $ oil generate scaffold post title:string summary:varchar[64] body:text
-        Creating migration: /vagrant/projects/hellofuel/hello/fuel/app/migrations/001_create_posts.php
-        Creating model: /vagrant/projects/hellofuel/hello/fuel/app/classes/model/post.php
-        Creating controller: /vagrant/projects/hellofuel/hello/fuel/app/classes/controller/post.php
-        Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/index.php
-        Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/view.php
-        Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/create.php
-        Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/edit.php
-        Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/_form.php
-        Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/template.php
+
+Creating migration: /vagrant/projects/hellofuel/hello/fuel/app/migrations/001_create_posts.php
+Creating model: /vagrant/projects/hellofuel/hello/fuel/app/classes/model/post.php
+Creating controller: /vagrant/projects/hellofuel/hello/fuel/app/classes/controller/post.php
+Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/index.php
+Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/view.php
+Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/create.php
+Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/edit.php
+Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/post/_form.php
+Creating view: /vagrant/projects/hellofuel/hello/fuel/app/views/template.php
 ~~~
 
 この時点ではテーブルつくられてません。
@@ -249,8 +257,9 @@ $ vi $(phpenv prefix)/etc/php.ini
 pdo_mysql.default_socket=/var/run/mysqld/mysqld.sock
 ~~~
 
-~~~
+~~~bash
 $ oil refine migrate post
+
 Performed migrations for app:default:
 001_create_posts
 ~~~

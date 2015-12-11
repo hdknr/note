@@ -25,6 +25,37 @@ $ git commit -a my_filename
 $ git commit -i file.txt -m "Merging file.txt"
 ~~~
 
+## error: The requested URL returned error: 403 Forbidden while accessing
+
+- エラー
+
+~~~bash
+$ git push
+error: The requested URL returned error: 403 Forbidden while accessing https://github.com/hdknr/bin.git/info/refs
+fatal: HTTP request failed
+~~~
+
+- ユーザー指定
+
+~~~bash
+$ git config --global user.name hdknr
+$ git config --global user.email gmail@hdknr.com
+$ git remote set-url origin https://hdknr@github.com/hdknr/bin.git
+~~~
+
+- 新しいブランチをpush
+
+~~~bash
+$ git push origin centos
+Password:  *******
+Counting objects: 3, done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 229 bytes, done.
+Total 2 (delta 1), reused 0 (delta 0)
+To https://hdknr@github.com/hdknr/bin.git
+ * [new branch]      centos -> centos
+~~~
+
 
 ## Cannot get remote repository information.
 

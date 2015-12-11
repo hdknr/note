@@ -1,4 +1,25 @@
-## Jain環境
+## Maildir
+
+- [Postfix mbox to Maildir format conversion](https://rimuhosting.com/knowledgebase/linux/mail/Postfix+mbox+to+Maildir+conversion)
+
+main.cf:
+
+~~~
+home_mailbox = Maildir/
+~~~
+
+## virtual_mailbox_maps
+
+- [MySQL](http://www.postfixvirtual.net/postfixconf.html)
+- [PostfixCompleteVirtualMailSystemHowto](https://help.ubuntu.com/community/PostfixCompleteVirtualMailSystemHowto)
+
+## maildrop(フィルタリング機能付きメール配送エージェント)
+
+~~~bash
+$ sudo apt-get install maildrop
+~~~
+
+## Jail環境
 
 - main.cf でデフォルトトランスポートを定義
 

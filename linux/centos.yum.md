@@ -9,3 +9,10 @@ $ sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
 $ sudo yum upgrade ca-certificates --disablerepo=epel
 $ sudo yum update
 ~~~
+
+
+# build-essentials
+
+~~~bash
+$ sudo yum groupinstall 'Development Tools'
+~~~

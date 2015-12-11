@@ -1,5 +1,4 @@
 Django: INSTALLED_APPS を動的に変更できるようにする
-
 - Django実行中にアプリを追加するとか
 
 # settings.py : local_settings.py を読みむ
@@ -54,7 +53,7 @@ APPS_DIR = os.path.join(BASE_DIR, 'apps')
 def _attr(self, name):
 	# オリジナルの__getattribute__ を呼ぶ
     ret = super(type(self), self).__getattribute__(name)
-    
+
     # INSTALLED_APPS だったら、 appsディレクトリ以下を追加
     if name == "INSTALLED_APPS":
         return ret + CUSTOM_APPS + tuple(
@@ -67,3 +66,99 @@ def _attr(self, name):
 # メソッドを入れ替える
 Settings.__getattribute__ = MethodType(_attr, None, Settings)
 ~~~
+
+## データベースに保存
+
+- https://www.djangopackages.com/grids/g/live-setting/
+
+### Constance
+
+- [docs](http://django-constance.readthedocs.org/en/latest/#)
+- [github](https://github.com/jezdez/django-constance)
+
+~~~bash
+$ pip install django-constance[database]
+~~~
+
+- settings.py
+
+~~~py
+INSTALLED_APPS += (
+    'constance',
+)
+CONSTANCE_CONFIG = {
+    'THE_ANSWER': (
+        42,
+        'Answer to the Ultimate Question of Life, '
+        'The Universe, and Everything'),
+}
+~~~
+
+~~~py
+from constance import config
+
+
+
+### Siteprefs
+
+- [django-siteprefs](http://django-siteprefs.readthedocs.org/en/latest/index.html)
+
+- settings.py
+
+~~~py
+INSTALLED_APPS += (
+  'siteprefs',
+)
+~~~
+
+~~~bash
+$ python manage.py migrate
+~~~
+
+- urls.py
+
+~~~py
+from siteprefs.toolbox import autodiscover_siteprefs                             
+autodiscover_siteprefs()             
+~~~
+
+- app/admin.py
+
+~~~py
+from siteprefs.models import Preference
+
+
+class PreferenceAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Preference, PreferenceAdmin)
+~~~~
+
+
+### Livesettings
+- [bkroeze/django-livesettings](https://bitbucket.org/bkroeze/django-livesettings/)
+- [docs](https://django-livesettings.readthedocs.org/en/latest/)
+- [PYPI](https://pypi.python.org/pypi/django-livesettings)
+- [demo](https://bitbucket.org/chris1610/satchmo/src)
+
+keycache:
+
+- [keycache](https://pypi.python.org/pypi/django-keyedcache)
+- [django-keyedcache](https://bitbucket.org/bkroeze/django-keyedcache/)
+
+~~~bash
+$ pip install django-keyedcache
+~~~
+
+- settings.py
+
+~~~py
+INSTALLED_APPS += (
+    'django.contrib.sites',
+    'livesettings',
+)
+SITE_ID = 1
+~~~
+
+### others
+- [sciyoshi/django-dbsettings](https://github.com/sciyoshi/django-dbsettings)

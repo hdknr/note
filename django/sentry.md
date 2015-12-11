@@ -1,7 +1,28 @@
 ## インストール
+### Debian
+
+~~~bash
+$ sudo apt-get install libxml2-dev libxslt1-dev python-dev
+$ sudo apt-get install redis-server
+~~~
+
+- Wheezy だとredisふるすぎます
+~~~
+# /etc/apt/sources.list
+# backprots を追加
+deb http://ftp.jp.debian.org/debian wheezy-backports main
+deb-src http://ftp.jp.debian.org/debian wheezy-backports main
+~~~
+
+~~~bash
+$ sudo apt-get update
+$ sudo apt-get -t wheezy-backports install redis-server
+~~~
+
 ### Django 1.6!
 
 - 専用のVirtualenv
+- Django 1.7 でもいける(sentry 7.7.1)
 
 ~~~bash
 $ pyenv virtualenv sentry
@@ -41,7 +62,7 @@ $ sentry init tracker/settings.py
 Configuration file created at 'tracker/settings.py'
 ~~~
 
-### app/tracker.py 
+### app/tracker.py
 
 ~~~
 $ sentry init app/tracker.py
@@ -65,6 +86,7 @@ DATABASES = {
 ## 最初のマイグレーション
 
 ~~~bash
+
 $ SENTRY_CONF=~/projects/pallet/web/app/tracker.py sentry upgrade
 ~~~
 
@@ -99,17 +121,17 @@ $ sentry --config=~/projects/pallet/web/app/tracker.py celery worker -B
 !! SENTRY_ADMIN_EMAIL is not configured !!
 !! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!
 
- 
+
  -------------- celery@jessie.local v3.1.18 (Cipater)
----- **** ----- 
+---- **** -----
 --- * ***  * -- Linux-3.16.0-4-amd64-x86_64-with-debian-8.1
--- * - **** --- 
+-- * - **** ---
 - ** ---------- [config]
 - ** ---------- .> app:         sentry:0x7f823458d390
 - ** ---------- .> transport:   redis://localhost:6379//
 - ** ---------- .> results:     disabled
 - *** --- * --- .> concurrency: 1 (prefork)
--- ******* ---- 
+-- ******* ----
 --- ***** ----- [queues]
  -------------- .> alerts           exchange=default(direct) key=alerts
                 .> auth             exchange=default(direct) key=auth
@@ -136,7 +158,7 @@ $ sentry --config=~/projects/pallet/web/app/tracker.py shell
 !! SENTRY_ADMIN_EMAIL is not configured !!
 !! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!
 
-Python 2.7.9 (default, Apr 24 2015, 02:28:37) 
+Python 2.7.9 (default, Apr 24 2015, 02:28:37)
 [GCC 4.9.2] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 (InteractiveConsole)
@@ -199,7 +221,7 @@ try:
 except:
     pass
 ~~~
-    
+
 - テスト
 
 ~~~
@@ -229,4 +251,13 @@ This is an example Python exception
 >>> e.project.team
 <Team at 0x7fe363a1b910: id=2L, slug=u'pallet', owner_id=None, name=u'Pallet'>
 
+~~~
+
+
+## Bad Request(400)
+
+- Django の問題
+
+~~~py
+ALLOWED_HOSTS = ['wp.deb', 'localhost', 'yourdomain.com', '127.0.0.1', ]
 ~~~

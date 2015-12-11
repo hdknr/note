@@ -1,6 +1,8 @@
 ## Article
 
 - [Adding Real-Time to Django Applications](http://crossbar.io/docs/Adding-Real-Time-to-Django-Applications/)
+- [http://crossbar.io/docs/](http://crossbar.io/docs/)
+- [Small demo of a pragmatic use of WAMP in Python](http://tavendo.com/blog/post/small-demo-of-a-pragmatic-use-of-wamp-in-python/)
 
 ## Project
 

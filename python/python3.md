@@ -2,6 +2,21 @@
 - [Six: Python 2 and 3 Compatibility Library](https://pythonhosted.org/six/)
 - [Cheat Sheet: Writing Python 2-3 compatible code](http://python-future.org/compatible_idioms.html)
 
+
+## いろいろ
+
+~~~
+from __future__ import print_function
+~~~
+
+## unicode_literals
+
+~~~python
+from __future__ import unicode_literals
+~~~
+
+- [Should I import unicode_literals?](http://python-future.org/unicode_literals.html)
+
 ## basestring
 
 - python3にはありません

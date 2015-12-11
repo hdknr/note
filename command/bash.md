@@ -1,3 +1,18 @@
+## `$$` : PID
+
+~~~bash
+$ ps -F --pid $$  
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+vagrant  24267 29628  0  6361  6328   0 22:57 pts/12   00:00:00 -bash
+~~~
+
+- 一時ファイル名
+
+~~~bash
+$ date +'%m%d%H%M%S'.$$
+1030233536.24267
+~~~
+
 ## 絶対パス
 
 - readline を使ってスクリプトの絶対パスを出す
@@ -20,7 +35,7 @@ ${VAR/置換前文字列/置換後文字列} → 文字列置換(最初にマッ
 ${VAR//置換前文字列/置換後文字列} → 文字列置換(マッチしたものすべて)
 ```
 
-- basname 
+- basname
 
 ~~~
 basename=${path##*/}
@@ -52,7 +67,7 @@ filename=${basename%.*}
 ```
    X=1;
    let "X=X+1";
-   echo $X; 
+   echo $X;
    let "X=X*37";
    echo $X;
 ```
@@ -89,7 +104,7 @@ hoge.bash
 
 ```bash
 Q="mysql -N -u root --password=password apps"
-SCRIPT=$HOME/update_employee_info.sh 
+SCRIPT=$HOME/update_employee_info.sh
 FF="name dep sec"
 TT="employee"
 TOTAL=46
@@ -102,7 +117,7 @@ for T in $TT ;do
     R=$(echo "select $F, count(*) from $T group by $F" | $Q)
     A=(${R})        # スペースでsplitする
     if [ "${A[1]}" == "$TOTAL" ] ; then
-        echo "$T.$F OK" 
+        echo "$T.$F OK"
     fi
   done;
 done

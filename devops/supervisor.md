@@ -12,7 +12,7 @@
 ~~~
 
 ~~~
-# which supervisorctl 
+# which supervisorctl
 /root/.anyenv/envs/pyenv/shims/supervisorctl
 ~~~
 
@@ -62,7 +62,7 @@
 *** 45,51 ****
 --- 48,55 ----
   supervisor.rpcinterface_factory = supervisor.rpcinterface:make_main_rpcinterface
-  
+
   [supervisorctl]
 ! ;serverurl=unix:///tmp/supervisor.sock ; use a unix:// URL  for a unix socket
 ! serverurl=unix:///var/run/supervisor.sock
@@ -70,7 +70,7 @@
 ***************
 *** 139,141 ****
 --- 143,146 ----
-  
+
   ;[include]
   ;files = relative/directory/*.ini
 + files = /etc/supervisord.conf.d/*.ini
@@ -106,6 +106,15 @@ $ln -s $(which supervisord) /usr/bin/
 ~~~
 ln -s $(which supervisorctl ) /usr/bin/
 ~~~
+
+### CentOS: /etc/init.d/supervisord
+
+- CentOS sysvinit はRedhatと同じ(修正なしで動きます)
+
+~~~bash
+# curl https://raw.githubusercontent.com/Supervisor/initscripts/master/redhat-init-equeffelec > /etc/init.d/supervisord
+~~~
+
 
 ## 起動
 

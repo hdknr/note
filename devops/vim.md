@@ -1,3 +1,11 @@
+## Debian系
+
+- デフォルトエディタの変更
+
+~~~bash
+$ sudo update-alternatives --config editor
+~~~
+
 ## 正規表現
 
 - [Vimで使える正規表現](http://archiva.jp/web/tool/vim_regexps.html)
@@ -13,7 +21,7 @@ autocmd InsertEnter * set cursorline
 
 "" ハイライト設定
 "" 		- ctermbg = 背景色を変えたい時(NONEでなし)
-"" 		- cterm = underline 
+"" 		- cterm = underline
 highlight CursorLine ctermbg=NONE cterm=underline
 ```
 
@@ -35,14 +43,14 @@ make -f make_unix.mak
 make[1]: ディレクトリ `/home/hdknr/.vim/bundle/vimproc' に入ります
 cc -W -O2 -Wall -Wno-unused -Wno-unused-parameter -std=gnu99 -pedantic -shared -fPIC -o autoload/vimproc_linux64.so autoload/proc.c -lutil
 make[1]: ディレクトリ `/home/hdknr/.vim/bundle/vimproc' から出ます
-~~~	
+~~~
 
 ## neobundle#rc() is deprecated function
 
 - [参考](https://rcmdnk.github.io/blog/2014/10/27/computer-vim-markdown/)
 
 ~~~
-$ more ~/.vimrc.neobundle 
+$ more ~/.vimrc.neobundle
 
 "call neobundle#rc(expand('~/.vim/bundle/'))
 call neobundle#begin(expand('~/.vim/bundle/'))

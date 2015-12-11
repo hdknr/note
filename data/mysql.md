@@ -1,6 +1,25 @@
 # MySQL
 
 
+## ファイルから読み込んでBLOBに入れる
+
+~~~sql
+INSERT INTO
+  my_table (stamp, docFile)
+VALUES
+  (NOW(), LOAD_FILE('/tmp/my_file.odt'))
+~~~
+
+## truncate : `Cannot truncate a table referenced in a foreign key constraint`
+
+
+~~~sql
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE table1;
+SET FOREIGN_KEY_CHECKS = 1;
+~~~
+
+
 ## 現在のデータベース
 
 ~~~

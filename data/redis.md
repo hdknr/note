@@ -26,7 +26,7 @@ C:¥> choco install redis-64
 ~~~xml
 <?xml version="1.0" encoding="utf-8"?>
 <packages>
-  <package id="StackExchange.Redis" 
+  <package id="StackExchange.Redis"
   	version="1.0.414" targetFramework="net45" />
 </packages>
 ~~~
@@ -144,4 +144,118 @@ s$ redis-server
 
 ~~~
 > keys *
+~~~
+
+
+## CentOS
+
+~~~
+$ sudo rpm --import http://vault.centos.org/RPM-GPG-KEY-CentOS-6
+~~~
+
+~~~~
+$ sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+http://rpms.famillecollet.com/enterprise/remi-release-6.rpm を取得中
+警告: /var/tmp/rpm-tmp.FXV2fA: ヘッダ V3 DSA/SHA1 Signature, key ID 00f97f56: NOKEY
+エラー: 依存性の欠如:
+        epel-release >= 6 は remi-release-6.6-1.el6.remi.noarch に必要とされています
+~~~
+
+~~~
+$ sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm を取得中
+警告: /var/tmp/rpm-tmp.IKUE9R: ヘッダ V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY
+準備中...                ########################################### [100%]
+~~~
+
+~~~
+$ sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm                                                 
+http://rpms.famillecollet.com/enterprise/remi-release-6.rpm を取得中
+警告: /var/tmp/rpm-tmp.xEpijT: ヘッダ V3 DSA/SHA1 Signature, key ID 00f97f56: NOKEY
+準備中...                ########################################### [100%]
+   1:remi-release           ########################################### [100%]
+~~~     
+
+~~~
+$ sudo yum --enablerepo=remi install redis
+....
+
+パッケージをダウンロードしています:
+(1/2): jemalloc-3.6.0-1.el6.x86_64.rpm                             | 100 kB     00:00     
+(2/2): redis-3.0.5-1.el6.remi.x86_64.rpm                           | 438 kB     00:00     
+------------------------------------------------------------------------------------------
+合計                                                      577 kB/s | 538 kB     00:00     
+警告: rpmts_HdrFromFdno: ヘッダ V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+Importing GPG key 0x0608B895:
+ Userid : EPEL (6) <epel@fedoraproject.org>
+ Package: epel-release-6-8.noarch (installed)
+ From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+これでいいですか? [y/N]y
+warning: rpmts_HdrFromFdno: Header V3 DSA/SHA1 Signature, key ID 00f97f56: NOKEY
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+Importing GPG key 0x00F97F56:
+ Userid : Remi Collet <RPMS@FamilleCollet.com>
+ Package: remi-release-6.6-1.el6.remi.noarch (installed)
+ From   : /etc/pki/rpm-gpg/RPM-GPG-KEY-remi
+これでいいですか? [y/N]y
+rpm_check_debug を実行しています
+トランザクションのテストを実行しています
+トランザクションのテストを成功しました
+トランザクションを実行しています
+...
+警告: RPMDB は yum 以外で変更されました。
+  インストールしています  : jemalloc-3.6.0-1.el6.x86_64                               1/2
+  インストールしています  : redis-3.0.5-1.el6.remi.x86_64                             2/2
+  Verifying               : jemalloc-3.6.0-1.el6.x86_64                               1/2
+  Verifying               : redis-3.0.5-1.el6.remi.x86_64                             2/2
+
+インストール:
+  redis.x86_64 0:3.0.5-1.el6.remi                                                         
+
+依存性関連をインストールしました:
+  jemalloc.x86_64 0:3.6.0-1.el6                                                           
+
+完了しました!
+~~~~
+
+~~~
+$ sudo /etc/init.d/redis start
+redis-server を起動中:                                     [  OK  ]
+~~~
+
+~~~
+]$ redis-cli
+127.0.0.1:6379>
+~~~
+
+~~~
+$ sudo lsof -i:6379
+COMMAND     PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+redis-ser 41695 redis    4u  IPv4 315652      0t0  TCP localhost:6379 (LISTEN)
+~~~~
+
+
+## コマンド
+
+- [コマンドリファレンス](http://redis.shibu.jp/commandreference/)
+
+- キー一覧
+
+~~~
+127.0.0.1:6379> keys *
+~~~
+
+- 絞る
+
+~~~
+$ redis-cli keys "const*"
+1) "constance:THE_ANSWER"
+~~~
+
+- 値
+
+~~~
+$ redis-cli get "constance:THE_ANSWER"
+"I50\n."
 ~~~
