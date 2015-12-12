@@ -1,3 +1,5 @@
+django-floppyforms: Google Map で GeoDjangoのフィールド表示
+
 ## django-floppyforms GeoDjango
 
 - [GeoDjango widgets](http://django-floppyforms.readthedocs.org/en/latest/geodjango.html)
@@ -204,3 +206,5 @@ markers.addMarker(mark);
 </script>
 {% endblock %}
 ~~~
+
+![](https://raw.githubusercontent.com/hdknr/scriptogr.am/fcb11148fc517fdcb042efd8698e1c4a4b05a91b/django/geodjango/django-floppyforms.marker.png)
