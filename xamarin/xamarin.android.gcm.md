@@ -19,6 +19,12 @@ Android.OS.Build.VERSION.Release
 
 - [console.developers.google.com](https://console.developers.google.com)
 
+### Sender ID
+
+– The Sender ID authorizes the app server to your client app – it is a unique number that identifies the app server that is permitted to send messages to your client app.
+- The sender ID is also your project number; you obtain the sender ID from the Google Developers Console when you register your project.
+
+
 ##  Xamarin
 
 - [RemoteNotificationsサンプル](https://github.com/xamarin/monodroid-samples/tree/master/RemoteNotifications)
@@ -138,6 +144,7 @@ namespace PushNotification.Droid
 	class RegistrationIntentService : IntentService
 	{
 		string  PACKAGE_NAME = "jp.lafoglig.push.pushnotification";
+    string PROJET_NUMBER = "7814173588432214";
 
 		static object locker = new object();
 
@@ -158,7 +165,7 @@ namespace PushNotification.Droid
 
           // トークンを取得(GCMより登録トークン)
 					var token = instanceID.GetToken (
-						PACKAGE_NAME,
+						PROJECT_NUMBER,       // Sender ID
             GoogleCloudMessaging.InstanceIdScope, null);
 
 					Log.Info ("RegistrationIntentService",
