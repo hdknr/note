@@ -15,6 +15,9 @@ Android.OS.Build.VERSION.Release
 - [PendingIntent](http://androidpg.blogspot.jp/2012/02/progressbar_09.html)
 - [Android4.1で追加された Notification のスタイル](http://dev.classmethod.jp/smartphone/android/android-tips-23-android4-1-notification-style/)
 
+## Google Developer Console
+
+- [console.developers.google.com](https://console.developers.google.com)
 
 ##  Xamarin
 
@@ -251,7 +254,7 @@ using Android.Util;
 namespace PushNotification.Droid
 {
 	[Service (Exported = false),            // システム起動ではない
-	 IntentFilter ( 
+	 IntentFilter (
 		new [] {"com.google.android.c2dm.intent.RECEIVE" }) // GCM メッセージを受け取る
 	]
 	public class MessageListenerService : GcmListenerService
@@ -277,7 +280,7 @@ namespace PushNotification.Droid
 		{
             // インテント
 			var intent = new Intent (
-                this, 
+                this,
                 typeof(MainActivity));   // このアプリケーション
 			intent.AddFlags (ActivityFlags.ClearTop);
 
@@ -299,7 +302,7 @@ namespace PushNotification.Droid
             // 通知サービスマネージャ
 			var notificationManager = (NotificationManager)GetSystemService(
 				Context.NotificationService);
-			
+
             // マネージャ経由して通知する
 			notificationManager.Notify (
 				0, notificationBuilder.Build());

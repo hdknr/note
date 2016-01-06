@@ -5,7 +5,7 @@ django-floppyforms: Google Map で GeoDjangoのフィールド表示
 - [GeoDjango widgets](http://django-floppyforms.readthedocs.org/en/latest/geodjango.html)
 
 ~~~bash
-$ django-floppyforms
+$ pip install django-floppyforms
 ~~~
 
 ~~~py

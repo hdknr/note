@@ -1,0 +1,2 @@
+- [System.Net.WebSockets](https://developer.xamarin.com/api/namespace/System.Net.WebSockets/)
+- [WebSocket.Portable](https://github.com/NVentimiglia/WebSocket.Portable)
