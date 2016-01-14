@@ -20,7 +20,7 @@ $ export _JAVA_OPTIONS='-Dfile.encoding=UTF-8'
 
 ~~~bash
 
-$ export KEY_NANE=apps
+$ export KEY_NAME=apps
 $ export KEY_STORE=apps
 $ keytool -genkey -v -keystore $KEY_STORE.keystore -alias $KEY_NAME -keyalg RSA -keysize 2048 -validity 10000
 ~~~
@@ -28,7 +28,7 @@ $ keytool -genkey -v -keystore $KEY_STORE.keystore -alias $KEY_NAME -keyalg RSA 
 ## 一覧(SHA1-1)
 
 ~~~bash
-$ keytool -list -keystore $KEY_STORE.keystore
+$ keytool -v -list -keystore $KEY_STORE.keystore
 Picked up _JAVA_OPTIONS: -Dfile.encoding=UTF-8
 キーストアのパスワードを入力してください:  
 
@@ -37,8 +37,24 @@ Picked up _JAVA_OPTIONS: -Dfile.encoding=UTF-8
 
 キーストアには 1 エントリが含まれます。
 
-apps, 2016/01/06, PrivateKeyEntry,
-証明書のフィンガープリント (MD5): 60:BD:8A:31:B7:74:44:7F:A0:DA:17:1D:BB:3C:55:B3
+別名: apps
+作成日: 2016/01/08
+エントリタイプ: PrivateKeyEntry
+証明連鎖の長さ: 1
+証明書[1]:
+所有者: CN=nara, OU=lafoglia, O=lafoglia, L=tokyo, ST=tokyo, C=jp
+発行者: CN=nara, OU=lafoglia, O=lafoglia, L=tokyo, ST=tokyo, C=jp
+シリアル番号: 568fa2e7
+有効期間の開始日: Fri Jan 08 20:52:07 JST 2016 終了日: Tue May 26 20:52:07 JST 2043
+証明書のフィンガープリント:
+         MD5:  E4:18:11:EE:3F:07:0E:C0:74:13:22:AC:8F:DD:75:E7
+         SHA1: 9A:02:AE:21:3C:9B:38:33:96:07:FD:3B:E0:E1:8F:42:B5:61:6C:1B
+         署名アルゴリズム名: SHA1withRSA
+         バージョン: 3
+
+*******************************************
+*******************************************
+
 ~~~
 
 ## パッケージ名
