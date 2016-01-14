@@ -2,6 +2,15 @@
 # iOS
 
 
+- [cornerRadiusを片側だけ効かせる（UIViewの一部だけ角丸にする）](http://qiita.com/shu223/items/8093f8490019d432af52)
+
+~~~csharp
+
+this.View.Layer.CornerRadius = 10.0f;
+this.View.Layer.MasksToBounds = true;
+
+~~~
+
 - [Cocoa Touch: How To Change UIView's Border Color And Thickness?](http://stackoverflow.com/questions/3330378/cocoa-touch-how-to-change-uiviews-border-color-and-thickness)
 
 ~~~objective-c
