@@ -1,3 +1,46 @@
+# MapKIT
+
+- [iPhoneアプリで位置情報と地図を使うための基礎知識 (1/3)](http://www.atmarkit.co.jp/ait/articles/1104/04/news117.html)
+- [MKMapView上でのタップイベントの取得方法!!](http://web-terminal.blogspot.jp/2013/01/mkmapview.html)
+- [Objective-CでMKMapViewの緯度経度を取得とドラッグイベントを制御する方法](http://seikoudoku2000.hatenablog.com/entry/20110503/1304436895)
+- [determine if MKMapView was dragged/moved](http://stackoverflow.com/questions/5556977/determine-if-mkmapview-was-dragged-moved)
+
+
+- マップの移動イベント
+- MapLoaded のイベントの後でも呼ばれる
+
+~~~csharp
+
+MainMap.RegionChanged += (object sender, MKMapViewChangeEventArgs e) =>
+{
+  Console.WriteLine("***** RegionChanged");
+
+};
+~~~
+
+# Autolayout
+
+- [Autolayout時にUIViewのframeを変更する方法](http://qiita.com/ryusukefuda/items/ec04b743683c58958fc3)
+
+- auto layout にする
+
+~~~csharp
+
+button.TranslatesAutoresizingMaskIntoConstraints = false;
+
+~~~
+
+- [今度こそ克服するAutoLayoutの使い方・基礎編～SwiftからはじめるiOSアプリ開発:その5【初心者向けアプリ開発3分tips】](http://engineer.typemag.jp/article/ra-ios-tips06)
+
+# Button
+
+- [【XamarinによるiOS超入門 】 ボタン ( UIButton )](http://furuya02.hatenablog.com/entry/2015/01/09/041915)
+- [Font](https://developer.xamarin.com/recipes/ios/standard_controls/labels/change_the_font/)
+- [UIButtonで、画像とタイトルの位置を入れ替える時にハマった話 (UIEdgeInsets)](http://qiita.com/paming/items/a3b61dff825070f8ef40)
+- [UIButtonの画像(imageView)の左寄せ、右寄せ(alignment)の設定](http://qiita.com/90_jill/items/791d72740ceecaf30d00)
+- [Auto Layout with the Xamarin Designer for iOS](https://developer.xamarin.com/guides/ios/user_interface/designer/designer_auto_layout/)
+
+
 # DropDown
 
 - [ValorePartners/IOSDropdown](https://github.com/ValorePartners/IOSDropdown)
