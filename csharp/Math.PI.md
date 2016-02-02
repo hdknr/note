@@ -61,3 +61,10 @@ Console.WriteLine(center.RotatePoint(blue, 180).ToString());
 Console.WriteLine(center.RotatePoint(blue, 360).ToString());
 
 ~~~
+
+~~~
+(70, 70)
+(0, 100)
+(-100, 0)
+(100, 0)
+~~~
