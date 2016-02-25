@@ -23,3 +23,9 @@ $ sed '$d'
 ```
 $ sed -e "1,/^DROP PROCEDURE/d" sql/schema.sql
 ```
+
+
+
+## その他
+
+- [BSD sed のメモ](http://qiita.com/mattintosh4/items/4e4d44016be15333af11)

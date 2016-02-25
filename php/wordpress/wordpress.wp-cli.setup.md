@@ -3,7 +3,6 @@
 ~~~bash
 $ mkdir wphome && cd wphome
 $ curl -sS https://getcomposer.org/installer | php
-$ ./composer.phar require psy/psysh
 $ ./composer.phar require wp-cli/wp-cli
 ~~~
 
@@ -28,7 +27,7 @@ WP-CLI 0.19.2
 
 ~~~bash
 $ vi wp-cli.yml
-$ cat wp-cli.yml 
+$ cat wp-cli.yml
 
 path: wordpress
 ~~~
@@ -87,7 +86,7 @@ USER=$(cat wp-cli.yml | shyaml get-value "core config".dbuser)
 PASSWORD=$(cat wp-cli.yml | shyaml get-value "core config".dbpass)
 HOST=localhost
 
-cat << EOF 
+cat << EOF
 CREATE DATABASE $NAME
     DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 GRANT ALL on $NAME.*
@@ -97,7 +96,7 @@ EOF
 ~~~            
 
 ~~~bash
-$ ./createdb.bash  | mysql -u root -p 
+$ ./createdb.bash  | mysql -u root -p
 ~~~
 
 ~~~bash
@@ -118,7 +117,7 @@ admin_email: admin@admin.admin
 ~~~
 
 ~~~bash
-$ cat install.bash 
+$ cat install.bash
 #!/bin/bash
 
 PARAMS=''
@@ -130,7 +129,7 @@ vendor/bin/wp core install $PARAMS
 ~~~
 
 ~~~bash
-$ ./install.bash 
+$ ./install.bash
 Success: WordPress installed successfully.
 ~~~
 
@@ -232,4 +231,3 @@ $ sudo /etc/init.d/nginx restart
 
 - [USING WP CLI TO SET UP A TEST VERSION OF YOUR SITE](http://torquemag.io/using-wp-cli-to-set-up-a-test-version-of-your-site/)
 - [AUTOMATED WORDPRESS INSTALLATION WITH BASH & WP CLI](http://www.ltconsulting.co.uk/automated-wordpress-installation-with-bash-wp-cli/)
-

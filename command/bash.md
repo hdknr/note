@@ -162,3 +162,7 @@ linux-gnu
 $ echo $OSTYPE
 darwin14
 ~~~
+
+## その他
+
+- [たった一行で bash の代入式がスマートに書けるようになる関数](http://qiita.com/mattintosh4/items/959517399d5993e34ef7)

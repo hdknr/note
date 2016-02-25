@@ -19,3 +19,8 @@ Mercurialの場合
 ~~~
 https://bitbucket.org/<user>/<repo>/<type>/tip/<path>/<filename.ext>
 ~~~
+
+## その他
+
+- https://bitbucket.org/tutorials/markdowndemo/overview
+- [bitbucketでコミットメッセージからIssueを操作したい](http://qiita.com/kazuph/items/77ab0b5735a66ad5108c)

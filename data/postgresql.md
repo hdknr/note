@@ -49,3 +49,9 @@ postgres=> \q
 ## Ansible
 
 - [ansibleでpostgresqlインストール](http://qiita.com/kitaro_tn/items/04aa7279c17be8b9b0ed)
+
+
+## pg_dump
+
+- http://www.ksknet.net/postgresql/pg_dump.html
+- http://wp.kaz.bz/tech/2007/07/02/59.html

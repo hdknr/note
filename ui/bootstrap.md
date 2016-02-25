@@ -1,3 +1,20 @@
+## img
+
+### img-responsive : レスポンシブ
+
+~~~js
+$(function(){
+  $("li.photo img").addClass("img-responsive");
+});
+~~~
+
+### center-block: センタリング
+
+~~~html
+<a class="center-block img-responsive" src="..."/>
+~~~
+
+
 ## 基本
 
 - [Bootstrap使い方メモ１（基本＋CSS）](http://qiita.com/opengl-8080/items/2764b6db143b1a4411f6)

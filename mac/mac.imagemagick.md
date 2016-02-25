@@ -36,7 +36,7 @@ $ brew link --overwrite imagemagick
 Linking /usr/local/Cellar/imagemagick/6.9.0-3... 71 symlinks created
 ~~~
 
-## convert
+## conver t
 
 - 横並び
 
@@ -49,5 +49,3 @@ $ convert +append 26.csv.png  26.xls.png 26.xlsx.png  26.png
 ~~~
 $ convert -append 26.csv.png  26.xls.png 26.xlsx.png  26.png
 ~~~
-
-

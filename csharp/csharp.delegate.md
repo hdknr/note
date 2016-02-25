@@ -1,7 +1,7 @@
 ## delegate
 
 ~~~csharp
-public class Sample 
+public class Sample
 {
    public delegate int Sum( int x, int y );
 
@@ -25,7 +25,7 @@ Console.WriteLine(s2(3,4));
 
 ## Action
 
-Action 返り値がvoidのdelegate 
+Action 返り値がvoidのdelegate
 
 ~~~ csharp
 public class Machine
@@ -41,17 +41,17 @@ public class Machine
   }
 }
 
-public class Man 
+public class Man
 {
   string _job = "job";
-  public Man(string job){ 
+  public Man(string job){
     _job = job;
   }
-  
+
   public void Logger(string msg)
   {
     Console.WriteLine(string.Format(
-        "{0}: {1}", _job, msg  )); 
+        "{0}: {1}", _job, msg  ));
   }
   public void Work()
   {
@@ -108,3 +108,8 @@ Console.WriteLine( a(19) );
 
 False
 ~~~
+
+
+# その他
+
+- http://qiita.com/RyotaMurohoshi/items/740151bd772889cf07de

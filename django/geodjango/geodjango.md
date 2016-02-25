@@ -50,7 +50,7 @@ a library for fast & interactive maps.)
 
 - [How to get the nearest point on a linestring to a given point?](http://gis.stackexchange.com/questions/2061/how-to-get-the-nearest-point-on-a-linestring-to-a-given-point)
 - [PostGISのよく使う機能をまとめた](http://d.hatena.ne.jp/EulerDijkstra/20131008/1381190780)
-
+- [Django Rest Framework GISで誰でも簡単RESTful Geo API](http://monomoti.hatenablog.jp/entry/2015/12/15/000000)
 
 # サンプル
 

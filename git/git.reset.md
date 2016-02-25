@@ -64,3 +64,17 @@ $ git reset --hard e5e19a7
 HEAD is now at e5e19a7 カラム指定
 
 ~~~
+
+
+## 削除したファイルの復活
+
+~~~bash
+$ git reset HEAD app.ico
+$ git checkout  app.ico
+~~~
+
+## fatal: You have not concluded your merge (MERGE_HEAD exists).
+
+## fatal: multiple stage entries for merged file '.gitignore'
+
+- http://qiita.com/dt_pal/items/bb28084a63ad53a4039f
