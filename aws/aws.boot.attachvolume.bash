@@ -2,6 +2,9 @@
 # sudo apt-get install jq -y
 # pip install awscli
 # aws configure   # (key, secret, and default region)
+#
+# Copy this and paste at User-Data to Instance wizard.
+# https://raw.githubusercontent.com/hdknr/scriptogr.am/master/aws/aws.user-data.mount-volume.png
 
 AWSCLI=/usr/local/bin/aws
 STORAGE=ApplicationStorage
