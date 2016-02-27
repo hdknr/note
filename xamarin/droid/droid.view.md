@@ -1,0 +1,1 @@
+- [ビューとビューグループ](http://www.javadrive.jp/android/activity/index4.html)

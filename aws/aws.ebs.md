@@ -54,6 +54,17 @@ $ aws ec2 describe-volumes --filters Name=status,Values="available"  | jq ".Volu
 ~~~
 
 
+## ボリューム一覧
+
+~~~bash
+$ aws ec2 describe-volumes | jq ".Volumes[].VolumeId"
+"vol-4ff179b0"
+"vol-79ad2586"
+"vol-56bb259f"
+~~~
+
+
+
 # detach-valume
 
 - [detach-volume](http://docs.aws.amazon.com/cli/latest/reference/ec2/detach-volume.html)

@@ -1,0 +1,2 @@
+-  https://developer.xamarin.com/api/type/Android.Content.PM.PackageInfo/
+- https://forums.xamarin.com/discussion/12452/get-application-runtime-version

@@ -1,0 +1,2 @@
+- [新しくなったObjective SharpieでCocoaPodsのバインディングライブラリを作る](http://qiita.com/iseebi/items/7e645bde85a04ebef371)
+- [Objective Sharpie](https://developer.xamarin.com/guides/cross-platform/macios/binding/objective-sharpie/)

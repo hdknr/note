@@ -1,0 +1,4 @@
+- http://stackoverflow.com/questions/3522866/what-is-the-android-widget-toast-equivalent-for-ios-applications
+- https://components.xamarin.com/view/toastios
+- https://github.com/EgorBo/Toasts.Forms.Plugin
+- https://github.com/aritchie/userdialogs
