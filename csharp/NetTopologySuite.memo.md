@@ -1,0 +1,2 @@
+- http://stackoverflow.com/questions/26763564/having-trouble-serializing-nettopologysuite-featurescollection-to-geojson
+- https://github.com/GeoJSON-Net/GeoJSON.Net
