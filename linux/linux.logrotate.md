@@ -4,3 +4,18 @@
 
 - /var/lib/logrotate.status  の日付を変更する
 -
+
+
+## 実行
+
+- テスト
+
+~~~
+$ sudo  /usr/sbin/logrotate -fd /etc/logrotate.d/nginx
+~~~
+
+- 実行
+
+~~~
+$ sudo  /usr/sbin/logrotate -f /etc/logrotate.d/nginx
+~~~

@@ -3,6 +3,15 @@
 - [Showing Images in list view adapter using Akavache](http://stackoverflow.com/questions/27425301/showing-images-in-list-view-adapter-using-akavache)
 - [Akavache is AKA Awesome! ](https://codemilltech.com/akavache-is-aka-awesome/)
 
+# インストール(Nuget)
+
+以下の順
+
+- Splat
+- Rx-Core Rx-Interfaces Rx-Linq Rx-Main Rx-PlatformServices
+- SQLitePCL.raw_basic
+- akavache.core -> akavache.sqlite3 -> akavache
+
 # API
 
 ## 取得

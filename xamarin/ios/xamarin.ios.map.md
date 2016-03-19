@@ -54,6 +54,12 @@ public override MKAnnotationView GetViewForAnnotation (
 - MKPolygon , MKPolygonView
 - MKCircle , MKCircleView
 
+- [MapKitのアノテーション移動時の再描画](http://tkatochin.hatenablog.com/entry/20100326/1269568292)
+
+~~~
+[mapView setRegion:mapView.region animated:NO];
+~~~
+
 # 文字を描く
 
 - http://stackoverflow.com/questions/1302824/iphone-how-to-draw-text-in-the-middle-of-a-rect

@@ -6,7 +6,18 @@
 - Publisher(Subject), Event Source... . / IObservable
 - Listner (Observer), Event Subscriber... / IObserver
 
+## Subject
+
+~~~csharp
+using System.Reactive.Subjects;
+~~~
+
+- [Rx入門 (5) - Subject<T>の利用](http://blog.xin9le.net/entry/2011/12/19/025912)
+- [[Rx入門] Subject詳解 / Hotな、ColdなObservableのこと](http://qiita.com/acple@github/items/8d3a4d3414fa59adff70)
+
 ## 記事
+
+- [Rx で Chain of Responsibility](http://qiita.com/amay077/items/908e796febf5096b18dd)
 
 - [C#でReactive Extensions(Rx)その1:まずはIObserver, IObservableを理解する](http://nanoappli.com/blog/archives/6885)
 
@@ -24,3 +35,8 @@
 - [いまさら聞けないReactive Extensions.2](http://qiita.com/Temarin_PITA/items/456c3b40fa65954ea262)
 - [いまさら聞けないReactive Extensions.3](http://qiita.com/Temarin_PITA/items/107fa2e39f427e591dbd)
 - [いまさら聞けないReactive Extensions.4](http://qiita.com/Temarin_PITA/items/be5f9cea260580327700)
+
+
+- [Reactive Extensionsの非同期周りの解説と自前実装](http://neue.cc/2010/09/28_277.html)
+
+- [第1回　Reactive Extensionsの概要と利用方法](http://www.atmarkit.co.jp/fdotnet/introrx/introrx_01/introrx_01_01.html)

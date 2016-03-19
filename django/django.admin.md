@@ -31,3 +31,8 @@ class RentalAdmin(admin.ModelAdmin):
 ## Read Only
 
 - [Readonly models in Django admin interface?](https://stackoverflow.com/questions/8265328/readonly-models-in-django-admin-interface)
+
+
+## フィルター
+
+- [modlinltd/django-advanced-filters](https://github.com/modlinltd/django-advanced-filters)

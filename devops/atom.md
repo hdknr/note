@@ -45,3 +45,8 @@ $ apm install vim-mode
 C:\Users\hdknr\AppData\Local\atom\bin>apm install vim-mode
 Installing vim-mode to C:\Users\hdknr\.atom\packages done
 ~~~
+
+
+## 記事
+
+- [Atomエディタで使って気に入ったpackageとか](http://qiita.com/horimislime/items/72de9580125151ac6af0)

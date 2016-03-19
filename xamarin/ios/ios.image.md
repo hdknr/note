@@ -19,3 +19,8 @@ public async void Get(string url)
   }
 }
 ~~~
+
+
+## Regina
+
+- [実行中の実機がどのRetinaのタイプか判断する方法 [swift2.1]](http://anthrgrnwrld.hatenablog.com/entry/2015/11/15/094426)

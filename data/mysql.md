@@ -95,3 +95,9 @@ SELECT UNIX_TIMESTAMP('2005-03-27 03:00:00');
 +---------------------------------------+
 1 row in set (0.00 sec)
 ~~~
+
+## カラム長変更
+
+~~~mysql
+ALTER TABLE flier_address MODIFY address VARCHAR(100);
+~~~

@@ -10,3 +10,4 @@ Icon*
 *.swiftdoc
 *.swiftmodule
 *.dylib
+scriptcs_packages*
