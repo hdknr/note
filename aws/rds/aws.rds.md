@@ -82,3 +82,15 @@ Type "help" for help.
 
 tactgresdb=> \q
 ~~~
+
+
+# マルチAZ
+
+- [Multi-AZの役割](http://macotasu.hatenablog.jp/entry/2015/07/09/231312)
+- [AWSのMultiAZについて調べたので残しておく](http://natural-hokke.hateblo.jp/entry/2014/10/24/133205)
+
+![](http://cdn-ak.f.st-hatena.com/images/fotolife/M/Maco_Tasu/20150709/20150709223107.png)
+
+- フェールオーバー時にもエンドポイントが変わらない(再接続で済む)
+- AZ間の通信には（同一リージョンであっても）1G/$0.01かかる点には注意しなければならない。
+- 2インスタンス使うため料金は倍掛かる。
