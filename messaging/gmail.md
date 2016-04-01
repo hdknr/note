@@ -1,0 +1,3 @@
+- [Google Gmail APIでメールを取得する](http://qiita.com/ryurock/items/4b063372ede81780c3c8)
+- [Google Apps ScriptでGmailをもっと自動化してみる](http://news.mynavi.jp/articles/2015/03/20/gmailauto/)
+- [GASで監視メールをSlackに流す](http://tech.sanwasystem.com/entry/2015/04/28/143541)
