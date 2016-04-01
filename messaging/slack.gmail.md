@@ -1,6 +1,28 @@
 ## 特定のアドレスからのメールを１件だけ報告
 
+### 準備
+
+ WebHook を追加する
+
+- https://slack.com/apps/build
+- "Make Custom Integration"
+- "Incoming WebHooks"
+
+情報をコピーしておく
+
+- WebHook URL
+- Channel
+
+### Google App Script
+
+
 - [GAS(google app script)で指定ラベルのGmailをslackに通知](https://gist.github.com/matsuyoro/c53d82017b2763633e5b)
+
+
+- Goole Apps > スプレッドシート
+- 追加
+- "ツール" > "スクリプトエディタ"
+- スクリプト編集
 
 ~~~javascript
 
@@ -47,3 +69,9 @@ function sendHttpPost(message, username)
   UrlFetchApp.fetch(postUrl, options);
 }
 ~~~
+
+### 定期実行
+
+- スクリプトエディタより "現在のスクリプトのトリガー" (時計アイコン)
+- 新しいトリガーを追加
+- イベント: 時間主導型　で間隔をしていして定期実行トリガー
