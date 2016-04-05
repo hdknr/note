@@ -1,5 +1,6 @@
 ## ヘルプテキストを消す
 
+
 ~~~js
 $(function(){
  $(".form-group .help-block").toggle();
