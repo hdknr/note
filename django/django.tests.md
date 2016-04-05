@@ -16,6 +16,11 @@ $ ./manage.py test
 
 ### `--keepdb` :データベースを削除させない
 
+- 事前に test_{{ 実際のデータベース名 }} を作成する
+
+~~~bash
+$ python manage.py yourapp --keepdb
+~~~
 
 
 ## Content Type fixture

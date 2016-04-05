@@ -6,10 +6,10 @@ class RentalAdmin(admin.ModelAdmin):
     form = RentalAdminForm                                                          
 
     def get_form(self, request, obj=None, **kwargs):                                
-		#  ここで何かする                                                                                    
+		    # ここで何かする                                                                                    
         res = super(RentalAdmin, self).get_form(                                    
             request, obj, **kwargs)                                                 
-		# さらに resに対して何かする                                                                                    
+        # さらに resに対して何かする                                                                                    
         return res  
 ~~~        
 
@@ -36,3 +36,8 @@ class RentalAdmin(admin.ModelAdmin):
 ## フィルター
 
 - [modlinltd/django-advanced-filters](https://github.com/modlinltd/django-advanced-filters)
+
+
+## 記事
+
+- [Django 管理画面逆引きメモ](http://qiita.com/Fq4X/items/044c149d93db097cdaf8)
