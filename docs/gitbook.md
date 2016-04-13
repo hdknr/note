@@ -1,3 +1,7 @@
+# インストール
+
+## gitbool-cli
+
 ~~~bash
 $ npm install gitbook-cli -g
 /Users/hide/.anyenv/envs/ndenv/versions/v0.12.7/bin/gitbook -> /Users/hide/.anyenv/envs/ndenv/versions/v0.12.7/lib/node_modules/gitbook-cli/bin/gitbook.js
@@ -15,8 +19,11 @@ gitbook-cli@2.1.3 /Users/hide/.anyenv/envs/ndenv/versions/v0.12.7/lib/node_modul
 └── npmi@1.0.1 (semver@4.3.6, npm@2.15.3)
 ~~~
 
+
+## 初期化
+
 ~~~bash
-$ `ndenv which gitbook` init                                                                                         [1/1886]
+$ `ndenv which gitbook` init                                                                                         
 Installing GitBook 2.6.7
   SOLINK_MODULE(target) Release/.node
   CXX(target) Release/obj.target/fse/fsevents.o
@@ -62,28 +69,129 @@ safe@5.0.1, qs@2.3.3, node-uuid@1.4.7, mime-types@1.0.2, combined-stream@0.0.7, 
  anymatch@1.3.0, fsevents@0.3.8)
 └── npm@2.4.1
 
-info: init book at /Users/hide/Dropbox/アプリ/scriptogram 
-info: detect structure from SUMMARY (if it exists) 
-info: create SUMMARY.md 
-info: found README.md 
-info: initialization is finished 
+info: init book at /Users/hide/Dropbox/アプリ/scriptogram
+info: detect structure from SUMMARY (if it exists)
+info: create SUMMARY.md
+info: found README.md
+info: initialization is finished
 
 Done, without error
 
 ~~~
 
+## ビルド
+
 ~~~bash
 
 $ `ndenv which gitbook` build
-info: loading book configuration....OK 
-info: load plugin gitbook-plugin-highlight ....OK 
-info: load plugin gitbook-plugin-search ....OK 
-info: load plugin gitbook-plugin-sharing ....OK 
-info: load plugin gitbook-plugin-fontsettings ....OK 
-info: >> 4 plugins loaded 
-info: start generation with website generator 
-info: clean website generatorOK 
-info: generation is finished 
+info: loading book configuration....OK
+info: load plugin gitbook-plugin-highlight ....OK
+info: load plugin gitbook-plugin-search ....OK
+info: load plugin gitbook-plugin-sharing ....OK
+info: load plugin gitbook-plugin-fontsettings ....OK
+info: >> 4 plugins loaded
+info: start generation with website generator
+info: clean website generatorOK
+info: generation is finished
 
 Done, without error
+~~~
+
+## 確認
+
+~~~bash
+$ open _book/index.html
+~~~
+
+# PDF
+
+~~~bash
+$ `ndenv which gitbook` pdf
+info: loading book configuration....OK
+info: load plugin gitbook-plugin-highlight ....OK
+info: load plugin gitbook-plugin-search ....OK
+info: load plugin gitbook-plugin-sharing ....OK
+info: load plugin gitbook-plugin-fontsettings ....OK
+info: >> 4 plugins loaded
+info: start generation with pdf generator
+info: clean pdf generatorOK
+info: write SUMMARY.html
+info: start conversion to pdf ....ERROR
+
+Error: Need to install ebook-convert from Calibre
+~~~
+
+## Calibre
+
+~~~bash
+$ brew untap phinze/cask; brew untap caskroom/cask; brew update
+~~~
+
+~~~bash
+$ brew install Calibre
+Error: No available formula with the name "calibre"
+==> Searching for similarly named formulae...
+Error: No similarly named formulae found.
+==> Searching taps...
+This formula was found in a tap:
+Caskroom/cask/calibre
+To install it, run:
+  brew install Caskroom/cask/calibre
+~~~
+
+~~~bash
+$ brew install Caskroom/cask/calibre
+==> brew cask install Caskroom/cask/calibre
+==> Downloading https://download.calibre-ebook.com/2.54.0/calibre-2.54.0.dmg
+
+######################################################################## 100.0%
+==> Verifying checksum for Cask calibre
+==> Symlinking App 'calibre.app' to '/Users/hide/Applications/calibre.app'
+==> Symlinking Binary 'calibre' to '/usr/local/bin/calibre'
+==> Symlinking Binary 'calibre-complete' to '/usr/local/bin/calibre-complete'
+==> Symlinking Binary 'calibre-customize' to '/usr/local/bin/calibre-customize'
+==> Symlinking Binary 'calibre-debug' to '/usr/local/bin/calibre-debug'
+==> Symlinking Binary 'calibre-parallel' to '/usr/local/bin/calibre-parallel'
+==> Symlinking Binary 'calibre-server' to '/usr/local/bin/calibre-server'
+==> Symlinking Binary 'calibre-smtp' to '/usr/local/bin/calibre-smtp'
+==> Symlinking Binary 'calibredb' to '/usr/local/bin/calibredb'
+==> Symlinking Binary 'ebook-convert' to '/usr/local/bin/ebook-convert'
+==> Symlinking Binary 'ebook-device' to '/usr/local/bin/ebook-device'
+==> Symlinking Binary 'ebook-edit' to '/usr/local/bin/ebook-edit'
+==> Symlinking Binary 'ebook-meta' to '/usr/local/bin/ebook-meta'
+==> Symlinking Binary 'ebook-polish' to '/usr/local/bin/ebook-polish'
+==> Symlinking Binary 'ebook-viewer' to '/usr/local/bin/ebook-viewer'
+==> Symlinking Binary 'fetch-ebook-metadata' to '/usr/local/bin/fetch-ebook-metadata'
+==> Symlinking Binary 'lrf2lrs' to '/usr/local/bin/lrf2lrs'
+==> Symlinking Binary 'lrfviewer' to '/usr/local/bin/lrfviewer'
+==> Symlinking Binary 'lrs2lrf' to '/usr/local/bin/lrs2lrf'
+==> Symlinking Binary 'markdown-calibre' to '/usr/local/bin/markdown-calibre'
+==> Symlinking Binary 'web2disk' to '/usr/local/bin/web2disk'
+🍺  calibre staged at '/opt/homebrew-cask/Caskroom/calibre/2.54.0' (4115 files, 214M)
+~~~
+
+## 生成
+
+~~~~bash
+$ `ndenv which gitbook` pdf
+info: loading book configuration....OK
+info: load plugin gitbook-plugin-highlight ....OK
+info: load plugin gitbook-plugin-search ....OK
+info: load plugin gitbook-plugin-sharing ....OK
+info: load plugin gitbook-plugin-fontsettings ....OK
+info: >> 4 plugins loaded
+info: start generation with pdf generator
+info: clean pdf generatorOK
+info: write SUMMARY.html
+info: start conversion to pdf ....OK
+info: generation is finished
+info: >> 1 file(s) generated
+
+Done, without error
+~~~
+
+確認
+
+~~~bash
+$ open book.pdf
 ~~~
