@@ -1,4 +1,4 @@
-# インストール
+# gitbook インストール
 
 ## gitbool-cli
 
