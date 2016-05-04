@@ -1,4 +1,4 @@
-# mkdocs 
+# mkdocs
 
 - [www.mkdocs.org](http://www.mkdocs.org/)
 - [readthedocs](http://mkdocs.readthedocs.io/en/stable/)
@@ -31,6 +31,9 @@ $ cat docs/index.md
 
 # Index for Mkdocs
 ~~~
+
+- Start watching/detecting changes になれば起動
+- ドキュメントが多いと時間がかかります
 
 ~~~bash
 $ mkdocs serve
