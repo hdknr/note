@@ -1,7 +1,7 @@
 # mkdocs 
 
-- http://www.mkdocs.org/
-- http://mkdocs.readthedocs.io/en/stable/
+- [www.mkdocs.org](http://www.mkdocs.org/)
+- [readthedocs](http://mkdocs.readthedocs.io/en/stable/)
 
 ## インストール
 
