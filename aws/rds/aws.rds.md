@@ -1,4 +1,4 @@
-# RDSインスタンス作成
+# RDSインスタンス作成(ansible)
 
 - ansible RDS作成タスク
 
@@ -94,3 +94,20 @@ tactgresdb=> \q
 - フェールオーバー時にもエンドポイントが変わらない(再接続で済む)
 - AZ間の通信には（同一リージョンであっても）1G/$0.01かかる点には注意しなければならない。
 - 2インスタンス使うため料金は倍掛かる。
+
+
+# awscli
+
+## DBインスタンス(describe-db-instances)
+
+- [describe-db-instances](http://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-instances.html)
+
+~~~bash
+$ aws rds describe-db-instances --profile ictact |  ¥
+jq ".DBInstances[]|[.DBInstanceIdentifier, .DBName, .MasterUsername,  .AvailabilityZone, .AllocatedStorage, .VpcSecurityGroups[].VpcSecurityGroupId, .DBParameterGroups[].DBParameterGroupName ]" -c   
+~~~
+
+~~~
+["stagingdb","appdb","appuser","ap-northeast-1c",5,"sg-19808171","default.postgres9.3"]
+["livedb","appdb","appuser","ap-northeast-1c",50,"sg-19808171","default.postgres9.3"]
+~~~
