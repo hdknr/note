@@ -1,3 +1,3 @@
 # Xamarin.iOS
 
-- [SpliteKIT](ios.splitekit.md)
+- [SpriteKit](ios.spritekit.md)
