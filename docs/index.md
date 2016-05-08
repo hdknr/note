@@ -1,3 +1,1 @@
-# Index for Mkdocs
-
-[mkdocs](mkdocs.md)
+README.md
