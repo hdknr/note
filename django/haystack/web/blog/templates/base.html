@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+
+  {% block head_script %}
+  {% endblock %}
+
+  {% block head_style %}
+  {% endblock %}
+
+</head>
+
+<body id="top" name="top">
+
+  <header id="header">
+  </header>
+
+  <nav id="globalnavi">
+    <ul>
+      <li class="help"><a href="#">help</a></li>
+    </ul>
+  </nav>
+
+  <main id="contents">
+    {% block content %}{% endblock %} {# ページコンテンツ #}
+  </main>
+
+</body>
+
+</html>
