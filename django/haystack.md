@@ -21,3 +21,47 @@
 # Elasticsearch
 
 - [Elasticsearch](elasticsearch.md)
+
+
+# Command
+
+- haystack_info
+
+~~~bash
+$ python manage.py haystack_info
+Number of handled 1 index(es).
+  - Model: Note by Index: <blog.search_indexes.NoteIndex object at 0x7f9c92ae8668>
+~~~  
+
+# SearchQuerySet API
+
+- [SearchQuerySet API](http://django-haystack.readthedocs.io/en/v2.4.1/searchqueryset_api.html#ref-searchqueryset-api)
+
+~~~py
+In [1]: from haystack.query import SearchQuerySet
+In [2]: all_results = SearchQuerySet().all()
+In [3]: type(all_results)
+Out[3]: haystack.query.SearchQuerySet
+In [4]: all_results.count()
+Out[4]: 2
+~~~
+
+~~~py
+In [9]: SearchQuerySet().filter(text=u'東京五輪').count()
+Out[9]: 1
+
+In [10]: SearchQuerySet().filter(text=u'東京五輪')[0]
+Out[10]: <SearchResult: blog.note (pk=u'2')>
+
+In [12]: res.model
+Out[12]: blog.models.Note
+
+In [14]: print res.text[:10]
+東京五輪期間中、国学
+
+In [15]: res.object
+Out[15]: <Note: 東京五輪期間中、国学院高、都立青山高の一部も駐車場に借用か>
+
+In [17]: print res.object.body[:10]
+２０２０年東京五輪
+~~~
