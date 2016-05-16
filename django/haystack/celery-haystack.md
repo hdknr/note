@@ -46,6 +46,8 @@ HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'
 
 # blog : celery タスクの起動
 
+
+- [Redis broker not working. Celery 3.1.13 #2240](https://github.com/celery/celery/issues/2240)
 - どれかのアプリで app.celery.app をロードする
 
 - \__init__.py
