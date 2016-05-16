@@ -237,3 +237,4 @@ haystack
 # その他
 
 - [elasticsearchをつかったインデクシンング](elasticsearch_indexing.md)
+- [celery-haystackでジョブキューでインデクシング](celery-haystack.md)
