@@ -7,6 +7,7 @@
 # Welcome to MkDocs
 
 For full documentation visit [mkdocs.org](http://mkdocs.org).
+([github](https://github.com/mkdocs/mkdocs))
 
 ## Commands
 

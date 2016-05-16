@@ -19,3 +19,12 @@ true
     var dog = $('#dog');
 })(jQuery);
 ~~~
+
+# Timeline
+
+- [タイムライン系プラグイン](http://www.jqueryrain.com/demo/jquery-timeline-plugin/)
+- [magnusjt/schedulerjs](https://github.com/magnusjt/schedulerjs)
+
+# Slider
+
+- [スライダー系プラグイン](http://www.jqueryrain.com/example/jquery-slider-slideshow/)

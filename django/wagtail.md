@@ -1,4 +1,4 @@
-# Wagtain Vagrant PYPI
+# Wagtail Vagrant PYPI
 
 ## Unidecode
 

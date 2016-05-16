@@ -206,3 +206,24 @@ Out[58]: u'/Users/hide/Dropbox/\u30a2\u30d5\u309a\u30ea/build/index.html'
 
 In [59]: utils.write_file(output_content.encode('utf-8'), output_path)
 ~~~
+
+## Markdown変換の実際
+
+- [Available Extensions](https://pythonhosted.org/Markdown/extensions/index.html)
+
+
+~~~py
+In [9]: from markdown.extensions import meta, toc, tables, fenced_code
+~~~
+
+~~~py
+In [10]: import markdown
+In [11]: md = markdown.Markdown(extensions=[u'meta', u'toc', u'tables', u'fenced_code'], extension_configs={})
+~~~
+
+~~~py
+In [12]: markdown_source = "# Markdown"
+In [13]: html_content = md.convert(markdown_source)
+In [14]: print html_content
+<h1 id="markdown">Markdown</h1>
+~~~

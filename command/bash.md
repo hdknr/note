@@ -137,6 +137,18 @@ for T in $TT ;do
 done
 ```
 
+## name.jpgのファイル名の間に文字を挿入
+
+- [$IFS](https://bash.cyberciti.biz/guide/$IFS)
+
+~~~bash
+IFS=.
+for i in *.jpg; do
+    A=($i)
+    echo "${A[0]}.small.${A[1]}"
+done
+~~~
+
 ## global replace
 
 - {$変数{//変換対象文字/変換文字}

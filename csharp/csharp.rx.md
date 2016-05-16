@@ -17,6 +17,8 @@ using System.Reactive.Subjects;
 
 ## 記事
 
+- [Reactive Extensions再入門 その３２「型変換を行うCastとOfTypeメソッド」](http://blog.okazuki.jp/entry/20120205/1328452448)
+- [C#の主要インターフェース解説：IObservable<T>、IObserver<T>](http://garicchi.hatenablog.jp/entry/2014/09/17/200000)
 - [Rx で Chain of Responsibility](http://qiita.com/amay077/items/908e796febf5096b18dd)
 
 - [C#でReactive Extensions(Rx)その1:まずはIObserver, IObservableを理解する](http://nanoappli.com/blog/archives/6885)

@@ -1,3 +1,4 @@
 site_name: My Markdown Texts
 theme: readthedocs
+site_dir: ../build
 docs_dir: .

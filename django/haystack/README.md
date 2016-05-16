@@ -1,3 +1,5 @@
+django-haystack + elasticsearch サンプル
+
 ＃ Debianパッケージインストール
 
 ~~~bash
@@ -231,3 +233,7 @@ haystack
 
 8 directories, 21 files
 ~~~
+
+# その他
+
+- [elasticsearchをつかったインデクシンング](elasticsearch_indexing.md)

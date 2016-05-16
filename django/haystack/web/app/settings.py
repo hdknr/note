@@ -125,6 +125,7 @@ LANGUAGE_CODE = 'ja'
 TIME_ZONE = 'Asia/Tokyo'
 INSTALLED_APPS += [
     'haystack',
+    'celery_haystack',
     'blog',
 ]
 HAYSTACK_CONNECTIONS = {
@@ -134,3 +135,4 @@ HAYSTACK_CONNECTIONS = {
         'INDEX_NAME': 'haystack',
     },
 }
+HAYSTACK_SIGNAL_PROCESSOR = 'celery_haystack.signals.CelerySignalProcessor'

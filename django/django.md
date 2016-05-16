@@ -89,3 +89,8 @@
 - sphinx
 - sphinx_rtd_theme
 - sphinxcontrib-blockdiag
+
+## プロジェクト
+
+- プロジェクト管理 [taiga.io](https://github.com/taigaio)
+- CMS [wagtail.io](https://wagtail.io/)

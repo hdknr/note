@@ -31,3 +31,9 @@ $ vi .pip/pip.conf
 [global]
 cert = /home/system/etc/cacert.pem
 ~~~
+
+## 再インストール
+
+~~~bash
+$ pip --no-cache-dir install -I pillow
+~~~

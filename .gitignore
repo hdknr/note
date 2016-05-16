@@ -4,10 +4,11 @@ GET_STARTED.txt
 Icon*
 *~
 *.swp
-*.py
+*.pyc
 *.sqlite3
 *.o
 *.swiftdoc
 *.swiftmodule
 *.dylib
 scriptcs_packages*
+_book

@@ -1,9 +1,10 @@
 import datetime
 from haystack import indexes
 from blog.models import Note
+from celery_haystack.indexes import CelerySearchIndex
 
 
-class NoteIndex(indexes.SearchIndex, indexes.Indexable):
+class NoteIndex(CelerySearchIndex, indexes.Indexable):
     text = indexes.CharField(document=True, use_template=True)
     # text = indexes.CharField(document=True, )
     author = indexes.CharField(model_attr='user')

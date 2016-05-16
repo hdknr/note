@@ -15,6 +15,12 @@ dhcp_message_type (uint8): ACK 0x5
 $ sudo ipconfig set en0 DHCP
 ```
 
+### 再起動
+
+~~~
+$ sudo ifconfig en0 down ; sudo ifconfig en0 up;
+~~~
+
 ## scutil
 
 ```

@@ -55,3 +55,10 @@ postgres=> \q
 
 - http://www.ksknet.net/postgresql/pg_dump.html
 - http://wp.kaz.bz/tech/2007/07/02/59.html
+
+
+## psql
+
+- [psqlメモ](http://www.ne.jp/asahi/hishidama/home/tech/postgres/psql.html)
+- [MySQLユーザのためのPostgreSQLチートシート](http://qiita.com/taksatou@github/items/cff165d5146b6346182d)
+- [パラメータの設定方法](http://www.asami.asia/tech/postgresql/parameter/how2setup/)

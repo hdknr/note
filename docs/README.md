@@ -10,3 +10,8 @@ README for [gitbook](gitbook.md)
 - README.md works as index.md
 
 [mkdocs](mkdocs.md)
+
+
+# Xamarin Workbook
+
+- [Xamarin Workbook](../../xamarin/xamarin.workbook.md)

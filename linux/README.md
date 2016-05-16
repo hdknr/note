@@ -1,3 +1,3 @@
 # Linux
 
-- [Alpine](./alipine.md)
+- [Alpine](./alpine.md)
