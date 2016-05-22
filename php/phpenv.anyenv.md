@@ -23,6 +23,12 @@ $ phpenv --version
 phpenv 0.4.0
 ~~~
 
+## 更新
+
+~~~bash
+$ git --git-dir=$(phpenv root)/.git pull
+~~~
+
 ## PHP 5.6.10 インストール
 
 ~~~bash
@@ -137,7 +143,7 @@ $ phpenv install 5.6.10
 - 削除 & 再インストール
 
 ~~~
-$ rm -rf /tmp/php-build*	
+$ rm -rf /tmp/php-build*
 $ rm -rf .anyenv/envs/phpenv/versions/5.6.10
 ~~~
 
@@ -184,7 +190,7 @@ $ phpenv rehash
 
 ~~~
 $ php -v
-PHP 5.6.10 (cli) (built: Jul  7 2015 03:05:11) 
+PHP 5.6.10 (cli) (built: Jul  7 2015 03:05:11)
 Copyright (c) 1997-2015 The PHP Group
 Zend Engine v2.6.0, Copyright (c) 1998-2015 Zend Technologies
     with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend Technologies
