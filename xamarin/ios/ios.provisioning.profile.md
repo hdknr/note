@@ -71,6 +71,20 @@ $ plutil -convert xml1 Info.plist  -o ~/Download/Info.plist.xml      # To XML
 $ plutil -convert binary1 filename.plist    # to Binary
 ~~~~
 
+~~~bash
+#!/bin/bash
+
+CODE="
+from plistlib import readPlist;
+from sys import stdin;
+from json import dumps
+print dumps(readPlist(stdin))
+"
+IPA=$1
+PLIST=$(unzip -Z1 $IPA | GREP_OPTIONS= grep Info.plist|head -n 1)
+unzip -p $IPA $PLIST | plutil  -convert xml1 -o - - --  | python -c "$CODE"
+~~~
+
 # 証明書
 
 - [aps_developer_identity.cer to p12 without having to export from Key Chain?](http://stackoverflow.com/questions/1453286/aps-developer-identity-cer-to-p12-without-having-to-export-from-key-chain)
@@ -82,4 +96,35 @@ $ openssl x509 -in aps_dev.cer -inform DER -noout -text
 - PEM 化
 ~~~
 $ openssl x509 -in aps_dev.cer -inform DER -out aps_dev.pem -outform PEM
+~~~
+
+
+# 開発用のUDID
+
+- XML
+
+~~~bash
+$ security cms -D -i embedded.mobileprovision
+~~~
+
+- 抜き出し
+
+~~~
+$ security cms -D -i embedded.mobileprovision | python -c "import plistlib as p, sys as s; print '\n'.join(p.readPlist(s.stdin)['ProvisionedDevices']);"
+~~~
+
+- bash
+
+~~~bash
+#!/bin/bash
+
+CODE="
+from plistlib import readPlist;
+from sys import stdin;
+print '\n'.join(readPlist(stdin)['ProvisionedDevices']);"
+
+IPA=$1
+GREP_OPTIONS=
+exml=$(unzip -Z1 $IPA | grep mobileprovision)
+unzip -p $IPA ${exml[0]} | security cms -D | python -c "$CODE"
 ~~~
