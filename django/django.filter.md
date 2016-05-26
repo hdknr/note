@@ -29,3 +29,12 @@ class ForumFilter(django_filters.FilterSet):
             if isinstance(self.filters[i],  django_filters.CharFilter):
                 self.filters[i].lookup_type = u'contains'
 ~~~
+
+## デフォルトの検索条件を与える(`queryset`)
+
+~~~py
+def alumnus_list(request):
+    queryset = models.Alumnus.objects.filter(full_name__gt='')             
+    results = filters.AlumnusFilter(request.GET or None, queryset=queryset)  
+    ...
+~~~

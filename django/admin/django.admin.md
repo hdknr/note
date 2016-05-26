@@ -13,6 +13,28 @@ class RentalAdmin(admin.ModelAdmin):
         return res  
 ~~~        
 
+## フォームフィールドの初期化(get_changeform_initial_data)
+
+- フォームフィールドの初期化であって、instanceに値がセットされるわけではない
+- フォームフィールドを向こうにすると保存されません
+
+~~~py
+class AlumnusCsvAdmin(BaseModelAdmin):                                              
+    def get_changeform_initial_data(self, request):                                 
+        res = super(AlumnusCsvAdmin, self).get_changeform_initial_data(request)  
+        res['user'] = request.user                                                  
+        return res   
+~~~
+
+## フィードに値を設定(save_model)
+  
+~~~py
+class AlumnusCsvAdmin(BaseModelAdmin):                                              
+    def save_model(self, request, obj, form, change):                               
+        obj.user = request.user                                                  
+        super(AlumnusCsvAdmin, self).save_model(request, obj, form, change)         
+~~~
+
 ## グルーピング
 
 - [Group models from different app/object into one Admin block](https://stackoverflow.com/questions/10561091/group-models-from-different-app-object-into-one-admin-block)
