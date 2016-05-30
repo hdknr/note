@@ -30,3 +30,15 @@ true
 [ 1, 2, 3 ]
 
 ~~~
+
+## forEach
+
+- [Array.prototype.forEach()](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+
+~~~js
+var fs = ['institute_code', 'school_code', 'course_code'];
+ fs.forEach(function(value, index, ar){
+    var cn = pascalCase("student_" + value);   
+    $("#" + cn).val(user[value]);
+ });
+~~~
