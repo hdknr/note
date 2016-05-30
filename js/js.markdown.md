@@ -1,0 +1,3 @@
+- [Marked.js で Markdown をクライアント側でパースして表示する](http://qiita.com/amay077/items/704d48130e5cf17e8654)
+- [JavaScript - Markdownパーサーのshowdown.js、markdown-js、markedを簡単比較](http://kannokanno.hatenablog.com/entry/2013/06/19/132042)
+- [chjj/marked](https://github.com/chjj/marked)
