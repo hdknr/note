@@ -14,7 +14,7 @@
         if value <= your_max:
             return value
         raise forms.ValidationError(
-        	u"{0} ({1} > {2})".format( 
+        	u"{0} ({1} > {2})".format(
 				_(u"Too many units"), value, your_max))
 ~~~
 
@@ -56,12 +56,16 @@ class OrderForm(froms.ModelForm):
 {% endif %}
 ~~~
 
+## フィールド
+
+- [MultiValueField](https://github.com/hdknr/annotated-django/commit/2cead7bfa850c14b51496738f1bf5e134b93e850)
+
 ## テンプレート
 
 ### すべての hidden フィールド
 
 ~~~
-{% for hidden in form.hidden_fields %} 
-{{ hidden }} 
+{% for hidden in form.hidden_fields %}
+{{ hidden }}
 {% endfor %}
 ~~~

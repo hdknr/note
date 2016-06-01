@@ -83,6 +83,9 @@ mysql> create user `vagrant`@`localhost` identified  by '';
 mysql> grant all privileges on *.* to 'vagrant'@'localhost' with grant option;
 ~~~
 
+- [MySQL の権限のコマンドまとめ。](http://qiita.com/PallCreaker/items/0b02c5f42be5d1a14adb)
+
+
 ## 時刻
 
 ~~~mysql
@@ -96,15 +99,6 @@ SELECT UNIX_TIMESTAMP('2005-03-27 03:00:00');
 1 row in set (0.00 sec)
 ~~~
 
-- フィールド追加
+## スキーマ変更
 
-~~~mysql
-alter table smtp_message add created_at datetime default NULL;
-alter table smtp_message add updated_at datetime ;
-~~~
-
-## カラム長変更
-
-~~~mysql
-ALTER TABLE flier_address MODIFY address VARCHAR(100);
-~~~
+- [テーブル変更](sql.alter.table.md)

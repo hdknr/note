@@ -2,7 +2,8 @@
 
 - [CHH/phpenv](https://github.com/CHH/phpenv)
 - [Qiita](http://qiita.com/uchiko/items/5f1843d3d848de619fdf)
-- http://y-uti.hatenablog.jp/entry/2014/10/13/232540
+- [anyenv + phpenv + php-build で複数のバージョンの PHP を切り替える](http://y-uti.hatenablog.jp/entry/2014/10/13/232540)
+- [phpenvでPECLからインストールするpecl-buildのオリジナルが壊れているのでfork版を使う](http://qiita.com/CLCL/items/1dbd76274700a0ea1ede)
 
 ## 前提
 
@@ -37,7 +38,7 @@ Add above line at the end of your ~/.bashrc and restart your shell to use phpenv
 ```
 sugar@wzy:~$echo 'export PATH="$HOME/.phpenv/bin:$PATH"' >> ~/. bash_phpenv
 sugar@wzy:~$echo 'eval "$(phpenv init -)"' >> ~/.bash_phpenv
-sugar@wzy:~$ source ~/.bash_phpenv 
+sugar@wzy:~$ source ~/.bash_phpenv
 ```
 
 ```
@@ -207,7 +208,7 @@ vagrant@10:~$ phpenv global 5.5.19
 
 ```
 vagrant@10:~$ php -version
-PHP 5.5.19 (cli) (built: Dec  2 2014 10:01:16) 
+PHP 5.5.19 (cli) (built: Dec  2 2014 10:01:16)
 Copyright (c) 1997-2014 The PHP Group
 Zend Engine v2.5.0, Copyright (c) 1998-2014 Zend Technologies
     with Zend OPcache v7.0.4-dev, Copyright (c) 1999-2014, by Zend Technologies

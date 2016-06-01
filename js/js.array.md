@@ -42,3 +42,26 @@ var fs = ['institute_code', 'school_code', 'course_code'];
     $("#" + cn).val(user[value]);
  });
 ~~~
+
+## filter : 間引く
+
+最新の活動オブジェクトのタイトルが設定されているエントリのみ残す：
+
+~~~js
+
+$scope.activities = data.filter(
+function(e) {
+  return e.last_activity && e.last_activity.title ;
+});
+~~~
+
+## sort
+
+~~~js
+data.sort(function(a, b){
+  if (a.last_announce.updated_at == b.last_announce.updated_at )
+    return 0;
+  // 最新の告知を先にする
+  return ( a.last_announce.updated_at > b.last_announce.updated_at ) ? -1 : 1;
+});
+~~~

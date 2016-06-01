@@ -1,74 +1,25 @@
-## 中心地にピンが立ってしまう
+## Map
 
-- MKMapViewDelegate でアノテーションのビューを返してしまっているとか
+- [MKAnnotationView](https://developer.apple.com/library/prerelease/ios/documentation/MapKit/Reference/MKAnnotationView_Class/index.html)
+- [MKPinAnnotationView](https://developer.apple.com/library/prerelease/ios/documentation/MapKit/Reference/MKPinAnnotationView_Class/index.html#//apple_ref/occ/cl/MKPinAnnotationView)
 
-~~~csharp
-public override MKAnnotationView GetViewForAnnotation (
-  MKMapView mapView, IMKAnnotation annotation)
-{
-  bool enable_initial_pin = false;
+### Annotation Dragable
 
-  if (annotation is MKUserLocation)
-    return null;
+- [iOS - MKMapView - Draggable Annotations](http://stackoverflow.com/questions/11927692/ios-mkmapview-draggable-annotations)
 
-  if (annotation is MapObjAnnotation) {
-    return (annotation as MapObjAnnotation).CreateView (mapView);
-  }
+- draggable
+
+- [MonoTouch.MapKit.MKAnnotationView.Draggable](https://developer.xamarin.com/api/property/MonoTouch.MapKit.MKAnnotationView.Draggable/)
 
 
-  if (!enable_initial_pin)
-      return null;
+## Geo
 
-  // show pin annotation
-  var anView = (MKPinAnnotationView)mapView.DequeueReusableAnnotation (pId);
-
-  if (anView == null)
-    anView = new MKPinAnnotationView (annotation, pId);
-
-  ((MKPinAnnotationView)anView).PinColor = MKPinAnnotationColor.Red;
-  anView.CanShowCallout = true;
-
-  return anView;
-}
-
-~~~
+- [mweisman/ShapeKit](https://github.com/mweisman/ShapeKit)
+- [FOSS4G 開発者の為の、図形演算ライブラリガイド](http://qiita.com/amay077/items/7a99df1c0da881cc47f6)
+- [NetTopologySuite, ProjNet, GeoAPIあたりが軒並みPCL対応済み[Xamarin]](http://qiita.com/kochizufan/items/f7e2024be7079ded8697)
+- [NetTopologySuite/NetTopologySuite](https://github.com/NetTopologySuite/NetTopologySuite)
+- [Suggestions on how to create a custom GeoJson serializer using JSON.NET?](http://stackoverflow.com/questions/1262380/suggestions-on-how-to-create-a-custom-geojson-serializer-using-json-net)
 
 
-# Info.plist: Maps Integration なしでもMapKIT 使えます
-
-- "Maps Integration Enabled" にすると、
-
-# アノテーションが多すぎ
-
-- https://robots.thoughtbot.com/how-to-handle-large-amounts-of-data-on-maps
-
-# 矢印を書く
-
-- http://stackoverflow.com/questions/17829611/how-to-draw-an-arrow-between-two-points-on-the-map-mapkit
-- http://stackoverflow.com/questions/13695317/rotate-a-point-around-another-point
-
-# 描画
-
-- http://glassonion.hatenablog.com/entry/20100623/1277246927
-- MKPolyline, MKPolylineView
-- MKPolygon , MKPolygonView
-- MKCircle , MKCircleView
-
-- [MapKitのアノテーション移動時の再描画](http://tkatochin.hatenablog.com/entry/20100326/1269568292)
-
-~~~
-[mapView setRegion:mapView.region animated:NO];
-~~~
-
-# 文字を描く
-
-- http://stackoverflow.com/questions/1302824/iphone-how-to-draw-text-in-the-middle-of-a-rect
-
-# 点線
-
-# 線の太さ
-
-`LineWidth`
-
-- http://pinkstone.co.uk/how-to-draw-an-mkpolyline-on-a-map-view/
-- http://stackoverflow.com/questions/32573756/mkmapview-draw-connected-lines-between-all-points
+### etc
+- https://searchcode.com/codesearch/view/5506455/
