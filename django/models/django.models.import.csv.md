@@ -1,0 +1,3 @@
+- [django-csvimport](https://github.com/edcrewe/django-csvimport)
+- [django-csv-importer](https://django-csv-importer.readthedocs.org/en/latest/)([PYPI](https://pypi.python.org/pypi/django-csv-importer))
+- [django-adopters](https://django-adaptors.readthedocs.org/en/latest/#)([Github](https://github.com/anthony-tresontani/django-adaptors))
