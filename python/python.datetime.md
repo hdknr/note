@@ -1,3 +1,12 @@
+## Hours & Minutes : datetime.time
+
+~~~py
+In [1]: from datetime import time
+In [2]: time(10, 0, 0)
+Out[2]: datetime.time(10, 0)
+~~~
+
+
 ## 現地時間
 
 ~~~bash
@@ -9,9 +18,10 @@ Requirement already satisfied (use --upgrade to upgrade):
   six>=1.5 in /home/vagrant/.anyenv/envs/pyenv/versions/2.7.10/lib/python2.7/site-packages (from python-dateutil)
 Installing collected packages: python-dateutil
 Successfully installed python-dateutil-2.4.2
-~~~~
+~~~
 
 - 日付
+
 ~~~py
 In [1]: from dateutil import parser
 In [2]: dt = parser.parse('2016-2-1')
