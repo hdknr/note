@@ -47,3 +47,18 @@ def login_portal(br, username, password):
     # フォーム送信
     br.find_elements_by_css_selector(submit_css)[0].click()
 ~~~
+
+## 記事
+
+- [Selenium WebDriverのwaitを活用しよう](http://softwaretest.jp/labo/tech/labo-294/)
+
+### or 待ち
+
+- [Selenium Expected Conditions - possible to use 'or'?](http://stackoverflow.com/questions/16462177/selenium-expected-conditions-possible-to-use-or)
+
+~~~py
+WebDriverWait(driver, 10).until(
+  lambda a:
+    a.presence_of_element_located(By.CSS_SELECTOR, "div.some_result") OR
+    a.presence_of_element_located(By.CSS_SELECTOR, "div.no_result"))
+~~~  
