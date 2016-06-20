@@ -22,6 +22,7 @@
 # Elasticsearch
 
 - [Elasticsearch](elasticsearch.md)
+- [haystack](haystack.md)
 
 
 # Command

@@ -1,1 +1,0 @@
-- [HTML + CSS + JavaScript で簡単に導入できるdatetimepicker の比較](http://techracho.bpsinc.jp/shibuya/2014_10_15/19114)

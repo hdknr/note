@@ -31,6 +31,15 @@ true
 
 ~~~
 
+## map
+
+~~~js
+> a = [1, 2, 3]
+[ 1, 2, 3 ]
+> a.map(function(e){ return e * e; });
+[ 1, 4, 9 ]
+~~~
+
 ## forEach
 
 - [Array.prototype.forEach()](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -65,3 +74,22 @@ data.sort(function(a, b){
   return ( a.last_announce.updated_at > b.last_announce.updated_at ) ? -1 : 1;
 });
 ~~~
+
+## range(Python)
+
+- [JavaScriptでPythonのrange関数のようにリスト作成](http://qiita.com/zuzu/items/d2befdb1e02506d11513)
+
+~~~bash
+$ npm install jsranger
+jsranger@1.1.1 node_modules/jsranger
+~~~
+
+~~~bash
+> var jsranger = require('jsranger');
+undefined
+> jsranger(2, 20);
+[ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ]
+~~~
+
+- [Javascript で python の range() みたいのを書いてみるメモ](http://cortyuming.hateblo.jp/entry/20131223/p2)
+- [JavaScript function similar to Python range()ll](http://stackoverflow.com/questions/8273047/javascript-function-similar-to-python-range/8273091#8273091)

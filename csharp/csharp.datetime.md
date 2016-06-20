@@ -9,3 +9,12 @@
 > DateTime.Now.ToString("F")
 2016年3月30日 16:09:55
 ~~~
+
+
+## ParseExact
+
+~~~cs
+csharp> DateTime.ParseExact("10:00:00", "HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.AdjustToUniversal)         
+
+2016/06/13 10:00:00  
+~~~
