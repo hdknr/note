@@ -1,0 +1,3 @@
+- [bash-completionで独自の補完関数を作成する方法（gistyのサブコマンドを補完するやつ書いてみた）](http://d.hatena.ne.jp/snaka72/20090930/125431675)
+- [bash なんて書いたことない人が補完関数をとりあえず自作する](http://qiita.com/sosuke/items/06b64068155ae4f8a853)
+- [bash-completionで ssh コマンドなどの補完を強化してみる](http://qiita.com/murachi1208/items/c6aadc7a6e455a78bb3f)
