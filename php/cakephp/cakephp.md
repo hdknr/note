@@ -30,3 +30,15 @@ function pascalCase(str){
   return camel.charAt(0).toUpperCase() + camel.slice(1);
 }
 ~~~
+
+
+## python
+
+~~~bash
+$ pip install inflection
+~~~
+
+~~~python
+>>> inflection.underscore('CamelCase')
+'camel_case'
+~~~

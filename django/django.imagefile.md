@@ -1,1 +1,0 @@
-- [S3 と非同期サムネイル作成 コトハジメ](https://gist.github.com/voluntas/7002085)

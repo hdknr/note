@@ -40,6 +40,14 @@
 - http://iwb.jp/angularjs-date-japanese/
 - http://js.studio-kingdom.com/angularjs/ng_filter/date
 
+## date フィルター
+
+- [日付／時刻データを整形するには？（date）](http://www.buildinsider.net/web/angularjstips/0027)
+
+~~~html
+{{updated_at | date: 'yyyy年M月d日（EEE）a hh時mm分ss秒'}}
+~~~
+
 # テンプレート
 
 ## ng-bind

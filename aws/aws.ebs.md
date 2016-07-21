@@ -139,10 +139,12 @@ aws: error: argument --volume-id is required
 
 - [Linux でボリュームを使用できるようにする](http://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
 
-- デバイス名が異なる
+  `このような場合、各デバイス名の末尾の文字は同じ規則で変更されます。たとえば、/dev/sdb が /dev/xvdf になり、/dev/sdc が /dev/xvdg に変更されます。`
+
+- デバイス名が異なる `lsblk` ( list block devices) で確認
 
 ~~~bash
-# lsblk
+$ sudo lsblk
 NAME    MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 xvda    202:0    0     8G  0 disk
 └─xvda1 202:1    0     8G  0 part /
@@ -152,14 +154,15 @@ xvdb    202:16   0   100G  0 disk
 - data だけが表示された場合、デバイスにはファイルシステムが存在していないので、ファイルシステムを作成する必要があります。
 
 ~~~bash
-# file -s /dev/xvdb
+$ sudo file -s /dev/xvdb
 /dev/xvdb: data
 ~~~
 
 - 作成
 
 ~~~bash
-# mkfs -t ext4 /dev/xvdb
+$ sudo mkfs -t ext4 /dev/xvdb
+
 mke2fs 1.42.9 (4-Feb-2014)
 Filesystem label=
 OS type: Linux
@@ -184,13 +187,21 @@ Writing superblocks and filesystem accounting information: done
 ~~~
 
 ~~~bash
-# file -s /dev/xvdb
+$ sudo file -s /dev/xvdb
 /dev/xvdb: Linux rev 1.0 ext4 filesystem data, UUID=f1babc5d-3254-4f92-ba4c-381c3a748c2b (extents) (large files) (huge files)
 ~~~
 
+- マウントされています
+
 ~~~bash
-# mkdir /home/system
-# mount /dev/xvdb /home/system
+$ sudo mkdir /home/system
+$ sudo mount /dev/xvdb /home/system
+
+$ sudo lsblk
+NAME    MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0     8G  0 disk
+└─xvda1 202:1    0     8G  0 part /
+xvdb    202:16   0   100G  0 disk /home/system
 ~~~
 
 

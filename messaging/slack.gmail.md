@@ -1,3 +1,5 @@
+[gmail](gmail.md)
+
 ## 特定のアドレスからのメールを１件だけ報告
 
 ### 準備
@@ -35,21 +37,21 @@ function myFunction() {
 }
 
 function procThreads(threads){
-  if( threads.length < 1)
-      return ;
 
-  var count = Math.max(threads.length, 10);
-  for(var i = 0; i < count; i++) {
-    var lastDate = threads[i].getLastMessageDate();
-    if( i == 0 ){
-      var msg  = threads[i].getFirstMessageSubject() ;
-      msg = msg + " " +  threads[i].getMessages()[0].getPlainBody();
-      msg = msg + " " + threads[i].getPermalink();
-      sendHttpPost(msg, "Gmail");
+  threads.forEach(function(thread, i, ar){
+    var n = thread.getMessageCount();
+    if( i < 1 && n > 0 ){
+       var message = thread.getMessages()[n-1];
+
+       var text = [
+          message.getSubject(),
+          message.getPlainBody() ,
+          thread.getPermalink()].join("\n\n");
+
+      sendHttpPost(text, "Gmail");
+      thread.markRead();
     }
-    threads[i].markRead();        // 既読
-    threads[i].moveToTrash();     // ゴミ箱行き
-  }
+  });
 }
 
 function sendHttpPost(message, username)
@@ -75,3 +77,8 @@ function sendHttpPost(message, username)
 - スクリプトエディタより "現在のスクリプトのトリガー" (時計アイコン)
 - 新しいトリガーを追加
 - イベント: 時間主導型　で間隔をしていして定期実行トリガー
+
+
+## 記事
+
+- http://qiita.com/hokaccha/items/e41012cc3833ae9cbe13

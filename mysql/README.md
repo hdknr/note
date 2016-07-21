@@ -1,5 +1,10 @@
 # MySQL
 
+## Topic
+
+- [pytz](mysql.pytz.md)
+- [照合順序](mysql.collate.md)
+
 
 ## ファイルから読み込んでBLOBに入れる
 
@@ -102,3 +107,29 @@ SELECT UNIX_TIMESTAMP('2005-03-27 03:00:00');
 ## スキーマ変更
 
 - [テーブル変更](sql.alter.table.md)
+
+## ERROR 1267 (HY000) at line 1: Illegal mix of collations (utf8_unicode_ci,IMPLICIT) and (utf8_general_ci,IMPLICIT) for operation '='
+
+
+~~~msyql
+UPDATE score as A
+  INNER JOIN researchers as R
+ON(A.personal_no = R.personal_no COLLATE  utf8_general_ci)
+SET
+  A.grade = R.grade
+WHERE
+   A.grade = '' and A.personal_no <> '';
+~~~
+
+
+## CAST
+
+~~~mysql
+mysql> select CAST('43214' as unsigned);                                                                                                                                      
++---------------------------+
+| CAST('43214' as unsigned) |
++---------------------------+
+|                     43214 |
++---------------------------+
+1 row in set (0.01 sec)
+~~~
