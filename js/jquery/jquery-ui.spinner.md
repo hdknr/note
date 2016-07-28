@@ -1,3 +1,6 @@
+[jQuery UI spinner](https://jqueryui.com/spinner/)
+
+
 ## HH:MM のスピナー
 
 - `value` を分で持つ( 10:00 は 600 )
