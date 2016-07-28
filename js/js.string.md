@@ -23,3 +23,12 @@ function format(str, obj) {
     );
 }
 ~~~
+
+
+## parseInt
+
+- [javascript parseInt return NaN for empty string](http://stackoverflow.com/questions/6736476/javascript-parseint-return-nan-for-empty-string)
+
+~~~javascript
+var num = parseInt(s) || 0;
+~~~

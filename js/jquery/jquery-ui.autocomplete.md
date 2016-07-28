@@ -65,11 +65,17 @@ $("#id_food_menu").focus(function() {
 
                 response(results);  // 絞り込んだ結果を設定
               },
-            // 選択されたらフォームを送信
-            select: function( event, ui ){$("form").submit();}
+            // 選択されたらchangeイベント発火
+            select: function( event, ui ){
+                $(this).val(ui.item.value).change();
           });
       }
     });
+
+    // フォームの自動送信
+    $("form input,select,textarea").change(function() {
+      $("form").submit();
+    })
   });
 </script>
 {% endblock %}

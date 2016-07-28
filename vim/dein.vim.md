@@ -1,17 +1,23 @@
 - [Shougo/dein.vim](https://github.com/Shougo/dein.vim)
+
 - [dein.vimを使ってみる](http://qiita.com/yoza/items/2f8bd33a18225754f346)
 - [NeoBundle から dein.vim に乗り換えたら爆速だった話](http://qiita.com/delphinus35/items/00ff2c0ba972c6e41542)
-- [NeoVim、そしてdein.vimへ](http://qiita.com/okamos/items/2259d5c770d51b88d75b)
 - [NeoBundleからDein.vimへの移行](http://rcmdnk.github.io/blog/2016/03/10/computer-vim/)
 - [VimとNeoVimのプラグインマネージャDein.vim ](http://kaworu.jpn.org/vim/Vim%E3%81%A8NeoVim%E3%81%AE%E3%83%97%E3%83%A9%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3Dein.vim)
+- [dein.vimによるプラグイン管理のマイベストプラクティス
+](http://qiita.com/kawaz/items/ee725f6214f91337b42b)
 
+## NeoVim + dein
+
+- [NeoVim と dein.vim を使ってみる!](http://qiita.com/Ress/items/7e71e007cf8d41a07a1a)
+- [NeoVim、そしてdein.vimへ](http://qiita.com/okamos/items/2259d5c770d51b88d75b)
+
+
+## install
 
 動作環境
 - Vim 7.4 以上、もしくは、neovim
 - gitコマンド
-
-
-## install
 
 ~~~
 $ curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
