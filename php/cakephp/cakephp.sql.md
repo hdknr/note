@@ -1,0 +1,1 @@
+- [【CakePHP】直接SQL（クエリ）を実行する](http://cakephp.popotoo.com/db/56/)
