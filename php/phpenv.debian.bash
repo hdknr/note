@@ -41,7 +41,7 @@ else
     CONFIGURE_OPTS="--with-libdir=lib/x86_64-linux-gnu" phpenv install $PHPVER
 fi
 
-CONF="$(phpenv prefix)/etc/conf.d/wordpress.conf"
+CONF="$(phpenv prefix)/etc/php-fpm.conf"
 # https://github.com/andreasjansson/envtpl
 if [ ! -f $CONF ]; then
     echo "creating.... $CONF";
