@@ -77,8 +77,16 @@ aws_secret_access_key = yG9tmKOT85ACdFYHTA/mO/Y1OAksurhsGIl6U0yh
 - [AWS CLIを使ってEC2インスタンスの情報を取得する](http://qiita.com/toshiro3/items/37821bdcc50c8b6d06dc)
 - [【AWS】CLIの初期設定について（認証情報とコマンド補完）](http://www.task-notes.com/entry/20141026/1414322858)
 
+プロファイルを追加:
+
 ~~~bash
 $ aws config --profile ictact
+
+$ aws configure --profile unitedly
+AWS Access Key ID [None]: AAAAAAAAAAATZAZDZR4Q
+AWS Secret Access Key [None]: SbbbbbbbbbbbbbbbS32OBRMoqjkpNPHaj9d6C5HJ
+Default region name [None]: ap-northeast-1
+Default output format [None]: json
 ~~~
 
 ~~~bash

@@ -4,6 +4,7 @@
 
 - [pytz](mysql.pytz.md)
 - [照合順序](mysql.collate.md)
+- [rootパスワード変更](mysql.password.md)
 
 
 ## ファイルから読み込んでBLOBに入れる
