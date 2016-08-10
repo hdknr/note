@@ -1,7 +1,7 @@
 ## トピック
 
 - [連想配列](bash.dict.md)
-- [配列](bash.array.md)
+- [配列](bash.arrays.md)
 - [補完](bash.completion.md)
 
 ## 記事

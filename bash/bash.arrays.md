@@ -1,0 +1,3 @@
+- [6.7 Arrays](https://www.gnu.org/software/bash/manual/bash.html#Arrays)
+- [Test if element is in array in bash](http://superuser.com/questions/195598/test-if-element-is-in-array-in-bash)
+- [Appendix B. Reference Cards ](http://tldp.org/LDP/abs/html/refcards.html#AEN22491)
