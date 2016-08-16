@@ -3,6 +3,7 @@
 - [Getting started](http://gruntjs.com/getting-started)
 - [Gruntを試そう](https://app.codegrid.net/entry/grunt-introduction)
 - [Gruntを使ってプロジェクトを自動化する、Myタスクメモ](http://tipsbear.com/grunt-task-memo/)
+- [フロント開発をがんばるためにGulpとGruntに入門してみた](https://github.com/shoutakenaka/workshop-gulp-intro/blob/master/slide.md)
 
 ## インストール
 
@@ -42,7 +43,7 @@ Gruntfile.js  LICENSE  README.md  bower.json  dist  fonts  grunt  js  less  node
 
 ~~~
 $ cd app/components/bower_components/bootstrap
-$ npm install 
+$ npm install
 ~~~
 
 - 編集 & grunt
@@ -58,7 +59,7 @@ $ grunt dist
 - 配置
 
 ~~~
-$ ./manage.py collectstatic 
+$ ./manage.py collectstatic
 ~~~
 
 
