@@ -111,4 +111,6 @@ bootstrap#3.3.2 bower_components/bootstrap
 # Link
 
 - http://www.nishimiyahara.net/2014/03/21/171931
--
+- [[Grunt & Yeoman] grunt-bower-task で Bower を扱いやすくレイアウトする](http://www.d-wood.com/blog/2013/11/11_5021.html)
+- [bowerでインストールしたファイルの配置を設定するにはgrunt-bower-taskが便利](http://kyohei8.hatenablog.com/entry/2013/11/17/145316)
+- [GruntとgulpでBower環境を作る](http://create-something.hatenadiary.jp/entry/2014/07/27/204633)

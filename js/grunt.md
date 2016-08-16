@@ -3,7 +3,12 @@
 - [Getting started](http://gruntjs.com/getting-started)
 - [Gruntを試そう](https://app.codegrid.net/entry/grunt-introduction)
 - [Gruntを使ってプロジェクトを自動化する、Myタスクメモ](http://tipsbear.com/grunt-task-memo/)
+
+## vs gulp
+
 - [フロント開発をがんばるためにGulpとGruntに入門してみた](https://github.com/shoutakenaka/workshop-gulp-intro/blob/master/slide.md)
+- [Gruntとgulpを比較 〜 JSおくのほそ道 #008](http://qiita.com/hosomichi/items/badaee6d0de448ba9770)
+- [これから始める人のためのgulp入門](http://satoyan419.com/introduction-to-gulp/)
 
 ## インストール
 
