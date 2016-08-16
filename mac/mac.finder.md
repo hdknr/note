@@ -9,3 +9,7 @@
 $ defaults write com.apple.finder AppleShowAllFiles YES
 $ killall finder
 ~~~
+
+## ウィンドウ切り替え
+
+- [Macのちょい効き!ワザ - WindowsのAlt＋Tabのようなウィンドウ切り替えをMacで行なうには](http://news.mynavi.jp/articles/2012/08/14/tips/)

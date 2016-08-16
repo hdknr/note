@@ -27,3 +27,23 @@
 
 - `-n`  : 実際にはリンクを作ることなく動作のみが表示
 - `-f`  : 強制的にシンボリックリンクを削除する
+
+## sysv-rc-conf
+
+~~~bash
+$ sudo apt-get -y install sysv-rc-conf
+~~~
+
+- 一覧
+
+~~~bash
+$ sudo  sysv-rc-conf --list
+~~~
+
+
+## insserv
+
+~~~bash
+$ sudo insserv -s
+~~~
+ 

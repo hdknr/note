@@ -17,6 +17,8 @@ function redirect_logout_page(){
 add_action('wp_logout','redirect_logout_page');
 ~~~
 
+- 確認画面のスキップ [How to log out without confirmation 'Do you really want to log out?"?](http://wordpress.stackexchange.com/questions/67336/how-to-log-out-without-confirmation-do-you-really-want-to-log-out)
+
 ### ajax
 
 - [Wordpress Logout Using Ajax](http://stackoverflow.com/questions/24590295/wordpress-logout-using-ajax)
