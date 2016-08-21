@@ -196,3 +196,80 @@ $ gulp files
   '/Users/hide/Projects/HybridWebView/js/bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2' ]
 [05:19:25] Finished 'files' after 40 ms
 ~~~
+
+##  gulp-concat : ファイルを一つに
+
+~~~bash
+$ npm install --save-dev gulp-concat -g
+~~~
+
+- gulp のタスク修正
+
+~~~js
+
+var gulp = require('gulp');
+var mainBowerFiles = require('gulp-main-bower-files');
+var uglify = require('gulp-uglify');
+
+var gulpFilter = require('gulp-filter');
+var concat = require('gulp-concat');      // 追加
+
+// $ gulp uglify
+gulp.task('uglify', function(){
+    var filterJS = gulpFilter('**/*.js', { restore: true });
+    return gulp.src('./bower.json')
+        .pipe(mainBowerFiles())
+        .pipe(filterJS)
+        .pipe(concat('vendor.js'))        // libs/vender.jsにまとめる
+        .pipe(uglify())
+        .pipe(filterJS.restore)
+        .pipe(gulp.dest('./libs'));
+});
+
+~~~
+
+- 実行/確認
+
+~~~bash
+$ gulp uglify
+$ tree libs/
+libs/
+├── bootstrap
+│   └── dist
+│       ├── css
+│       │   ├── bootstrap-theme.min.css
+│       │   ├── bootstrap-theme.min.css.map
+│       │   ├── bootstrap.min.css
+│       │   └── bootstrap.min.css.map
+│       └── fonts
+│           ├── glyphicons-halflings-regular.eot
+│           ├── glyphicons-halflings-regular.svg
+│           ├── glyphicons-halflings-regular.ttf
+│           ├── glyphicons-halflings-regular.woff
+│           └── glyphicons-halflings-regular.woff2
+└── vendor.js
+
+4 directories, 10 files
+~~~
+
+- index.html で確認
+
+~~~html
+<html>
+
+  <head>
+    <link href="./libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <a href="#" class="btn btn-warning">Hello</a>
+
+    <script src="./libs/vendor.js"></script>
+    <script>
+      $(function(){
+        $('a').click(function(){ alert('Hello');});
+      });
+    </script>
+  </body>
+</html>
+~~~

@@ -1,6 +1,7 @@
 ## 連想配列
 
 - [How do I test if an item is in a bash array?](http://unix.stackexchange.com/questions/177138/how-do-i-test-if-an-item-is-in-a-bash-array)
+- [Bash associative array examples](http://www.artificialworlds.net/blog/2012/10/17/bash-associative-array-examples/)
 
 ~~~bash
 function inArray # ( keyOrValue, arrayKeysOrValues )

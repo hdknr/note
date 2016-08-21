@@ -31,6 +31,10 @@ sql
 txt
 ```
 
+## printf
+
+- [find lacks the option -printf, now what?](http://stackoverflow.com/questions/752818/find-lacks-the-option-printf-now-what)
+
 ## 大きいファイルを探す
 
 ~~~bash
