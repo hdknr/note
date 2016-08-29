@@ -2,6 +2,13 @@
 
 ### 行番号
 
+- 5 行目を表示
+
+~~~bash
+$ sed -n 5P source.txt
+$ awk 'NR==5' source.txt
+~~~
+
 - 1-5行目を削除
 
 ```

@@ -5,7 +5,23 @@
 - [pytz](mysql.pytz.md)
 - [照合順序](mysql.collate.md)
 - [rootパスワード変更](mysql.password.md)
+- [ALTER TABLE](mysql.alter.table.md)
 
+
+## 重複を削除
+
+- [Delete all Duplicate Rows except for One in MySQL? [duplicate]](http://stackoverflow.com/questions/4685173/delete-all-duplicate-rows-except-for-one-in-mysql)
+
+~~~sql
+DELETE T1
+FROM
+    mail_recipient as T1,                     -- 同一テーブルでの和集合
+    mail_recipient as T2
+WHERE
+    T1.id > T2.id AND T1.email = T2.email     -- 重複メアドの場合、id が大きい方が削除対応
+    AND T1.mail_id = T2.mail_id               -- 同じメールに対する宛先を条件とする
+    AND T1.mail_id = 35;                      -- id=35 のメールの宛先を条件とする
+~~~
 
 ## ファイルから読み込んでBLOBに入れる
 
