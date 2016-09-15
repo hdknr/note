@@ -1,0 +1,4 @@
+- http://qiita.com/bouzuya/items/ae1cb5610a64794bc522
+- http://jangajan.com/blog/2014/09/02/hubot-brain-sample/
+- https://www.npmjs.com/package/hubot-brain-inspect
+- http://blog.fumiz.me/2012/08/05/hubot-irc-bot-script/

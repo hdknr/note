@@ -1,0 +1,2 @@
+- https://codezine.jp/article/detail/6529
+- https://coffeescript-cookbook.github.io/chapters/databases/sqlite
