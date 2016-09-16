@@ -1,0 +1,1 @@
+- [他のブランチへ特定のコミットをマージする](http://qiita.com/narumi_/items/0120c74b96bec6b93fdc)
