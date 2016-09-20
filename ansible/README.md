@@ -1,6 +1,7 @@
 ## トピック
 
 - [インストール](ansible.install.md)
+- [設定関連](ansible.config.md)
 - [file](ansible.file.md)
 - [ssh](ansible.ssh.md)
 - [playbook](ansible.playbook.md)
