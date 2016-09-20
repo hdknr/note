@@ -1,0 +1,5 @@
+- [AnsibleからVPC立てる](http://soundtricker.blogspot.jp/2014/08/ansiblevpc.html)
+- [AnsibleでVPCの作成](http://qiita.com/okamura-s/items/e3baf6fcb404de8f9ec2)
+- [AnsibleでECインスタンスの作成](http://qiita.com/okamura-s/items/bab19b7317ee9e381a11)
+- [Skeleton AWS Ansible Projects](https://github.com/dfederlein/ansible-aws/)
+- [Creating VPC in AWS using Ansible](http://stackoverflow.com/questions/34270293/creating-vpc-in-aws-using-ansible)
