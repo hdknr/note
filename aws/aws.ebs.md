@@ -205,8 +205,6 @@ xvdb    202:16   0   100G  0 disk /home/system
 ~~~
 
 
-
-
 # 記事
 
 - [[AWS] EC2インスタンスにEBSボリュームをアタッチする/デタッチする](http://qiita.com/white_aspara25/items/270c7253e5fe58bd5d86)

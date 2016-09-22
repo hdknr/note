@@ -19,7 +19,7 @@
 
 ## ELB
 
-- [ELB](aws.loadbalancer.md)
+- [ELB](aws.loadbalancer.md) (ACM証明書ドメイン承認)
 
 ## Autoscale
 

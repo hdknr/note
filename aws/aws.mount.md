@@ -62,24 +62,53 @@ wait_for_attach_volume () {
 
 ## パーティション作成
 
-~~~
-# fdisk /dev/xvdf
-Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
-Building a new DOS disklabel with disk identifier 0x7ad7ca0d.
-Changes will remain in memory only, until you decide to write them.
-After that, of course, the previous content won't be recoverable.
+- [Amazon EBS ボリュームを使用できるようにする](http://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
+- /dev/sdb で作成したボリュームをインスタンスにアタッチ
 
-Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
+~~~bash
+# fdisk /dev/xvdf
+
+Welcome to fdisk (util-linux 2.27.1).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+Device does not contain a recognized partition table.
+Created a new DOS disklabel with disk identifier 0x36d6905d.
 
 Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
 Select (default p): p
 Partition number (1-4, default 1): 1
 First sector (2048-209715199, default 2048):
-Using default value 2048
-Last sector, +sectors or +size{K,M,G} (2048-209715199, default 209715199):
-Using default value 209715199
+Last sector, +sectors or +size{K,M,G,T,P} (2048-209715199, default 209715199):
+
+Created a new partition 1 of type 'Linux' and of size 100 GiB.
+
+Command (m for help): p
+
+Disk /dev/xvdf: 100 GiB, 107374182400 bytes, 209715200 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x36d6905d
+
+Device     Boot Start       End   Sectors  Size Id Type
+/dev/xvdf1       2048 209715199 209713152  100G 83 Linux
+
+Command (m for help): w
+The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
+
+
+~~~
+
+~~~bash
+# file -s /dev/xvdf
+/dev/xvdf: DOS/MBR boot sector; partition 1 : ID=0x83, start-CHS (0x0,32,33), end-CHS (0x2fe,42,44), startsector 2048, 209713152 sectors, extended partition table (last)
 ~~~
 
 ## フォーマット

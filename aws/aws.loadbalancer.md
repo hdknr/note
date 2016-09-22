@@ -4,8 +4,7 @@
 
 
 
-# SSLの証明書
-
+# ACM Certificate: SSLの証明書
 
 - [Request a Certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request.html)
 - [Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate.html)
