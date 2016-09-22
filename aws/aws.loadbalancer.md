@@ -4,6 +4,21 @@
 
 
 
+# SSLの証明書
+
+
+- [Request a Certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request.html)
+- [Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate.html)
+
+送信メアド:
+
+- administrator@your_domain
+- hostmaster@your_domain
+- postmaster@your_domain
+- webmaster@your_domain
+- admin@your_domain
+
+
 ## その他
 
 - [ELBをVPC内に設置する際のサブネット設計の注意点](http://qiita.com/tetor/items/4c9e1aa58da2c5755452)
