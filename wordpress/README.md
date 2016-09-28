@@ -1,3 +1,9 @@
+## トピック
+
+[Composerから入れる](wordpress.composer.md)
+[wp-cliコマンド](wordpress.wp-cli.md)
+
+
 ## リンク
 
 - http://roots.io/using-composer-with-wordpress/
