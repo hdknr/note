@@ -67,3 +67,18 @@ WordPress version: 4.4.1
 Database revision: 35700
 TinyMCE version:   4.208 (4208-20151113)
 ~~~
+
+
+## プラグインリスト
+
+~~~bash
+$ vendor/bin/wp plugin list
+
++-------------------------+----------+-----------+--------------+
+| name                    | status   | update    | version      |
++-------------------------+----------+-----------+--------------+
+| akismet                 | inactive | available | 3.1.11       |
+.....
+| rest-api                | active   | none      | 2.0-beta13.1 |
++-------------------------+----------+-----------+--------------+
+~~~
