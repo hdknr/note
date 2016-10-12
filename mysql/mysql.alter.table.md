@@ -16,3 +16,10 @@ alter table smtp_message add updated_at datetime ;
 ~~~mysql
 ALTER TABLE flier_address MODIFY address VARCHAR(100);
 ~~~
+
+
+## NULL を許容
+
+~~~mysql
+ALTER TABLE archives_studentexchange  MODIFY major VARCHAR(50) null default null;
+~~~

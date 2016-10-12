@@ -12,7 +12,7 @@ Listing vhosts ...
 
 
 ~~~
-# rabbitmqctl add_vhost /myhost 
+# rabbitmqctl add_vhost /myhost
 Creating vhost "/myhost" ...
 ...done.
 ~~~
@@ -29,3 +29,8 @@ Creating user "user1" ...
 Setting permissions for user "user1" in vhost "/myhost" ...
 ...done.
 ~~~
+
+
+## Python 管理ツール
+
+- [rabbitmqadmin](https://www.rabbitmq.com/management-cli.html)

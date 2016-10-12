@@ -1,5 +1,12 @@
 # mysqldump
 
+
+## データだけ( --no-create-info, -t)
+
+~~~bash
+$ mysqldump -u $DBU --password=$DBP -t $DBN events_event
+~~~
+
 ##  テーブルごとダンプ
 
 ```
@@ -24,3 +31,7 @@ CREATE DEFINER=`dbu`@`localhost` PROCEDURE `insert_users`()
 $ alias Q='mysql -u root --password=password  mydb'
 $ echo "show tables" | Q -N | while read T ; do Q -t -e "show index from $T" ; done > index.txt
 ```
+
+## 記事
+
+- [mysqldumpまとめ](http://qiita.com/PlanetMeron/items/3a41e14607a65bc9b60c)

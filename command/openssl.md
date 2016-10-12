@@ -49,7 +49,7 @@ SSL-Session:
     Protocol  : TLSv1
     Cipher    : DHE-RSA-AES256-SHA
     Session-ID: 7F676E886855BA0BFDB6C1A5C48B2AE56D024055570676E1F3FA2DE760649ED5
-    Session-ID-ctx: 
+    Session-ID-ctx:
     Master-Key: E5D6856E19612E7B2CB5466F905D02EE3090967D5174030C11F965CB9196433561445824FA3A8A3566E6B717AB9644CF
     Key-Arg   : None
     Start Time: 1418857110
@@ -63,4 +63,18 @@ SSL-Session:
 
 ~~~
 $ sudo openssl rsa -in yourdomain.key -out yourdomain.key.nopass
+~~~
+
+## フィンガープリント確認
+
+プライベートキー:
+
+~~~bash
+$ openssl pkcs8 -in ~/.ssh/private.pem -inform PEM -outform DER -topk8 -nocrypt | openssl sha1 -c
+~~~
+
+パブリックキー:
+
+~~~bash
+$ ssh-keygen -lf  yourdomain.pub
 ~~~

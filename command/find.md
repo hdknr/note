@@ -1,3 +1,11 @@
+
+## ファイルの拡張子一覧
+
+~~~bash 
+$ find html/ -type f | while read f; do echo ${f##*.}; done  | sort | uniq
+~~~
+
+
 ## 指定したパターンのファイルを除外
 
 - [複数のディレクトリ除外](https://gist.github.com/kiyotune/3825822)
