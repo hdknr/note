@@ -11,3 +11,13 @@ SMART情報表示：smartctl
 LVM：lvmdiskscan, pvdisplay, pvscan, lvdisplay, lvscan
 不良セクタ対処：badblocks, ddrescue
 ~~~
+
+
+
+## ヒアドキュメント用一時ファイルを作成できません: デバイスに空き領域がありません
+
+- `/` が 100% だったらとりあえず
+
+~~~bash
+$ sudo apt-get autoclean
+~~~
