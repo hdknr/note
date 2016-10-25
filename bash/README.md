@@ -4,6 +4,10 @@
 - [配列](bash.arrays.md)
 - [補完](bash.completion.md)
 
+##  OS
+
+- [OSX](bash.osx.md)
+
 ## 記事
 
 
