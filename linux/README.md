@@ -1,6 +1,7 @@
 # Linux
 
 - [Alpine](./alpine.md)
+- [パフォーマンス](linux.performance.md)
 
 # Networking
 
