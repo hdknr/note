@@ -17,3 +17,26 @@
 ~~~
 server_name  ec.ic-tact.co.jp wp.deb;
 ~~~
+
+
+## タイムアウト対応
+
+- /etc/nginx/conf.d/timeout.conf
+
+~~~
+  proxy_connect_timeout       1200;
+  proxy_send_timeout          1200;
+  proxy_read_timeout          1200;
+  send_timeout                1200;
+~~~
+
+## アップロードファイルサイズ
+
+- /etc/nginx/site-enabled/yoursite.conf
+
+~~~
+server {
+  client_max_body_size 30M;
+  listen 80;
+  ....
+~~~
