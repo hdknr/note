@@ -1,0 +1,1 @@
+- [はじめてのTypeScript開発環境構築（gulp, bower, webpack, tsd, npm） ](http://kuroeveryday.blogspot.jp/2015/05/typescript-development.html)
