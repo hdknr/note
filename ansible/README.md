@@ -6,6 +6,7 @@
 - [ssh](ansible.ssh.md)
 - [playbook](ansible.playbook.md)
 - [YAML](ansible.yaml.md)
+- [command](ansible.command.md) : ドキュメントビルド
 
 ## AWS
 
@@ -96,6 +97,7 @@ hdknr@wzy:~$
 - [Ansibleを使い出す前に押さえておきたかったディレクトリ構成のベストプラクティス](http://bit.ly/2cxwIUC)
 - [Ansible - ディレクトリ構成について](http://qiita.com/makaaso/items/0375081c1600b312e8b0)
 - [Ansible : Best Practices](http://docs.ansible.com/ansible/playbooks_best_practices.html)
+- [Ansibleを複数ホストへのコマンド投げツールとしてad-hocに使う](http://d.sunnyone.org/2016/01/ansiblead-hoc.html)
 
 ## メモ
 
@@ -104,3 +106,5 @@ hdknr@wzy:~$
 - [DevOps Technologies: Fabric or Ansible](https://insights.sei.cmu.edu/devops/2015/03/devops-technologies-fabric-or-ansible.html)
 - [http://qiita.com/unarist/items/39f5510f95c752c10df1](http://qiita.com/hnakamur/items/c7c4f7277c07a14a4a59)
 - [jcalazan/ansible-django-stack](https://github.com/jcalazan/ansible-django-stack)
+- [ansibleで特定のtaskを特定のhostに実行する](http://qiita.com/346@github/items/00122556cb2bd6f57998)
+- [How can you run only one task out of a playbook, for debug purposes](https://coderwall.com/p/ur8qnw/how-can-you-run-only-one-task-out-of-a-playbook-for-debug-purposes)
