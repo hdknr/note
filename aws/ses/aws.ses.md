@@ -17,6 +17,10 @@
 - [awscli:ses](http://docs.aws.amazon.com/cli/latest/reference/ses/index.html)
 - [bot: ses](http://boto.cloudhackers.com/en/latest/ref/ses.html)
 
+### サンドボックス解除
+
+- [Amazon SES サンドボックスの外への移動](https://docs.aws.amazon.com/ja_jp/ses/latest/DeveloperGuide/request-production-access.html)
+
 ## DNS : SPF/TXT
 
 ~~~

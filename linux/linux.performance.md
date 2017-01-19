@@ -15,8 +15,7 @@ vm.drop_caches
 ページキャッシュだけ解放:
 
 ~~~bash
-$ sudo sync
-$ sudo /sbin/sysctl -w vm.drop_caches=1
+$ sudo sync && sudo /sbin/sysctl -w vm.drop_caches=1
 ~~~
 
 ~~~bash

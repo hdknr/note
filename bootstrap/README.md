@@ -2,6 +2,7 @@
 
 - [パンくず](bootstrap.breadcrumb.md)
 - [Table](bootstrap.table.md)
+- [Collapse(アコーディオン)](bootstrap.collapse.md)
 
 ## フォーム
 

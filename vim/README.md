@@ -1,3 +1,6 @@
+
+- [コマンドモード](vim.command-mode.md)
+
 ## Debian系
 
 - デフォルトエディタの変更

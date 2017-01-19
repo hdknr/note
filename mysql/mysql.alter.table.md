@@ -1,3 +1,5 @@
+# カラム
+
 ## カラム削除
 
 ~~~mysql
@@ -22,4 +24,13 @@ ALTER TABLE flier_address MODIFY address VARCHAR(100);
 
 ~~~mysql
 ALTER TABLE archives_studentexchange  MODIFY major VARCHAR(50) null default null;
+~~~
+
+
+# インデックス
+
+## インデックス削除
+
+~~~mysql
+ALTER TABLE partners_shippingfee DROP INDEX partners_shippingfee_company_id_e85a3531_uniq ;
 ~~~

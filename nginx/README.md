@@ -4,7 +4,15 @@ nginx
 
 - [nginx.conf](nginx.conf.md)
 - [502エラー](nginx.502.md)
+- [allow/deny](nginx.access.md)
+- [map](nginx.map.md)
 
+
+## ビルド内容
+
+~~~bash
+$ sudo nginx -V  |& tr " " "\n"
+~~~
 
 ## ビルド
 
