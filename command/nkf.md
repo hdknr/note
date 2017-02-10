@@ -7,3 +7,16 @@
 ~~~
 $ nfk -w --overwirte hoge.php
 ~~~
+
+
+## urlencode
+
+~~~bash
+$ echo 'テスト' | nkf -WwMQ | tr = %
+%E3%83%86%E3%82%B9%E3%83%88
+~~~
+
+~~~bash
+$ echo %E3%83%86%E3%82%B9%E3%83%88 | nkf -w --url-input
+テスト
+~~~
