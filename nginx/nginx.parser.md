@@ -4,6 +4,7 @@ nginxparser: Pythonでnginxの設定ファイルを解析してみる
 
 -  https://github.com/fatiherikli/nginxparser
 -  [pyparsing](http://pyparsing.wikispaces.com/)使ってる
+-  https://github.com/peakwinter/python-nginx
 
 ### その他パーサ
 
