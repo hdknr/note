@@ -1,7 +1,8 @@
 ## トピック
 
-[Composerから入れる](wordpress.composer.md)
-[wp-cliコマンド](wordpress.wp-cli.md)
+- [Composerから入れる](wordpress.composer.md)
+- [wp-cliコマンド](wordpress.wp-cli.md)
+- [パスワード](wordpress.password.md)
 
 
 ## リンク

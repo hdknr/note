@@ -24,3 +24,24 @@ jquery     2.1.3   2.1.4   2.1.4
 jsdom      4.0.1   7.1.0   7.1.0  
 npm        3.5.1   3.5.1   3.5.0  
 ~~~
+
+
+## メモ
+
+npm 自体の更新:
+
+~~~bash
+$ npm update -g npm
+~~~
+
+全てのグローバルパッケージを更新
+
+~~~bash
+$ npm update -g
+~~~
+
+古いパッケージの確認
+
+~~~bash
+$ npm outdated -g
+~~~

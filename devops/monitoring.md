@@ -1,5 +1,4 @@
 ## Glances
-
 - Python CUI(curses) モニタリングツール
 - https://nicolargo.github.io/glances/
 
@@ -33,3 +32,12 @@
 - [python-diamond/Diamond](https://github.com/python-diamond/Diamond)
 - [Diamond RTD](http://diamond.readthedocs.io/en/latest/)
 - [metrics収集ツール、Diamondで遊んでみた](http://qiita.com/risuoku/items/bdb7d0b20756fabfe91c)
+
+
+## Prometheus
+
+- https://prometheus.io/
+- [次世代監視の大本命！ Prometheus を実運用してみた](http://qiita.com/sugitak/items/ff8f5ad845283c5915d2)
+- [prometheusをubuntuに入れる](http://qiita.com/junsumida/items/0e0ed4ce2b51e662ba07)
+- [Prometheus: Go言語で書かれたモニタリングシステム](http://wazanova.jp/items/1672)
+- [Prometheusのインストール](http://qiita.com/hana_shin/items/16a7ee88ef502a3fc0eb)

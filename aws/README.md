@@ -22,16 +22,18 @@
 [ELB](aws.elb.md):
 
 -  ACM証明書ドメイン承認
--  SSL強制 
+-  SSL強制
 
 ## Autoscale
 
 - [起動設定](aws.autoscale.md)
 - [ヘルスチェック](aws.autoscale.health.md)
 
-## RDS
+## その他
 
 - [RDS](rds/README.md)
+- [SES](ses/README.md)
+- [Batch](aws.batch.md)
 
 # ツール
 

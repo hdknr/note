@@ -28,6 +28,9 @@
 
 ## [pull](git.pull.md)
 
+- ブランチ指定
+- 戻す: 不要なpullをしてしまったのでローカルを戻す
+
 ## [push](git.push.md)
 
 - 新しいブランチをpush
