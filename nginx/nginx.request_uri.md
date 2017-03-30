@@ -1,0 +1,2 @@
+- [nginxでrequest_uriに応じてHTTP/HTTPS片方のみ許可](http://qiita.com/hash/items/9b2d148b15014b3cf597)
+- [Modify $request_uri in Nginx](http://stackoverflow.com/questions/32352283/modify-request-uri-in-nginx)
