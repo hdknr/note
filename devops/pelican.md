@@ -1,0 +1,1 @@
+- [pelican](https://github.com/getpelican/pelican)
