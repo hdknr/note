@@ -7,6 +7,7 @@
 - [playbook](ansible.playbook.md)
 - [YAML](ansible.yaml.md)
 - [command](ansible.command.md) : ドキュメントビルド
+- [タグ](ansible.tags.md)
 
 ## AWS
 
