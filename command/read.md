@@ -1,0 +1,1 @@
+- [read について知っておくと while read で役に立つときが来る…かも](http://qiita.com/mattintosh4/items/a98cfb5a62ee95c8a137)
