@@ -1,0 +1,1 @@
+- [jquery: find element whose id has a particular pattern](http://stackoverflow.com/questions/1487792/jquery-find-element-whose-id-has-a-particular-pattern)
