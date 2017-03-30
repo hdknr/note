@@ -6,6 +6,7 @@
 - [照合順序](mysql.collate.md)
 - [rootパスワード変更](mysql.password.md)
 - [ALTER TABLE](mysql.alter.table.md)
+- [スキーマ](mysql.schema.md)
 
 
 ## 重複を削除
