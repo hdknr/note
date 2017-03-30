@@ -12,3 +12,4 @@ Icon*
 *.dylib
 scriptcs_packages*
 _book
+*.log

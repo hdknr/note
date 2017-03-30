@@ -19,6 +19,14 @@ $ git config --global user.email gmail@hdknr.com
 $ git remote set-url origin https://hdknr@github.com/hdknr/bin.git
 ~~~
 
+## ツリー表示
+
+~/.gitconfig:
+
+~~~
+[alias]
+    tr = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
+~~~    
 
 
 ## error: The requested URL returned error: 403 Forbidden while accessing
