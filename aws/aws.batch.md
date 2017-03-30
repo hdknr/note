@@ -1,0 +1,1 @@
+- [新サービス】AWS BatchがGA(一般利用開始)になったので使ってみた](http://dev.classmethod.jp/cloud/aws/first-impression-of-aws-batch/)
