@@ -25,6 +25,14 @@ $ mysqldump -u dbu --password=dbp dbn --routines | grep PROCEDURE
 CREATE DEFINER=`dbu`@`localhost` PROCEDURE `insert_users`()
 ```
 
+## INSERT文
+
+`-c` : `--complete-insert`
+
+~~~bash
+$ mysqldump -c --skip-extended-insert
+~~~
+
 ## index 一覧
 
 ```bash
