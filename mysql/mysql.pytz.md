@@ -16,7 +16,7 @@ MySQLにデフォルトタイムゾーンを指定:
 タイムゾーン情報をMySQLに設定:
 
     $ mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root -p mysql
-    Enter password: 
+    Enter password:
     Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
     Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
 
@@ -90,15 +90,15 @@ django/db/models/query.py:
             if tzinfo is None:
                 tzinfo = timezone.get_current_timezone()
         else:
-            tzinfo = None 
+            tzinfo = None
         return self._clone(klass=DateTimeQuerySet, setup=True,
                 _field_name=field_name, _kind=kind, _order=order, _tzinfo=tzinfo)
 ```
-                
+
 対処したらdatetimes()でエラーが出ない:
 
 ```py
-                
+
     >>> Profile.objects.datetimes('created_at','year')
     [datetime.datetime(2014, 1, 1, 0, 0, tzinfo=<DstTzInfo 'Asia/Tokyo' JST+9:00:00 STD>)]
 ```
@@ -108,12 +108,12 @@ SQL文:
 
 ```sql
 
-    SELECT DISTINCT 
+    SELECT DISTINCT
     CAST(
         DATE_FORMAT(
-            CONVERT_TZ(`closed_profile`.`created_at`, 'UTC', 'Asia/Tokyo'), 
+            CONVERT_TZ(`closed_profile`.`created_at`, 'UTC', 'Asia/Tokyo'),
             '%Y-01-01 00:00:00') AS DATETIME
-    ) 
+    )
     FROM `closed_profile` ORDER BY 1 ASC LIMIT 21                
 ```
 
@@ -126,7 +126,7 @@ CONVERT_TZ()を対処していない環境で実行するとNULLが返る：
 
 TZ情報を流し込む：
 
-    $ mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root --password=$DBROOT_PASSWD  mysql 
+    $ mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root --password=$DBROOT_PASSWD  mysql
     Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
     Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
 
@@ -140,7 +140,7 @@ TZ情報を流し込む：
     $ sudo /etc/init.d/mysql restart
     Stopping MySQL database server: mysqld.
     Starting MySQL database server: mysqld . ..
-    Checking for tables which need an upgrade, are corrupt or were 
+    Checking for tables which need an upgrade, are corrupt or were
     not closed cleanly..
 
 時刻が変換される:
@@ -150,3 +150,18 @@ TZ情報を流し込む：
     CONVERT_TZ(created_at, 'UTC', 'Asia/Tokyo')
     2014-04-28 22:32:46
 
+
+## CentOS
+
+
+~~~bash
+$ yum update tzdata
+~~~
+
+~~~bash
+$ mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+
+Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
+Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
+~~~

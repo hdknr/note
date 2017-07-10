@@ -1,6 +1,7 @@
 scriptcs: C# scripting
 
 - [scriptcs](http://scriptcs.net/)
+- [scriptcs/scriptcs](https://github.com/scriptcs/scriptcs)
 - 途中メモ
 
 ## Macでビルド
@@ -27,6 +28,13 @@ Already on 'dev'
 Your branch is up-to-date with 'origin/dev'.
 ~~~
 
+- mono　パス設定
+~~~bash
+$ export PATH=/Library/Frameworks/Mono.framework/Versions/4.6.2/bin:$PATH
+~~~
+
+    mono 5.0.1 だと動かない模様。。。。
+
 ~~~bash
 $ chmod +x build.sh
 $ ./build.sh
@@ -42,7 +50,7 @@ Test assembly: /Users/hide/Projects/scriptcs/test/ScriptCs.Tests.Acceptance/bin/
 ~~~
 
 ~~~bash
-$ alias scriptcs='mono /Users/hide/Projects/scriptcs/src/ScriptCs/bin/Release/scriptcs.exe'
+$ alias scriptcs='mono /Users/hide/Projects/scriptcs/artifacts/Release/bin/scriptcs.exe'
 ~~~
 
 ~~~bash

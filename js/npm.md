@@ -45,3 +45,13 @@ $ npm update -g
 ~~~bash
 $ npm outdated -g
 ~~~
+
+
+## キャッシュ
+
+- キャッシュの場所を変更する
+
+~~~bash
+$ npm config set cache /tmp/.npm-cache
+$ npm config set cache /tmp/.npm-cache --global
+~~~
