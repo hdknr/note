@@ -83,6 +83,30 @@ autostart=true
 autorestart=true
 ~~~
 
+php-fpm.conf:
+
+~~~
+[global]
+
+[www]
+user = system
+group = users
+
+listen = var/run/php-fpm.sock
+listen.allowed_clients = 127.0.0.1
+listen.owner = www-data
+listen.group = www-data
+listen.mode = 0660
+
+
+pm = dynamic
+pm.max_children = 5
+pm.start_servers = 3
+pm.min_spare_servers = 1
+pm.max_spare_servers = 3
+pm.max_requests = 500
+~~~
+
 ## mysqli
 
 - ソケットファイルをOSに合わせて、 php-fpmを再起動
