@@ -74,7 +74,16 @@ $ ps ax | grep php-fpm
 $ sudo killall php-fpm
 ~~~
 
-## mysqli 
+## supervisord 例
+
+~~~ini
+[program:www]
+command=/home/system/.anyenv/envs/phpenv/versions/7.1.1/sbin/php-fpm --nodaemonize  -y /home/system/projects/wordpress/etc/php-fpm.conf
+autostart=true
+autorestart=true
+~~~
+
+## mysqli
 
 - ソケットファイルをOSに合わせて、 php-fpmを再起動
 
