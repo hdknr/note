@@ -77,6 +77,41 @@ nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
 nginx: configuration file /etc/nginx/nginx.conf test is successful
 ~~~
 
+現在の設定:
+
+~~~
+$ sudo nginx -T
+
+$ sudo nginx -T | grep fastcgi | sort  | uniq
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+       fastcgi_param HTTP_HOST $my_host;
+       fastcgi_param PATH_INFO $fastcgi_script_name;
+       fastcgi_param SCRIPT_FILENAME $request_filename;
+       fastcgi_pass phpfpm;
+       fastcgi_read_timeout 1800;
+       include fastcgi_params;
+# configuration file /etc/nginx/fastcgi_params:
+fastcgi_param  CONTENT_LENGTH     $content_length;
+fastcgi_param  CONTENT_TYPE       $content_type;
+fastcgi_param  DOCUMENT_ROOT      $document_root;
+fastcgi_param  DOCUMENT_URI       $document_uri;
+fastcgi_param  GATEWAY_INTERFACE  CGI/1.1;
+fastcgi_param  HTTPS              $https if_not_empty;
+fastcgi_param  QUERY_STRING       $query_string;
+fastcgi_param  REDIRECT_STATUS    200;
+fastcgi_param  REMOTE_ADDR        $remote_addr;
+fastcgi_param  REMOTE_PORT        $remote_port;
+fastcgi_param  REQUEST_METHOD     $request_method;
+fastcgi_param  REQUEST_SCHEME     $scheme;
+fastcgi_param  REQUEST_URI        $request_uri;
+fastcgi_param  SCRIPT_NAME        $fastcgi_script_name;
+fastcgi_param  SERVER_ADDR        $server_addr;
+fastcgi_param  SERVER_NAME        $server_name;
+fastcgi_param  SERVER_PORT        $server_port;
+fastcgi_param  SERVER_PROTOCOL    $server_protocol;
+fastcgi_param  SERVER_SOFTWARE    nginx/$nginx_version;
+~~~
 
 ## 1つのIPアドレスで、複数のSSLサイトを処理する:Server Name Identification (SNI)
 
