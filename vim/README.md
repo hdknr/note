@@ -1,5 +1,7 @@
 
 - [コマンドモード](vim.command-mode.md)
+- [vim python](vim.python.md)
+
 
 ## Debian系
 
