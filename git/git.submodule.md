@@ -127,3 +127,15 @@ submodule.asset/jquery.url=https://github.com/jquery/jquery.git
        git submodule [--quiet] sync [--recursive] [--] [<path>...]
 
 ~~~
+
+## URL の変更
+
+- [submodule の向き先 url を変更する](http://qiita.com/8mamo10/items/fd11d8c7a2d928b39173)
+
+~~~bash
+$ vim .gitmodules
+~~~
+
+~~~bash
+$ git submodule sync && git submodule update
+~~~
