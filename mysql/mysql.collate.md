@@ -37,3 +37,24 @@ mysql> SHOW FULL COLUMNS FROM auth_user where Field like 'username';
 ~~~sql
 alter table <some_table> convert to character set utf8 collate utf8_unicode_ci;
 ~~~
+
+
+## charset
+
+~~~mysql
+mysql> show variables like "chara%";
+
++--------------------------+----------------------------+
+| Variable_name            | Value                      |
++--------------------------+----------------------------+
+| character_set_client     | utf8                       |
+| character_set_connection | utf8                       |
+| character_set_database   | utf8                       |
+| character_set_filesystem | binary                     |
+| character_set_results    | utf8                       |
+| character_set_server     | utf8                       |
+| character_set_system     | utf8                       |
+| character_sets_dir       | /usr/share/mysql/charsets/ |
++--------------------------+----------------------------+
+8 rows in set (0.00 sec)
+~~~
