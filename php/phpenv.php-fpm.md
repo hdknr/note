@@ -4,6 +4,11 @@
 
 ## php-fpm
 
+~~~bash
+$ find $(phpenv prefix) -name "php-fpm" -print
+/home/vagrant/.anyenv/envs/phpenv/versions/7.0.6/sbin/php-fpm
+~~~
+
 ~~~
 $ `phpenv prefix`/sbin/php-fpm --help
 

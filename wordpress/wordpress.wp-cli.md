@@ -1,3 +1,11 @@
+## インストール
+
+- [WP-CLIの使い方](http://qiita.com/IK12_info/items/4a9190119be2a0f347a0)
+
+
+
+
+
 ## composer
 
 ~~~bash
