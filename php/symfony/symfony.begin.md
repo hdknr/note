@@ -1,5 +1,7 @@
 ## インストールと起動
 
+- [Installing & Setting up the Symfony Framework](https://symfony.com/doc/current/setup.html)
+
 ゲストのUbuntuのphpenv:
 
 ~~~bash
