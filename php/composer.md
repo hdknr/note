@@ -47,6 +47,8 @@ Composer version 1.1.1 2016-05-17 12:25:44
 
 ~~~
 
+- [Composerをインストールしてみた](http://qiita.com/kakijin/items/02364adacf36410f449e)
+
 ## xdebug を無効にする
 
 ~~~bash
