@@ -150,20 +150,4 @@ supervisor: reread & restart だけだとだめで、reload
 
 # その他
 
-
-- [アップロードサイズ](http://qiita.com/n-oshiro/items/4816ad71b90a9967fa18)
-
-~~~
-
-http {
-    client_max_body_size 1048576; # default 1m
-
-    server {
-        client_max_body_size 100m;
-
-        location ~ ^/upload/ {
-            client_max_body_size 2g;
-        }
-    }
-}
-~~~
+- [タイムアウト対策](nginx.timeout.md)
