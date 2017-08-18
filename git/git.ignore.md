@@ -7,7 +7,7 @@ $ git config --global core.excludesfile ~/.gitignore_global
 ~~~bash
 $ more ~/.gitconfig
 [user]
-        email = gmail@hdknr.com
+        email = gmail@hoge.com
         name = hdknr
 [core]
         excludesfile = /home/vagrant/.gitignore_global
