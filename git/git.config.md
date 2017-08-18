@@ -42,3 +42,7 @@ fatal: HTTP request failed
 ~~~bash
 $ export GIT_SSL_NO_VERIFY=true  
 ~~~
+
+## その他
+
+- [.gitignore をグローバル設定する](git.ignore.md)
