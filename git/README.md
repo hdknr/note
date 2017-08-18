@@ -17,7 +17,7 @@
 ## [config](git.config.md)
 
 - ユーザー指定
-- [.gitgnore] (git.ignore.md)
+- [.gitgnore](git.ignore.md)
 
 ## [filter-branch](git.filter-branch.md)
 
