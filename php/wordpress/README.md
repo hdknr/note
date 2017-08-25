@@ -3,6 +3,7 @@
 - [Composerから入れる](wordpress.composer.md)
 - [wp-cliコマンド](wordpress.wp-cli.md)
 - [パスワード](wordpress.password.md)
+- [サイトのURLの変更](wordpress.config.md)
 
 
 ## リンク
