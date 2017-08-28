@@ -22,3 +22,15 @@ Debian:
 ~~~bash
 $ sudo dpkg-reconfigure tzdata
 ~~~
+
+
+
+## datetimectl コマンド
+
+
+~~~bash
+$ sudo timedatectl list-timezones  | grep Tokyo
+Asia/Tokyo
+
+$ sudo timedatectl set-timezone Asia/Tokyo
+~~~
