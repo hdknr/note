@@ -25,6 +25,13 @@ $ sudo  /usr/sbin/logrotate -f /etc/logrotate.d/nginx
 - ifempty: ログファイルが空でもローテーションする
 
 
+## 実行記録(`/var/lig/logrotate/status`)
+
+~~~bash
+# cat /var/lib/logrotate/status  | grep word
+
+"/backups/exports/wordpress.log" 2017-8-26-6:25:2
+~~~
 
 ## サンプル
 
