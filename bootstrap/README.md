@@ -12,6 +12,7 @@
 
 # その他
 
+- [いろいろ](bootstrap.misc.md)
 - [Bootstrap 3からBootstrap 4に移行する時に知っておく必要がある注意点のまとめ](http://coliss.com/articles/build-websites/operation/work/migrate-from-bootstrap3-to-bootstrap4.html)
 - [印刷関連](bootstrap.print.md)
 
