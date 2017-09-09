@@ -5,3 +5,4 @@
 ## HTML
 
 - [meta](html.meta.md)
+- [SEO](html.seo.md)
