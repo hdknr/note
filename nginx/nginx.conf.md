@@ -2,14 +2,22 @@
 
 
 ~~~bash
-$ nginx -t -c /path/to/nginx.conf
+$ sudo nginx -t -c /path/to/nginx.conf
 ~~~
 
 Debian系の場合、設定ファイルは `/etc/nginx/nginx.conf` になります。
 `include` などを相対パスで指定した場合は、　`/etc/nginx` からの相対パスになります。
 
 ~~~bash
-$ nginx -t -c /etc/nginx/nginx.conf
+$ sudo nginx -t -c /etc/nginx/nginx.conf
+~~~
+
+### コンパイルオプションの確認
+
+[pam](nginx.auth.pam.md) が入っているかの確認:
+
+~~~bash
+$ sudo nginx -V  2>&1 |  sed 's/--/\n--/g' | grep pam
 ~~~
 
 ## default_server
