@@ -1,3 +1,16 @@
+## 設定確認
+
+
+~~~bash
+$ nginx -t -c /path/to/nginx.conf
+~~~
+
+Debian系の場合、`-c` でテストすると `--prefix` みないので、 `include` で相対パスにしていると問題になります。
+
+~~~bash 
+$ nginx -t
+~~~
+
 ## default_server
 
 - [How nginx processes a request](http://nginx.org/en/docs/http/request_processing.html)
