@@ -5,10 +5,11 @@
 $ nginx -t -c /path/to/nginx.conf
 ~~~
 
-Debian系の場合、`-c` でテストすると `--prefix` みないので、 `include` で相対パスにしていると問題になります。
+Debian系の場合、設定ファイルは `/etc/nginx/nginx.conf` になります。
+`include` などを相対パスで指定した場合は、　`/etc/nginx` からの相対パスになります。
 
-~~~bash 
-$ nginx -t
+~~~bash
+$ nginx -t -c /etc/nginx/nginx.conf
 ~~~
 
 ## default_server
