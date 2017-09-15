@@ -33,3 +33,32 @@ START_HOURS_RANGE=3-22
 7       25      cron.weekly             nice run-parts /etc/cron.weekly
 @monthly 45     cron.monthly            nice run-parts /etc/cron.monthly
 ~~~
+
+
+# うごかない？
+
+## cron 自体が動いているか確認
+
+毎分実行される：
+
+~~~bash
+*/1 * * * * /usr/bin/env > /tmp/output
+~~~
+
+
+## PATHがおかしい
+
+cronで動くシェルの場合、 binのみ。
+
+~~~bash
+PATH=/usr/bin:/bin
+~~~
+
+## SHELL を明示的に指定してみる
+
+シェルスクリプトコードが特定のシェルに依存しているとか。
+
+~~~bash
+SHELL=/bin/bash
+...
+~~~~
