@@ -28,3 +28,9 @@ span.lang-flip-ja:before{ content: "English"; }
     <span class="lang-flip-{{ LANGUAGE_CODE }}"></span>
 </a>
 ~~~
+
+# 画像
+
+## object-fit
+
+- [【CSS3】親要素の大きさに依存して画像の表示方法を変える［object-fit］プロパティの使い方。](http://on-ze.com/archives/2296)
