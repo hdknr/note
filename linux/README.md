@@ -11,15 +11,12 @@
 
 - [Networking](linux.networking.md)
 
-
 # ファイル
 
+- [スワップ](linux.swap.md)
 - [テキストファイルなど](linux.files.md)
 - [ファイルシステム](linux.filesystem.md)
 
-# サービス
-
-- [vsftd](vsftpd.md)
 
 # セキュリティ
 
