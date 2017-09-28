@@ -6,7 +6,7 @@ nginx
 - [502エラー](nginx.502.md)
 - [allow/deny](nginx.access.md)
 - [map](nginx.map.md)
-
+- [fastcgi](nginx.fastcgi.md)
 
 ## ビルド内容
 
