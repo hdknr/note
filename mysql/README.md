@@ -8,6 +8,7 @@
 - [ALTER TABLE](mysql.alter.table.md)
 - [スキーマ](mysql.schema.md)
 - [CSV化](mysql.csv.md)
+- [チューニング](mysql.tuning.md)
 
 
 ## 重複を削除
