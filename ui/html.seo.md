@@ -10,49 +10,5 @@
 
 グローバル:
 
-~~~yaml
-header:
-  nav:
-
-main:
-  article:
-  aside:
-
-footer:    
-~~~
-
-
-`article`:
-
-
-~~~yaml
-artcile:
-
-  header:
-    h1:
-
-  section:
-    h2:
-
-  section:
-    h2:
-
-  ...
-~~~
-
-
-`section`:
-
-~~~yaml
-section:
-  h2:
-
-  section:
-    h3:
-    div:
-
-  section:
-    h3:
-    div:
-
-~~~
+![](html5-sectioning/html5-sectioning.001.png)
+![](html5-sectioning/html5-sectioning.002.png)
