@@ -16,6 +16,32 @@ false
 true
 ~~~
 
+## splice: 要素操作
+
+- [splice](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+~~~js
+> a = ['a', 'b', 'c', 'd', 'e']
+> var from = 4
+> var to = 1
+~~~
+
+### ２つの要素を交換
+
+~~~js
+> a[from] = a.splice(to, 1, a[from])[0]
+> a
+[ 'a', 'e', 'c', 'd', 'b' ]
+~~~
+
+### 要素を移動挿入
+
+~~~js
+> a.splice(to, 0, a.splice(from, 1)[0])
+> a
+[ 'a', 'b', 'e', 'c', 'd' ]
+~~~
+
 ## push
 
 ~~~js
