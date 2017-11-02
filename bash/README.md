@@ -49,6 +49,10 @@ $ date +'%m%d%H%M%S'.$$
 BASEDIR=$(readlink -f $0 | xargs dirname)
 ~~~
 
+~~~
+THIS=$( readlink -m $( type -p $0 ))
+~~~
+
 
 ## 置換
 
