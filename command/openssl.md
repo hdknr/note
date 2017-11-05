@@ -78,3 +78,27 @@ $ openssl pkcs8 -in ~/.ssh/private.pem -inform PEM -outform DER -topk8 -nocrypt 
 ~~~bash
 $ ssh-keygen -lf  yourdomain.pub
 ~~~
+
+## PKCS12 作成
+
+~~~bash
+$ openssl pkcs12 -export -inkey private.pem -in cert.pem -out dist.p12
+~~~
+
+## X.509 をテキスト形式にする
+
+~~~bash
+$ openssl x509 -text -noout -in cer.txt  > cer.x509.txt
+~~~
+
+## 秘密鍵から公開鍵を生成する
+
+~~~bash
+$ openssl rsa -in key.txt -pubout -out pub.txt
+~~~
+
+## 証明書から公開鍵を抜く
+
+~~~bash
+$ openssl x509 -pubkey -noout -in cer.txt  > cert.pub.txt
+~~~
