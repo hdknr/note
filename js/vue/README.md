@@ -1,2 +1,3 @@
-
+- [#64](https://github.com/hdknr/scriptogr.am/issues/64)
 - [テンプレート](vue.template.md)
+- [テンプレート](vue.events.md)
