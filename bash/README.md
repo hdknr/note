@@ -1,5 +1,6 @@
 ## トピック
 
+- [#66](https://github.com/hdknr/scriptogr.am/issues/66)
 - [連想配列](bash.dict.md)
 - [配列](bash.arrays.md)
 - [補完](bash.completion.md)
@@ -43,14 +44,10 @@ $ date +'%m%d%H%M%S'.$$
 
 ## 絶対パス
 
-- readline を使ってスクリプトの絶対パスを出す
+- [realpath](https://linuxjm.osdn.jp/html/GNU_coreutils/man1/realpath.1.html) を使う
 
 ~~~
-BASEDIR=$(readlink -f $0 | xargs dirname)
-~~~
-
-~~~
-THIS=$( readlink -m $( type -p $0 ))
+THIS=$(realpath $0)
 ~~~
 
 
