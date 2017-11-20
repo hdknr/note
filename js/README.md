@@ -7,6 +7,10 @@
 - [日時](js.datetime.md)
 - [文字列](js.string.md)
 
+# REST
+
+- [axios](axios.md)
+
 # Tools
 
 - [bower](bower.md)
@@ -15,3 +19,5 @@
 
 
 # UI
+
+- [vue.js](vue/README.md)
