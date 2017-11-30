@@ -1,5 +1,35 @@
 - [コンポーネント](https://jp.vuejs.org/v2/guide/components.html)
 
+## 双方向バインド(`v-model` + `$emit("input", newValue)`)
+
+- 基本的には 親 -> 子の単横方で、 子 -> 親 はない
+- が、 `v-model` を使えば双方向`っぽく`動く
+- 子の中で、 `$emit('input', newValue)` すればVueが親の値を変更してくれる
+
+
+    ... v-model is just syntactic sugar for v-bind:value and v-on:input.
+
+親:
+
+~~~html
+<mymedia-inplace-edit
+  v-model="content.title">   {# title属性を双方向バインドする #}
+</mymedia-inplace-edit>
+~~~
+
+
+子(さらにINPUTコンポーネントと双方向バインドしている):
+
+~~~html
+<b-form-input
+  type="text"
+  required="true"
+  @change="editing=false; $emit('input', $event);"     {# 変更イベントがおきたら新しい値を input イベントで emmit する#}
+  v-model="value"                                      {# 実際の入力処理: 子valueをINPUTと双方向バインドする #}
+>
+</b-form-input>
+~~~
+
 
 ## サブコンポーネントの更新
 
