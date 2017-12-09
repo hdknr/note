@@ -73,3 +73,22 @@
     ...
   },
 ~~~      
+
+## コンポーネントのクラスを生成
+
+~~~js
+var app = new Vue({
+  components: {
+    'myarticles_article' : myArticlesArticle,
+    'myarticles_section' : myArticlesSection,
+    ....
+  },
+}
+~~~
+
+~~~js
+get_component(element){
+  // element.content_type がコンポーネント名と 1:1 で定義されている
+  return new Vue(this.$options.components[element.content_type]);
+}
+~~~
