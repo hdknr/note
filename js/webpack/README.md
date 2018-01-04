@@ -1,5 +1,7 @@
 ## Webpack
 
+- [#65](https://github.com/hdknr/scriptogr.am/issues/65)
+
 ### 例
 
 ~~~bash
@@ -69,3 +71,12 @@ bundle.js  676 kB       0  [emitted]  [big]  main
    + 47 hidden modules
 Done in 2.44s.
 ~~~
+
+
+## 記事
+
+[最新版で学ぶwebpack 3入門(図解付き) – JS開発で必須のモジュールバンドラー ](https://ics.media/entry/12140)
+
+- 「CSSや画像を含むあらゆるアセットファイルをJavaScriptとして出力する」ことが基本的な使い方
+- ECMAScript Modules(ES Modules/ESM)をサポート
+- [Tree Shaking](https://qiita.com/pirosikick/items/863830856891d40308cb)（未使用のモジュールを省いてバンドルする機能）が使える
