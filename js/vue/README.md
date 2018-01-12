@@ -1,4 +1,5 @@
 - [#64](https://github.com/hdknr/scriptogr.am/issues/64)
+- [nuxt.js](nextjs/README.md)
 
 ## トピック
 
