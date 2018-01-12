@@ -3,6 +3,15 @@
 
 ## インストール
 
+Debian/golang([goenv](https://github.com/hdknr/scriptogr.am/blob/master/go/goenv.md)):
+
+~~~bash
+$ go get github.com/ericchiang/pup
+~~~
+
+
+macOS:
+
 ~~~bash
 $ brew install pup
 Updating Homebrew...
@@ -15,6 +24,8 @@ No changes to formulae.
 ==> Pouring pup-0.4.0.sierra.bottle.1.tar.gz
 🍺  /usr/local/Cellar/pup/0.4.0: 5 files, 3.9MB
 ~~~
+
+
 
 ## 記事
 
