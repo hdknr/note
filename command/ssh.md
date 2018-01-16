@@ -8,3 +8,12 @@ $ zgrep sshd /var/log/auth.log* | grep "Accepted publickey for admin" | sed -re 
 157.168.71.211 p7957211-ipngn1702marunouchi.tokyo.ocn.ne.jp.
 222.229.233.5 p82335-ipbffx32marunouchi.tokyo.ocn.ne.jp.
 ~~~
+
+
+## ネットワークを変えたら接続できなくなった
+
+/etc/hosts.allow で日本ネットワークのみ許可制限がはいっているとか:
+
+~~~
+sshd: .jp
+~~~
