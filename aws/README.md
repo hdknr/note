@@ -34,6 +34,7 @@
 - [RDS](rds/README.md)
 - [SES](ses/README.md)
 - [Batch](aws.batch.md)
+- [証明書サービス: ACM](aws.acm.md)
 
 # ツール
 
