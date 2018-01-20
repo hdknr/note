@@ -7,6 +7,10 @@
 - [テンプレート](vue.template.md)
 - [イベント](vue.events.md)
 - [コンポーネント](vue.components.md)
+
+  - [スロット](vue.components.slot.md)
+
+
 - [スタイル](vue.style.md)
 
 ## TIP
