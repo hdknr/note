@@ -92,3 +92,8 @@ get_component(element){
   return new Vue(this.$options.components[element.content_type]);
 }
 ~~~
+
+## コンポーネントネーミング
+
+- [vue: スタイルガイド](https://jp.vuejs.org/v2/style-guide/index.html)
+- [Vueコンポーネントの強く推奨される名付け方](https://qiita.com/suin/items/e4d6a0e0d4912fbf9b77)
