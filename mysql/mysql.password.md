@@ -74,14 +74,23 @@ stretch/sid
 ~~~
 
 ~~~bash
-$ sudo mysqladmin password -u root     
-New password:                                                                      
-Confirm new password:                                   
+$ sudo mkdir -p /var/run/mysqld
+$ sudo chown mysql:mysql /var/run/mysqld
+$ sudo mysqld_safe --skip-grant-tables &
+~~~
 
-Warning: Since password will be sent to server in plain text, use ssl connection to ensure password safety.
-mysqladmin:      
-You cannot use 'password' command as mysqld runs
- with grant tables disabled (was started with --skip-grant-tables).
-Use: "mysqladmin flush-privileges password '*'" instead
-root@ubuntu:~# mysql -u root -p
+~~~bash
+$ sudo mysql -u root mysql
+~~~
+
+~~~mysql
+mysql> update user set authentication_string=password("new-passwod") where user='root';
+Query OK, 1 row affected, 1 warning (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 1
+~~~
+
+再起動:
+~~~bash
+$ sudo kill -9 12301; sudo kill -9 12685
+$ sudo /etc/init.d/mysql start
 ~~~
