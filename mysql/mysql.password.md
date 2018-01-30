@@ -65,3 +65,23 @@ Enter password:
 +---------------------+
 
 ~~~
+
+### Ubuntu
+
+~~~bash
+$ cat /etc/debian_version
+stretch/sid
+~~~
+
+~~~bash
+$ sudo mysqladmin password -u root     
+New password:                                                                      
+Confirm new password:                                   
+
+Warning: Since password will be sent to server in plain text, use ssl connection to ensure password safety.
+mysqladmin:      
+You cannot use 'password' command as mysqld runs
+ with grant tables disabled (was started with --skip-grant-tables).
+Use: "mysqladmin flush-privileges password '*'" instead
+root@ubuntu:~# mysql -u root -p
+~~~
