@@ -1,4 +1,4 @@
-# バージョン
+## バージョン
 
 ~~~bash
 $ lsb_release -a
@@ -13,3 +13,7 @@ Codename:       trusty
 $ more /etc/debian_version
 jessie/sid
 ~~~
+
+## Debian
+
+- [apt](debian.apt.md)
