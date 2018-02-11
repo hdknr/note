@@ -1,5 +1,8 @@
+- [#77](https://github.com/hdknr/scriptogr.am/issues/77)
 - [psql](posgresql.psql.md)
 
 ## パフォーマンス
 
-- http://qiita.com/awakia/items/9981f37d5cbcbcd155eb
+- [PostgresのRDSチューニング
+](http://qiita.com/awakia/items/9981f37d5cbcbcd155eb)
+- [pg_stat_statements](postgresql.pg_stat_statements.md)
