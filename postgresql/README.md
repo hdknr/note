@@ -1,5 +1,5 @@
 - [#77](https://github.com/hdknr/scriptogr.am/issues/77)
-- [psql](posgresql.psql.md)
+- [psql](postgresql.psql.md)
 
 ## パフォーマンス
 
