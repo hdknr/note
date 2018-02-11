@@ -24,11 +24,11 @@ rows | 処理行数 (返却行数 or 影響行数)
 - 設定変更
 
 
-Name	                   |Value             |
--------------------------|-----------------|----------
-pg_stat_statements.track |ALL               |
-shared_preload_libraries |pg_stat_statements|
-track_activity_query_size|2048	            |
+Name	                   |Value             
+-------------------------|-----------------
+pg_stat_statements.track |ALL               
+shared_preload_libraries |pg_stat_statements
+track_activity_query_size|2048	            
 
 - 有効化
 
