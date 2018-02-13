@@ -7,6 +7,7 @@ nginx
 - [allow/deny](nginx.access.md)
 - [map](nginx.map.md)
 - [fastcgi](nginx.fastcgi.md)
+- [ログ](nginx.log.md)
 
 ## ビルド内容
 

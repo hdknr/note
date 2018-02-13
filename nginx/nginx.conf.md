@@ -62,3 +62,11 @@ server {
   listen 80;
   ....
 ~~~
+
+## ワーカープロセス数
+
+自動:
+
+~~~
+worker_processes  auto;
+~~~
