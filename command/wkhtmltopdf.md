@@ -34,3 +34,13 @@ $ xvfb-run wkhtmltopdf index.html index.pdf
 $ pip install pyvirtualdisplay    
 $ pip install EasyProcess
 ~~~
+
+~~~py
+from easyprocess import EasyProcess
+from pyvirtualdisplay import Display
+
+
+if __name__ == "__main__":
+    Display(visible=0, size=(1024, 768)).start()
+    EasyProcess('wkhtmltopdf index.html index.pdf').start()
+~~~
