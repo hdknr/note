@@ -14,6 +14,10 @@ $ more /etc/debian_version
 jessie/sid
 ~~~
 
+## トピック
+
+- [OSバージョンアップ](upgrade.md)
+
 ## Debian
 
 - [apt](debian.apt.md)

@@ -2,6 +2,7 @@
 
 - [Alpine](./alpine.md)
 - [パフォーマンス](linux.performance.md)
+- [Ubuntu](./ubuntu/)
 
 # Management
 
