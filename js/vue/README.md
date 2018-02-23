@@ -1,8 +1,9 @@
 - [#64](https://github.com/hdknr/scriptogr.am/issues/64)
-- [nuxt.js](nextjs/README.md)
 
 ## トピック
 
+- [vue-cli](vue-cli.md)
+- [SSR: nuxt.js](nextjs/README.md)
 - [インスタンス](vue.instance.md)
 - [テンプレート](vue.template.md)
 - [イベント](vue.events.md)
