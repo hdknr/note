@@ -10,6 +10,10 @@
 - [Ubuntu](aws.ubuntu.md)
 - [Ubuntu Boot](aws.ubuntu.boot.md)
 
+## [VPC](vpc)
+
+- [最小インターネット公開](vpc/vpc.minimum.md)
+
 ## EBS
 
 - [EBS](aws.ebs.md)
