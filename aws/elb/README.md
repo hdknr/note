@@ -32,7 +32,7 @@ server {
 
 
 
-# ACM Certificate: SSLの証明書
+## ACM Certificate: SSLの証明書
 
 - [Request a Certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request.html)
 - [Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate.html)
@@ -44,6 +44,13 @@ server {
 - postmaster@your_domain
 - webmaster@your_domain
 - admin@your_domain
+
+
+## ヘルスチェック
+
+nginxの`default_server` が正しく `200` を返すようにする:
+
+- [ELB(https) + nginx でヘルスチェックがこける問題]https://qiita.com/ameyamashiro/items/63793a02d66b6c48ec09
 
 
 ## その他

@@ -23,10 +23,11 @@
 
 ## ELB
 
-[ELB](aws.elb.md):
+[ELB](elb):
 
 -  ACM証明書ドメイン承認
 -  SSL強制
+-  ヘルスチェック(nginx)
 
 ## Autoscale
 
