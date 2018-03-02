@@ -2,10 +2,8 @@
 
 - [awscli - aws コマンド](aws.awscli.md)
 
-## EC2
+## [EC2](ec2)
 
-- [インスタンス起動時にコマンド実行](aws.bootcommand.md)
-- [インスタンス起動時にEBSをアタッチするスクリプト](aws.boot.attachvolume.bash)
 - [メタデータ](aws.instance.metadata.md)
 - [Ubuntu](aws.ubuntu.md)
 - [Ubuntu Boot](aws.ubuntu.boot.md)
@@ -14,16 +12,11 @@
 
 - [最小インターネット公開](vpc/vpc.minimum.md)
 
-## EBS
+## [EBS](ebs)
 
-- [EBS](aws.ebs.md)
-- [アタッチ](aws.mount.md)
-- [アタッチスクリプト](aws.mount.ebs.bash)
+- [インスタンス起動時にEBSをアタッチしてマウントする](ebs.attach-volume.md)
 
-
-## ELB
-
-[ELB](elb):
+## [ELB](elb)
 
 -  ACM証明書ドメイン承認
 -  SSL強制
