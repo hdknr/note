@@ -9,6 +9,7 @@
 - [スキーマ](mysql.schema.md)
 - [CSV化](mysql.csv.md)
 - [チューニング](mysql.tuning.md)
+- [トラブル](trouble)
 
 
 ## 重複を削除
