@@ -4,6 +4,7 @@
 
 事前:
 
+- EC2インスタンスとEBSのボリュームの `ゾーンがおなじであること` を確認
 - `$STORAGE` として、 EBSのボリュームに `Name` を指定しておく
 - jq, awscli コマンドをイストールしておく
 
@@ -44,3 +45,12 @@ mount $LOCALDEVICE $MOUNTPOINT
 sudo service mysql start
 sudo supervisorctl reload
 ~~~
+
+
+## アタッチできない
+
+- インスタンスのゾーンとEBSのゾーンがことなる
+
+オートスケールから起動:
+
+- サブネット のゾーンは マウントする EBS と同じものを `１つだけ` チョイスする
