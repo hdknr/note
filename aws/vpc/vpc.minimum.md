@@ -35,3 +35,8 @@
 
 - ![](images/11.routing-table.bind-subnets.png)
 - ![](images/12.routing-table-bind-subnets-done.png)
+
+
+## 13. インスタンスに公開DNSを割り当てる
+
+- ![](images/13.dns-enable.png)
