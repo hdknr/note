@@ -17,6 +17,7 @@
 
 ## TIP
 
+
 ### 強制リフレッシュ($forceUpdate())
 
 ~~~js
@@ -25,3 +26,7 @@ onEvent(ev) {
     this.$forceUpdate();
 }
 ~~~
+
+### その他
+
+- [ファイルアップロード](vue.input-file.md)
