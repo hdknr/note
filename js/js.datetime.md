@@ -59,6 +59,16 @@ true
 2016
 ~~~
 
+### moment 問題とか
+
+Safariの場合、 YYYY-MM-DD を守らないと日付をデシリアライズできない:
+
+~~~js
+moment('2018-01');        // OK
+moment('2018-1');         // NG
+moment(['2018', '1']);    // OK (こちら推奨)
+~~~
+
 
 # Date
 
@@ -121,7 +131,6 @@ function blocktimelist(d0, d1, block){
     return rs;
 }
 ~~~    
-
 
 ## Picker
 
