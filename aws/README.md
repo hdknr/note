@@ -1,5 +1,8 @@
+
+
 # AWS 関連
 
+- [#75](https://github.com/hdknr/scriptogr.am/issues/75)
 - [awscli - aws コマンド](aws.awscli.md)
 
 ## [EC2](ec2)
@@ -22,6 +25,10 @@
 -  SSL強制
 -  ヘルスチェック(nginx)
 
+## [RDS](rds/README.md)
+
+- パスワード変更
+
 ## Autoscale
 
 - [起動設定](aws.autoscale.md)
@@ -29,7 +36,6 @@
 
 ## その他
 
-- [RDS](rds/README.md)
 - [SES](ses/README.md)
 - [Batch](aws.batch.md)
 - [証明書サービス: ACM](aws.acm.md)
