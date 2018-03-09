@@ -4,10 +4,10 @@
 
 ## Fundation
 
-- [オブジェクト](js.object.md)
-- [配列](js.array.md)
-- [日時](js.datetime.md) (`moment.js`)
-- [文字列](js.string.md)
+- [オブジェクト](lang/js.object.md)
+- [配列](lang/js.array.md)
+- [日時](lang/js.datetime.md) (`moment.js`)
+- [文字列](lang/js.string.md)
 
 ## REST
 
