@@ -3,6 +3,7 @@
 年の選択支がおおいので、もっとも選択されやすい年の位置にスクロールさせる
 
 `ref=yearSelect` で指定した `el-select`
+
 ~~~html
 <el-select ref="yearSelect" v-model="selectedYear" @change="on_year">
   <el-option v-for="year in years" :label="year_label(year)" :key="year" :value="year"></option>
