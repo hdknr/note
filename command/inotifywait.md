@@ -133,7 +133,7 @@ yyyy
 
 - https://github.com/seb-m/pyinotify
 - [pythonでinotifyを使ってみる。](https://blanktar.jp/blog/2013/03/python-inotify.html)
-
+- [再帰的にフォルダを監視できるincronライクなコマンド『Watcher』](https://orebibou.com/2015/05/%E5%86%8D%E5%B8%B0%E7%9A%84%E3%81%AB%E3%83%95%E3%82%A9%E3%83%AB%E3%83%80%E3%82%92%E7%9B%A3%E8%A6%96%E3%81%A7%E3%81%8D%E3%82%8Bincron%E3%83%A9%E3%82%A4%E3%82%AF%E3%81%AA%E3%82%B3%E3%83%9E%E3%83%B3/)
 
 ## mac(fswatch)
 
