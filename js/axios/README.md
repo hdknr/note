@@ -1,6 +1,9 @@
 - https://github.com/axios/axios
-- https://github.com/hdknr/scriptogr.am/issues/69
+- [#69](https://github.com/hdknr/scriptogr.am/issues/69)
 
+## Tips
+
+- [クエリパラメータ](axios.queryparameter.md)
 
 
 ## POST(PUT, PATCH)

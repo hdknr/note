@@ -11,7 +11,7 @@
 
 ## REST
 
-- [axios](axios.md)
+- [axios](./axios)
 
 ## Tools
 
