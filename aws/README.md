@@ -38,6 +38,10 @@
 
 - [請求アラート](Cloudwatch/billing.md)
 
+## セキュリティグループ
+
+- [sshが許可されたアドレス](aws.securitygroup.md)
+
 ## その他
 
 - [SES](ses/README.md)
