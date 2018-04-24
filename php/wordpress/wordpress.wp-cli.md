@@ -90,3 +90,26 @@ $ vendor/bin/wp plugin list
 | rest-api                | active   | none      | 2.0-beta13.1 |
 +-------------------------+----------+-----------+--------------+
 ~~~
+
+
+## wp-config.php
+
+~~~php
+if ( defined( 'WP_CLI' ) ) {
+    $_SERVER['HTTP_HOST'] = 'localhost';
+}
+
+if ( !defined( 'WP_CLI' ) ) {
+    // remove x-pingback HTTP header
+    add_filter('wp_headers', function($headers) {
+        unset($headers['X-Pingback']);
+        return $headers;
+    });
+    // disable pingbacks
+    add_filter( 'xmlrpc_methods', function( $methods ) {
+            unset( $methods['pingback.ping'] );
+            return $methods;
+    });
+    add_filter( 'auto_update_translation', '__return_false' );
+}
+~~~
