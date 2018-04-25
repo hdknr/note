@@ -67,12 +67,13 @@ set httpd port 2812 and
 
 ## 通知
 
-起動スクリプトを変更:
+起動した時にアラートを送るように, 起動スクリプトを変更:
 
 ~~~
 check process mysql with pidfile /var/run/mysqld/mysqld.pid
-     start program = "/bin/bash -c '/etc/init.d/mysql start && /home/ubuntu/bin/slert.py'"
+     start program = "/bin/bash -c '/etc/init.d/mysql start && /home/ubuntu/bin/slert.py restart'"
      stop program = "/etc/init.d/mysql stop"
+     if 1 restarts within 1 cycles then exec "/home/ubuntu/bin/slert.py error'"
      if 5 restarts within 5 cycles then timeout
 ~~~     
 
@@ -80,11 +81,52 @@ slert.py:
 
 ~~~py
 #!/usr/bin/python3
+'''pip install slackweb'''
 import slackweb
 URL='https://hooks.slack.com/services/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'
 slack = slackweb.Slack(url=URL)
 slack.notify(text="エラー")
 ~~~
+
+
+## 考察
+
+start プログラムにダミーのコマンドを指定してみる:
+
+~~~
+check process mysql with pidfile /var/run/mysqld/mysqld.pid
+     start program = "/bin/bash -c '/home/ubuntu/bin/dummy.sh'"
+     stop program = "/etc/init.d/mysql stop"
+     if 1 restarts within 1 cycles then exec "/bin/bash -c '/etc/init.d/mysql start && /home/ubuntu/bin/slert.py'"  
+     if 5 restarts within 5 cycles then timeout
+~~~
+
+mysqld をkillする
+
+~~~bash
+$ sudo killall mysqld
+~~~
+
+最初のサイクルで start プログラムを実行:
+
+~~~
+[UTC Apr 25 08:25:09] info     : 'mysql' trying to restart
+[UTC Apr 25 08:25:09] info     : 'mysql' start: /bin/bash
+[UTC Apr 25 08:25:39] error    : 'mysql' failed to start (exit status 0) -- no output
+~~~
+
+次のサイクルで `exec` され(startも実行されるがこれはダミー)て、mysqdが起動し、アラートも飛ぶ:
+
+~~~
+[UTC Apr 25 08:27:39] error    : 'mysql' service restarted 1 times within 1 cycles(s) - exec
+[UTC Apr 25 08:27:39] info     : 'mysql' exec: /bin/bash
+[UTC Apr 25 08:27:39] error    : 'mysql' process is not running
+
+[UTC Apr 25 08:27:39] info     : 'mysql' trying to restart
+[UTC Apr 25 08:27:39] info     : 'mysql' start: /bin/bash
+[UTC Apr 25 08:27:40] info     : 'mysql' started
+~~~
+
 
 ## 記事
 
