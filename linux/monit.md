@@ -29,15 +29,13 @@ $ sudo grep -v "^#" /etc/monit/monitrc
 ~~~
 
 
-## mysqld の監視 (/etc/monit/conf.d/mysql.conf)
-
-bitnamiのMySQL監視:
+## mysqld の自動起動 (/etc/monit/conf.d/mysql)
 
 ~~~bash
 check process mysql with pidfile /var/run/mysqld/mysqld.pid
     start program = "/etc/init.d/mysql start"
     stop program = "/etc/init.d/mysql stop"
-    if failed port 3306 then restart
+    if 5 restarts within 5 cycles then timeout
 ~~~
 
 ログ:
@@ -66,7 +64,30 @@ set httpd port 2812 and
     allow admin:monit      # require user 'admin' with password 'monit'
 ~~~    
 
+
+## 通知
+
+起動スクリプトを変更:
+
+~~~
+check process mysql with pidfile /var/run/mysqld/mysqld.pid
+     start program = "/bin/bash -c '/etc/init.d/mysql start && /home/ubuntu/bin/slert.py'"
+     stop program = "/etc/init.d/mysql stop"
+     if 5 restarts within 5 cycles then timeout
+~~~     
+
+slert.py:
+
+~~~py
+#!/usr/bin/python3
+import slackweb
+URL='https://hooks.slack.com/services/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'
+slack = slackweb.Slack(url=URL)
+slack.notify(text="エラー")
+~~~
+
 ## 記事
 
 - [
 【Ubuntu】monit によるプロセス監視と Slack 通知【Webhook】](https://fisproject.jp/2017/07/slack-notification-from-monit/)
+- [Debian 9 (Stretch) - Monit でプロセス監視！](https://www.mk-mode.com/octopress/2017/10/06/debian-9-monit-monitoring/)
