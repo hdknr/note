@@ -148,6 +148,31 @@ check process mysql with pidfile /var/run/mysqld/mysqld.pid
 [UTC Apr 25 08:58:22] info     : 'mysql' exec: /home/ubuntu/bin/slert.py
 ~~~
 
+## 要するに
+
+~~~
+check process mysql with pidfile /var/run/mysqld/mysqld.pid
+     start program = "/etc/init.d/mysql start"
+     stop program = "/etc/init.d/mysql stop"
+     if does not exist then restart
+     if does not exist for 1 cycle then exec "/home/ubuntu/bin/slert.py stopped"
+     else if succeeded for 1 cycle then exec "/home/ubuntu/bin/slert.py restarted"
+     if 5 restarts within 5 cycles then timeout
+~~~     
+
+~~~
+[UTC Apr 25 09:07:13] error    : 'mysql' process is not running
+[UTC Apr 25 09:07:13] info     : 'mysql' exec: /home/ubuntu/bin/slert.py
+[UTC Apr 25 09:07:13] error    : 'mysql' process is not running
+[UTC Apr 25 09:07:13] info     : 'mysql' trying to restart
+[UTC Apr 25 09:07:13] info     : 'mysql' start: /etc/init.d/mysql
+
+
+[UTC Apr 25 09:09:14] info     : 'mysql' process is running with pid 25011
+[UTC Apr 25 09:09:14] info     : 'mysql' exec: /home/ubuntu/bin/slert.py
+[UTC Apr 25 09:09:14] info     : 'mysql' process is running with pid 25011
+~~~
+
 ## 記事
 
 - [
