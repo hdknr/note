@@ -127,6 +127,26 @@ $ sudo killall mysqld
 [UTC Apr 25 08:27:40] info     : 'mysql' started
 ~~~
 
+結局以下のようにすると１ cycleめで再起動させて成功したら次のサイクルで`exec`される:
+
+~~~
+check process mysql with pidfile /var/run/mysqld/mysqld.pid
+     start program = "/etc/init.d/mysql start"
+     stop program = "/etc/init.d/mysql stop"
+     if does not exist then restart
+     else if succeeded for 1 cycle then exec "/home/ubuntu/bin/slert.py restart"
+     if 5 restarts within 5 cycles then timeout
+~~~     
+
+~~~
+[UTC Apr 25 08:56:20] error    : 'mysql' process is not running
+[UTC Apr 25 08:56:20] info     : 'mysql' trying to restart
+[UTC Apr 25 08:56:20] info     : 'mysql' start: /etc/init.d/mysql
+
+
+[UTC Apr 25 08:58:22] info     : 'mysql' process is running with pid 24467
+[UTC Apr 25 08:58:22] info     : 'mysql' exec: /home/ubuntu/bin/slert.py
+~~~
 
 ## 記事
 
