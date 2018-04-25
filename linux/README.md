@@ -7,6 +7,7 @@
 # Management
 
 - [sudo](linux.sudo.md)
+- [monit](monit.md)
 
 # Networking
 
