@@ -1,0 +1,49 @@
+## Download IE/Edge 仮想マシン
+
+- https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/
+
+
+Edge:
+
+~~~bash
+$ vagrant box add MSEdgeWin10 ~/Downloads/MSEdge\ -\ Win10.box
+
+$ vagrant box list
+MSEdgeWin10                      (virtualbox, 0)
+~~~
+
+Vagrantfile:
+
+~~~bash
+$ mkdir msedge
+$ cd msedge
+
+$ vagrant init MSEdgeWin10
+$ vim Vagrantfile
+~~~
+
+~~~ruby
+config.vm.provider "virtualbox" do |vb|
+  # Display the VirtualBox GUI when booting the machine
+  vb.gui = true
+
+  # Customize the amount of memory on the VM:
+  vb.memory = "8192"
+  vb.customize ["modifyvm", :id, "--vram", "256"]
+end
+
+config.vm.guest = :windows
+config.ssh.username = "IEUser"
+config.ssh.password = "Passw0rd!"
+~~~
+
+~~~bash
+$ vagrant up
+~~~
+
+
+
+## 記事
+
+- [vagrant で modernIE](http://hpcmemo.hatenablog.com/entry/2017/01/14/001422)
+- [OS X に Microsoft Edge テスト環境を作る（VirtualBox）](https://qiita.com/DriftwoodJP/items/9e50ec8550ef161212e9)

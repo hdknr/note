@@ -11,3 +11,4 @@
 ## Browser
 
 - [Chrome](chrome.md)
+- [IE11](ie.md)
