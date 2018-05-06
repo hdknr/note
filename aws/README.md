@@ -42,6 +42,10 @@
 
 - [sshが許可されたアドレス](aws.securitygroup.md)
 
+## [Elastic Beanstalk](beanstalk/README.md)
+
+- ホスティング
+
 ## その他
 
 - [SES](ses/README.md)
