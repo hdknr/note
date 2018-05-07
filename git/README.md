@@ -19,6 +19,11 @@
 - ユーザー指定
 - [.gitgnore](git.ignore.md)
 
+## [diff](git.diff.md)
+
+- コミット間での差分
+- 差分のファイル名一覧
+
 ## [filter-branch](git.filter-branch.md)
 
 ## [log](git.log.md)
