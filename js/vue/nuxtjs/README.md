@@ -6,6 +6,28 @@
 ## Topic
 
 - [インストール](nuxtjs.install.md)
+- [ホストとポート番号を変更するには？](https://ja.nuxtjs.org/faq/host-port/)
+
+~~~bash
+$ npm install --save-dev cross-env
+~~~
+
+packages.json:
+
+~~~js
+"scripts": {
+  "dev": "cross-env HOST=0.0.0.0 PORT=3333 nuxt"
+}
+~~~
+
+~~~bash
+$ npm run dev
+
+> ssr@1.0.0 dev /vagrant/projects/nuxts/ssr
+> cross-env HOST=0.0.0.0 PORT=3333 nuxt
+....
+~~~
+
 
 ## nginx
 
