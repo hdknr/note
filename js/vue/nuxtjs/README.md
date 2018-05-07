@@ -3,6 +3,10 @@
 - https://nuxtjs.org/
 - [next.js](https://github.com/zeit/next.js)(react の SSR(Server Side Rendering)) のインスパイア
 
+## アーキテクチャ
+
+- [asyncData](nuxtjs.asyncdata.md)
+
 ## Topic
 
 - [インストール](nuxtjs.install.md)
