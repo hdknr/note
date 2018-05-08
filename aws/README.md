@@ -25,9 +25,15 @@
 -  SSL強制
 -  ヘルスチェック(nginx)
 
-## [RDS](rds/README.md)
+## ストレージ
+
+### [RDS](rds/README.md)
 
 - パスワード変更
+
+### [DynamoDB](dynamodb/README.md)
+
+- NoSQL
 
 ## Autoscale
 
