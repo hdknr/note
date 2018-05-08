@@ -2,9 +2,10 @@
 
 - [#63](https://github.com/hdknr/scriptogr.am/issues/63)
 
-## Fundation
+## 言語
 
 - [オブジェクト](lang/js.object.md)
+- [クラス](lang/js.class.md)
 - [配列](lang/js.array.md)
 - [日時](lang/js.datetime.md) (`moment.js`)
 - [文字列](lang/js.string.md)
