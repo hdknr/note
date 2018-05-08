@@ -1,3 +1,4 @@
+- [#84](https://github.com/hdknr/scriptogr.am/issues/84)
 
 ## extensions
 
@@ -52,7 +53,19 @@ Options:
 
 ~~~
 
+## vim
+
+- [VSCodeVim/Vim](https://github.com/VSCodeVim/Vim)
+- [割と突き詰めてやったvim->vscode移行](https://qiita.com/y-mattun/items/45776b7e1942edb2f727)
+
+## Python
+
+- [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [WindowsのVisual Studio CodeでPython!! その３](http://tohnaman.hatenablog.jp/entry/2018/03/25/094607)
+- [Visual Studio CodeでPython + Djangoを書いて、py.testを実行してみた](http://thinkami.hatenablog.com/entry/2016/07/05/224416)
+
 ## 記事
 
 - [Mac版 Visual Studio Codeを使ってみます](http://qiita.com/akiko-pusu/items/185f4fd8484ecd3b3243)
 - [ターミナルからVisual Studio Codeを起動する方法【公式の方法】](http://qiita.com/naru0504/items/c2ed8869ffbf7682cf5c)
+
