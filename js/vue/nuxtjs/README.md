@@ -1,7 +1,9 @@
 ## nuxt.js
 
+- [#72](https://github.com/hdknr/scriptogr.am/issues/72)
 - https://nuxtjs.org/
 - [next.js](https://github.com/zeit/next.js)(react の SSR(Server Side Rendering)) のインスパイア
+
 
 ## アーキテクチャ
 
@@ -10,6 +12,7 @@
 ## Topic
 
 - [インストール](nuxtjs.install.md)
+- [認証](nuxtjs.auth.md)
 - [ホストとポート番号を変更するには？](https://ja.nuxtjs.org/faq/host-port/)
 
 ~~~bash
@@ -32,6 +35,7 @@ $ npm run dev
 ....
 ~~~
 
+- [django](https://github.com/nuxt/nuxt.js/issues?utf8=%E2%9C%93&q=is%3Aissue%20django)
 
 ## nginx
 
