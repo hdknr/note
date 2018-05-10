@@ -90,6 +90,29 @@ xvda    202:0    0     8G  0 disk
 xvdb    202:16   0   100G  0 disk /home/system
 ~~~
 
+## /etc/fstab
+
+
+~~~
+LABEL=cloudimg-rootfs	/	 ext4	defaults,discard	0 0
+/var/swap/swap0 swap swap defaults 0 0
+/dev/xvdf1	/vagrant  ext4    defaults	0    0
+~~~
+
+
+~~~bash 
+$ sudo file -s /dev/xvdf1
+/dev/xvdf1: Linux rev 1.0 ext4 filesystem data, UUID=7da175a4-ed10-4c74-af46-4d233d433a3b (needs journal recovery) (extents) (large files) (huge files)
+~~~
+
+~~~bash 
+$ sudo lsblk
+NAME    MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+xvdf    202:80   0   100G  0 disk 
+└─xvdf1 202:81   0   100G  0 part /vagrant
+xvda1   202:1    0   120G  0 disk /
+~~~
+
 
 ## 記事
 
