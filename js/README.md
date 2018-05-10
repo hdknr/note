@@ -13,9 +13,11 @@
 ## REST
 
 - [axios](./axios)
+- [CORS](cors.md)
 
 ## Tools
 
+- [npm](npm.md)
 - [bower](bower.md)
 - [grunt](grunt.md)
 - [gulp](gulp.md)

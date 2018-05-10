@@ -21,18 +21,8 @@
 
 ## Auth0
 
-- [Vuejs 2 認証チュートリアル](https://auth0.com/blog/jp-vuejs2-authentication-tutorial/)
-- [JSON Web Tokens (JWT) in Auth0](https://auth0.com/docs/jwt)
+- [Auth0](https://github.com/hdknr/scriptogr.am/blob/master/identity/auth0/README.md)
 - [nuxt/example-auth0](https://github.com/nuxt/example-auth0)
-- [Cookies vs Tokens: The Definitive Guide](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
-
-### auth0-lock
-
-    Lock is an embeddable login form, configurable to your needs, and recommended for use in single page apps. It enables you to easily add social identity providers, so that your users can login seamlessly using any provider they want.
-
-- [auth0/lock](https://github.com/auth0/lock) : [Lock v11 for Web](https://auth0.com/docs/libraries/lock/v11)
-- [example-auth0](https://github.com/hdknr/example-auth0)
-
 
 ## Firebase
 

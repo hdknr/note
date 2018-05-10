@@ -46,6 +46,11 @@ $ npm update -g
 $ npm outdated -g
 ~~~
 
+最新版のインストール(`@latest`):
+
+~~~bash 
+$ npm update auth0-lock@latest
+~~~
 
 ## キャッシュ
 
