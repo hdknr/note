@@ -76,6 +76,7 @@ aws_secret_access_key = yG9tmKOT85ACdFYHTA/mO/Y1OAksurhsGIl6U0yh
 - [AWS CLIで複数アカウントのアクセスキーを管理して扱う設定](http://qiita.com/kwsmkn/items/ce72d8e4cc35f1fc01b5)
 - [AWS CLIを使ってEC2インスタンスの情報を取得する](http://qiita.com/toshiro3/items/37821bdcc50c8b6d06dc)
 - [【AWS】CLIの初期設定について（認証情報とコマンド補完）](http://www.task-notes.com/entry/20141026/1414322858)
+- [名前付きプロファイル](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-multiple-profiles.html)
 
 プロファイルを追加:
 
@@ -110,6 +111,12 @@ aws_secret_access_key = yi2tmKOT95WCdFYHTWfdafdsafdapaOWksurhsiIl6Ugyh
 [profile ictact]
 aws_access_key_id = XKIXI26V7E6YDWGJY32Q
 aws_secret_access_key = TgJdgadNIZyaUg5akGGSGOjTHFAw9SfdsakkelNURoUvfC
+~~~
+
+## プロファイルを固定
+
+~~~bash 
+$ export AWS_PROFILE=user2
 ~~~
 
 # インスタンス情報 (ec2 describe-instances)
