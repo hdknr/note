@@ -24,6 +24,12 @@ $ sudo find . -type f \( -name "*~" -o -name "*bk" \) -prune -o -name "*" -exec 
 find ../ -name .svn -prune -o -type f -name "*" -exec grep -H error404 {} \;
 ```
 
+node_modules を叙階:
+
+~~~bash 
+$ find . -type d -name "node_modules" -prune -o -type f -exec grep -H WebAuth  {} \;
+~~~
+
 ## ファイルの拡張子一覧
 - bash の置換, `${FILE##*.}` を使う。
 

@@ -15,11 +15,23 @@
     so that your users can login seamlessly using any provider they want.
 
 - [auth0/lock](https://github.com/auth0/lock) : [Lock v11 for Web](https://auth0.com/docs/libraries/lock/v11)
+
+オリジン間認証サンプル:
+
 - [example-auth0](https://github.com/hdknr/example-auth0)
+- 参考:[Cross-Origin Authentication](https://auth0.com/docs/libraries/lock/v11#cross-origin-authentication)
 
 ## 記事
 
-- [Cookies vs Tokens: The Definitive Guide](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
+auth0手順:
+
+- [Universal Login](universal.md)
+- [Cross-Origin Authentication](coauth.md)
+
+手順の詳細:
+
+- [Cookies vs Tokens: The Definitive Guide](tokenbased.md)
+- [Universal vs Embedded Login](universal-embedded.md)
 
 ## 関連
 
