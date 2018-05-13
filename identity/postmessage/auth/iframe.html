@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Auth</title>
+</head>
+<body>
+
+<button class="btn">button</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(function()
+{
+
+  // 2) ホストページからのメッセージを受信
+  $(window).on('message', function(event)
+  {
+    // ホワイトリスト
+    if (event.originalEvent.origin != 'http://www.page.com') return;
+    console.log(event.originalEvent);
+  });
+
+
+  // 3) クリックしたらホストページにメッセージ
+  $('.btn').on('click', function()
+  {
+    // https://developer.mozilla.org/ja/docs/Web/API/Window/postMessage
+    window.parent.postMessage(
+      'Hello Host',     
+      'http://www.page.com'
+     );
+  });
+
+  
+});
+</script>
+</body>
+</html>

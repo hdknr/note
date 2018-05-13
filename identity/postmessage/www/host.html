@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>WWW</title>
+</head>
+<body>
+
+<button class="btn">button</button>
+
+<iframe class="child-iframe" src="http://auth.page.com/iframe.html"></iframe>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(function(){
+
+    // 1) ボタンイベントでメッセージを送信
+    $('.btn').on('click', function()
+    {
+      // https://developer.mozilla.org/ja/docs/Web/API/Window/postMessage
+      $('.child-iframe')[0].contentWindow.postMessage(
+          'Hello Boy in a IFrame',      // メッセージ
+          'http://auth.page.com'        // 送信先オリジン
+       );
+    });
+
+    // 3) IFRAMEからのメッセージを受信
+    $(window).on('message', function(event)
+    {
+      // ホワイトリスト 
+      if (event.originalEvent.origin != 'http://auth.page.com') return;
+      
+      console.log(event.originalEvent.data);
+    });
+
+});
+</script>
+</body>
+</html>
