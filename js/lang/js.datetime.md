@@ -69,6 +69,24 @@ moment('2018-1');         // NG
 moment(['2018', '1']);    // OK (こちら推奨)
 ~~~
 
+`add`などは破壊的:
+
+~~~js
+while(dt <= last ){
+    ...
+    dt.add(1, 'month')
+}
+~~~
+
+オブジェクトなので、代入するときはインスタンスを作ること:
+
+~~~js
+all_dt = []
+while(dt <= last){
+    all_dt.push(moment(dt));            // 新しく作ったインスタンスを保存する
+    dt.add(1, 'month')
+}
+~~~
 
 ## Date
 
