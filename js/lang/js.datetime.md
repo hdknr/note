@@ -1,6 +1,6 @@
-# moment.js
+## moment.js
 
-## moment.js を使いましょう
+### moment.js を使いましょう
 
 - ブラウザのJavascriptによってDateの挙動が異なるのでmement.js を使いましょう
 - [http://momentjs.com/](http://momentjs.com/)
@@ -70,9 +70,9 @@ moment(['2018', '1']);    // OK (こちら推奨)
 ~~~
 
 
-# Date
+## Date
 
-## Date.parse
+### Date.parse
 
 -  返すのは Date でなく整数
 
@@ -85,8 +85,11 @@ undefined
 Fri Jan 01 2016 03:00:00 GMT+0000 (UTC)
 ~~~
 
+### 演算
 
-## 書式
+- 比較は `getTime()` メソッドで行う
+
+### 書式
 
 - toString()        `'Wed Jun 01 2016 10:00:00 GMT+0900 (JST)'`
 - toDateString()    `'Wed Jun 01 2016'`
@@ -103,14 +106,14 @@ Fri Jan 01 2016 03:00:00 GMT+0000 (UTC)
 - setHours(), setMinutes(), setSeconds(), setMilliseconds()
 - setUTC*()
 
-## deep copy
+### deep copy
 
 ~~~js
 var date = new Date();
 var copiedDate = new Date(date);
 ~~~
 
-## 分ブロック単位化
+### 分ブロック単位化
 
 ~~~js
 // 次の block 単位日時
