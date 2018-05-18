@@ -16,6 +16,29 @@ $ curl -s https://accounts.google.com/.well-known/openid-configuration | jq ".is
 $ curl -s ifconfig.me
 ~~~
 
+## POST
+
+- [curlコマンドから HTTP POST する方法
+](https://qiita.com/letsspeak/items/8c7266742371699ab45e)
+
+FORM:
+
+~~~bash
+$ curl -F "name1=value1" -F "name2=value2" http://yourdomain/execute.script
+~~~
+
+JSON:
+
+~~~bash
+$ curl -X POST -H "Content-Type: application/json" -d '
+{
+    "name": "Manager",
+    "description": "someone who manages"
+}'
+~~~
+
 ## リンク
 
 - [curlのオプション勉強したのでまとめ](http://d.hatena.ne.jp/hogem/20091122/1258863440)
+
+
