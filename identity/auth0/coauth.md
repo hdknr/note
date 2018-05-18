@@ -22,7 +22,7 @@ Auth0認証手順:
 
 カスタムドメイン方式:
 
-- カスタムドメインを auth0 に設定して、トップレベルドメインを同じにする
+- カスタムドメインを auth0 に設定して、トップレベルドメインを同じにする
 - 例えば、 www.yourdomain.com に対して auth.yourdomain.com を auth0に設定する
 - 3rd パーティクッキー問題がおきない
 
@@ -53,3 +53,8 @@ crossOriginVerification() 呼びだし:
 
 
 ### Browser Testing Matrix
+
+
+## 参考
+
+- [https://qiita.com/yasumodev/items/d339a875b4b9bf65d156](https://qiita.com/yasumodev/items/d339a875b4b9bf65d156)
