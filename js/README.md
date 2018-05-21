@@ -1,6 +1,7 @@
 # Javascript
 
 - [#63](https://github.com/hdknr/scriptogr.am/issues/63)
+- [Web](web)
 
 ## 言語
 
