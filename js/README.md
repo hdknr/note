@@ -6,7 +6,7 @@
 
 - [オブジェクト](lang/js.object.md)
 - [クラス](lang/js.class.md)
-- [配列](lang/js.array.md)
+- [配列](lang/js.array.md) / [underscore.js](underscore)
 - [日時](lang/js.datetime.md) (`moment.js`)
 - [文字列](lang/js.string.md)
 
