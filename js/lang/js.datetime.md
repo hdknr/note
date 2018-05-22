@@ -106,6 +106,14 @@ Fri Jan 01 2016 03:00:00 GMT+0000 (UTC)
 ### 演算
 
 - 比較は `getTime()` メソッドで行う
+- `YYYY-MM-DD` と　現在時刻を比較するときは時刻を `00:00:00` (とか) にあわせること
+
+~~~js
+const value = moment('2018-04-21', 'YYYY-MM-DD').toDate();                  // 00:00:00
+// startOf('day') をすることで、時刻を 00:00:00 にそろえる
+const min_date = moment().subtract(13, 'months').startOf('day').toDate();
+const max_date = moment().subtract(1, 'days').startOf('day').toDate();
+~~~
 
 ### 書式
 
