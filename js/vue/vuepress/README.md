@@ -81,3 +81,9 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 ~~~bash 
 $ php -S localhost:8000
 ~~~
+
+## トピック
+
+- [.vuepress/config.js](vuepress.config.md)
+- [markdown-it/markdown-it](https://github.com/markdown-it/markdown-it)
+- [Markdownを拡張する](https://vuepress.vuejs.org/guide/markdown.html)

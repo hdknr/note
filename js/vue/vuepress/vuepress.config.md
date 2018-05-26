@@ -1,5 +1,7 @@
 ## 設定
 
+[Config Reference](https://vuepress.vuejs.org/config/#basic-config)
+
 ~~~bash 
 $ touch .vuepress/config.js 
 ~~~
