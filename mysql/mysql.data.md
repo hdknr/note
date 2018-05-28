@@ -1,6 +1,7 @@
 ## データディレクトリの移動
 
-[MySQLのデータディレクトリを移動する](https://qiita.com/ShuM/items/1a960b4ef53f8a08dd5a)
+- [MySQLのデータディレクトリを移動する](https://qiita.com/ShuM/items/1a960b4ef53f8a08dd5a)
+- [データベースディレクトリを移動したら動かない](../trouble/mysql.apparmor.md)
 
 /etc/mysql.conf.d/mysqld.cnf:
 
