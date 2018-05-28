@@ -1,5 +1,7 @@
 # MySQL
 
+- [#49](https://github.com/hdknr/scriptogr.am/issues/49)
+
 ## Topic
 
 - [pytz](mysql.pytz.md)
@@ -10,6 +12,7 @@
 - [CSV化](mysql.csv.md)
 - [チューニング](mysql.tuning.md)
 - [トラブル](trouble)
+- [データストレージ](mysql.data.md)
 
 
 ## 重複を削除
