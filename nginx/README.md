@@ -1,4 +1,4 @@
-nginx
+[nginx(#42)](https://github.com/hdknr/scriptogr.am/issues/42)
 
 ## トピック
 

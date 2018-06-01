@@ -1,6 +1,6 @@
-## アドレス
+## IPアドレス
 
-- [Module ngx_http_access_module](http://nginx.org/en/docs/http/ngx_http_access_module.html)
+- [Module ngx_http_access_module](ngx_http_access_module.md) (ELBの考慮)
 - [Nginx でIPアドレスによるアクセス制御を行う](http://dev.classmethod.jp/server-side/server/nginx-ip-access-control/)
 - [Nginx Block And Deny IP Address OR Network Subnets](https://www.cyberciti.biz/faq/linux-unix-nginx-access-control-howto/)
 
