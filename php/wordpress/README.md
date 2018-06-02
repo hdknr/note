@@ -5,6 +5,7 @@
 - [インストール](wordpress.wp-cli.md)
 - [wp-cliコマンド](wordpress.wp-cli.md)
 - [WP REST API](wordpress.rest.md)
+- [AWS環境](wordpress.aws.md)
 
 ## 管理
 
