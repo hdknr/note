@@ -1,10 +1,15 @@
+[#50](https://github.com/hdknr/scriptogr.am/issues/50)
+
 ## トピック
 
-- [Composerから入れる](wordpress.composer.md)
+- [インストール](wordpress.wp-cli.md)
 - [wp-cliコマンド](wordpress.wp-cli.md)
+- [WP REST API](wordpress.rest.md)
+
+## 管理
+
 - [パスワード](wordpress.password.md)
 - [サイトのURLの変更](wordpress.config.md)
-
 
 ## リンク
 

@@ -1,3 +1,5 @@
+CAUTION: 古い情報 . [wp-cli.phar で入れた方がよい](wordpress.wp-cli.md)
+
 Wordpress: Composerでインストールしてみる
 
 - [Using Composer with WordPress](http://roots.io/using-composer-with-wordpress/)
