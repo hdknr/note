@@ -22,5 +22,17 @@
 `@change` に変える
 
 ~~~html
-<input type="checkbox" @chnage="$emit('on-select', image)" v-model="image.selected">
+<input type="checkbox" @change="$emit('on-select', image)" v-model="image.selected">
+~~~
+
+## v-model 
+
+- `@input` に対して、 `$event` を引数としてコールバックされる
+
+~~~html
+<input v-model="date">
+~~~
+
+~~~html
+<input :value="date" @input="onDateChange($event.target.value)">
 ~~~
