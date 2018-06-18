@@ -1,6 +1,6 @@
 設定関連
 
-# ansible.cfg
+## ansible.cfg
 
 例:
 
@@ -13,9 +13,9 @@ hostfile = hosts.conf
 ~~~
 
 
-# hosts.conf
+## hosts.conf
 
-## リモートサーバーのPythonのパスを指定(virtualenvなど)
+### リモートサーバーのPythonのパスを指定(virtualenvなど)
 
 ~~~ini
 [localhost]

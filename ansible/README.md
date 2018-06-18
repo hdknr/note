@@ -1,7 +1,10 @@
+[#88](https://github.com/hdknr/scriptogr.am/issues/88)
+
 ## トピック
 
 - [インストール](ansible.install.md)
 - [設定関連](ansible.config.md)
+- [hosts](ansible.hosts.md)
 - [file](ansible.file.md)
 - [ssh](ansible.ssh.md)
 - [playbook](ansible.playbook.md)
