@@ -14,7 +14,7 @@
 ## REST
 
 - [axios](./axios)
-- [CORS](cors.md)
+- [CORS](web/cors.md)
 
 ## Tools
 

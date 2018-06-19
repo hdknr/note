@@ -1,6 +1,8 @@
 [MDN: 開発者向けのウェブ技術](https://developer.mozilla.org/ja/docs/Web)
 
+## トピック
 
+- [CORS](cors.md)
 
 
 ## URLエンコード
