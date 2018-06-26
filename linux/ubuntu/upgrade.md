@@ -1,3 +1,19 @@
+## 17.10 -> 18.04 LTS
+
+- [Release Note](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes)
+- [ubuntu 18.04 LTS にアップグレードする(コマンドライン編)](https://qiita.com/TsutomuNakamura/items/bbd712e3afe5f4bacfac)
+
+~~~bash 
+$ sudo apt-get install update-manager-core -y
+~~~
+
+~~~bash 
+$ sudo do-release-upgrade
+~~~
+
+
+
+
 ## 17.04 -> 17.10
 
 - [Upgrading from Ubuntu 17.04](https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes#Upgrading_from_Ubuntu_17.04)
