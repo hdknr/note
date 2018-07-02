@@ -8,6 +8,7 @@
 - [map](nginx.map.md)
 - [fastcgi](nginx.fastcgi.md)
 - [ログ](nginx.log.md)
+- [proxy_method](nginx.proxy_method)
 
 ## ビルド内容
 
