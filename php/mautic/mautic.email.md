@@ -61,3 +61,14 @@ Help:
 - `--batch=X`:  最大何件をバッチでおくるか。プロバイダごとにことなります。
 - `--segment-id=X`: セグメントをIDで指定します。 セグメントが複数にまたがっているユーザーには1件送ります。
 - `--min-contact-id` / `--max-contact-id` : 1度に送るコンタクトIDの範囲を決めます。
+
+
+## キュー送信
+
+- [Message Queues](https://www.mautic.org/docs/en/contacts/message_queue.html)
+- 送信したらキューに入る
+- 実際の送信は次のコマンドで行う
+
+~~~bash 
+$ php /data/projects/taberu/landing/pr/app/console mautic:messages:send
+~~~
