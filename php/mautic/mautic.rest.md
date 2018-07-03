@@ -38,7 +38,7 @@ $ rm -rf app/cache/*
 一覧　　　　　| `GET /api/segments`                 |  https://developer.mautic.org/#list-contact-segments
 追加        | `POST /api/segments/new`             | https://developer.mautic.org/#create-segment
 修正　　　　　| `PATCH /api/segments/{id}/edit`      | https://developer.mautic.org/#edit-segment
-修正/追加　　| `PUT /api/segments/{id}/edit`         | hhttps://developer.mautic.org/#edit-segment
+修正/追加　　| `PUT /api/segments/{id}/edit`         | https://developer.mautic.org/#edit-segment
 削除        | `DELETE /api/segments/{id}/delete`    | https://developer.mautic.org/#delete-segment
 
 セグメントコンタクト:
@@ -47,3 +47,11 @@ $ rm -rf app/cache/*
 ------| -----------------------------------------------|----------------------------------------------------------------
 追加   | `POST /api/segments/{id}/contact/{cid}/add`    | https://developer.mautic.org/#add-contact-to-a-segment
 削除   | `POST /api/segments/{id}/contact/{cid}/remove` | https://developer.mautic.org/#remove-contact-from-a-segment
+
+
+## メール
+
+用途             | REST                                                    | Document
+----------------| --------------------------------------------------------|----------------------------------------------------------------
+セグメントへ送信   | `POST /api/emails/{id}/send`                            | https://developer.mautic.org/#send-email-to-segment
+コンタクトへ送信   | `POST /api/emails/{id}/contact/{cid]/send`              | https://developer.mautic.org/#send-email-to-contact
