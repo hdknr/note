@@ -95,3 +95,15 @@ $ sudo crontab -l -u root
 
 00 */8 * * * /usr/local/sbin/update-ngxblocker
 ~~~
+
+
+# URL
+
+- `.git` のアクセス
+
+~~~
+    location ~ \.git {
+       return 404;
+       break;
+    }
+~~~
