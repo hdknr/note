@@ -3,6 +3,7 @@
 ## トピック
 
 - [nginx.conf](nginx.conf.md)
+- [location](nginx.location.md)
 - [502エラー](nginx.502.md)
 - [allow/deny](nginx.access.md)
 - [map](nginx.map.md)
