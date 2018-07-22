@@ -123,3 +123,27 @@ location ~ ^/pr(.*) {
    try_files $uri @pr_app;
 }
 ~~~
+
+あるいは、
+
+~~~
+location /pr {                            
+  # インストールした親ディレクトリをrootに(root/pr 配下にインストール)
+  root /data/projects/taberu/landing;
+                                               
+  try_files $uri $uri/ /pr/index.php$1;        
+                                               
+  index index.php;                             
+                                               
+  location ~ \.php$ {
+    fastcgi_pass   mautic_upstream;                                  
+    fastcgi_index index.php;          
+
+    fastcgi_split_path_info ^(.+\.php)(/.+)$;               
+    fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_param   PATH_INFO $fastcgi_script_name;
+    fastcgi_param   HTTP_PROXY "";
+    include         fastcgi_params;
+  }
+}
+~~~
