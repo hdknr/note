@@ -78,3 +78,12 @@ $ git checkout  app.ico
 ## fatal: multiple stage entries for merged file '.gitignore'
 
 - http://qiita.com/dt_pal/items/bb28084a63ad53a4039f
+
+
+## 記事
+
+- [git reset HEAD^を取り消す方法](https://qiita.com/ngron/items/7870fc8a803b882af9bd)
+- [[git reset (--hard/--soft)]ワーキングツリー、インデックス、HEADを使いこなす方法](https://qiita.com/shuntaro_tamura/items/db1aef9cf9d78db50ffe)
+- [gitで一度行った変更をなかったことにする方法4つ](http://labs.timedia.co.jp/2011/02/git-various-undo.html)
+- [gitでのヤバイ！を取り消す方法](https://qiita.com/ritukiii/items/74ee3274c3f218511a0c)
+- [3分でわかるGitで間違えてコミットや削除したときに使用するコマンド](https://iwb.jp/git-branch-restore-change-delete-command/)

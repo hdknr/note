@@ -32,6 +32,11 @@
 
 - 削除したファイルを取り除く
 
+
+## [merge](git.merge.md)
+
+- ブランチで作業したら内容をmasterに取り込む
+
 ## [pull](git.pull.md)
 
 - ブランチ指定
