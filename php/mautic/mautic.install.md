@@ -131,7 +131,8 @@ location /pr {
   # インストールした親ディレクトリをrootに(root/pr 配下にインストール)
   root /data/projects/taberu/landing;
                                                
-  try_files $uri $uri/ /pr/index.php$1;        
+  # Big Controller pr/index.php
+  try_files $uri $uri/ /pr/$1;        
                                                
   index index.php;                             
                                                
