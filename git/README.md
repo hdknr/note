@@ -51,6 +51,10 @@
 - ブランチ名指定
 - デフォルト変更
 
+## [read-tree](git.read-tree.md)
+
+- サブディレクトリの変更の取り込み
+
 ## [remote](git.remote.md)
 
 ## [reset](git.reset.md)
