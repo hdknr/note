@@ -1,3 +1,6 @@
+[#48](https://github.com/hdknr/scriptogr.am/issues/48)
+
+
 ## [branch](git.branch.md)
 
 ## [checkout](git.checkout.md)
