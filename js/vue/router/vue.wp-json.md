@@ -143,25 +143,10 @@ var wordpress = {
       const path = "/post/" + catgory ".html#/posts/" + post.id;
     },
 
-    toExcerpt: function (post) {
-      // Wordpressの Excerptからリンクを変換する(Wordpressに飛ばないで、固定ページに飛ばす)
-      if (post && post.excerpt) {
-        const src = post.excerpt.rendered;
-        let el = document.createElement('div');
-        el.innerHTML = src;
-        const anchors = el.getElementsByTagName("a");
-        for (let i = 0; i < anchors.length; i++) {
-          anchors[i].href = this.postDetailUrl(post);
-        }
-        return el.innerHTML;
-      }
-      return '';
-    },
-
-    toContent: function (post) {
-      // Wordpressの コンテツからリンクを変換(Wordpressに飛ばないで、固定ページに飛ばす)
-      if (post && post.content) {
-        const src = post.content.rendered;
+    toLocalHtml(post, field){
+      // Wordpressの exerpt, content のアンカーを変換(Wordpressに飛ばないで、固定ページに飛ばす)
+      if (post && post[field]) {
+        const src = post[field].rendered;
         let el = document.createElement('div');
         el.innerHTML = src;
         const anchors = el.getElementsByTagName("a");
@@ -236,7 +221,7 @@ var wordpress = {
         <p class="day">{{ post.date|local_datetime }}<p>
 
         <h3>{{ post.title.rendered }}</h3>
-        <div v-html="toExcerpt(post)"></div>
+        <div v-html="toLocalHtml(post, 'excerpt')"></div>
     </a>
 </div>
 
@@ -309,7 +294,7 @@ var app = new Vue({
 
     <div class="warp">
         <p class="date">{{ post.date|local_datetime }}</p>
-        <div v-if="post.content" v-html="toContent(post)">
+        <div v-if="post.content" v-html="toLocalHtml(post, 'content')">
             <!-- ブログ内容 -->
         </div>
         <a href="index.html"> 戻る</a>
