@@ -15,6 +15,7 @@
 - [スタイル](vue.style.md)
 - [Element](element)
 - [VuePress](vuepress)
+- [デバッグ](vue.debug.md)
 
 ## TIP
 
