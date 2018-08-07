@@ -7,9 +7,9 @@
 - [インスタンス](vue.instance.md)
 - [テンプレート](vue.template.md)
 - [イベント](vue.events.md)
+- [ルーター](router)
 - [コンポーネント](vue.components.md)
-
-  - [スロット](vue.components.slot.md)
+- [スロット](vue.components.slot.md)
 
 
 - [スタイル](vue.style.md)
