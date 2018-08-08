@@ -3,6 +3,10 @@
 - [RDS](aws.rds.md)
 - [RDS PostgreSQL関連](aws.rds.md)
 
+## MySQL
+
+- [MySQLを立てる](aws.rds.mysql.md)
+
 ## Aurora
 
 - [aurora](aws.rds.aurora.md)
