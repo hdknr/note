@@ -6,6 +6,7 @@
 - [wp-cliコマンド](wordpress.wp-cli.md)
 - [WP REST API](wordpress.rest.md)
 - [AWS環境](wordpress.aws.md)
+- [wp-json](wp-json.md)
 
 ## 管理
 
