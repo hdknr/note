@@ -10,3 +10,4 @@
 - [nginx設定](mautic.nginx.md)
 - [メール](mautic.email.md)
 - [REST API](mautic.rest.md)
+- [デバッグ](mautic.debug.md)
