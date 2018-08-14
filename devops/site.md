@@ -12,6 +12,12 @@
 
 ### rotbot.txt
 
+- [djang-robotsで配信管理](https://github.com/hdknr/annotated-django/blob/2.1.x/markdown/django/django.robots.md)
+
+### sitemap.xml
+
+- [Django sitemapフレームワーク](https://github.com/hdknr/annotated-django/blob/2.1.x/markdown/django/django.sitemap.md)
+
 ### ログ
 
 ltsv形式で記録(/etc/nginx/conf.d/log_format.conf):
@@ -78,3 +84,5 @@ pidfile = os.path.join(LOGS, "gunicorn.pid")
 ## アプリケーション
 
 ### ログ
+
+### キャッシュ
