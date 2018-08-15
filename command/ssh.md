@@ -17,3 +17,7 @@ $ zgrep sshd /var/log/auth.log* | grep "Accepted publickey for admin" | sed -re 
 ~~~
 sshd: .jp
 ~~~
+
+## 記事
+
+- [sshポートフォワーディング - Qiita](https://qiita.com/mechamogera/items/b1bb9130273deb9426f5)
