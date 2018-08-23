@@ -1,3 +1,5 @@
+# VS COde
+
 - [#84](https://github.com/hdknr/scriptogr.am/issues/84)
 
 ## extensions
@@ -6,7 +8,6 @@
 - `ext install`
 
 - [vscode-restructuredtext/vscode-restructuredtext](https://github.com/vscode-restructuredtext/vscode-restructuredtext)
-
 
 ## コマンドライン
 
@@ -64,8 +65,34 @@ Options:
 - [WindowsのVisual Studio CodeでPython!! その３](http://tohnaman.hatenablog.jp/entry/2018/03/25/094607)
 - [Visual Studio CodeでPython + Djangoを書いて、py.testを実行してみた](http://thinkami.hatenablog.com/entry/2016/07/05/224416)
 
+## タブ
+
+HTMLだけ2タブにする:
+
+- CTRL + ⌘  + P
+- `Preferences: Configure language specific settings`
+- 言語選択(django-html とか)
+- 右ペインで `ユーザー設定`
+
+~~~json
+// Place your settings in this file to overwrite the default settings
+{
+
+    // Migrated from previous "File | Auto Save" setting:
+    "files.autoSave": "afterDelay",
+
+    // http://tohnaman.hatenablog.jp/entry/2018/03/25/094607
+    // "python.formatting.provider": "yapf",
+    "[html]": {
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false
+    },
+    "[django-html]": {
+    },
+}
+~~~
+
 ## 記事
 
 - [Mac版 Visual Studio Codeを使ってみます](http://qiita.com/akiko-pusu/items/185f4fd8484ecd3b3243)
 - [ターミナルからVisual Studio Codeを起動する方法【公式の方法】](http://qiita.com/naru0504/items/c2ed8869ffbf7682cf5c)
-
