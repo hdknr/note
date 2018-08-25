@@ -1,3 +1,21 @@
+# その他
+
+## オートコンプリート
+
+### [bassjobsen/Bootstrap-3-Typeahead](https://github.com/bassjobsen/Bootstrap-3-Typeahead/)
+
+- https://cdnjs.com/libraries/bootstrap-3-typeahead 
+
+~~~html
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+~~~
+
+~~~js
+$(".prefecture-select").typeahead({
+  source: prefectrues
+});
+~~~
+
 ## img
 
 ### img-responsive : レスポンシブ
