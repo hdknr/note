@@ -11,8 +11,9 @@
 - [navbarをデフォルトでcollapseさせる](bootstrap.navbar.collapse.md)
 - [ラジオボタン](bootstrap.input.radio.md)
 
-# その他
+## その他
 
+- [日付選択(datepicker)](bootstrap.datepicker.md)
 - [いろいろ](bootstrap.misc.md)
 - [Bootstrap 3からBootstrap 4に移行する時に知っておく必要がある注意点のまとめ](http://coliss.com/articles/build-websites/operation/work/migrate-from-bootstrap3-to-bootstrap4.html)
 - [印刷関連](bootstrap.print.md)
@@ -24,7 +25,6 @@
 ## select
 
 - [Bootstrap-select](https://silviomoreto.github.io/bootstrap-select/)
-
 
 ## Glyphicons
 
