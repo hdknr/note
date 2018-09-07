@@ -1,5 +1,7 @@
 # TeX/LaTex
 
+[#53](https://github.com/hdknr/scriptogr.am/issues/53)
+
 ## 環境
 
 ### macOS
@@ -53,6 +55,6 @@ expand(1/(x + y))
 
 ~~~latex
 \begin{equation*}
- z = \frac{1}{a + b + c} + \frac{2}{e + f + g}
+ z = \ac{1}{a + b + c} + \frac{2}{e + f + g}
 \end{equation*}
 ~~~
