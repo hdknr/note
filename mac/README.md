@@ -1,12 +1,12 @@
 # OSX [#89](https://github.com/hdknr/scriptogr.am/issues/89)
 
-
 - [日本語入力](mac.ime.md)
 - [Homebrew](mac.brew.md)
 
 ## Mac
 
 - [ターゲッドディスプレイモード](mac.dpd.md) : iMac を Macbookの外部ディスプレイとして使う
+
 
 ##　トラブル
 

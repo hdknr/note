@@ -6,7 +6,7 @@
 $ echo 'Hello, World!' | pbcopy
 ~~~
 
-~~bash
+~~~bash
 $ pbpaste
 Hello, World!
 ~~~
