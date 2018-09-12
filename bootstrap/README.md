@@ -1,8 +1,16 @@
-# Bootstrap
+# Bootstrap ([#68](https://github.com/hdknr/scriptogr.am/issues/68))
 
 - [パンくず](bootstrap.breadcrumb.md)
 - [Table](bootstrap.table.md)
 - [Collapse(アコーディオン)](bootstrap.collapse.md)
+
+## 概念
+
+- [ブレークポイント/レスポンシブブレークポイント](https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints)
+
+## ユーティリティ
+
+- [余白(padding, margin)](bootstrap.spacing.md)
 
 ## フォーム
 
