@@ -7,8 +7,7 @@
 | `xs`                | `{property}{sides}-{size}`              |
 | `sm`,`md`,`lg`, `xl`| `{property}{sides}-{breakpoint}-{size}` |
 
-
-## 余白
+## 余白
 
 |`{property}` | 余白           |
 |-------------|---------------|
@@ -17,7 +16,7 @@
 
 ## 方向
 
-|{sides}  | 方向               |
+|`{sides}`| 方向               |
 |---------|-------------------|
 | `t`     | `top`             | 
 | `b`     | `bottom`          | 
