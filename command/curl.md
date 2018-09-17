@@ -37,6 +37,18 @@ $ curl -X POST -H "Content-Type: application/json" -d '
 }'
 ~~~
 
+## stdout
+
+- [bash - curl .gz file and pipe it for decompression - Ask Ubuntu](https://askubuntu.com/questions/538637/curl-gz-file-and-pipe-it-for-decompression)
+
+~~~bash 
+$ curl "$URL" | gunzip -c > filename
+~~~
+
+~~~bash 
+$ curl -L https://example.com/mygzip.tar.gz | tar zxv
+~~~
+
 ## リンク
 
 - [curlのオプション勉強したのでまとめ](http://d.hatena.ne.jp/hogem/20091122/1258863440)
