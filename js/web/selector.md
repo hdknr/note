@@ -1,19 +1,9 @@
 # セレクター
 
+## querySelectorAll
 
-## URLを書き換える
+- [現在のページのクエリを関連ページのアンカーに渡す](querySelectorAll.md)
 
-現在のページのクエリを関連ページのアンカーに渡す:
-
-~~~js
-var parser = document.createElement('a');
-parser.href = window.location.href;
-if(parser.search){
-[].map.call(document.querySelectorAll('.rel-pages'), function(a){
-    var href = a.getAttribute('href');
-    a.setAttribute('href', href + parser.search);
-});
-}
 ~~~
 
 ## 記事

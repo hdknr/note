@@ -16,7 +16,7 @@
 
 - [Jupyter (iPython) Notebookを使って技術ノート環境を構築する方法 - MyEnigma](https://myenigma.hatenablog.com/entry/2016/02/20/183423)
 - [Jupyter NotebookをGitHub上で公開する - abcdefg.....](http://pppurple.hatenablog.com/entry/2016/06/11/194713)
-
+- [Motivating Examples](https://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Typesetting%20Equations.html#Inline-Typesetting-(Mixing-Markdown-and-TeX))
 
 #### SymPy
 
@@ -38,14 +38,20 @@ y = Symbol('y')
 expand(1/(x + y))
 ~~~
 
+## git 
+
+- [git + latexdiff でTeXの原稿を添削してもらいやすくする。 - やったことの説明](http://ksknw.hatenablog.com/entry/2015/07/25/230230)
+
+
 ## TeX
 
+- [TeX/LaTeX etc. -- Part 3: 数式](https://www.biwako.shiga-u.ac.jp/sensei/kumazawa/texindex3.html#formula)
 - [分数](http://www.latex-cmd.com/equation/frac.html)
-
 
 ## Markdown Latex
 
 - [Markdown/LaTeX記法比較表 - Qiita](https://qiita.com/icoxfog417/items/41a6793579eaf7bc0e00)
+- [GithubのREADMEとかwikiで数式を書く](http://idken.net/posts/2017-02-28-math_github/)
 
 
 ## 分数

@@ -5,6 +5,9 @@
 - [セレクター](selector.md)
 - [CORS](cors.md)
 
+## DOM
+
+- [ページのクエリを引き継ぐ](querySelectorAll.md)
 
 ## URLエンコード
 

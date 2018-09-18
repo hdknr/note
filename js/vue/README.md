@@ -10,12 +10,11 @@
 - [ルーター](router)
 - [コンポーネント](vue.components.md)
 - [スロット](vue.components.slot.md)
-
-
 - [スタイル](vue.style.md)
 - [Element](element)
 - [VuePress](vuepress)
 - [デバッグ](vue.debug.md)
+- [IE11](vue.ie.md)
 
 ## TIP
 
