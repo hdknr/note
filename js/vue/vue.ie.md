@@ -55,6 +55,8 @@ reloadPosts: function (slugs, id) {
 ## vue-routerのイベントが無視される
 
 - [Manual change of hash into the URL doesn't trigger the route in IE11 · Issue #1849 · vuejs/vue-router](https://github.com/vuejs/vue-router/issues/1849)
+- [window.onhashchange - Web API インターフェイス | MDN](https://developer.mozilla.org/ja/docs/Web/API/WindowEventHandlers/onhashchange)
+- [プログラムによるナビゲーション | Vue Router](https://router.vuejs.org/ja/guide/essentials/navigation.html)
 
 IE判定:
 
@@ -66,15 +68,17 @@ methods:{
 },
 ~~~
 
-イベントハンドラを定義:
+URLフラグメントが変更されたら vue-router をナビゲートさせるようにイベントハンドラを定義:
 
 ~~~js 
 mounted: function() {
     if(this.isIE()){
       var vm = this;
+      // https://developer.mozilla.org/ja/docs/Web/API/WindowEventHandlers/onhashchange
       window.addEventListener('hashchange', function() {
-        var currentPath = window.location.hash.slice(1);
+        var currentPath = window.location.hash.slice(1);    // '#' を覗く
         if (vm.$route.path !== currentPath) {
+          // https://router.vuejs.org/ja/guide/essentials/navigation.html
           vm.$router.push(currentPath)
         }
       }, false);
