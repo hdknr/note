@@ -3,7 +3,7 @@
 - [#63](https://github.com/hdknr/scriptogr.am/issues/63)
 - [Web](web)
 
-## 言語
+## [言語](lang)
 
 - [オブジェクト](lang/js.object.md)
 - [クラス](lang/js.class.md)
