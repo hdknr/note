@@ -1,3 +1,5 @@
+# Ubuntu [#58](https://github.com/hdknr/scriptogr.am/issues/58)
+
 ## バージョン
 
 ~~~bash
@@ -13,6 +15,11 @@ Codename:       trusty
 $ more /etc/debian_version
 jessie/sid
 ~~~
+
+Version:
+
+- [1604 Xenial][1604.xenial.md]
+- [1804 Bionic Beaver][1804.bionic.md]
 
 ## トピック
 
