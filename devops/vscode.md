@@ -8,6 +8,8 @@
 - `ext install`
 
 - [vscode-restructuredtext/vscode-restructuredtext](https://github.com/vscode-restructuredtext/vscode-restructuredtext)
+- [VSCodeでCSVをステキに見やすくする「Rainbow CSV」を紹介するよ - Qiita](https://qiita.com/0w0/items/07a481921a2ac09a049f)
+
 
 ## コマンドライン
 
