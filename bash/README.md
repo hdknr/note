@@ -190,6 +190,12 @@ $ echo $OSTYPE
 darwin14
 ~~~
 
+
+## ヒアドキュメント
+
+- [bashのヒアドキュメントを活用する - Qiita](https://qiita.com/take4s5i/items/e207cee4fb04385a9952)
+
+
 ## その他
 
 - [たった一行で bash の代入式がスマートに書けるようになる関数](http://qiita.com/mattintosh4/items/959517399d5993e34ef7)
