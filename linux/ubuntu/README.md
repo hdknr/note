@@ -24,6 +24,7 @@ Version:
 ## トピック
 
 - [OSバージョンアップ](upgrade.md)
+- [Lubuntu](lubuntu.md) - ライトウェイトUbuntu
 
 ## Debian
 
