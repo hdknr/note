@@ -15,6 +15,11 @@
 - [データストレージ](mysql.data.md)
 
 
+## ツール
+
+- [Sequel Proを超えるGUIツールが出てきたぞ - Qiita](https://qiita.com/shunichi_com/items/b07ae8c678aa7c0e2ff6)
+
+
 ## 重複を削除
 
 - [Delete all Duplicate Rows except for One in MySQL? [duplicate]](http://stackoverflow.com/questions/4685173/delete-all-duplicate-rows-except-for-one-in-mysql)
