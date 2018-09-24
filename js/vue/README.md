@@ -31,3 +31,9 @@ onEvent(ev) {
 ### その他
 
 - [ファイルアップロード](vue.input-file.md)
+
+
+
+## 記事
+
+- [「Vueコンサルが教えたくない７つの真実」を勉強してみた - Qiita](https://qiita.com/shinobu_shiva/items/e0c458aa6c1e683a9881)

@@ -424,3 +424,90 @@ $ curl http://localhost:3000 | pup
  </body>
 </html>
 ~~~
+
+## スタティックサイトジェネレータ
+
+~~~bash
+$ vue init nuxt-community/starter-template shaper
+$ cd shaper
+$ npm install
+~~~
+
+~~~bash 
+$ npm run generate --ssr
+
+> shaper@1.0.0 generate /Users/hide/Documents/Tech/tmp/shaper
+> nuxt generate
+
+  nuxt:generate Generating... +0ms
+  nuxt:build App root: /Users/hide/Documents/Tech/tmp/shaper +0ms
+  nuxt:build Generating /Users/hide/Documents/Tech/tmp/shaper/.nuxt files... +0ms
+  nuxt:build Generating files... +50ms
+  nuxt:build Generating routes... +6ms
+  nuxt:build Building files... +17ms
+  ████████████████████ 100% 
+
+Build completed in 9.029s
+
+ DONE  Compiled successfully in 9032ms                                                                                                               13:22:27
+
+Hash: 826418b29c15fabd8828
+Version: webpack 3.12.0
+Time: 9032ms
+                                  Asset       Size  Chunks             Chunk Names
+    pages/index.bad21caf5aec6e92e66a.js    4.05 kB       0  [emitted]  pages/index
+layouts/default.43b36a86c35a6950d916.js    1.42 kB       1  [emitted]  layouts/default
+         vendor.13ef70b463ce71c01a92.js     145 kB       2  [emitted]  vendor
+            app.9024e623c2ef58df1c1b.js      28 kB       3  [emitted]  app
+       manifest.826418b29c15fabd8828.js    1.47 kB       4  [emitted]  manifest
+                               LICENSES  604 bytes          [emitted]  
+ + 3 hidden assets
+Hash: 906707197973097cd37b
+Version: webpack 3.12.0
+Time: 750ms
+             Asset    Size  Chunks             Chunk Names
+server-bundle.json  125 kB          [emitted]  
+  nuxt: Call generate:distRemoved hooks (1) +0ms
+  nuxt:generate Destination folder cleaned +11s
+  nuxt: Call generate:distCopied hooks (1) +21ms
+  nuxt:generate Static & build files copied +21ms
+  nuxt:render Rendering url / +0ms
+  nuxt: Call generate:page hooks (1) +135ms
+  nuxt:generate Generate file: /index.html +134ms
+  nuxt:render Rendering url / +131ms
+  nuxt: Call generate:done hooks (1) +3ms
+  nuxt:generate HTML Files generated in 11.1s +3ms
+  nuxt:generate Generate done +0ms
+~~~
+
+~~~bash 
+$ tree dist/
+dist/
+├── 200.html
+├── README.md
+├── _nuxt
+│   ├── LICENSES
+│   ├── app.9024e623c2ef58df1c1b.js
+│   ├── layouts
+│   │   └── default.43b36a86c35a6950d916.js
+│   ├── manifest.826418b29c15fabd8828.js
+│   ├── pages
+│   │   └── index.bad21caf5aec6e92e66a.js
+│   └── vendor.13ef70b463ce71c01a92.js
+├── favicon.ico
+└── index.html
+
+3 directories, 10 files
+~~~
+
+~~~bash
+$ python -m http.server 8000
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+~~~
+
+~~~bash 
+$ curl -s http://localhost:8000/dist/ | pup "h1"
+<h1 class="title">
+ shaper
+</h1>
+~~~
