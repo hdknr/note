@@ -1,4 +1,4 @@
-- [#70](https://github.com/hdknr/scriptogr.am/issues/70)
+# コマンド [#70](https://github.com/hdknr/scriptogr.am/issues/70)
 
 ## パーサー
 
@@ -8,3 +8,7 @@
 
 - [nc](nc.md)
 - [ss](ss.md)
+
+## ファイル
+
+- [uniq](uniq.md) : 重複洗い出し、削除...
