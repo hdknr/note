@@ -1,8 +1,9 @@
 # PHP [#51](https://github.com/hdknr/scriptogr.am/issues/51)
 
-## Topic
+## php-fpm
 
 - [php-fpm](php-fpm.md)
+- [nginxでPHPを動かす](phprun)
 
 ## インストール
 
