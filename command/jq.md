@@ -55,3 +55,9 @@ curl -s https://accounts.google.com/.well-known/openid-configuration | jq "."
 ~~~bash
 curl -s http://192.168.56.54:8080/wp-json/wp/v2/posts/ | jq '.[] | "\(.id) , \(.title.rendered)"' -r
 ~~~
+
+
+## 関連
+
+- [curl](curl.md)
+- [pup](pup.md) - HTMLのパーサー

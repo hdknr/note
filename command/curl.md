@@ -53,4 +53,7 @@ $ curl -L https://example.com/mygzip.tar.gz | tar zxv
 
 - [curlのオプション勉強したのでまとめ](http://d.hatena.ne.jp/hogem/20091122/1258863440)
 
+## 関連
 
+- [pup](pup.md) : HTML の抜きだし
+- [jq](jq.md): JSONの整形
