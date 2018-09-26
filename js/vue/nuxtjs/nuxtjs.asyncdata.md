@@ -1,4 +1,4 @@
-## [asyncData](https://ja.nuxtjs.org/api/)
+# [asyncData](https://ja.nuxtjs.org/api/)
 
 - `ページコンポーネント` がロードされる前に毎回呼び出される
 - asyncData([context](https://ja.nuxtjs.org/api/context)) の結果は data とマージされる
@@ -68,3 +68,11 @@ asyncData ({ params }, callback) {
    });
 },
 ~~~
+
+## 関連
+
+- [Process | Node.js v10.11.0 Documentation](https://nodejs.org/api/process.html#process_process)
+
+## 記事
+
+- [SSRしないNuxt.jsでページロード時に非同期部分を更新する方法 | なすびブログ](https://blog.nasbi.jp/programming/frontend/javascript/ssr%E3%81%97%E3%81%AA%E3%81%84nuxt-js%E3%81%A7%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%AD%E3%83%BC%E3%83%89%E6%99%82%E3%81%AB%E9%9D%9E%E5%90%8C%E6%9C%9F%E9%83%A8%E5%88%86%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%99/)
