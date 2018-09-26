@@ -72,6 +72,10 @@ bundle.js  676 kB       0  [emitted]  [big]  main
 Done in 2.44s.
 ~~~
 
+## 関連
+
+- [webpack-contrib/webpack-bundle-analyzer: Webpack plugin and CLI utility that represents bundle content as convenient interactive zoomable treemap](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+
 
 ## 記事
 

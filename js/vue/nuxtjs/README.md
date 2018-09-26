@@ -1,4 +1,4 @@
-## nuxt.js
+# nuxt.js
 
 - [#72](https://github.com/hdknr/scriptogr.am/issues/72)
 - https://nuxtjs.org/
@@ -8,6 +8,7 @@
 ## アーキテクチャ
 
 - [asyncData](nuxtjs.asyncdata.md)
+- [ルーティング](nuxtjs.routes.md)
 
 ## Topic
 
