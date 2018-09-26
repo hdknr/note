@@ -25,7 +25,13 @@ No changes to formulae.
 🍺  /usr/local/Cellar/pup/0.4.0: 5 files, 3.9MB
 ~~~
 
+## 例
 
+H1を抜く:
+
+~~~bash 
+$ curl -s http://yoursite.com/ | pup h1 text{}
+~~~
 
 ## 記事
 
