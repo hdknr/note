@@ -94,7 +94,7 @@ where_field = domain
 
 - postfix_transport テーブル
 
-~~~mysql
+~~~sql
 CREATE TABLE `postfix_transport` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `domain` varchar(50) NOT NULL,
@@ -127,11 +127,13 @@ mysql> select * from postfix_transport;
 
 
 master.cf:
+
 ~~~
 virtual_alias_maps = proxy:mysql:/etc/postfix/db/virtual_alias_maps.cf
 ~~~
 
 virtual_alias_maps.cf:
+
 ~~~
 host = localhost
 user = emailqueue
@@ -144,7 +146,7 @@ where_field = recipient
 
 postfix_aliasテーブル:
 
-~~~mysql
+~~~sql
 CREATE TABLE `postfix_alias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `recipient` varchar(100) NOT NULL,
@@ -168,7 +170,7 @@ mysql> select * from postfix_transport;
 
 - エイリアスを定義(webmaster@admin.deb)
 
-~~~
+~~~sql
 mysql> select * from postfix_alias;
 +----+---------------------+-------------------------+
 | id | recipient           | forward                 |
@@ -183,7 +185,6 @@ mysql> select * from postfix_alias;
 mailbox unix  -       n       n       -       -       pipe
   flags=FDRq user=vagrant argv=/home/vagrant/mailbox.sh $sender $recipient
 ~~~
-
 
 ### 受信テスト
 
@@ -224,7 +225,14 @@ Sep  3 05:17:12 jessie postfix/qmgr[7275]: 30D6A8E5AD: removed
 ## Resource
 
 ### Postfix
+
 - [pipe](http://www.postfix.org/pipe.8.html)
 
 ### Others
+
 - [Postfix/Mysql Virtual Mail How To](http://hostingsoftware.net/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=56)
+
+## AWS
+
+- [ELB + PostfixでElasticなMTA(メール受信)システムの構築 – ELB Proxy Protocol Supportの活用 ｜ Developers.IO](https://dev.classmethod.jp/cloud/aws/build-elastic-mta-by-proxy-protocol-enabled-elb-and-postfix/)
+- [Postfix から SES にリレーする](https://github.com/hdknr/scriptogr.am/blob/master/aws/ses/aws.postfix.md)
