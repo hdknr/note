@@ -5,6 +5,10 @@
 - [php-fpm](php-fpm.md)
 - [nginxでPHPを動かす](phprun)
 
+## メール
+
+- [mb_send_mail](php.mb_send_mail.md)
+
 ## インストール
 
 - [anyenv+phpenv](phpenv.anyenv.md)
