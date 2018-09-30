@@ -1,65 +1,4 @@
-## Maildir
-
-- [Postfix mbox to Maildir format conversion](https://rimuhosting.com/knowledgebase/linux/mail/Postfix+mbox+to+Maildir+conversion)
-
-main.cf:
-
-~~~
-home_mailbox = Maildir/
-~~~
-
-## virtual_mailbox_maps
-
-- [MySQL](http://www.postfixvirtual.net/postfixconf.html)
-- [PostfixCompleteVirtualMailSystemHowto](https://help.ubuntu.com/community/PostfixCompleteVirtualMailSystemHowto)
-
-## maildrop(フィルタリング機能付きメール配送エージェント)
-
-~~~bash
-$ sudo apt-get install maildrop
-~~~
-
-## Jail環境
-
-- main.cf でデフォルトトランスポートを定義
-
-~~~
-default_transport=jail
-~~~
-
-- master.cf で定義したトランスポートを処理するコマンド
-
-~~~
-jail unix  -       n       n       -       -       pipe
-  flags=FDRq user=vagrant argv=/home/vagrant/inbound.sh $sender $recipient
-~~~
-
-## サーバー間でJail:特定のドメインを指定したサーバーに転送
-
-- transport
-
-~~~bash
-$ sudo mkdir -p /etc/postfix/db
-$ sudo vim /etc/postfix/db/transport
-
-tact.deb smtp:[192.168.56.10]
-
-$ sudo postmap /etc/postfix/db/transport
-$ tree /etc/postfix/db
-/etc/postfix/db
-├── transport
-└── transport.db
-~~~
-
-- main.cf
-
-~~~bash
-relay_domains = tact.deb
-transport_maps = hash:/etc/postfix/db/transport
-default_transport=jail
-~~~
-
-### postfix-mysql(Debian)
+# postfix-mysql(Debian)
 
 - main.cf
 
@@ -115,7 +54,7 @@ mysql> select * from postfix_transport;
 +----+----------+----------------------+
 ~~~
 
-### 受信
+## 受信
 
 方針:
 
@@ -186,7 +125,7 @@ mailbox unix  -       n       n       -       -       pipe
   flags=FDRq user=vagrant argv=/home/vagrant/mailbox.sh $sender $recipient
 ~~~
 
-### 受信テスト
+## 受信テスト
 
 - 存在するアドレスに送信
 
@@ -220,19 +159,3 @@ Sep  3 05:17:12 jessie postfix/cleanup[7630]: B9C9B8E5B5: message-id=<2015090305
 Sep  3 05:17:12 jessie postfix/bounce[7636]: 30D6A8E5AD: sender non-delivery notification: B9C9B8E5B5
 Sep  3 05:17:12 jessie postfix/qmgr[7275]: 30D6A8E5AD: removed
 ~~~
-
-
-## Resource
-
-### Postfix
-
-- [pipe](http://www.postfix.org/pipe.8.html)
-
-### Others
-
-- [Postfix/Mysql Virtual Mail How To](http://hostingsoftware.net/index.php?module=pagemaster&PAGE_user_op=view_page&PAGE_id=56)
-
-## AWS
-
-- [ELB + PostfixでElasticなMTA(メール受信)システムの構築 – ELB Proxy Protocol Supportの活用 ｜ Developers.IO](https://dev.classmethod.jp/cloud/aws/build-elastic-mta-by-proxy-protocol-enabled-elb-and-postfix/)
-- [Postfix から SES にリレーする](https://github.com/hdknr/scriptogr.am/blob/master/aws/ses/aws.postfix.md)
