@@ -4,7 +4,6 @@
 - https://nuxtjs.org/
 - [next.js](https://github.com/zeit/next.js)(react の SSR(Server Side Rendering)) のインスパイア
 
-
 ## アーキテクチャ
 
 - [asyncData](nuxtjs.asyncdata.md)
@@ -12,6 +11,7 @@
 
 ## Topic
 
+- [JAMStack](jamstack.md)
 - [インストール](nuxtjs.install.md)
 - [認証](nuxtjs.auth.md)
 - [ホストとポート番号を変更するには？](https://ja.nuxtjs.org/faq/host-port/)

@@ -30,7 +30,6 @@ Installing collected packages: jmespath, python-dateutil, botocore, colorama, aw
 Successfully installed awscli-1.9.12 botocore-1.3.12 colorama-0.3.3 jmespath-0.9.0 python-dateutil-2.4.2
 ~~~
 
-
 ~~~bash
 
 $ which aws
@@ -70,13 +69,8 @@ aws_access_key_id = XKIXIQXL35DTBNISJZGQ
 aws_secret_access_key = yG9tmKOT85ACdFYHTA/mO/Y1OAksurhsGIl6U0yh
 ~~~
 
-
 # プロファイル
 
-- [AWS CLIで複数アカウントのアクセスキーを管理して扱う設定](http://qiita.com/kwsmkn/items/ce72d8e4cc35f1fc01b5)
-- [AWS CLIを使ってEC2インスタンスの情報を取得する](http://qiita.com/toshiro3/items/37821bdcc50c8b6d06dc)
-- [【AWS】CLIの初期設定について（認証情報とコマンド補完）](http://www.task-notes.com/entry/20141026/1414322858)
-- [名前付きプロファイル](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-multiple-profiles.html)
 
 プロファイルを追加:
 
@@ -119,17 +113,10 @@ aws_secret_access_key = TgJdgadNIZyaUg5akGGSGOjTHFAw9SfdsakkelNURoUvfC
 $ export AWS_PROFILE=user2
 ~~~
 
-# インスタンス情報 (ec2 describe-instances)
+## 記事
 
-~~~bash
-$ aws ec2 describe-instances --profile ictact | jq ".Reservations[].Instances[]|[.InstanceId, .InstanceType, .VpcId, .ImageId, .PublicDnsName]" -c
-~~~
-
-~~~
-["i-535b8adc","t1.micro","vpc-fbf6709e","ami-e54e648b","ec2-53-64-4-1.ap-northeast-1.compute.amazonaws.com"]
-["i-60561cef","m3.xlarge","vpc-fbf6709e","ami-36d1dc58","ec2-54-64-244-35.ap-northeast-1.compute.amazonaws.com"]
-~~~
-
-# RDS
-
-- [RDS関連](rds/aws.rds.md)
+- [AWS-CLIの初期設定のメモ - Qiita](https://qiita.com/reflet/items/e4225435fe692663b705)
+- [AWS CLIで複数アカウントのアクセスキーを管理して扱う設定](http://qiita.com/kwsmkn/items/ce72d8e4cc35f1fc01b5)
+- [AWS CLIを使ってEC2インスタンスの情報を取得する](http://qiita.com/toshiro3/items/37821bdcc50c8b6d06dc)
+- [【AWS】CLIの初期設定について（認証情報とコマンド補完）](http://www.task-notes.com/entry/20141026/1414322858)
+- [名前付きプロファイル](https://docs.aws.amazon.com/ja_jp/cli/latest/userguide/cli-multiple-profiles.html)

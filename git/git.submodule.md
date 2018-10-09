@@ -13,6 +13,12 @@ $ git pull -f
 $  git submodule update --init --recursive
 ~~~
 
+もしくは[pull](git.pull.md)で:
+
+~~~bash 
+$ git pull --recurse-submodules
+~~~
+
 ## SYNOPSIS
 
 ### add

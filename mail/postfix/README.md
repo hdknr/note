@@ -2,7 +2,8 @@
 
 ## アーキテクチャ
 
-- [pipe](http://www.postfix.org/pipe.8.html)
+- [pipe](postfix.pipe.md)
+- [canonical](postfix.canonical.md)
 
 ## Config
 
