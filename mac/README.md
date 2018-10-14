@@ -6,6 +6,7 @@
 ## Mac
 
 - [ターゲッドディスプレイモード](mac.dpd.md): (iMacをMacbookの外部ディスプレイにする)
+- [起動音を消す](mac.nvram.md)
 
 ## トラブル
 
