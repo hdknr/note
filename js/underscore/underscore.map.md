@@ -17,6 +17,8 @@ undefined
 
 ## オブジェクトの場合
 
+コールバック引数は、 `値`, `キー` の順番
+
 ~~~js
 > _.map({x:1, y:2, z:3}, function(val, key){
 ...  return key +"=" + val * 11;
