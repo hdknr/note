@@ -2,6 +2,7 @@
 
 ## トピック
 
+- [ドキュメント(document)](document.md)
 - [セレクター](selector.md)
 - [CORS](cors.md)
 - [JSONデータの受け渡し](json.data.md)
@@ -18,4 +19,3 @@
 ### 記事
 
 - [How do I turn a javascript dictionary into an encoded url string?](https://stackoverflow.com/questions/7045065/how-do-i-turn-a-javascript-dictionary-into-an-encoded-url-string?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa)
-

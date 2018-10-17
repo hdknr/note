@@ -19,3 +19,8 @@ const json_data = JSON.parse(document.getElementById("pagedata").textContent);
 console.log(json_data);
 </script>
 ~~~
+
+
+## 記事
+
+- [HTML に JSON データを埋め込んで JavaScript から利用する - Qiita](https://qiita.com/hoto17296/items/197bdf91f97a33a69dfc)
