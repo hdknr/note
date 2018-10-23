@@ -15,6 +15,7 @@ underscore.js
 - `_.keys(obj)`  - キーの配列を返す
 - `_.allKeys(obj)` - 継承したキーも含めて返す
 - [_.omit](underscore.omit.md)  - 属性を取り除く
+- `_.extend` - オブジェクトの連結( python の `dict1.update(dict2)`的な)
 
 ~~~~
 
