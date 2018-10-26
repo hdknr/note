@@ -1,12 +1,13 @@
-#  EBSはいつ in-use から available になるか？
+# EBS
+
+## EBSはいつ in-use から available になるか？
 
 - EC2インスタンスをおとしただけだと、attached されているEBSは in-use のまま
 - 削除すると available に変わる
 
+## describe-volumes
 
-#  describe-volumes
-
-## ストレージ名で検索
+### ストレージ名で検索
 
 [describe-volumes](http://docs.aws.amazon.com/cli/latest/reference/ec2/describe-volumes.html)
 
@@ -43,7 +44,7 @@
 ]
 ~~~
 
-## 利用可能なストレージ
+### 利用可能なストレージ
 
 - 利用可能なボリューム
 
@@ -53,8 +54,7 @@ $ aws ec2 describe-volumes --filters Name=status,Values="available"  | jq ".Volu
 "vol-79ad2586"
 ~~~
 
-
-## ボリューム一覧
+### ボリューム一覧
 
 ~~~bash
 $ aws ec2 describe-volumes | jq ".Volumes[].VolumeId"
@@ -63,16 +63,14 @@ $ aws ec2 describe-volumes | jq ".Volumes[].VolumeId"
 "vol-56bb259f"
 ~~~
 
-
-
-# detach-valume
+## detach-valume
 
 - [detach-volume](http://docs.aws.amazon.com/cli/latest/reference/ec2/detach-volume.html)
 
 強制的にデタッチ
 
-~~~
-# aws ec2 detach-volume --volume-id vol-668537de --force
+~~~bash
+$ aws ec2 detach-volume --volume-id vol-668537de --force
 {
     "AttachTime": "2016-02-25T01:55:48.000Z",
     "InstanceId": "i-7897f3f7",
@@ -84,8 +82,8 @@ $ aws ec2 describe-volumes | jq ".Volumes[].VolumeId"
 
 すでにデタッチされているとエラーが帰ります
 
-~~~
-# aws ec2 detach-volume --volume-id vol-668537de --force
+~~~bash
+$ aws ec2 detach-volume --volume-id vol-668537de --force
 
 A client error (IncorrectState) occurred when calling the DetachVolume operation:
 Volume 'vol-668537de'is in the 'available' state.
@@ -93,8 +91,8 @@ Volume 'vol-668537de'is in the 'available' state.
 
 [describe-volumes](http://docs.aws.amazon.com/cli/latest/reference/ec2/describe-volumes.html) で確認
 
-~~~
-# aws ec2 describe-volumes --volume-ids vol-668537de | jq ".[][0]"
+~~~bash
+$ aws ec2 describe-volumes --volume-ids vol-668537de | jq ".[][0]"
 {
   "Size": 100,
   "CreateTime": "2016-02-25T01:55:48.781Z",
@@ -109,10 +107,10 @@ Volume 'vol-668537de'is in the 'available' state.
 }
 ~~~
 
-## `volume-id` は必須
+### `volume-id` は必須
 
-~~~
-# aws ec2 detach-volume --filters Name=tag-key,Values="Name" Name=tag-value,Values="ApplicationStorage"  --force
+~~~bash
+$ aws ec2 detach-volume --filters Name=tag-key,Values="Name" Name=tag-value,Values="ApplicationStorage"  --force
 usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]
 To see help text, you can run:
 
@@ -122,8 +120,8 @@ To see help text, you can run:
 aws: error: argument --volume-id is required
 ~~~
 
-~~~
-# export VOLID=$(aws ec2 describe-volumes --filters Name=tag-key,Values="Name" Name=tag-value,Values="ApplicationStorage" | jq '.[][0].VolumeId' -r)
+~~~bash
+$ export VOLID=$(aws ec2 describe-volumes --filters Name=tag-key,Values="Name" Name=tag-value,Values="ApplicationStorage" | jq '.[][0].VolumeId' -r)
 
 # aws ec2 detach-volume --volume-id $VOLID --force
 {
@@ -135,7 +133,7 @@ aws: error: argument --volume-id is required
 }
 ~~~
 
-# デバイス名
+## デバイス名
 
 - [Linux でボリュームを使用できるようにする](http://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ebs-using-volumes.html)
 
@@ -204,7 +202,6 @@ xvda    202:0    0     8G  0 disk
 xvdb    202:16   0   100G  0 disk /home/system
 ~~~
 
-
-# 記事
+## 記事
 
 - [[AWS] EC2インスタンスにEBSボリュームをアタッチする/デタッチする](http://qiita.com/white_aspara25/items/270c7253e5fe58bd5d86)
