@@ -10,6 +10,11 @@
 52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 ~~~
 
+5分ごとに実行:
+
+~~~bash
+*/5  * * * * /home/ubuntu/bin/every5.bash
+~~~
 
 # /etc/anacrontab
 
@@ -33,7 +38,6 @@ START_HOURS_RANGE=3-22
 7       25      cron.weekly             nice run-parts /etc/cron.weekly
 @monthly 45     cron.monthly            nice run-parts /etc/cron.monthly
 ~~~
-
 
 # うごかない？
 

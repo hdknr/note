@@ -7,7 +7,9 @@
 ## Management
 
 - [sudo](linux.sudo.md)
+- [crontab](linux.crontab.md)
 - [monit](monit.md)
+- [/etc/logrotated.d/](linux.logrotate.md)
 
 ## Networking
 
