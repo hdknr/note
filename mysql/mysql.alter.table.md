@@ -52,3 +52,9 @@ SET FOREIGN_KEY_CHECKS=0;
 DROP TABLE users;
 SET FOREIGN_KEY_CHECKS=1;
 ~~~
+
+### ID自動生成 (`AUTO_INCREMENT`) のリセット
+
+~~~sql
+ALTER TABLE auth_user AUTO_INCREMENT = 1;
+~~~

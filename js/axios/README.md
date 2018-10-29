@@ -1,10 +1,13 @@
+
+# axios
+
 - https://github.com/axios/axios
 - [#69](https://github.com/hdknr/scriptogr.am/issues/69)
 
 ## Tips
 
 - [クエリパラメータ](axios.queryparameter.md)
-
+- [プロミス](aixos.promise.md)
 
 ## POST(PUT, PATCH)
 
