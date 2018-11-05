@@ -1,12 +1,54 @@
-## リンク
+# tmux (#96)
 
-- http://robots.thoughtbot.com/a-tmux-crash-course
-- http://qiita.com/succi0303/items/cb396704493476373edf
-- [Quickly open projects in tmux with split window configuration](https://bbs.archlinux.org/viewtopic.php?id=192923)
-- [
-tmuxを使い始めたので基本的な機能の使い方とかを整理してみた](http://kanjuku-tomato.blogspot.jp/2014/02/tmux.html)
+- [tmux/tmux](https://github.com/tmux/tmux)
+- [man](http://man7.org/linux/man-pages/man1/tmux.1.html)
 
-## tmux
+## トピック
+
+### 1. KEY BINDINGS
+
+### 2. COMMANDS
+
+### 3. CLIENTS AND SESSIONS
+
+- [attach-session](client_and_session/attach-session.md) セッションを再現
+
+### 4. WINDOWS AND PANES
+
+- [rename-window](windows_and_panes/rename-window.md) タイトルの変更
+
+### 5. KEY BINDINGS(設定)
+
+- [bind-key](key_bindings/bind-key.md) キーバインドの設定
+
+### 6. OPTIONS
+
+### 7. HOOKS
+
+### 8. MOUSE SUPPORT
+
+### 9. FORMATS
+
+### 10. NAMES AND TITLES
+
+### 11. ENVIRONMENT
+
+### 12. STATUS LINE
+
+### 13. BUFFERS
+
+### 14. MISCELLANEOUS
+
+### 15. CONTROL MODE
+
+### 16. FILES
+
+| ファイル          | 内容                      |
+|------------------|--------------------------|
+| `~/.tmux.conf`   | デフォルトの設定ファイル     |
+| `/etc/tmux.conf` | システムワイドの設定ファイル  |
+
+## インストール
 
 ### install: Mac Homebrew
 
@@ -63,11 +105,6 @@ tmux 2.0
 - http://yuuki.hatenablog.com/entry/tmux-ssh-mackerel
 
 
-### Windowタイトルの名称変更
-
-~~~
-rename-window 'YourProject'
-~~~
 
 
 ## reattach-to-user-namespace
@@ -95,3 +132,15 @@ Electron: 0.36.8
 Chrome  : 47.0.2526.110
 Node    : 5.1.1
 ~~~
+
+## 問題
+
+- [tmuxへのアタッチで画面サイズが合わない時は-d - Qiita](https://qiita.com/maueki/items/dec71193560955f15e5f)
+
+## リンク
+
+- http://robots.thoughtbot.com/a-tmux-crash-course
+- http://qiita.com/succi0303/items/cb396704493476373edf
+- [Quickly open projects in tmux with split window configuration](https://bbs.archlinux.org/viewtopic.php?id=192923)
+- [
+tmuxを使い始めたので基本的な機能の使い方とかを整理してみた](http://kanjuku-tomato.blogspot.jp/2014/02/tmux.html)
