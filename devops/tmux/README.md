@@ -7,6 +7,8 @@
 
 ### 1. KEY BINDINGS
 
+- [デフォルトバインディング](key_bindings)
+
 ### 2. COMMANDS
 
 ### 3. CLIENTS AND SESSIONS
