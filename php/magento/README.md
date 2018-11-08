@@ -16,4 +16,5 @@ $ cd magento2-2.2.6
 $ php -v
 7.0.30
 $ curl -sS https://getcomposer.org/installer | php
+$ php composer.phar install
 ~~~
