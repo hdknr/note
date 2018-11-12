@@ -1,0 +1,2 @@
+- [Calling Rust From Python | bheisler.github.io](https://bheisler.github.io/post/calling-rust-in-python/)
+- [Rust Inside Other Languages](https://doc.rust-lang.org/1.2.0/book/rust-inside-other-languages.html)
