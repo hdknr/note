@@ -19,7 +19,7 @@
 - 5.17. Vectors
 - 5.18. Strings
 - 5.19. Generics
-- 5.20. Traits
+- [5.20. Traits](5.20.trait)
 - 5.21. Drop
 - 5.22. if let
 - 5.23. Trait Objects
