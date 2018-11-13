@@ -1,3 +1,10 @@
+# electron-vue
+
+## Hello
+
+初期化:
+
+~~~bash
 $ vue init simulatedgreg/electron-vue hellovue
 
 ? Application Name hellovue
@@ -27,14 +34,21 @@ Next Steps:
   $ cd hellovue
   $ yarn (or `npm install`)
   $ yarn run dev (or `npm run dev`)
+~~~
 
+インストール:
 
+~~~bash
 $ cd hellovue
 $ npm update
 $ npm audit
 $ npm install karma@3.1.1
 $ npm install
+~~~
 
+テスト実行:
+
+~~~bash
 $ npm run dev
 
 > hellovue@0.0.1 dev /Users/hide/Documents/Boxes/ubn1804/projects/hellovue
@@ -137,6 +151,11 @@ $ npm run dev
   
 ┗ ----------------------------
 
+~~~
+
+ビルド:
+
+~~~bash
 $ npm run build
 
 > hellovue@0.0.1 build /Users/hide/Documents/Boxes/ubn1804/projects/hellovue
@@ -236,12 +255,14 @@ Child html-webpack-plugin for "index.html":
   • building        target=DMG arch=x64 file=build/hellovue-0.0.1.dmg
   • building block map blockMapFile=build/hellovue-0.0.1.dmg.blockmap
   • building embedded block map file=build/hellovue-0.0.1-mac.zip
-Peeko-2:hellovue hide$ 
+~~~
 
+## Topic
 
+- https://github.com/SimulatedGREG/electron-vue
 
+## 記事
 
-
-
-
-
+- https://qiita.com/search?q=electron-vue
+- [フロントエンド開発初心者がelectron-vueでアプリをつくってみた　その１～概念編～ - Qiita](https://qiita.com/kurimeg/items/63a28981e619dfed9708)
+- [フロントエンド開発初心者がelectron-vueでアプリをつくってみた　その２～実装編～ - Qiita](https://qiita.com/kurimeg/items/1736ab05dde5d8f8973c)

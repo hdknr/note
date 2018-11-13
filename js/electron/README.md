@@ -24,12 +24,10 @@
 - [javascript - How to handle "Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first." on Desktop with Chrome 66? - Stack Overflow](https://stackoverflow.com/questions/49930680/how-to-handle-uncaught-in-promise-domexception-play-failed-because-the-use)
 - [Electron 3 audio not allowed before user interaction with the page (Chrome 66 autoplay policy) · Issue #13525 · electron/electron](https://github.com/electron/electron/issues/13525)
 
-
 ## vue
 
 - [ElectronでVue.jsを始める - Qiita](https://qiita.com/SatoTakumi/items/fd79672d7eb8a9b4a0bb)
 - [SimulatedGREG/electron-vue: An Electron & Vue.js quick start boilerplate with vue-cli scaffolding, common Vue plugins, electron-packager/electron-builder, unit/e2e testing, vue-devtools, and webpack.](https://github.com/SimulatedGREG/electron-vue)
-
 
 ## ネットワーキング
 
