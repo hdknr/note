@@ -1,4 +1,4 @@
-Windows: git に sshの設定
+# Windows: git に sshの設定
 
 - ssh_config に IdentityFile を設定すればいい、という話
 

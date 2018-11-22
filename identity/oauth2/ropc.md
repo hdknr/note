@@ -59,3 +59,7 @@ Originヘッダーも詐称できるのでは？
 - [10 Things You Should Know about Tokens](https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/#token-storage)
 
 - [Cookies are bad for you: Improving web lication security](http://sitr.us/2011/08/26/cookies-are-bad-for-you.html)
+
+##  OAuthLib
+
+- [Resource Owner Password Credentials Grant — OAuthLib 3.0.0-dev documentation](https://oauthlib.readthedocs.io/en/latest/oauth2/grants/password.html)
