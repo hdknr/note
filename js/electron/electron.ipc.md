@@ -93,3 +93,5 @@ export default {
 - [Electronでipcを使ってプロセス間通信を行う - Qiita](https://qiita.com/Misumi_Rize/items/dde76dbf89abee13991c)
 - [javascript - How to access DOM elements in electron? - Stack Overflow](https://stackoverflow.com/questions/32780726/how-to-access-dom-elements-in-electron)
 - [【Electron連載】第４回 基本編－メイン／レンダラープロセスの話 - Qiita](https://qiita.com/nullpointer_t/items/83cc14225b677f0d72fa)
+- [Electronで最初に躓くメインプロセスとレンダラープロセスについて - Electron｜ONE-RUN](https://st40.xyz/one-run/article/502/)
+- [Electronでファイルやフォルダの選択 - Qiita](https://qiita.com/_takwat/items/6544342fd4141345bb19)

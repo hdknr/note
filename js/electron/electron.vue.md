@@ -266,3 +266,4 @@ Child html-webpack-plugin for "index.html":
 - https://qiita.com/search?q=electron-vue
 - [フロントエンド開発初心者がelectron-vueでアプリをつくってみた　その１～概念編～ - Qiita](https://qiita.com/kurimeg/items/63a28981e619dfed9708)
 - [フロントエンド開発初心者がelectron-vueでアプリをつくってみた　その２～実装編～ - Qiita](https://qiita.com/kurimeg/items/1736ab05dde5d8f8973c)
+- [electron-vueで自動アップデートを実装する - Qiita](https://qiita.com/hatahata/items/0036294967e0e69c4a3d)

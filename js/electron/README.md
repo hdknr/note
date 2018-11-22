@@ -5,14 +5,27 @@
 ## Topic
 
 - [electron-builder](electron.builder.md)
+- [クレデンシャル保存](electron.credential.md)
+- [テンプレート(EJS)](electron.ejs.md)
+- [ビルトインHTTP(express)](electron.express.md)
+- [IPC(プレセス間通信)](electron.ipc.md)
 
 ## API
 
 - [BrowserWindow | Electron](https://electronjs.org/docs/api/browser-window)
 
-## キーボード入力ができない
+## vue
 
-- [tmux下でElectronがうまく動作しない](http://qiita.com/itkrt2y/items/dee87c406617d1bd45a6)
+- [ElectronでVue.jsを始める - Qiita](https://qiita.com/SatoTakumi/items/fd79672d7eb8a9b4a0bb)
+- [SimulatedGREG/electron-vue: An Electron & Vue.js quick start boilerplate with vue-cli scaffolding, common Vue plugins, electron-packager/electron-builder, unit/e2e testing, vue-devtools, and webpack.](https://github.com/SimulatedGREG/electron-vue)
+- [vuejs/awesome-vue: 🎉 A curated list of awesome things related to Vue.js](https://github.com/vuejs/awesome-vue)
+
+
+## ネットワーキング
+
+- [Electronでアプリ内部にWebサーバーを立てる - Qiita](https://qiita.com/pman-taichi/items/406b6eb068e074dc6675)
+- [node.js - Why do I see an "Electron Security Warning" after updating my Electron project to the latest version? - Stack Overflow](https://stackoverflow.com/questions/48854265/why-do-i-see-an-electron-security-warning-after-updating-my-electron-project-t)
+- [ElectronでExpressアプリケーションを動かす - dackdive's blog](https://dackdive.hateblo.jp/entry/2016/02/20/213251)
 
 ## 記事
 
@@ -24,13 +37,6 @@
 - [javascript - How to handle "Uncaught (in promise) DOMException: play() failed because the user didn't interact with the document first." on Desktop with Chrome 66? - Stack Overflow](https://stackoverflow.com/questions/49930680/how-to-handle-uncaught-in-promise-domexception-play-failed-because-the-use)
 - [Electron 3 audio not allowed before user interaction with the page (Chrome 66 autoplay policy) · Issue #13525 · electron/electron](https://github.com/electron/electron/issues/13525)
 
-## vue
+### キーボード入力ができない
 
-- [ElectronでVue.jsを始める - Qiita](https://qiita.com/SatoTakumi/items/fd79672d7eb8a9b4a0bb)
-- [SimulatedGREG/electron-vue: An Electron & Vue.js quick start boilerplate with vue-cli scaffolding, common Vue plugins, electron-packager/electron-builder, unit/e2e testing, vue-devtools, and webpack.](https://github.com/SimulatedGREG/electron-vue)
-
-## ネットワーキング
-
-- [Electronでアプリ内部にWebサーバーを立てる - Qiita](https://qiita.com/pman-taichi/items/406b6eb068e074dc6675)
-- [node.js - Why do I see an "Electron Security Warning" after updating my Electron project to the latest version? - Stack Overflow](https://stackoverflow.com/questions/48854265/why-do-i-see-an-electron-security-warning-after-updating-my-electron-project-t)
-- [ElectronでExpressアプリケーションを動かす - dackdive's blog](https://dackdive.hateblo.jp/entry/2016/02/20/213251)
+- [tmux下でElectronがうまく動作しない](http://qiita.com/itkrt2y/items/dee87c406617d1bd45a6)
