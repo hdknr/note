@@ -1,2 +1,0 @@
-- http://alphasis.info/jquery-plugins/jqplot/
-- http://qiita.com/kokono/items/da041274c6dd96a11b05
