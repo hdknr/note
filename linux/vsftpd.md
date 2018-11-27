@@ -1,6 +1,7 @@
 # vsftpd
 
 - https://security.appspot.com/vsftpd.html
+- [sftp](../command/sftp.md)
 
 ## /etc/vsftpd.conf
 
@@ -19,6 +20,14 @@ pam_service_name=vsftpd
 rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
 rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
 ssl_enable=NO
+~~~
+
+### umask
+
+- [vsftpd umask | technote](https://tech.withsin.net/2018/02/26/vsftpd-umask/)
+
+~~~ini
+local_umask=002
 ~~~
 
 ## トラブル

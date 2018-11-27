@@ -1,3 +1,7 @@
+# ssh
+
+- [sftp](sftp.md)
+
 ## ssh ログインしたIPアドレス記録
 
 - Debian
