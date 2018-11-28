@@ -98,3 +98,4 @@ HTMLだけ2タブにする:
 
 - [Mac版 Visual Studio Codeを使ってみます](http://qiita.com/akiko-pusu/items/185f4fd8484ecd3b3243)
 - [ターミナルからVisual Studio Codeを起動する方法【公式の方法】](http://qiita.com/naru0504/items/c2ed8869ffbf7682cf5c)
+- [Visual Studio CodeでSSHごしにファイルを編集する - Qiita](https://qiita.com/informationsea/items/5c9f05c81a41fb885460)
