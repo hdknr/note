@@ -1,21 +1,24 @@
+# imagemagik
+
+- https://www.imagemagick.org/script/index.php
+
 ## インストール
+
+macOS:
 
 ~~~bash
 $ brew install imagemagick
+..
 ~~~
 
-## convert
-
-### 4つのPNGをマージ
-
-- 水平は `-append`
+Debian:
 
 ~~~bash
-$ convert +append 455.1.png  455.2.png  455.3.png 455.4.png 455.png
+$ sudo apt-get install imagemagick
+..
 ~~~
 
-- 垂直は `+append`
+## 関連
 
-~~~bash
-$ convert -gravity center -append 501.1.png  501.2.png 501.3.png  x.png
- ~~~
+- [convert](convert.md)
+- [sips](sips.md)(macOS)

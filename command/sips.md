@@ -8,6 +8,10 @@ $ sips -s format gif dog.jpg  --out dog.gif
   /Users/hide/Downloads/dog.gif
 ~~~
 
+## 関連
+
+- [imagemagik](imagemagik.md) / [convert](convert.md)
+
 ## 記事
 
 - [Macのターミナルで簡単に画像処理できるsipsの使い方 - Qiita](https://qiita.com/livlea/items/53b755e5067d4ebc5b43)
