@@ -37,3 +37,8 @@ Hello world
 
 
 ### MONO_PATH
+
+
+## 記事
+
+- [F# を知ってほしい - Qiita](https://qiita.com/cannorin/items/59d79cc9a3b64c761cd4)

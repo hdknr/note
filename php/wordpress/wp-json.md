@@ -57,6 +57,39 @@ $ curl  -s http://192.168.56.54:8080/wp-json/wp/v2/posts | jq ".[].title.rendere
 "Quis est facilis sit magni."
 ~~~
 
+Pythonでクロール:
+
+~~~py
+import click 
+import requests
+
+@click.group()
+def main():
+    pass
+
+
+@main.command()
+@click.argument('site')
+def crawl(site):
+    url = f"{site}/wp-json/wp/v2/posts"
+    count = 0
+
+    res = requests.get(url)
+    while res and res.status_code == 200:
+        with open(f"{count}.json", "w") as out:
+            out.write(res.content.decode('utf8'))
+
+        next_link = res.links['next'] and res.links['next']['url']
+        if next_link:
+            count = count + 1
+            res = requests.get(next_link)
+        else:
+            break
+
+if __name__ == '__main__':
+    main()
+~~~
+
 ## メディアの取得
 
 ~~~bash

@@ -1,5 +1,4 @@
 
-
 # AWS 関連
 
 - [#75](https://github.com/hdknr/scriptogr.am/issues/75)
@@ -21,9 +20,9 @@
 
 ## [ELB](elb)
 
--  ACM証明書ドメイン承認
--  SSL強制
--  ヘルスチェック(nginx)
+- ACM証明書ドメイン承認
+- SSL強制
+- ヘルスチェック(nginx)
 
 ## ストレージ
 
@@ -57,6 +56,7 @@
 - [SES](ses/README.md)
 - [Batch](aws.batch.md)
 - [証明書サービス: ACM](aws.acm.md)
+- [コスト](aws.cost.md)
 
 # ツール
 
