@@ -1,5 +1,7 @@
 # Vbguest
 
+- https://github.com/dotless-de/vagrant-vbguest
+
 ~~~bash 
 $ vagrant plugin install vagrant-vbguest
 

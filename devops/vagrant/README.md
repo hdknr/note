@@ -1,8 +1,24 @@
 # Vagrant
 
+- [Vagrant Documentation](https://www.vagrantup.com/docs/index.html)
 
-- [vbguest](vgrant.vbguest.md)
+## コマンド
 
-## 記事
+### [reload](vagrant.reload.md)
 
-- [VagrantのboxのGuest Additionsのアップデート方法 - Qiita](https://qiita.com/isaoshimizu/items/e217008b8f6e79eccc85)
+- 再起動
+
+### [ssh, ssh-config](vagrant.ssh.md)
+
+- ssh設定
+- ssh接続
+
+### [global-status](vagrant.global-status.md)
+
+- 状態確認
+
+## プラグイン
+
+### [vbguest](vagrant.vbguest.md)
+
+- Guest Additionsのアップデート
