@@ -1,5 +1,4 @@
-[#48](https://github.com/hdknr/scriptogr.am/issues/48)
-
+# Git: [#48](https://github.com/hdknr/scriptogr.am/issues/48)
 
 ## [branch](git.branch.md)
 
