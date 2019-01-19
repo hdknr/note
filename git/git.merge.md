@@ -14,10 +14,10 @@ fast-foward:
 
 - 意図的にfast-forwardを行わないコミットをすることが出来る
 
-
-~~~bash 
+~~~bash
 $ git checkout master
 $ git merge feature-111 --no-ff
+.
 ~~~
 
 ## 問題が起きたら
