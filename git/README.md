@@ -62,7 +62,6 @@
 
 ## [submodule](git.submodule.md)
 
-
 ## [github](git.github.md)
 
 ## [インストール](git.install.md)
@@ -74,15 +73,20 @@
 
 - [サルでもわかるGit入門](http://www.backlog.jp/git-guide/)
 
-
 ## tig
 
 - [tigでgitをもっと便利に！ addやcommitも](http://qiita.com/suino/items/b0dae7e00bd7165f79ea)
 
 ~~~bash
 $ sudo apt-get install tig
+.
 ~~~~
 
 ~~~bash
 $ brew install tig
+.
 ~~~~
+
+## トピック
+
+- [git-crypt](git-crypt.md)
