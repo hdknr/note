@@ -1,5 +1,9 @@
 # Let's Encrypt
 
+## Certbox
+
+- [Nginx on Ubuntu 18.04 LTS (bionic)](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
+
 ## Ubuntu
 
 ~~~bash
@@ -27,6 +31,7 @@ $ dpkg -L letsencrypt
 
 ~~~bash
 $ sudo letsencrypt certonly --standalone -d {{ ドメイン名前 }}
+.
 ~~~
 
 ## 起動中のサーバーで設定
@@ -48,33 +53,57 @@ IMPORTANT NOTES:
 
 nginx設定(default):
 
-~~~
+~~~ini
 include sites-available/lafoglia/upstream.conf;
 server {
-        listen 80 default_server;
-        listen [::]:80 default_server;
+  listen 80 default_server;
+  listen [::]:80 default_server;
 
-        # SSL
-        listen 443 ssl default_server;
-        listen [::]:443 ssl default_server;
-        include sites-available/lafoglia/keys.conf;
+  # SSL
+  listen 443 ssl default_server;
+  listen [::]:443 ssl default_server;
+  include sites-available/lafoglia/keys.conf;
 
-        root /home/ubuntu/lafoglia/html;
-        index index.html index.htm index.nginx-debian.html;
-        server_name _;
-        
-        location / {
-            try_files $uri $uri/ =404;
-            include sites-available/kitayama/root.conf;
-        }
+  root /home/ubuntu/lafoglia/html;
+  index index.html index.htm index.nginx-debian.html;
+  server_name _;
+
+  location / {
+      try_files $uri $uri/ =404;
+      include sites-available/kitayama/root.conf;
+  }
 }
 ~~~
 
 keys.conf:
 
-~~~
+~~~ini
 ssl_certificate /etc/letsencrypt/live/www.lafoglia.com/fullchain.pem;
 ssl_certificate_key /etc/letsencrypt/live/www.lafoglia.com//privkey.pem;
+~~~
+
+## 更新
+
+~~~bash
+$ sudo letsencrypt renew
+Processing /etc/letsencrypt/renewal/www.lafoglia.com.conf
+new certificate deployed without reload, fullchain is /etc/letsencrypt/live/www.lafoglia.com/fullchain.pem
+
+Congratulations, all renewals succeeded. The following certs have been renewed:
+  /etc/letsencrypt/live/www.lafoglia.com/fullchain.pem (success)
+~~~
+
+crontab:
+
+~~~bash
+00 05 01 * * sudo letsencrypt renew
+~~~
+
+## Too many failed authorizations recently
+
+~~~bash
+An unexpected error occurred:
+There were too many requests of a given type :: Error creating new authz :: Too many failed authorizations recently.
 ~~~
 
 ## 記事
