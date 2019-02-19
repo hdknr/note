@@ -1,5 +1,7 @@
 # Let's Encrypt
 
+- https://letsencrypt.org/
+
 ## Certbox
 
 - [Nginx on Ubuntu 18.04 LTS (bionic)](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
@@ -70,7 +72,13 @@ server {
 
   location / {
       try_files $uri $uri/ =404;
-      include sites-available/kitayama/root.conf;
+      include sites-available/lafoglia/root.conf;
+  }
+
+  # ACME: Automatic Certificate Management Environment (ACME)
+  location ^~ /.well-known/acme-challenge/ {
+    default_type "text/plain";
+    root         /home/ubuntu/lafoglia/html;
   }
 }
 ~~~
@@ -80,6 +88,57 @@ keys.conf:
 ~~~ini
 ssl_certificate /etc/letsencrypt/live/www.lafoglia.com/fullchain.pem;
 ssl_certificate_key /etc/letsencrypt/live/www.lafoglia.com//privkey.pem;
+~~~
+
+### /etc/letsencrypt
+
+~~~bash
+/etc/letsencrypt/
+├── accounts
+│   └── acme-v01.api.letsencrypt.org
+│       └── directory
+│           └── 7bc6623fb01d4682150b928ace710991
+│               ├── meta.json
+│               ├── private_key.json
+│               └── regr.json
+├── archive
+│   └── www.lafoglia.com
+│       ├── cert1.pem
+│       ├── chain1.pem
+│       ├── fullchain1.pem
+│       └── privkey1.pem
+├── csr
+│   ├── 0000_csr-letsencrypt.pem
+│   ├── 0001_csr-letsencrypt.pem
+│   ├── 0002_csr-letsencrypt.pem
+│   ├── 0003_csr-letsencrypt.pem
+│   ├── 0004_csr-letsencrypt.pem
+│   ├── 0005_csr-letsencrypt.pem
+│   ├── 0006_csr-letsencrypt.pem
+│   ├── 0007_csr-letsencrypt.pem
+│   ├── 0008_csr-letsencrypt.pem
+│   └── 0009_csr-letsencrypt.pem
+├── keys
+│   ├── 0000_key-letsencrypt.pem
+│   ├── 0001_key-letsencrypt.pem
+│   ├── 0002_key-letsencrypt.pem
+│   ├── 0003_key-letsencrypt.pem
+│   ├── 0004_key-letsencrypt.pem
+│   ├── 0005_key-letsencrypt.pem
+│   ├── 0006_key-letsencrypt.pem
+│   ├── 0007_key-letsencrypt.pem
+│   ├── 0008_key-letsencrypt.pem
+│   └── 0009_key-letsencrypt.pem
+├── live
+│   └── www.lafoglia.com
+│       ├── cert.pem -> ../../archive/www.lafoglia.com/cert1.pem
+│       ├── chain.pem -> ../../archive/www.lafoglia.com/chain1.pem
+│       ├── fullchain.pem -> ../../archive/www.lafoglia.com/fullchain1.pem
+│       └── privkey.pem -> ../../archive/www.lafoglia.com/privkey1.pem
+└── renewal
+    └── www.lafoglia.com.conf
+
+11 directories, 32 files
 ~~~
 
 ## 更新
