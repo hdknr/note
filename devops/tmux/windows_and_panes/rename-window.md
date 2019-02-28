@@ -1,6 +1,6 @@
 # rename-window (alias: renamew)
 
-~~~
+~~~bash
 rename-window [-t target-window] new-name
 ~~~
 

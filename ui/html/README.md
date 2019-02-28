@@ -12,6 +12,7 @@
 - [animation](animation)
 - [background](background)
 - [border](border)
+- [writing-mode](writing-mode) : 文字の向き
 
 ## その他
 

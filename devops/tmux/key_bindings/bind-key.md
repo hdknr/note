@@ -1,6 +1,6 @@
-#  bind-key (alias: bind)
+# bind-key (alias: bind)
 
-~~~
+~~~bash
 bind-key [-nr] [-T key-table] key command [arguments]
 ~~~
 

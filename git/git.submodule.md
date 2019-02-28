@@ -136,7 +136,6 @@ $ git submodule update --recursive --remote
 
 ~~~       
        git submodule [--quiet] sync [--recursive] [--] [<path>...]
-
 ~~~
 
 ## URL の変更
@@ -145,10 +144,12 @@ $ git submodule update --recursive --remote
 
 ~~~bash
 $ vim .gitmodules
+.
 ~~~
 
 ~~~bash
 $ git submodule sync && git submodule update
+.
 ~~~
 
 ## 記事

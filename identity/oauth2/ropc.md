@@ -48,16 +48,11 @@ Originヘッダーも詐称できるのでは？
 - 第３者にトークンが漏れないこと
 - 第３者に利用者のパスワードが漏れないこと
 
-
-
 ## 記事
 
 -  [JWT Token, Redux & SSR Patterns](https://spectrum.chat/thread/2dcd616b-0625-4293-adc1-eedd69e2d7ab)
-
 - [Securing React Redux Apps With JWT Tokens](https://medium.com/@rajaraodv/securing-react-redux-s-with-jwt-tokens-fcfe81356ea0)
-
 - [10 Things You Should Know about Tokens](https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/#token-storage)
-
 - [Cookies are bad for you: Improving web lication security](http://sitr.us/2011/08/26/cookies-are-bad-for-you.html)
 
 ##  OAuthLib

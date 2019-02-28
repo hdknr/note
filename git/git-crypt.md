@@ -1,5 +1,6 @@
 # git-crypt
 
+- https://github.com/AGWA/git-crypt
 - [git-crypt を使って秘密情報を版管理する ｜ DevelopersIO](https://dev.classmethod.jp/tool/git/git-crypt/)
 - [リモートリポジトリの特定のファイルを暗号化しておく - Qiita](https://qiita.com/yuhr/items/52cb02d46aa19b1b9e87)
 - [[git-crypt] リモートリポジトリ内の特定ファイルの暗号化 - Qiita](https://qiita.com/task4233/items/fbb9625225294151c8ac)
@@ -150,3 +151,30 @@ $ git commit -a -m "ansible and keys"
 $ git push
 .
 ~~~
+
+## pull & unlock
+
+~~~bash
+$ git-crypt unlock
+.
+~~~
+
+## status
+
+~~~bash
+$ git-crypt status | grep -v "not"
+    encrypted: keys/aws/app-server.pem
+    encrypted: keys/bitbucket/app-server.pem
+~~~
+
+## ユーザー一覧
+
+- [Easy Git Crypt User Identification Blog - DevOpsGuys](https://www.devopsgroup.com/2016/12/08/easy-git-crypt-user-identification/)
+
+~~~bash
+alias gpgcryptusers='pushd .git-crypt/keys/default/0; for file in *.gpg; do echo "${file} : " && git log -- ${file} | sed -n 9p; done; popd'
+~~~
+
+## その他
+
+- [Add `del-gpg-user` to delete (and re-encrypt) repository · Issue #47 · AGWA/git-crypt](https://github.com/AGWA/git-crypt/issues/47)
