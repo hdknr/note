@@ -65,7 +65,6 @@ nginxの`default_server` が正しく `200` を返すようにする:
      For Classic Load Balancer,
      the host header contains the IP address of the load balancer node.
 
-
 ## その他
 
 - [ELBをVPC内に設置する際のサブネット設計の注意点](http://qiita.com/tetor/items/4c9e1aa58da2c5755452)
