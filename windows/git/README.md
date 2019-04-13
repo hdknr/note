@@ -53,3 +53,47 @@ Refreshing environment variables from registry for cmd.exe. Please wait...Finish
 C:\Users\spin\Documents\Projects>git --version
 git version 2.19.1.windows.1
 ~~~
+
+## 改行コード問題
+
+- [windows環境の git で改行コードの自動変換に注意 - Qiita](https://qiita.com/yokoh9/items/1ec8099696ade0c1f36e)
+
+~~~ps1
+PS> git config --global core.autoCRLF false
+~~~
+
+## sshキーの設定
+
+Windows メニューから　`Git Bash`  を起動し、 `ssh-keygen` コマンドで作成:
+
+~~~bash
+hdknr@DESKTOP-DL075EP MINGW64 ~
+$ which ssh-keygen
+/usr/bin/ssh-keygen
+
+hdknr@DESKTOP-DL075EP MINGW64 ~
+$ ssh-keygen.exe -b 4096
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/hdknr/.ssh/id_rsa):
+Created directory '/c/Users/hdknr/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/hdknr/.ssh/id_rsa.
+Your public key has been saved in /c/Users/hdknr/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:thGefkSIvAPemU4bZz/bkh7ylYJILBco3loqWAVGUZY hdknr@DESKTOP-DL075EP
+The key's randomart image is:
++---[RSA 4096]----+
+| .=oo.           |
+| . oEo . .       |
+|  . + + o .      |
+| . = + * +       |
+|  o = % S .      |
+|.. + * X *   .   |
+|o o   + = *.o    |
+| .       +oB     |
+|         .+..    |
++----[SHA256]-----+
+~~~
+
+- [秘密鍵・公開鍵を作成する（Win） - Qiita](https://qiita.com/reflet/items/5c6ba6e29fe8436c3185)

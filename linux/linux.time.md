@@ -23,10 +23,7 @@ Debian:
 $ sudo dpkg-reconfigure tzdata
 ~~~
 
-
-
 ## datetimectl コマンド
-
 
 ~~~bash
 $ sudo timedatectl list-timezones  | grep Tokyo

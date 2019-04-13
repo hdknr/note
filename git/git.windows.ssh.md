@@ -2,7 +2,7 @@
 
 - ssh_config に IdentityFile を設定すればいい、という話
 
-##  ChocolateyでNugetのGitインストール
+## ChocolateyでNugetのGitインストール
 
 - [gitパッケージ](https://chocolatey.org/packages/git)
 

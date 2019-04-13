@@ -3,6 +3,13 @@
 - [tmux/tmux](https://github.com/tmux/tmux)
 - [man](http://man7.org/linux/man-pages/man1/tmux.1.html)
 
+## 最小設定
+
+~~~conf
+unbind C-b
+set -g prefix C-a
+~~~
+
 ## 機能
 
 ### 1. KEY BINDINGS

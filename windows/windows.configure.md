@@ -2,7 +2,7 @@
 
 ## 起動
 
-- [Windows10 - 起動時のパスワード入力を省略 - 自動サインイン - PC設定のカルマ](https://pc-karuma.net/windows10-disable-password-login/)
+- netplwiz: [Windows10 - 起動時のパスワード入力を省略 - 自動サインイン - PC設定のカルマ](https://pc-karuma.net/windows10-disable-password-login/)
 - [Windows10 起動時にアプリを自動起動 - スタートアップに登録 - PC設定のカルマ](https://pc-karuma.net/windows-10-app-startup/)
 
 ## ポリシー
