@@ -9,8 +9,10 @@
 ## 言語
 
 - [演算子](ps1.operators.md)
+- [型](ps1.types.md)
 - [匿名オブジェクト](ps1.object.md)
 - [関数](ps1.function.md)
+- [クラス](ps1.classs.md)
 
 ## ネットワーク
 
