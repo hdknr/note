@@ -1,0 +1,2 @@
+- [会議を爆速にする、Visual Studio Code 超便利スニペット集 - Qiita](https://qiita.com/kitfactory/items/31cdf80cf1d3d8b42de8)
+- [開発が捗る Visual Studio Code 拡張機能 - Qiita](https://qiita.com/Yuta_Yamamoto/items/fbeb7b31173b3e787fc2)
