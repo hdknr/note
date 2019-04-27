@@ -1,12 +1,18 @@
-[#80](https://github.com/hdknr/scriptogr.am/issues/80)
+# curl  ([#80](https://github.com/hdknr/scriptogr.am/issues/80))
+
+## トピック
+
+- [認証](curl.auth.md)
+- [クッキー](curl.cookie.md)
+- [CORS](cur.cors.md)
 
 ## 統計情報を出さない (-s)
 
-```
+~~~bash
 $ curl -s https://accounts.google.com/.well-known/openid-configuration | jq ".issuer"
 
 "accounts.google.com"
-```
+~~~
 
 ## 自分のグローバルアドレスを確認
 
@@ -14,6 +20,7 @@ $ curl -s https://accounts.google.com/.well-known/openid-configuration | jq ".is
 
 ~~~bash
 $ curl -s ifconfig.me
+.
 ~~~
 
 ## POST
@@ -25,6 +32,7 @@ FORM:
 
 ~~~bash
 $ curl -F "name1=value1" -F "name2=value2" http://yourdomain/execute.script
+.
 ~~~
 
 JSON:
@@ -43,10 +51,12 @@ $ curl -X POST -H "Content-Type: application/json" -d '
 
 ~~~bash 
 $ curl "$URL" | gunzip -c > filename
+.
 ~~~
 
 ~~~bash 
 $ curl -L https://example.com/mygzip.tar.gz | tar zxv
+.
 ~~~
 
 Zip:
@@ -54,6 +64,7 @@ Zip:
 ~~~bash
 $ curl https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip | jar xv
 $ curl https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip | bsdtar -xvf-
+.
 ~~~
 
 ## macos: curl: (35) SSL peer handshake failed, the server most likely requires a client certificate to connect
