@@ -1,17 +1,22 @@
+# gpg
+
 ## キー生成
 
 ### エントロピー
 
-```
+~~~bash
 $ sudo apt-get install rng-tools
-```
-```
+.
+~~~
+
+~~~bash
 $ sudo rngd -r /dev/urandom
-```
+.
+~~~
 
 ### 生成
 
-```
+~~~bash
 sugar@wzy:~$ gpg --gen-key
 gpg (GnuPG) 1.4.12; Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it. 
@@ -76,9 +81,9 @@ uid                  bobby brown (bobby) <bobby@ic-tact.co.jp>
 
 Note that this key cannot be used for encryption.  You may want to use
 the command "--edit-key" to generate a subkey for this purpose.
-```
+~~~
 
-```
+~~~bash
 $ tree -a .gnupg
 .gnupg
 ├── gpg.conf
@@ -89,13 +94,11 @@ $ tree -a .gnupg
 └── trustdb.gpg
 
 0 directories, 6 files
-
-```
-
+~~~
 
 ## プライベートキー一覧
 
-```
+~~~bash
 $ gpg --list-secret-keys
 
 /home/boby/.gnupg/secring.gpg
@@ -107,14 +110,13 @@ ssb   2048R/36E5A3B7 2013-11-15
 sec   2048R/44773BA3 2013-11-15 [満了: 2014-12-10]
 uid                  boby (hidelafoglia) <boby@ic-tact.co.jp>
 ssb   2048R/BFCEA558 2013-11-15
-```
-
+~~~
 
 ## パブリックキー一覧
 
-
-```
+~~~bash
 $ gpg --list-key
+
 /home/bobby/.gnupg/pubring.gpg
 ------------------------------
 pub   2048R/3B159704 2013-11-15 [満了: 2014-11-29]
@@ -122,7 +124,4 @@ uid                  bobby (hidelafoglia) <bobby@ic-tact.co.jp>
 
 pub   2048R/44773BA3 2013-11-15 [満了: 2014-12-10]
 uid                  bobby (hidelafoglia) <bobby@ic-tact.co.jp>
-
-```
-
-
+~~~
