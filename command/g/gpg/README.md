@@ -1,5 +1,10 @@
 # gpg
 
+~~~bash 
+$ sudo apt install gnupg gnupg-agent gpgsm
+.
+~~~
+
 ## キー生成
 
 ### エントロピー
@@ -18,6 +23,7 @@ $ sudo rngd -r /dev/urandom
 
 ~~~bash
 sugar@wzy:~$ gpg --gen-key
+
 gpg (GnuPG) 1.4.12; Copyright (C) 2012 Free Software Foundation, Inc.
 This is free software: you are free to change and redistribute it. 
 There is NO WARRANTY, to the extent permitted by law.
@@ -125,3 +131,61 @@ uid                  bobby (hidelafoglia) <bobby@ic-tact.co.jp>
 pub   2048R/44773BA3 2013-11-15 [満了: 2014-12-10]
 uid                  bobby (hidelafoglia) <bobby@ic-tact.co.jp>
 ~~~
+
+## キーの管理
+
+| コマンド	                     |   説明                        |
+| ----------------------------- | ----------------------------- |
+| gpg --gen-key	                | 新規キーの生成 |
+| gpg --gen-revoke my_user_ID   | my_user_ID に関するリボークキーを生成 |
+| gpg --edit-key user_ID        | インタラクティブにキーを編集、ヘルプは "help" |
+| gpg -o file --export	        | 全てのキーをファイルにエクスポート |
+| gpg --import file	            | 全てのキーをファイルからインポート |
+| gpg --send-keys user_ID       | user_ID のキーをキーサーバーに送信 |
+| gpg --recv-keys user_ID       | user_ID のキーをキーサーバーから受信 |
+| gpg --list-keys user_ID       | user_ID のキーをリスト |
+| gpg --list-sigs user_ID       | user_ID の署名をリスト |
+| gpg --check-sigs user_ID      | user_ID の署名をチェック |
+| gpg --fingerprint user_ID	    | user_ID のフィンガープリントをチェック |
+| gpg --refresh-keys            | ローカルキーリングをアップデート |
+
+## トラストコード
+
+| コード    | 信用の説明 |
+| -------- | --------------------------- |
+| `-`      | 所有者への信用未付与/未計算 |
+| e	       | 信用計算に失敗 |
+| q        | 計算用の情報不十分 |
+| n        | このキーを信用不可 |
+| m	       | スレスレの信用 |
+| f	       | フルに信用 |
+| u	       | 究極の信用 |
+
+## ファイル操作
+
+| コマンド	                    | 説明        |
+| ---------------------------- | ---------- |
+| gpg -a -s file               | ファイルを ASCII 文字化した file.asc と署名 |
+| gpg --armor --sign file      |  |
+| gpg --clearsign file         | メッセージをクリアサイン |
+| gpg --clearsign file|mail foo@example.org	    | foo@example.org にクリアサインされたメッセージをメールする |
+| gpg --clearsign --not-dash-escaped patchfile  | パッチファイルをクリアサイン |
+| gpg --verify file	           | クリアサインされたファイルを確認 |
+| gpg -o file.sig -b file      | 署名を別ファイルで作成 |
+| gpg -o file.sig --detach-sig file	 |   |
+| gpg --verify file.sig file   | file.sig を使ってファイルを確認 |
+| gpg -o crypt_file.gpg -r name -e file	        | file からバイナリー crypt_file.gpg への name 宛公開キー暗号化 |
+| gpg -o crypt_file.gpg --recipient name --encrypt file  | |
+| gpg -o crypt_file.asc -a -r name -e file               | file から ASCII 文字化された crypt_file.asc への name 宛公開キー暗号化 |
+| gpg -o crypt_file.gpg -c file                          | file からバイナリー crypt_file.gpg への対称暗号化 |
+| gpg -o crypt_file.gpg --symmetric file                 |  |
+| gpg -o crypt_file.asc -a -c file                       | file から ASCII 文字化された crypt_file.asc への対称暗号化 |
+| gpg -o file -d crypt_file.gpg -r name	                 | 暗号解読 |
+| gpg -o file --decrypt crypt_file.gpg                   |  |
+
+
+## トピック
+
+- [~.gnupg](files.md)
+
+
