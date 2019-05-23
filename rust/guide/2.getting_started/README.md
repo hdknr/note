@@ -9,11 +9,12 @@
 
 ~~~bash
 $ curl https://sh.rustup.rs -sSf | sh
+.
 ~~~
 
 Ubuntu:
 
-~~~bash 
+~~~bash
 $ curl https://sh.rustup.rs -sSf | sh
 info: downloading installer
 
@@ -74,8 +75,8 @@ To configure your current shell run source $HOME/.cargo/env
 
 ~~~
 
-~~~bash 
-$ cat ~/.cargo/env 
+~~~bash
+$ cat ~/.cargo/env
 
 export PATH="$HOME/.cargo/bin:$PATH"
 ~~~
@@ -127,7 +128,7 @@ DISCUSSION:
     learn Rust.
 ~~~
 
-~~~bash 
+~~~bash
 $ rustup update
 info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
 info: checking for self-updates
@@ -143,9 +144,8 @@ info: checking for self-updates
 
 ## 2.2 Hello, World!
 
-- [hello, World](hello_world) 
-
+- [hello, World](hello_world)
 
 ## 2.3 Hello, Cargo!
 
-- [hello, Cargo](hello_cargo) 
+- [hello, Cargo](hello_cargo)
