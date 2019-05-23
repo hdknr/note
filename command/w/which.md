@@ -1,3 +1,3 @@
-## Windows
+# which command 
 
 - `where` コマンドです
