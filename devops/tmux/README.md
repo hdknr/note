@@ -8,6 +8,8 @@
 ~~~conf
 unbind C-b
 set -g prefix C-a
+
+setw -g mode-keys vi         # コピーモード(viキーバインド)
 ~~~
 
 ## 機能
@@ -22,7 +24,7 @@ set -g prefix C-a
 
 - [attach-session](client_and_session/attach-session.md) セッションを再現
 
-### 4. WINDOWS AND PANES
+### 4. [WINDOWS AND PANES](windows_and_panes)
 
 - [rename-window](windows_and_panes/rename-window.md) タイトルの変更
 
@@ -79,3 +81,7 @@ set -g prefix C-a
 - [達人に学ぶ.tmux.confの基本設定 - Qiita](https://qiita.com/succi0303/items/cb396704493476373edf)
 - [Quickly open projects in tmux with split window configuration](https://bbs.archlinux.org/viewtopic.php?id=192923)
 - [tmuxを使い始めたので基本的な機能の使い方とかを整理してみた](http://kanjuku-tomato.blogspot.jp/2014/02/tmux.html)
+
+## 参考
+
+- [dotfiles/tmux.conf at master · kei500/dotfiles](https://github.com/kei500/dotfiles/blob/master/tmux.conf)
