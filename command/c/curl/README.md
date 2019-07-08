@@ -79,6 +79,7 @@ $ curl https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip
 ## リンク
 
 - [curlのオプション勉強したのでまとめ](http://d.hatena.ne.jp/hogem/20091122/1258863440)
+- [curlコマンドをPythonやnode.jsのコードに変換する方法 - Qiita](https://qiita.com/tottu22/items/9112d30588f0339faf9b)
 
 ## 関連
 
