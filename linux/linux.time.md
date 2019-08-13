@@ -1,4 +1,6 @@
 
+# 時刻
+
 ## zoneinfo
 
 - Ubuntu
@@ -30,4 +32,11 @@ $ sudo timedatectl list-timezones  | grep Tokyo
 Asia/Tokyo
 
 $ sudo timedatectl set-timezone Asia/Tokyo
+~~~
+
+Ubuntu:
+
+~~~bash 
+$ sudo timedatectl set-timezone Asia/Tokyo
+.
 ~~~

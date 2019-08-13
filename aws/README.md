@@ -51,6 +51,10 @@
 
 - ホスティング
 
+## [WAF](waf)
+
+- Web Application Firewall
+
 ## その他
 
 - [SES](ses/README.md)

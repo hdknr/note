@@ -8,6 +8,7 @@
 ~~~bash
 $ mkdir wp-content/plugins/hdknr
 $ vim wp-content/plugins/hdknr/wp-hdknr.php
+.
 ~~~
 
 - プラグインメタ情報をコメントで記載

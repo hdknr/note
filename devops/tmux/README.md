@@ -5,10 +5,11 @@
 
 ## 最小設定
 
+~/.tmux.conf:
+
 ~~~conf
 unbind C-b
 set -g prefix C-a
-
 setw -g mode-keys vi         # コピーモード(viキーバインド)
 ~~~
 

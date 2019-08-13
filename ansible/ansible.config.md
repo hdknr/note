@@ -1,4 +1,8 @@
-設定関連
+# 設定関連
+
+- [Configuring Ansible — Ansible Documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_configuration.html#roles-path)
+- [Ansible Configuration Settings — Ansible Documentation](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#ansible-configuration-settings-locations)
+- [ansible.cfgの項目をリスト化してみた - Qiita](https://qiita.com/croissant1028/items/33f06298d7d05bf1e295)
 
 ## ansible.cfg
 

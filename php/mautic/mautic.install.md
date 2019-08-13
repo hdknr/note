@@ -3,7 +3,6 @@
 - https://jp.mautic.org/
 - [メールサービス](https://github.com/hdknr/scriptogr.am/blob/master/php/mautic/mautic.email.md)
 
-
 ## インストール
 
 - PHP環境の用意( <= 7.0.30)
@@ -23,7 +22,6 @@ $ ./composer.phar install
 - nginxの設定
 - MySQLのデータベース作成
 - ブラウザでアクセスしてインストール(データベースは`localhost` ではなく `127.0.0.1` とする)
-
 
 ## nginx 設定
 
