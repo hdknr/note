@@ -60,3 +60,9 @@ Proofpoint Emerging Threats(ET):
 - https://www.proofpoint.com/jp/products/et-intelligence
 - https://ipcheck.proofpoint.com/
 
+## 構成
+
+![](https://e-book-info.com/wp-content/uploads/2018/03/waf-1.png)
+
+- [AWS WAFでWordPressを保護するための設定例 | はぐれメタルはにげだした](https://e-book-info.com/how-to-set-wordpress-protection-with-awswaf/)
+
