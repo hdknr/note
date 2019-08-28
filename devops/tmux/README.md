@@ -9,7 +9,7 @@
 
 ~~~conf
 unbind C-b
-set -g prefix C-a
+set -g prefix C-a            # [prefix] = Ctrl + A
 setw -g mode-keys vi         # コピーモード(viキーバインド)
 ~~~
 
@@ -17,9 +17,10 @@ setw -g mode-keys vi         # コピーモード(viキーバインド)
 
 ### 1. KEY BINDINGS
 
+- わすれたら `プロンプト` で [:list-keys](key_binding/list-keys.md)
 - [デフォルトバインディング](key_bindings)
 
-### 2. COMMANDS
+### 2. [COMMANDS](commands)
 
 ### 3. CLIENTS AND SESSIONS
 
@@ -29,9 +30,10 @@ setw -g mode-keys vi         # コピーモード(viキーバインド)
 
 - [rename-window](windows_and_panes/rename-window.md) タイトルの変更
 
-### 5. KEY BINDINGS(設定)
+### 5. [KEY BINDINGS](key_binding)(設定)
 
 - [bind-key](key_bindings/bind-key.md) (`bind`) キーバインドの設定
+- [list-keys](key_bindings_list-keys.md) (`lsk`) キーバイドの一覧
 - [unbind-key](key_bindings/unbind-key.md) (`unbind`) キーバインドの解除
 
 ### 6. OPTIONS
@@ -45,13 +47,13 @@ setw -g mode-keys vi         # コピーモード(viキーバインド)
 
 ### 8. MOUSE SUPPORT
 
-### 9. FORMATS
+### 9. [FORMATS](formats)
 
 ### 10. NAMES AND TITLES
 
 ### 11. ENVIRONMENT
 
-### 12. STATUS LINE
+### 12. [STATUS LINE](status_line)
 
 ### 13. BUFFERS
 

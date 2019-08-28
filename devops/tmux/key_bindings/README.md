@@ -1,5 +1,5 @@
 
-# キーバインド
+# `KEY BINDINGS`: キーバインド
 
 プレフィックスキーのデフォルトは `C-b` (Ctrl-b)
 
@@ -58,3 +58,20 @@
 |         M-p          | Move to the previous window with a bell or activity marker.
 |         C-Up, C-Down ,C-Left, C-Right | Resize the current pane in steps of one cell.
 |         M-Up, M-Down ,M-Left, M-Right | Resize the current pane in steps of five cells.
+
+## コマンド
+
+- [bind-key](bind-key.md) (`bind`)
+- [list-keys](list-keys.md) (`lsk`)
+- send-keys (`send`)
+- send-prefix
+- [unbind-key](unbind-key.md)  (`unbind`)
+
+## 確認
+
+- [tmux のキーバインドを調べる方法 - Qiita](https://qiita.com/catatsuy/items/5c80ff1f15bb226640eb)
+
+手順:
+
+- `[prefix]` + `:` でプロンプト
+- プロンプトで `:list-keys`
