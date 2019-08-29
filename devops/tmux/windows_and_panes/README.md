@@ -97,11 +97,11 @@ panes than that from which the layout was originally defined.
 - [display-panes](display-panes.md): 番号表示と移動 (`[prefix]` + `q`)
 - [join-pane](join-pane.md)
 - [kill-pane](kill-pane.md):ペインを閉じる (`[prefix]` + `x`)
-- last-pane
+- [last-pane](last-pane.md):前回のペインを選択する  (`[prefix]` + `;`)
 - [list-panes](list-pane.md): 一覧
 - [move-pane](move-pane.md)
 - pipe-pane
 - resize-pane
 - respawn-pane
-- swap-pane
+- [swap-pane](swap-pane.md): ２つのペインを交換する (`[prefix]` + `{` / `[prefix]` + `}`)
 - [select-pane](select-pane.md): 指定したペインへ移動 (`selectp`)
