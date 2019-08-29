@@ -15,58 +15,77 @@ setw -g mode-keys vi         # コピーモード(viキーバインド)
 
 ## 機能
 
-### 1. KEY BINDINGS
+### [DEFAULT KEY BINDINGS](default_key_bindings)
+
+### [COMMAND PARSING AND EXECUTION](http://man7.org/linux/man-pages/man1/tmux.1.html#COMMAND_PARSING_AND_EXECUTION)
+
+### [PARSING SYNTAX](http://man7.org/linux/man-pages/man1/tmux.1.html#PARSING_SYNTAX)
+
+### [COMMANDS](commands)
+
+### [CLIENTS AND SESSIONS](client_and_session)
+
+- [attach-session](client_and_session/attach-session.md) セッションを再現
+
+### [WINDOWS AND PANES](windows_and_panes)
+
+- [rename-window](windows_and_panes/rename-window.md) タイトルの変更
+
+### [KEY BINDINGS](key_bindings)
 
 - わすれたら `プロンプト` で [:list-keys](key_binding/list-keys.md)
 - [デフォルトバインディング](key_bindings)
 
-### 2. [COMMANDS](commands)
-
-### 3. CLIENTS AND SESSIONS
-
-- [attach-session](client_and_session/attach-session.md) セッションを再現
-
-### 4. [WINDOWS AND PANES](windows_and_panes)
-
-- [rename-window](windows_and_panes/rename-window.md) タイトルの変更
-
-### 5. [KEY BINDINGS](key_binding)(設定)
+コマンド:
 
 - [bind-key](key_bindings/bind-key.md) (`bind`) キーバインドの設定
 - [list-keys](key_bindings_list-keys.md) (`lsk`) キーバイドの一覧
 - [unbind-key](key_bindings/unbind-key.md) (`unbind`) キーバインドの解除
 
-### 6. OPTIONS
+### [OPTIONS](options)
 
 - [set-option](options/set-option.md) (`set`)
 - [set-window-option](options/set-window-option.md) (`setw`)
 - [show-options](options/show-options.md) (`show`)
 - [show-window-options](options/show-window-options.md)(`showw`)
 
-### 7. HOOKS
+### [HOOKS](http://man7.org/linux/man-pages/man1/tmux.1.html#HOOKS)
 
-### 8. MOUSE SUPPORT
+### [MOUSE SUPPORT](http://man7.org/linux/man-pages/man1/tmux.1.html#MOUSE_SUPPORT)
 
-### 9. [FORMATS](formats)
+### [FORMATS](formats)
 
-### 10. NAMES AND TITLES
+### [STYLES](http://man7.org/linux/man-pages/man1/tmux.1.html#STYLES)
 
-### 11. ENVIRONMENT
+### [NAMES AND TITLES](http://man7.org/linux/man-pages/man1/tmux.1.html#NAMES_AND_TITLES)
 
-### 12. [STATUS LINE](status_line)
+### [GLOBAL AND SESSION ENVIRONMENT](http://man7.org/linux/man-pages/man1/tmux.1.html#GLOBAL_AND_SESSION_ENVIRONMENT)
 
-### 13. BUFFERS
+### [STATUS LINE](status_line)
 
-### 14. MISCELLANEOUS
+- command-prompt
+- [confirm-before](status_line/confirm-before.md): 確認プロンプト
+- display-menu
+- display-message
 
-### 15. CONTROL MODE
+### [BUFFERS](http://man7.org/linux/man-pages/man1/tmux.1.html#BUFFERS)
 
-### 16. FILES
+### [MISCELLANEOUS](http://man7.org/linux/man-pages/man1/tmux.1.html#MISCELLANEOUS)
+
+### [TERMINFO EXTENSIONS](http://man7.org/linux/man-pages/man1/tmux.1.html#TERMINFO_EXTENSIONS
+)
+### [CONTROL MODE](http://man7.org/linux/man-pages/man1/tmux.1.html#CONTROL_MODE)
+
+### [ENVIRONMENT](http://man7.org/linux/man-pages/man1/tmux.1.html#ENVIRONMENT)
+
+### [FILES](http://man7.org/linux/man-pages/man1/tmux.1.html#FILES)
 
 | ファイル          | 内容                      |
 |------------------|--------------------------|
 | `~/.tmux.conf`   | デフォルトの設定ファイル     |
 | `/etc/tmux.conf` | システムワイドの設定ファイル  |
+
+### [EXAMPLES](http://man7.org/linux/man-pages/man1/tmux.1.html#EXAMPLES)
 
 ## トピック
 
