@@ -23,28 +23,6 @@ $ curl -s ifconfig.me
 .
 ~~~
 
-## POST
-
-- [curlコマンドから HTTP POST する方法
-](https://qiita.com/letsspeak/items/8c7266742371699ab45e)
-
-FORM:
-
-~~~bash
-$ curl -F "name1=value1" -F "name2=value2" http://yourdomain/execute.script
-.
-~~~
-
-JSON:
-
-~~~bash
-$ curl -X POST -H "Content-Type: application/json" -d '
-{
-    "name": "Manager",
-    "description": "someone who manages"
-}'
-~~~
-
 ## stdout
 
 - [bash - curl .gz file and pipe it for decompression - Ask Ubuntu](https://askubuntu.com/questions/538637/curl-gz-file-and-pipe-it-for-decompression)
