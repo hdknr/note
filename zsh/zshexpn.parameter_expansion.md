@@ -1,18 +1,22 @@
 # zshexpan: PARAMETER EXPANSION
 
-The  character `$' is used to introduce parameter expansions.
+- [Parameter Expansion Flags](zshexpn.parameter_expansion_flags.md)
+- [Rules](zshexpn.parameter_expansion.rule.md)
+- [Examples](zshexpn.parameter_expansion.exapmles.md)
 
-See [zshparam(1)](zshparam) for a description of parameters,
+The  character `$` is used to introduce parameter expansions.
+
+See [zshparam(1)](zshparam.md) for a description of parameters,
 including arrays, associative arrays, and subscript notation to access individual array elements.
 
 Note in particular the fact that words of unquoted parameters are not automatically split on whitespace
-unless the option SH_WORD_SPLIT is set;
+unless the option `SH_WORD_SPLIT` is set;
 see references to this option below for more details.
 This is an important difference from other shells.
 
 In the expansions discussed below that require a pattern,
 the form of the pattern is the same as that used for filename generation;
-see the section `Filename Generation'.
+see the section `Filename Generation`.
 
 Note that these patterns,
 along with the replacement text of any substitutions,
@@ -29,8 +33,8 @@ not necessarily a space delimited word.
 With default options, after the assignments:
 
 ~~~zsh
-    array=("first word" "second word")
-    scalar="only word"
+array=("first word" "second word")
+scalar="only word"
 ~~~
 
 then `$array` substitutes two words, `first word` and `second word`,
