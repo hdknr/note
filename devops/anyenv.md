@@ -53,12 +53,17 @@ $ git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/
 .
 ~~~
 
+## bash
+
 ~~~zsh
 $ vim .anyenvrc
 ..
 ~~~
 
-~~~zsh
+~~~bash
+if ! [ -x "$(command -v anyenv)" ]; then
+   export PATH=$HOME/.anyenv/bin:$PATH
+fi
 eval "$(anyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 for D in `\ls $HOME/.anyenv/envs`; do

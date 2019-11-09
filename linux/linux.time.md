@@ -36,7 +36,7 @@ $ sudo timedatectl set-timezone Asia/Tokyo
 
 Ubuntu:
 
-~~~bash 
+~~~bash
 $ sudo timedatectl set-timezone Asia/Tokyo
 .
 ~~~

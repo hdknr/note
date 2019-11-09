@@ -1,5 +1,9 @@
 # インスタンス情報 (ec2 describe-instances)
 
+- [メタデータ](aws.instance.metadata.md)
+- [Ubuntu](aws.ubuntu.md)
+- [Ubuntu Boot](aws.ubuntu.boot.md)
+
 ## インスタンスID一覧
 
 ID:

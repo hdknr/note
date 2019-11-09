@@ -17,7 +17,7 @@ $ env HOMEBREW_INSTALL_CLEANUP=1 brew upgrade
 
 ~~~bash
 $ brew update
-
+.
 remote: Repository not found.
 fatal: repository 'https://github.com/Homebrew/homebrew-boneyard/' not found
 Error: Fetching /usr/local/Homebrew/Library/Taps/homebrew/homebrew-boneyard failed!
@@ -25,7 +25,7 @@ Error: Fetching /usr/local/Homebrew/Library/Taps/homebrew/homebrew-boneyard fail
 
 ~~~bash
 $ brew untap Homebrew/homebrew-boneyard
-
+.
 Untapping homebrew/boneyard...
 Untapped (33 files, 278.2KB).
 ~~~
@@ -34,7 +34,7 @@ Untapped (33 files, 278.2KB).
 
 ~~~bash
 $ brew info php55
-
+.
 Error: No available formula for php55
 ~~~
 
