@@ -1,12 +1,13 @@
-## `AWSサービス` ロール作成
+# `AWSサービス` ロール作成
 
-![](role.1.png)
-![](role.2.png)
-![](role.3.png)
-![](role.4.png)
+![サービス選択](role.1.png)
+![権限ポリシー選択](role.2.png)
+![ロール名](role.3.png)
+![作成](role.4.png)
 
 ## 「インランポリシーの追加」
-![](role.5.png)
+
+![インラインポリシー](role.5.png)
 
 ## JSONをコピペ
 
@@ -34,5 +35,5 @@
 
 ## 保存
 
-![](role.7.policy.png)
-![](role.8.policy.png)
+![ポリシー名/許可サービス/許可権限](role.7.policy.png)
+![作成](role.8.policy.png)
