@@ -39,9 +39,10 @@
 - [起動設定](aws.autoscale.md)
 - [ヘルスチェック](aws.autoscale.health.md)
 
-## [Cloudwatch](cloudwatch)
+## 管理
 
-- [請求アラート](Cloudwatch/billing.md)
+- [CloudWatch](cloudwatch)
+- [SSM: System Manager](ssm)
 
 ## セキュリティグループ
 
@@ -64,6 +65,7 @@
 
 # ツール
 
+- [boto3](boto3.md)
 - [awscli:python aws コマンド](aws.awscli.md)
 - [sshトラブル](aws.ssh.md)
 
