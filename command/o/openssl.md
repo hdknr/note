@@ -83,6 +83,7 @@ $ ssh-keygen -lf  yourdomain.pub
 
 ~~~bash
 $ openssl pkcs12 -export -inkey private.pem -in cert.pem -out dist.p12
+.
 ~~~
 
 ## X.509 をテキスト形式にする
@@ -95,10 +96,19 @@ $ openssl x509 -text -noout -in cer.txt  > cer.x509.txt
 
 ~~~bash
 $ openssl rsa -in key.txt -pubout -out pub.txt
+.
 ~~~
 
 ## 証明書から公開鍵を抜く
 
 ~~~bash
 $ openssl x509 -pubkey -noout -in cer.txt  > cert.pub.txt
+~~~
+
+## キーサイズの確認
+
+~~~bash
+$ openssl rsa -text -in sites-available/mysite/keys/server.key.nopass | grep Key
+Private-Key: (4096 bit)
+writing RSA key
 ~~~

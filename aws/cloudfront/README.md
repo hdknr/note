@@ -3,6 +3,22 @@
 - [ドキュメント](https://docs.aws.amazon.com/ja_jp/cloudfront/?id=docs_gateway)
 - [Qiita](https://qiita.com/tags/cloudfront)
 
+## 概念
+
+Origin(オリジン):
+
+- コンテンツの配信元となるサーバ
+
+Edge(エッジ):
+
+- CloudFrontのサーバーのこと(負荷分散されています)
+
+
+## トピック
+
+- [Wordpress](wordpress.md)
+- [SSL/証明書](ssl.md)
+
 ## [ガイド](https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 
 トピック:
