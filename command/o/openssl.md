@@ -1,21 +1,23 @@
-## SSLのハンドシェーク確認
+# OpenSSL
+
+## `s_client` : SSL/TLSクライアント
+
+### SSLのハンドシェーク確認
 
 - プロトコル指定
 
-```
+~~~bash
 $ openssl s_client -connect db_vest:443 -ssl3
-
 CONNECTED(00000003)
 1478:error:14094410:SSL routines:SSL3_READ_BYTES:sslv3 alert handshake failure:/SourceCache/OpenSSL098/OpenSSL098-52/src/ssl/s3_pkt.c:1125:SSL alert number 40
 1478:error:1409E0E5:SSL routines:SSL3_WRITE_BYTES:ssl handshake failure:/SourceCache/OpenSSL098/OpenSSL098-52/src/ssl/s3_pkt.c:546:
-
-```
+~~~
 
 - 指定なし
 
-```
+~~~bash
 $ openssl s_client -connect db_vest:443
-
+.
 CONNECTED(00000003)
 depth=1 /C=JP/L=Academe2/O=National Institute of Hoge/OU=UPKI/OU=NII Open Domain CA - G2
 verify error:num=20:unable to get local issuer certificate
@@ -56,59 +58,66 @@ SSL-Session:
     Timeout   : 300 (sec)
     Verify return code: 0 (ok)
 ---
-
-```
-
-## プライベートキーからパスワードを抜く
-
-~~~
-$ sudo openssl rsa -in yourdomain.key -out yourdomain.key.nopass
 ~~~
 
-## フィンガープリント確認
+## `sha1` / `dgst -sha1`: SHA-1 ダイジェスト
+
+### フィンガープリント確認
 
 プライベートキー:
 
 ~~~bash
 $ openssl pkcs8 -in ~/.ssh/private.pem -inform PEM -outform DER -topk8 -nocrypt | openssl sha1 -c
-~~~
-
-パブリックキー:
-
-~~~bash
-$ ssh-keygen -lf  yourdomain.pub
-~~~
-
-## PKCS12 作成
-
-~~~bash
-$ openssl pkcs12 -export -inkey private.pem -in cert.pem -out dist.p12
 .
 ~~~
 
-## X.509 をテキスト形式にする
+## `rsa`: キー
 
-~~~bash
-$ openssl x509 -text -noout -in cer.txt  > cer.x509.txt
-~~~
-
-## 秘密鍵から公開鍵を生成する
+### 秘密鍵から公開鍵を生成する
 
 ~~~bash
 $ openssl rsa -in key.txt -pubout -out pub.txt
 .
 ~~~
 
-## 証明書から公開鍵を抜く
+### キーからパスワードを抜く
 
 ~~~bash
-$ openssl x509 -pubkey -noout -in cer.txt  > cert.pub.txt
+$ openssl rsa -in yourdomain.key -out yourdomain.key.nopass
+.
 ~~~
 
-## キーサイズの確認
+### キーサイズの確認
 
 ~~~bash
 $ openssl rsa -text -in sites-available/mysite/keys/server.key.nopass | grep Key
 Private-Key: (4096 bit)
 writing RSA key
+~~~
+
+## `x509`: 証明書
+
+### 証明書から公開鍵を抜く
+
+~~~bash
+$ openssl x509 -pubkey -noout -in cer.txt  > cert.pub.txt
+.
+~~~
+
+### X.509 をテキスト形式にする
+
+~~~bash
+$ openssl x509 -text -noout -in cer.txt  > cer.x509.txt
+.
+~~~
+
+## `pkcs12`: [RFC7292](https://tools.ietf.org/html/rfc7292)
+
+- Javaキーストア
+
+### PKCS12 作成
+
+~~~bash
+$ openssl pkcs12 -export -inkey private.pem -in cert.pem -out dist.p12
+.
 ~~~
