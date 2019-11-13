@@ -111,6 +111,13 @@ $ openssl x509 -text -noout -in cer.txt  > cer.x509.txt
 .
 ~~~
 
+### DER -> PEM
+
+~~~bash
+$ openssl x509 -inform DER -outform PEM -text -in ~/Downloads/DigiCertSHA2ExtendedValidationServerCA.crt
+.
+~~~
+
 ## `pkcs12`: [RFC7292](https://tools.ietf.org/html/rfc7292)
 
 - Javaキーストア
