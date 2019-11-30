@@ -13,11 +13,11 @@ Edge(エッジ):
 
 - CloudFrontのサーバーのこと(負荷分散されています)
 
-
 ## トピック
 
 - [Wordpress](wordpress.md)
 - [SSL/証明書](ssl.md)
+- [ヘッダー送信](Cache_Based_on_Selected_Request_Headers)
 
 ## [ガイド](https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 
