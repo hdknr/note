@@ -1,5 +1,6 @@
 # Vagrant
 
+- [#45](https://github.com/hdknr/note/issues/45)
 - [Vagrant Documentation](https://www.vagrantup.com/docs/index.html)
 
 ## コマンド
@@ -16,6 +17,10 @@
 ### [global-status](vagrant.global-status.md)
 
 - 状態確認
+
+### [package](vagrant.package.md)
+
+- イメージを引越しする
 
 ## プラグイン
 
