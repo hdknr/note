@@ -1,3 +1,5 @@
+# ls 
+
 ## 時刻表示
 
 ~~~bash
@@ -7,16 +9,17 @@ $ ls -l --full-time | grep file
 -rw------- 1 vagrant vagrant         0 2015-10-31 00:13:57.787184541 +0000 filefOkexg
 ~~~
 
-## リンク
+## サイズ表示 (`-h`)
 
-- [【 ls 】 ファイルやディレクトリの情報を表示する](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230820/)
+`-h`: 人が読めるフォーマット
 
 ## サイズソート
 
--l: 詳細, -h: 人が読めるフォーマット, -S: ソート (降順), -r: 逆順
+-l: 詳細, -S: ソート (降順), -r: 逆順
 
-~~~
+~~~bash
 $ ls -lhSr
+.
 ~~~
 
 ## 日付順にソート(`ls -lt`)
@@ -36,3 +39,7 @@ $ ls -alrt *.tsv | head -n 3
 -rw------- 1 system users       0  3月 10  2015 tmp2apieB.tsv
 -rw------- 1 system users      46  3月 10  2015 tmp5jcPte.tsv
 ~~~
+
+## リンク
+
+- [【 ls 】 ファイルやディレクトリの情報を表示する](http://itpro.nikkeibp.co.jp/article/COLUMN/20060227/230820/)
