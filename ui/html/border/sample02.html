@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.min.css" />
+  <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <style>
+    .circle-1,
+    .circle-2,
+    .circle-3 {
+      color: #fff;
+      padding: 5%;
+      width: 180px;
+      height: 180px;
+      margin: 0 -15px;
+      mix-blend-mode: multiply;
+    }
+
+    .circle-1 {
+      background: #f66;
+      border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+    }
+
+    .circle-2 {
+      background: #f92;
+      border-radius: 80% 30% 50% 50%/50%;
+    }
+
+    .circle-3 {
+      background: #fc2;
+      border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      background: #ffd;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="circle-1">
+      <p>Praesent nec erat urna. Integer feugiat vel libero id porta. Aenean elementum lectus vitae est fringilla
+        iaculis. Nulla aliquet sem pulvinar.</p>
+    </div>
+
+    <div class="circle-2">
+      <p>Suspendisse eros augue, gravida sed interdum at, laoreet vel sem. Pellentesque auctor hendrerit, sit amet
+        interdum nisl aliquam. Nunc vel porttitor augue.</p>
+    </div>
+
+    <div class="circle-3">
+      <p>Integer ultrices a nulla sit amet aliquet. Praesent quis gravida turpis. Donec viverra venenatis pulvinar. Sed
+        ut luctus mauris, in pulvinar turpis. Donec sodales velit consequat.</p>
+    </div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/locale/ja.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js"></script>
+  <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

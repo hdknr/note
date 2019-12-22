@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.min.css" />
+  <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <style>
+    #img1 {
+      border-radius: 1em;
+    }
+
+    #img2 {
+      border-radius: 50px;
+    }
+
+    #img3 {
+      border-radius: 30%;
+    }
+
+    #img4 {
+      border-radius: 30% 70% 20% 40%;
+    }
+
+  </style>
+  <style>
+    .clover {
+      display: flex;
+      flex-wrap: wrap;
+      width: 420px;
+      margin: 20px auto;
+    }
+
+    .clover img {
+      margin: 5px;
+    }
+
+    .clover1 {
+      border-radius: 50% 50% 0 50%
+    }
+
+    .clover2 {
+      border-radius: 50% 50% 50% 0
+    }
+
+    .clover3 {
+      border-radius: 50% 0 50% 50%
+    }
+
+    .clover4 {
+      border-radius: 0 50% 50% 50%
+    }
+
+  </style>
+
+  <style>
+    #div8 {
+      border-radius: 10px 20px 30px 40px / 5px 10px 50px 100px;
+    }
+
+  </style>
+  <style>
+      .distortion {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .distortion p {
+        background: #efefef;
+        border-radius: 240px 15px 100px 15px / 15px 200px 15px 185px;
+        padding: 4%;
+        width: 260px;
+        margin: 10px;
+      }
+      .distortion .distortion-box1 {
+        border: 2px solid #333;
+      }
+      .distortion .distortion-box2 {
+        border: 6px solid #333;
+      }
+      .distortion .distortion-box3 {
+        border: 2px dashed #333;
+      }
+      .distortion .distortion-box4 {
+        border: 2px dotted #333;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="row m-3">
+      <div class="col-md-4">
+        <img id="img1" src="http://placehold.it/150">
+      </div>
+      <div class="col-md-8">
+      </div>
+    </div>
+
+    <div class="row m-3">
+      <div class="col-md-4">
+        <img id="img2" src="http://placehold.it/150">
+      </div>
+      <div class="col-md-8">
+      </div>
+    </div>
+
+    <div class="row m-3">
+      <div class="col-md-4">
+        <img id="img3" src="http://placehold.it/150">
+      </div>
+      <div class="col-md-8">
+      </div>
+    </div>
+
+    <div class="row m-3">
+      <div class="col-md-4">
+        <img id="img4" src="http://placehold.it/150">
+      </div>
+      <div class="col-md-8">
+      </div>
+    </div>
+
+
+    <div class="row m-3">
+      <div class="col-md-4">
+        <div class="clover">
+          <img class="clover1" src="http://www.webcreatorbox.com/sample/images/flower-pink.jpg" alt="" />
+          <img class="clover2" src="http://www.webcreatorbox.com/sample/images/flower-yellow.jpg" alt="" />
+          <img class="clover3" src="http://www.webcreatorbox.com/sample/images/flower-blue.jpg" alt="" />
+          <img class="clover4" src="http://www.webcreatorbox.com/sample/images/flower-green.jpg" alt="" />
+        </div>
+      </div>
+      <div class="col-md-8">
+      </div>
+
+      <div class="row m-3">
+        <div class="col-md-4">
+          <div id="div8" style="background-color: blue; color:beige;">
+            aaa bbb ccc ddd eee fff ggg hhh iii jjj kkk
+            aaa bbb ccc ddd eee fff ggg hhh iii jjj kkk
+            aaa bbb ccc ddd eee fff ggg hhh iii jjj kkk
+            aaa bbb ccc ddd eee fff ggg hhh iii jjj kkk
+            aaa bbb ccc ddd eee fff ggg hhh iii jjj kkk
+            <ul>
+              <li>楕円の横の半径と縦の半径をスラッシュ（/）で区切り</li>
+              <li>正円のときと同様に、左上、右上、右下、左下の順で、</li>
+              <li>左上を基準に時計回りで書いていきます。</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-8">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row m-3">
+      <div class="col-md-3">
+          <div class="distortion">
+              <p class="distortion-box1">
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+              </p>
+          </div>
+
+      </div>
+      <div class="col-md-3">
+          <div class="distortion">
+              <p class="distortion-box2">
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+              </p>
+          </div>
+
+      </div>
+      <div class="col-md-3">
+          <div class="distortion">
+              <p class="distortion-box3">
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+              </p>
+          </div>
+
+      </div>
+      <div class="col-md-3">
+          <div class="distortion">
+              <p class="distortion-box4">
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+                歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 歪み 
+              </p>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/locale/ja.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js"></script>
+  <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

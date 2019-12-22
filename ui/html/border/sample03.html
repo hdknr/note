@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker3.min.css" />
+  <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Courgette');
+
+    /* Positioning */
+    body {
+      padding: 50px;
+      position: relative;
+      background: #ffd;
+    }
+
+    p,
+    div {
+      position: absolute;
+    }
+
+    p {
+      font: 50px/1.2 'Courgette', cursive;
+      color: #fff;
+      text-align: center;
+      top: 130px;
+      left: 25%;
+      z-index: 1;
+    }
+
+    div {
+      width: 280px;
+      height: 300px;
+      left: 20%;
+      mix-blend-mode: multiply;
+    }
+
+    /* Circles */
+    .circle-1 {
+      background: #f66;
+      border-radius: 50% 50% 50% 70%/50% 50% 70% 60%;
+      animation: border-animation 6s infinite linear;
+    }
+
+    .circle-2 {
+      background: #f92;
+      border-radius: 80% 30% 50% 50%/50%;
+      animation: border-animation 4s infinite linear;
+    }
+
+    .circle-3 {
+      background: #fc2;
+      border-radius: 40% 40% 50% 40%/30% 50% 50% 50%;
+      animation: border-animation 3s infinite linear;
+    }
+
+    /* Animation */
+    @keyframes border-animation {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <p>Hello<br>New Me</p>
+    <div class="circle-1"></div>
+    <div class="circle-2"></div>
+    <div class="circle-3"></div>
+  </div>
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/locale/ja.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore-min.js"></script>
+  <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>

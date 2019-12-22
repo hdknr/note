@@ -1,0 +1,1 @@
+- [相手のssh公開鍵を使って便利に暗号化する方法](http://qiita.com/drobune/items/bf5d689eff7f69ed6866)

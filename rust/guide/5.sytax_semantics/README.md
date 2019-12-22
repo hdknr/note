@@ -1,0 +1,39 @@
+# 5. [Syntax and Semantics](https://doc.rust-lang.org/1.2.0/book/syntax-and-semantics.html)
+
+- 5.1. Variable Bindings    変数束縛
+- 5.2. Functions     関数
+- 5.3. Primitive Types      プリミティブ型
+- 5.4. Comments コメント
+- 5.5. if
+- 5.6. for loops
+- 5.7. while loops
+- 5.8. Ownership 所有権
+- 5.9. References and Borrowing 
+- 5.10. Lifetimes
+- 5.11. Mutability  
+- 5.12. Structs     構造体
+- 5.13. Enums       列挙型
+- 5.14. Match
+- 5.15. Patterns
+- 5.16. Method Syntax   メソッド構文
+- 5.17. Vectors
+- 5.18. Strings
+- 5.19. Generics
+- [5.20. Traits](5.20.trait)
+- 5.21. Drop
+- 5.22. if let
+- 5.23. Trait Objects
+- 5.24. Closures
+- 5.25. Universal Function Call Syntax          共通の関数呼出構文
+- 5.26. Crates and Modules          クレートとモジュール
+- 5.27. `const` and `static`
+- 5.28. Attributes
+- 5.29. `type` aliases
+- 5.30. Casting between types           型間のキャスト
+- 5.31. Associated Types                関連型
+- 5.32. Unsized Types                   サイズ不定型
+- 5.33. Operators and Overloading       演算子とオーバーロード
+- 5.34. Deref coercions                 Derefによる型強制
+- 5.35. Macros
+- 5.36. Raw Pointers                    生ポインタ
+- 5.37. `unsafe`

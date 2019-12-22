@@ -1,0 +1,2 @@
+- [最速で知る！ ElixirプログラミングとErlang/OTPの始め方【第二言語としてのElixir】 - エンジニアHub｜若手Webエンジニアのキャリアを考える！](https://employment.en-japan.com/engineerhub/entry/2017/06/12/110000)
+- [リアルタイムウェブな観点からElixir / Phoenix について - Qiita](https://qiita.com/mizchi/items/e38d3f0461fe316021f7)

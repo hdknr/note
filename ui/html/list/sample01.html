@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <style>
+    ol {
+      counter-reset: my-counter;
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    li:before {
+      content: counter(my-counter);
+      counter-increment: my-counter;
+      background-color: #bada55;
+      color: #222;
+      display: block;
+      float: left;
+      line-height: 22px;
+      margin-left: -30px;
+      text-align: center;
+      height: 22px;
+      width: 22px;
+      border-radius: 50%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <a href="https://coliss.com/articles/build-websites/operation/css/styling-ol-numbers-with-css-counters.html">[CSS]順序付きリスト、ol要素を丸数字で実装するスタイルシートのテクニック -spanや①は無し</a>
+  <ol>
+    <li>順序付きリスト</li>
+    <li>順序付きリスト</li>
+    <li>順序付きリスト</li>
+    <li>順序付きリスト</li>
+    <li>順序付きリスト</li>
+  </ol>
+</body>
+
+</html>

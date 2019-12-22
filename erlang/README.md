@@ -1,0 +1,1 @@
+- [ErlangとGolangを比較してみる](http://qiita.com/soranoba/items/68d57b4635a2917f3c73)

@@ -1,0 +1,2 @@
+- [読み仮名データの促音・拗音を小書きで表記するもの(zip形式)(JP)](http://www.post.japanpost.jp/zipcode/dl/kogaki-zip.html)
+- [日本郵便が公開する郵便番号データをそのまま利用するのがなぜ難しいか。そして、住所から郵便番号を求めるのがなぜ難しいか［PR］](http://www.publickey1.jp/blog/17/yubin7_pr.html)
