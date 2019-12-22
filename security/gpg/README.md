@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # gpg
 
 ~~~bash 
@@ -188,7 +186,6 @@ uid                  bobby (hidelafoglia) <bobby@ic-tact.co.jp>
 ## トピック
 
 - [~.gnupg](files.md)
->>>>>>> 876566e323a7818c5a1ecdaed354ef851fd0957e
 
 ## 記事
 

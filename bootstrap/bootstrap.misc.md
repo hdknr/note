@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # その他
 
 ## オートコンプリート
@@ -18,7 +16,6 @@ $(".prefecture-select").typeahead({
 });
 ~~~
 
->>>>>>> 876566e323a7818c5a1ecdaed354ef851fd0957e
 ## img
 
 ### img-responsive : レスポンシブ
