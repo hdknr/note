@@ -98,6 +98,15 @@ initial_position = start_of_file
 log_group_name = mysql
 ~~~
 
+## フィルターパターン
+
+スペース区切りファイルのパターン指定
+
+~~~
+[time, remote_addr, request_method, request_length, request_uri, https, uri, query_string, status=*5*, bytes_sent, body_bytes_sent, referer, useragent, forwarderedfor, request_time, upstream_response_time]
+~~~
+
+
 ##　資料
 
 

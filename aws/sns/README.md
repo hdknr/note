@@ -17,7 +17,6 @@
 ## 記事
 
 - [Amazon SNS による通知サービス](https://dev.classmethod.jp/cloud/amazon-sns-service/)
-
 - [Amazon SNS で、iOS・Androidにpush通知する方法](https://qiita.com/papettoTV/items/f45f75ce00157f87e41a)
 - [Amazon SNSがメッセージフィルタに対応し柔軟なpub-subが可能に!](https://dev.classmethod.jp/cloud/aws/routing-pubsub-messages-with-amazon-sns-message-filtering/)
 - [Ruby/RailsでAmazon SNSを使用してiOSとAndoroidにpush通知を送る方法](https://qiita.com/arumi8go/items/11c713186a055bd7fc86)
