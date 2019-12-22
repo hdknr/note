@@ -1,10 +1,6 @@
 # k8s / kubernetes
 
-<<<<<<< HEAD
 - [クーバネテス](https://www.howtopronounce.com/kubernetes/)
-=======
-- `クーバネテス`
->>>>>>> 876566e323a7818c5a1ecdaed354ef851fd0957e
 
 ## ポッド
 
