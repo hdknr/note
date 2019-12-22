@@ -1,21 +1,9 @@
-
-- [Git submodule の基礎](http://qiita.com/sotarok/items/0d525e568a6088f6f6bb)
-- [git submodule 使い方](http://transitive.info/article/git/command/submodule/)
-
-~~~
-git-submodule - Initialize, update or inspect submodules
-~~~
-
-## 再帰的に更新
-
-~~~bash 
-$ git pull -f 
-$  git submodule update --init --recursive
-~~~
+# [git-submodule - Initialize, update or inspect submodules](https://git-scm.com/docs/git-submodule)
 
 ## SYNOPSIS
 
 ### add
+
 ~~~
        git submodule [--quiet] add
        				 [-b <branch>]
@@ -92,24 +80,41 @@ submodule.asset/jquery.url=https://github.com/jquery/jquery.git
        				 [--] [<path>...]
 ~~~
 
-### deinit
+### deinit  削除
 
-~~~       
-       git submodule [--quiet] deinit
-       			     [-f|--force] [--] <path>...
+~~~
+git submodule [--quiet] deinit
+          [-f|--force] [--] <path>...
 ~~~
 
-### update
+~~~bash
+git submodule deinit -f client
+git rm -f client
+~~~
 
-~~~       
-       git submodule [--quiet] update
-       			     [--init] [--remote] [-N|--no-fetch]
-                     [-f|--force]
-                     [--rebase|--merge]
-                     [--reference <repository>]
-                     [--depth <depth>]
-                     [--recursive] [--]
-                     [<path>...]
+### update 更新
+
+~~~man
+git submodule [--quiet] update
+    [--init]
+    [--remote]
+    [-N|--no-fetch]
+    [--[no-]recommend-shallow]
+    [-f|--force]
+    [--checkout|--rebase|--merge]
+    [--reference <repository>]
+    [--depth <depth>]
+    [--recursive]
+    [--jobs <n>]
+    [--]
+    [<path>...]
+~~~
+
+### 再帰的に更新
+
+~~~bash
+$ git submodule update --recursive --remote
+.
 ~~~
 
 ### summary
@@ -131,7 +136,6 @@ submodule.asset/jquery.url=https://github.com/jquery/jquery.git
 
 ~~~       
        git submodule [--quiet] sync [--recursive] [--] [<path>...]
-
 ~~~
 
 ## URL の変更
@@ -140,8 +144,16 @@ submodule.asset/jquery.url=https://github.com/jquery/jquery.git
 
 ~~~bash
 $ vim .gitmodules
+.
 ~~~
 
 ~~~bash
 $ git submodule sync && git submodule update
+.
 ~~~
+
+## 記事
+
+- [gitサブモジュールの追加/削除/再追加 - Qiita](https://qiita.com/uma8/items/f6d625c92bb355ccc409)
+- [Git submodule の基礎](http://qiita.com/sotarok/items/0d525e568a6088f6f6bb)
+- [git submodule 使い方](http://transitive.info/article/git/command/submodule/)

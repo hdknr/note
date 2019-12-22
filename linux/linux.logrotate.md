@@ -24,7 +24,6 @@ $ sudo  /usr/sbin/logrotate -f /etc/logrotate.d/nginx
 - notifempty : 空だとローテーションしない
 - ifempty: ログファイルが空でもローテーションする
 
-
 ## 実行記録(`/var/lig/logrotate/status`)
 
 ~~~bash
@@ -37,3 +36,4 @@ $ sudo  /usr/sbin/logrotate -f /etc/logrotate.d/nginx
 
 - [Nginxログローテートの設定の実例
 ](http://qiita.com/koudaiii/items/23322bf7037c6a7b1cea)
+- [任意のログをlogrotateを使って管理する](https://qiita.com/Esfahan/items/a8058f1eb593170855a1)

@@ -1,6 +1,4 @@
-
-
-
+# character_set_* の UTF-8 化
 
 ![](aurora.parameter-group.cluster.png)
 ![](aurora.parameter-group.character.png)
@@ -29,4 +27,5 @@ mysql> show variables like '%char%';
 ~~~bash
 $ echo "show tables" | DJ dbshell | grep -v "Tables" | while read l; do echo "ALTER TABLE ${l}  CONVERT TO CHARACTER SET UTF8" | DJ dbshell; done
 $ echo "ALTER DATABASE yourdb default character set utf8;"  | mysql -u root -h aurorahost -p
+.
 ~~~

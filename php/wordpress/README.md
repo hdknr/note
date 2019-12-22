@@ -13,11 +13,14 @@
 - [パスワード](wordpress.password.md)
 - [サイトのURLの変更](wordpress.config.md)
 
+## テスト
+
+- [fixtures: テストデータ](wordpress.fixtures.md)
+
 ## リンク
 
 - http://roots.io/using-composer-with-wordpress/
 - https://firegoby.jp/archives/4437
-
 
 ## ログアウト
 

@@ -13,4 +13,4 @@
 
 ## `Host`(nginx`$host`)
 
-- ヘッダー転送を設定すると,CloudFrontの `CName` が `Host` としてオリジン(`nginx`)
+- ヘッダー転送を設定すると,CloudFrontの `CName` が `Host` としてオリジン(`nginx`) におくられます

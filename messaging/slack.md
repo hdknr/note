@@ -24,13 +24,11 @@ $ slackpy -c  '#general' -m "こんにちは" -l 10
 True
 ~~~
 
-
-
-
 ## その他
 
 - [loisaidasam/pyslack](https://github.com/loisaidasam/pyslack)
 - [SlackのWebhook URL取得手順](http://qiita.com/vmmhypervisor/items/18c99624a84df8b31008)
+- [SlackからMattermostへ移行！比較結果とオススメポイントを解説 | jMatsuzaki](https://jmatsuzaki.com/archives/23647)
 
 ~~~
 https://slack.com/services/new/incoming-webhook

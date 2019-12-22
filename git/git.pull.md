@@ -1,4 +1,4 @@
-pull
+# pull
 
 - pull = fetch + merge
 
@@ -15,4 +15,10 @@ $ git pull origin br-remote1:br-local2
 
 ~~~bash
 $ git pull f003dca
+~~~
+
+## [サブモジュール](git.submodule.md)も丸ごと pull
+
+~~~bash 
+$ git pull --recurse-submodules
 ~~~

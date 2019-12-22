@@ -6,3 +6,7 @@
 ~~~bash
 $ sudo xcrun cc
 ~~~
+
+## Mobile Safari
+
+- [検証機なし！iOS EmulatorでMobile Safariを快適にデバッグ - Qiita](https://qiita.com/toruta39/items/a570241739d8c1f41c75)

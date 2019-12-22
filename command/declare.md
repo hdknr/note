@@ -1,1 +1,0 @@
-- [シェルスクリプトのデバッグは typeset または declare を使うと良いかも](http://yonchu.hatenablog.com/entry/2013/07/09/230656)

@@ -1,8 +1,19 @@
-# /etc/crontab
+# cron
+
+## /etc/crontab
 
 - [Debian](http://manpages.debian.org/cgi-bin/man.cgi?query=crontab&sektion=5)
 
+`EDITOR` 変数:
+
 ~~~bash
+$ export EDITOR=vim
+.
+~~~
+
+~~~bash
+$ crontab -e
+
 # m h dom mon dow user  command
 17 *    * * *   root    cd / && run-parts --report /etc/cron.hourly
 25 6    * * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.daily )
@@ -10,8 +21,13 @@
 52 6    1 * *   root    test -x /usr/sbin/anacron || ( cd / && run-parts --report /etc/cron.monthly )
 ~~~
 
+5分ごとに実行:
 
-# /etc/anacrontab
+~~~bash
+*/5  * * * * /home/ubuntu/bin/every5.bash
+~~~
+
+## /etc/anacrontab
 
 - [Centos](http://www.unix.com/man-page/centos/5/anacrontab/)
 
@@ -34,10 +50,9 @@ START_HOURS_RANGE=3-22
 @monthly 45     cron.monthly            nice run-parts /etc/cron.monthly
 ~~~
 
+## うごかない？
 
-# うごかない？
-
-## cron 自体が動いているか確認
+### cron 自体が動いているか確認
 
 毎分実行される：
 
@@ -45,8 +60,14 @@ START_HOURS_RANGE=3-22
 */1 * * * * /usr/bin/env > /tmp/output
 ~~~
 
+Ubuntu([How to check cron logs in Ubuntu - Server Fault](https://serverfault.com/questions/136461/how-to-check-cron-logs-in-ubuntu)):
 
-## PATHがおかしい
+~~~bash
+$ sudo grep CRON /var/log/syslog
+May 14 07:30:01 ip-172-31-42-253 CRON[12150]: (ubuntu) CMD (/home/ubuntu/projects/myweb/bin/ignorelogs.bash )
+~~~
+
+### PATHがおかしい
 
 cronで動くシェルの場合、 binのみ。
 
@@ -54,7 +75,7 @@ cronで動くシェルの場合、 binのみ。
 PATH=/usr/bin:/bin
 ~~~
 
-## SHELL を明示的に指定してみる
+### SHELL を明示的に指定してみる
 
 シェルスクリプトコードが特定のシェルに依存しているとか。
 

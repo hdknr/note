@@ -1,6 +1,7 @@
 
-## Ubuntuにインストール
+# CloudWatch Logs エージェント
 
+## Ubuntuにインストール
 
 [クイックスタート: 実行中の EC2 Linux インスタンスに CloudWatch Logs エージェントをインストールして設定する](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/QuickStartEC2Instance.html) 
 
@@ -60,7 +61,7 @@ Step 5 of 5: Setting up agent as a daemon ...DONE
 
 ~~~bash
 $ sudo ps ax  | grep aws
-
+.
 26755 ?        S      0:00 /bin/sh /var/awslogs/bin/awslogs-agent-launcher.sh
 26758 ?        SNl    0:01 /var/awslogs/bin/python /var/awslogs/bin/aws logs push --config-file /var/awslogs/etc/awslogs.conf --additional-configs-dir /var/awslogs/etc/config
 ~~~
@@ -71,13 +72,17 @@ $ sudo ps ax  | grep aws
 
 ~~~bash 
 $ aws ec2 associate-iam-instance-profile --instance-id $(wget -q -O - http://169.254.169.254/latest/meta-data/instance-id) --iam-instance-profile Name="AppServer"
+.
 ~~~
 
 ## 設定ファイル
 
-~~~ini
+~~~bash
 $ sudo grep -v "^#" /var/awslogs/etc/awslogs.conf | grep -v "^$"
+.
+~~~
 
+~~~ini
 [general]
 state_file = /var/awslogs/state/agent-state
 
@@ -109,5 +114,10 @@ log_group_name = mysql
 
 ##　資料
 
+~~~python
+[time, remote_addr, request_method, request_length, request_uri, https, uri, query_string, status=*5*, bytes_sent, body_bytes_sent, referer, useragent, forwarderedfor, request_time, upstream_response_time]
+~~~
+
+##　資料
 
 - [CloudWatch Logs エージェントのリファレンス](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/AgentReference.html)

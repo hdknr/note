@@ -103,7 +103,6 @@ The partition table has been altered.
 Calling ioctl() to re-read partition table.
 Syncing disks.
 
-
 ~~~
 
 ~~~bash
@@ -113,8 +112,8 @@ Syncing disks.
 
 ## フォーマット
 
-~~~
-# mkfs -t ext4 /dev/xvdf1
+~~~bash
+$ sudo mkfs -t ext4 /dev/xvdf1
 mke2fs 1.42.9 (4-Feb-2014)
 Filesystem label=
 OS type: Linux
@@ -156,7 +155,7 @@ mount -a
 
 ~~~
 
-# df -H
+$ df -H
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/xvda1      127G  1.2G  121G   1% /
 none            4.1k     0  4.1k   0% /sys/fs/cgroup

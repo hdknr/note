@@ -1,3 +1,5 @@
+# aws-cli: `aws logs`
+
 - [logs:公式ドキュメント](https://docs.aws.amazon.com/cli/latest/reference/logs/index.html)
 
 ## 実行
@@ -7,7 +9,7 @@
 
 ~~~bash 
 $ sudo ps ax | grep aws
-
+.
 29312 ?        S      0:00 /bin/sh /var/awslogs/bin/awslogs-agent-launcher.sh
 29315 ?        SNl    0:23 /var/awslogs/bin/python /var/awslogs/bin/aws logs push --config-file /var/awslogs/etc/awslogs.conf --additional-configs-dir /var/awslogs/etc/config
 ~~~~
@@ -51,6 +53,7 @@ Python 2.7.12
 
 ~~~bash
 $ /var/awslogs/bin/python /var/awslogs/bin/aws logs help
+.
 ~~~
 
 ## pushサブコマンド
@@ -59,6 +62,7 @@ $ /var/awslogs/bin/python /var/awslogs/bin/aws logs help
 
 ~~~bash
 $ sudo cat /var/awslogs/etc/aws.conf
+.
 ~~~
 
 ~~~ini

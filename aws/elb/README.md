@@ -65,9 +65,9 @@ nginxの`default_server` が正しく `200` を返すようにする:
      For Classic Load Balancer,
      the host header contains the IP address of the load balancer node.
 
-
 ## その他
 
 - [ELBをVPC内に設置する際のサブネット設計の注意点](http://qiita.com/tetor/items/4c9e1aa58da2c5755452)
 - [Amazon VPCでロードバランサーを使う](http://dev.classmethod.jp/cloud/amazon-vpc-elb/)
 - [今更 VPC で 複数の AZ をまたいだ ELB を試す（1）](http://inokara.hateblo.jp/entry/2013/12/31/010647)
+- [ELB + PostfixでElasticなMTA(メール受信)システムの構築 – ELB Proxy Protocol Supportの活用 ｜ Developers.IO](https://dev.classmethod.jp/cloud/aws/build-elastic-mta-by-proxy-protocol-enabled-elb-and-postfix/)

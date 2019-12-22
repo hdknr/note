@@ -20,3 +20,10 @@ README for [gitbook](gitbook.md)
 # Others
 
 - [TeX](tex.md)
+
+## 記事
+
+- [RFC標準を調べるための知識やツール - Qiita](https://qiita.com/progrhyme/items/68922ec903ac39861125)
+
+
+

@@ -1,3 +1,5 @@
+# apt 関連
+
 ## dselect
 
 - [ListInstalledPackages](https://wiki.debian.org/ListInstalledPackages)
@@ -35,4 +37,10 @@ $ sudo apt-get -s dist-upgrade
 
 ~~~bash
 $ sudo rm -rf /var/lib/apt/lists/*
+~~~
+
+## 不要パッケージの削除
+
+~~~bash 
+$ sudo apt-get autoremove
 ~~~

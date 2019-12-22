@@ -7,7 +7,6 @@
 - [Redis](redis.md)
 - [MySQL](../mysql/README.md)
 
-
 # Public Data
 
 - [郵便番号住所](postal.md)

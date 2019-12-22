@@ -1,6 +1,6 @@
 ## attach-volume
 
--  [インスタンス起動時にEBSをアタッチしてマウントする](ebs.attach-volume.md)
+- [インスタンス起動時にEBSをアタッチしてマウントする](ebs.attach-volume.md)
 
 ## describe-volumes
 

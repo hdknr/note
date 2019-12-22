@@ -1,6 +1,5 @@
 # RDS MySQL
 
-
 ## 作成
 
 ### 1.  DBサブネットグループ作成
@@ -21,12 +20,15 @@
 - ポート範囲: すべて
 - ソース: `sg-xxxxx` で自分自身
 
-
 ### 3. パラメータグループ作成
 
 - 作成する MySQL のバージョンと同じものをベースにする
 - `character_set_****` を全て `utf8` にする
 - `skip-character-set-client-handshake` を `1` (true) にする
+
+参考:
+
+- [RDS charactoer_set* のUTF-8化](aws.rds.character-set.md)
 
 ### 4. インスタンス作成
 
@@ -37,6 +39,3 @@
 注意:
 
 - マルチAZで作成しても最初は「いいえ」で立ち上がって、しばらくすると「はい」になる
-
-
-- 

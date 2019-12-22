@@ -1,4 +1,6 @@
 
+# 時刻
+
 ## zoneinfo
 
 - Ubuntu
@@ -23,14 +25,18 @@ Debian:
 $ sudo dpkg-reconfigure tzdata
 ~~~
 
-
-
 ## datetimectl コマンド
-
 
 ~~~bash
 $ sudo timedatectl list-timezones  | grep Tokyo
 Asia/Tokyo
 
 $ sudo timedatectl set-timezone Asia/Tokyo
+~~~
+
+Ubuntu:
+
+~~~bash
+$ sudo timedatectl set-timezone Asia/Tokyo
+.
 ~~~

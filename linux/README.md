@@ -2,24 +2,29 @@
 
 - [Alpine](./alpine.md)
 - [パフォーマンス](linux.performance.md)
-- [Ubuntu](./ubuntu/)
+- [Ubuntu](./ubuntu/) ( [#58](https://github.com/hdknr/scriptogr.am/issues/58))
 
-# Management
+## Management
 
 - [sudo](linux.sudo.md)
+- [crontab](linux.crontab.md)
 - [monit](monit.md)
+- [/etc/logrotated.d/](linux.logrotate.md)
 
-# Networking
+## Networking
 
 - [Networking](linux.networking.md)
 
-# ファイル
+## ファイル
 
 - [スワップ](linux.swap.md)
 - [テキストファイルなど](linux.files.md)
 - [ファイルシステム](linux.filesystem.md)
 
-
-# セキュリティ
+## セキュリティ
 
 - [antivius](antivirus.md)
+
+## サービス
+
+- [vsftpd](vsftpd.md)

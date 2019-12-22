@@ -2,7 +2,10 @@
 
 - https://letsencrypt.org/
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 876566e323a7818c5a1ecdaed354ef851fd0957e
 ## Certbox
 
 - [Nginx on Ubuntu 18.04 LTS (bionic)](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
@@ -10,12 +13,20 @@
 ## Ubuntu
 
 ~~~bash
+<<<<<<< HEAD
 $ sudo apt install letsencrypt
+=======
+$ sudo apt-get install letsencrypt
+>>>>>>> 876566e323a7818c5a1ecdaed354ef851fd0957e
 ..
 ~~~
 
 ~~~bash
 $ dpkg -L letsencrypt
+<<<<<<< HEAD
+=======
+
+>>>>>>> 876566e323a7818c5a1ecdaed354ef851fd0957e
 /.
 /usr
 /usr/share
@@ -31,6 +42,7 @@ $ dpkg -L letsencrypt
 /usr/share/doc/letsencrypt/changelog.Debian.gz
 ~~~
 
+<<<<<<< HEAD
 `certbot` コマンド:
 
 ~~~bash
@@ -49,6 +61,9 @@ $ file /usr/bin/certbot
 ~~~bash
 $ sudo /etc/init.d/nginx stop
 .
+=======
+~~~bash
+>>>>>>> 876566e323a7818c5a1ecdaed354ef851fd0957e
 $ sudo letsencrypt certonly --standalone -d {{ ドメイン名前 }}
 .
 ~~~
@@ -57,7 +72,11 @@ $ sudo letsencrypt certonly --standalone -d {{ ドメイン名前 }}
 
 ~~~bash
 $ sudo letsencrypt certonly --webroot -w /home/ubuntu/lafoglia/html -m supervisor@lafoglia.com -d www.lafoglia.com -d lafoglia.com
+<<<<<<< HEAD
 .
+=======
+
+>>>>>>> 876566e323a7818c5a1ecdaed354ef851fd0957e
 
 IMPORTANT NOTES:
  - Congratulations! Your certificate and chain have been saved at

@@ -1,69 +1,21 @@
 
+# [AWS 関連: #75](https://github.com/hdknr/scriptogr.am/issues/75)
 
-# AWS 関連
+## [ガイド](https://docs.aws.amazon.com/)
 
-- [#75](https://github.com/hdknr/scriptogr.am/issues/75)
-- [awscli - aws コマンド](aws.awscli.md)
-
-## [EC2](ec2)
-
-- [メタデータ](aws.instance.metadata.md)
-- [Ubuntu](aws.ubuntu.md)
-- [Ubuntu Boot](aws.ubuntu.boot.md)
-
-## [VPC](vpc)
-
-- [最小インターネット公開](vpc/vpc.minimum.md)
-
-## [EBS](ebs)
-
-- [インスタンス起動時にEBSをアタッチしてマウントする](ebs.attach-volume.md)
-
-## [ELB](elb)
-
--  ACM証明書ドメイン承認
--  SSL強制
--  ヘルスチェック(nginx)
-
-## ストレージ
-
-### [RDS](rds/README.md)
-
-- パスワード変更
-
-### [DynamoDB](dynamodb/README.md)
-
-- NoSQL
-
-## Autoscale
-
-- [起動設定](aws.autoscale.md)
-- [ヘルスチェック](aws.autoscale.health.md)
-
-## [Cloudwatch](cloudwatch)
-
-- [請求アラート](Cloudwatch/billing.md)
-
-## セキュリティグループ
-
-- [sshが許可されたアドレス](aws.securitygroup.md)
-
-## [Elastic Beanstalk](beanstalk/README.md)
-
-- ホスティング
-
-## その他
-
-- [SES](ses/README.md)
-- [Batch](aws.batch.md)
-- [証明書サービス: ACM](aws.acm.md)
+- コンピューティング: [EC2](ec2), [Elastic Beanstalk](beanstalk/README.md), [Batch](aws.batch.md), [Fargate:コンテナ](fargate)
+- ネットワーキングとコンテンツ配信 : [CloudFront](cloudfront), [VPC](vpc), [ELB](elb)
+- ストレージ: [EBS](ebs)
+- データベース: [RDS](rds), [DynamoDB](dynamodb)
+- マネジメントとガバナンス: [Autoscaling](autoscaling), [CloudWatch](cloudwatch), [SSM: System Manager](ssm)
+- セキュリティ、アイデンティティ、コンプライアンス: [EC2セキュリティグループ](ec2/aws.securitygroup.md), [WAF](waf), [IAM](aws.iam.md)
+- カスタマーエンゲージメント: [SES:メール](ses/README.md)
+- 暗号化と PKI: [ACM: 証明書サービス](aws.acm.md)
 
 # ツール
 
+- [boto3](boto3.md)
 - [awscli:python aws コマンド](aws.awscli.md)
 - [sshトラブル](aws.ssh.md)
-
-# サービス
-
-- [IAM](aws.iam.md)
+- [コスト](aws.cost.md)
 - [準仮想化（PV）](aws.pv-grub.md)

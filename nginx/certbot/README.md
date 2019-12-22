@@ -5,7 +5,10 @@
 ## Let's Encrypt
 
 - [インストール](letsencrypt.md)
+<<<<<<< HEAD
 - [nginxでの更新](nginx.md)
+=======
+>>>>>>> 876566e323a7818c5a1ecdaed354ef851fd0957e
 
 ## Topic
 
