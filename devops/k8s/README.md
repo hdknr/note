@@ -1,6 +1,6 @@
 # k8s / kubernetes
 
-- [クーバネテス](https://www.howtopronounce.com/kubernetes/)
+- [クーバネテス](https://www.howtopronounce.com/kubernetes/) (**キュー**バナテツ, **クー**バ**ナ**ティス)
 
 ## ポッド
 
