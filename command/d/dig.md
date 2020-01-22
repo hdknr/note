@@ -1,3 +1,4 @@
+# dig コマンド
 
 ~~~bash
 $ dig +nocmd +noall +answer www.icloud.com
@@ -30,7 +31,11 @@ retry   | REFRESHでゾーン情報の更新ができなかった場合に、RET
 expire  | 何らかの理由でゾーン情報のリフレッシュができない状態が続いた場合、セカンダリネームサーバが持っているデータをどれだけの時間利用してもよいか
 minimum | Negative cache TTL: ネガティブキャッシュとは、存在しないドメイン名であるという情報のキャッシュを意味する
 
+## ANY
 
+~~~bash
+$ dig @ns-1143.awsdns-14.org. yourdomain.jp ANY +noall +answer
+~~~
 
 ### ネガティブキャッシュ
 
