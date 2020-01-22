@@ -9,18 +9,18 @@ www.icloud.com.edgekey.net. 21097 IN	CNAME	e4478.a.akamaiedge.net.
 e4478.a.akamaiedge.net.	19	IN	A	23.34.104.90
 ~~~
 
-## soa
+## SOA
 
 ~~~bash
 $ dig +nocmd +multiline +noall +answer soa icloud.com
 
-icloud.com.             85850 IN SOA adns1.apple.com. hostmaster.apple.com. (
-                                2011081885 ; serial
-                                1800       ; refresh (30 minutes)
-                                900        ; retry (15 minutes)
-                                2592000    ; expire (4 weeks 2 days)
-                                1800       ; minimum (30 minutes)
-                                )
+icloud.com.     85850 IN SOA adns1.apple.com. hostmaster.apple.com. (
+    2011081885 ; serial
+    1800       ; refresh (30 minutes)
+    900        ; retry (15 minutes)
+    2592000    ; expire (4 weeks 2 days)
+    1800       ; minimum (30 minutes)
+)
 ~~~
 
 
@@ -30,6 +30,9 @@ refresh | ゾーンの情報をリフレッシュするまでの時間
 retry   | REFRESHでゾーン情報の更新ができなかった場合に、RETRYで指定された時間後に再度リフレッシュを試みる
 expire  | 何らかの理由でゾーン情報のリフレッシュができない状態が続いた場合、セカンダリネームサーバが持っているデータをどれだけの時間利用してもよいか
 minimum | Negative cache TTL: ネガティブキャッシュとは、存在しないドメイン名であるという情報のキャッシュを意味する
+
+
+[SOAレコードには何が記述されている？](https://www.atmarkit.co.jp/fnetwork/dnstips/014.html)
 
 ## ANY
 
