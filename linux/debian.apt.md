@@ -3,6 +3,7 @@
 ## dselect
 
 - [ListInstalledPackages](https://wiki.debian.org/ListInstalledPackages)
+- [What does the "apt-get dselect-upgrade" command do? - Ask Ubuntu](https://askubuntu.com/questions/585273/what-does-the-apt-get-dselect-upgrade-command-do)
 
 ~~~bash
 $ dpkg --get-selections | tee packages.txt
@@ -14,8 +15,13 @@ $ sudo dpkg --set-selections < packages.txt
 $ apt-get dselect-upgrade
 ~~~
 
+[apt - dpkg --get-selections shows packages marked "deinstall" - Ask Ubuntu](https://askubuntu.com/questions/165951/dpkg-get-selections-shows-packages-marked-deinstall)
+
+### dselect を使わない
+
 ~~~bash
-$ aptitude install $(cat packages.txt | awk '{print $1}')
+$ sudo apt install $(grep -v deinstall  packages.txt | awk '{print $1}')
+.
 ~~~
 
 ## dist-upgrade
