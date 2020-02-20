@@ -48,5 +48,5 @@ $ sudo rm -rf /var/lib/apt/lists/*
 ## 不要パッケージの削除
 
 ~~~bash 
-$ sudo apt-get autoremove
+$ sudo apt autoremove
 ~~~

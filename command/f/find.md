@@ -53,7 +53,7 @@ txt
 ## 大きいファイルを探す
 
 ~~~bash
-$find / -type f -size +10000k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
+$ find / -type f -size +10000k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
 ~~~
 
 ## ディレクトリのみ表示
