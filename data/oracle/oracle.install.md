@@ -141,3 +141,68 @@ Finished running generic part of root.sh script.
 Now product-specific root actions will be performed.
 Finished product-specific root actions.
 ~~~
+
+## 3. netca
+
+`response/netca.rsp`:
+
+~~~bash
+$ git diff netca.rsp
+
+diff --git a/netca.rsp b/netca.rsp
+index ca227b4..45ccd36 100755
+--- a/netca.rsp
++++ b/netca.rsp
+@@ -44,7 +44,7 @@ CREATE_TYPE="CUSTOM"
+ # The command line flag has precedence over the one in this response file.
+ # This feature is present since 10.1.0.3.
+ #-------------------------------------------------------------------------------
+-#SHOW_GUI=false
++SHOW_GUI=false
+ 
+ #-------------------------------------------------------------------------------
+ # Name       : LOG_FILE
+@@ -58,7 +58,7 @@ CREATE_TYPE="CUSTOM"
+ # The command line argument has precedence over the one in this response file.
+ # This feature is present since 10.1.0.3.
+ #-------------------------------------------------------------------------------
+-#LOG_FILE=""/oracle11gHome/network/tools/log/netca.log""
++LOG_FILE=""/u01/app/oraInventory/logs/netca.log""
+ 
+ [oracle.net.ca]
+ #INSTALLED_COMPONENTS;StringList;list of installed components
+~~~
+
+~~~bash 
+$ sudo su - oracle
+$ export DISPLAY=:0.0
+$ netca -silent -responsefile ~/response/netca.rsp
+
+Thu Feb 20 04:01:21 UTC 2020 Oracle Net Configuration Assistant
+Parsing command line arguments:
+    Parameter "silent" = true
+    Parameter "responsefile" = /home/oracle/response/netca.rsp
+    Parameter "log" = /u01/app/oraInventory/logs/netca.log
+Done parsing command line arguments.
+Oracle Net Services Configuration:
+Profile configuration complete.
+Oracle Net Listener Startup:
+    Running Listener Control: 
+      /u01/app/oracle/product/11/db_1/bin/lsnrctl start LISTENER
+    Listener Control complete.
+    Listener started successfully.
+Listener configuration complete.
+Oracle Net Services configuration successful. The exit code is 0
+~~~
+
+### 4. listner.ora
+
+~~~bash
+$ ls $ORACLE_HOME/network/admin/listener.ora
+/u01/app/oracle/product/11/db_1/network/admin/listener.ora
+~~~
+
+~~~bash
+$ which lsnrctl 
+/u01/app/oracle/product/11/db_1/bin/lsnrctl
+~~~
