@@ -1,6 +1,6 @@
 # convert
 
-[imagemagick](imagemagik.md)
+- [imagemagick](../i/imagemagick.md)
 
 ## 4つのPNGをマージ
 
