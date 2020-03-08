@@ -15,7 +15,7 @@ Site:
 Install
 
 - [Ubuntu](ubuntu.md)
-- [macOS](ubuntu.md)
+- [macOS](macos.md)
 
 ## tsql コマンド
 
