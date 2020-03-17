@@ -57,6 +57,8 @@ $ sudo chmod 600 /etc/postfix/sasl_passwd.db
 
 ###  /etc/ssl/certs/ca-certificates.crt
 
+[postconf](http://www.postfix.org/postconf.1.html) で main.cfに追加:
+
 ~~~bash
 $ sudo postconf -e 'smtp_tls_CAfile = /etc/ssl/certs/ca-certificates.crt'
 ~~~
