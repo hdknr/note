@@ -168,3 +168,20 @@ $ sudo ACCEPT_EULA=Y apt install mssql-tools
 mssql-tools (17.4.1.1-1) を展開しています...
 mssql-tools (17.4.1.1-1) を設定しています ...
 ~~~
+
+
+~~~bash
+$ sudo cat /etc/odbcinst.ini 
+~~~
+
+~~~ini
+[FreeTDS]
+Description=FreeTDS Driver
+Driver=/usr/lib/x86_64-linux-gnu/odbc/libtdsodbc.so
+Setup=/usr/lib/x86_64-linux-gnu/odbc/libtdsS.so
+
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.4.so.2.1
+UsageCount=1
+~~~
