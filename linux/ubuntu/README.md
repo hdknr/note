@@ -25,6 +25,7 @@ Version:
 
 - [OSバージョンアップ](upgrade.md)
 - [Lubuntu](lubuntu.md) - ライトウェイトUbuntu
+- [ユーザー](users.md)
 
 ## Debian
 
