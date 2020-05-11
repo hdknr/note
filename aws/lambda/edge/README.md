@@ -1,44 +1,5 @@
 # Lambda@Edge
 
-## サンプル
-
-[一般的](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-general-examples):
-
-- [A/Bテスト](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-a-b-testing)
-- [応答ヘッダの書き換え](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-overriding-response-header) 
-
-[応答生成](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-generated-response-examples):
-
-- [静的コンテンツ](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-static-web-server)
-- [Gzip圧縮した静的コンテンツ](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-body-encoding-base64)
-- [HTTPリダイレクト](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#w713aac27c55c25c17b9b3)
-
-
-[クエリ](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-query-string-examples):
-
-- [クエリによってヘッダーを追加](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-header-based-on-query-string)
-- [クエリを正規化してキャッシュヒットをあげる](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-normalize-query-string-parameters)
-- [匿名ユーザーをログインページに飛ばす](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirect-to-signin-page)
-
-[パーソナライズ(国/デバイス)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirecting-examples):
-- [Viewer Requestを国別URLにリダイレクト](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirect-based-on-country)
-- [デバイスとごとに別のバージョンのオブジェクトを返す](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-vary-on-device-type)
-
-[動的オリジン変更(Origin-Requestトリガ)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-routing-examples):
-- [でカスタムオリジンからS3オリジンへ変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-S3-origin-based-on-query)
-- [S3オリジンを切り替える](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-S3-origin-request-trigger)
-- [S3からカスタムオリジンへ変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-custom-origin-request-trigger)
-- [徐々にS3バケットへのトラフィックを別のバケットへ転送](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-gradual-traffic-transfer)
-- [Countryヘッダーでオリジンのドメイン名を変更する](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-geo-header)
-
-[エラーステータス更新(Origin-Requetsトリガ)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-update-error-status-examples):
-- [エラーを200に変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-custom-error-static-body)
-- [エラーを302 Not Foundに変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-custom-error-new-site)
-
-[リクエストボディ変更(Requestトリガ)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-access-request-body-examples):
-- [HTMLフォームを読む](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-access-request-body-examples-read) 
-- [HTMLフォームを変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-access-request-body-examples-replace)
-
 ## lambda
 
 ### リクエスト, レスポンス, ヘッダー
@@ -226,3 +187,109 @@ def lambda_handler(event, context):
     ...
     return response
 ~~~
+
+### 環境変数
+
+- 使えません
+
+### ロール (実行権限)
+
+
+#### アクセス権
+
+-  AWSLambdaBasicExecutionRole(AWS管理ポリシー)(arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole)
+
+~~~json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+~~~
+
+- `cloudfrontresponsegenerationRolePolicy0`(など)(インラインポリシー)(CloudFrontが作成)
+
+~~~json
+{
+    "Statement": [
+        {
+            "Action": "kms:Decrypt",
+            "Resource": "arn:aws:kms:us-east-1:436565885264:key/msuniv-media",
+            "Effect": "Allow"
+        }
+    ]
+}
+~~~
+
+#### 信頼関係
+
+~~~json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": [
+          "edgelambda.amazonaws.com",
+          "lambda.amazonaws.com"
+        ]
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+~~~
+
+
+
+
+
+
+## サンプル
+
+[一般的](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-general-examples):
+
+- [A/Bテスト](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-a-b-testing)
+- [応答ヘッダの書き換え](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-overriding-response-header) 
+
+[応答生成](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-generated-response-examples):
+
+- [静的コンテンツ](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-static-web-server)
+- [Gzip圧縮した静的コンテンツ](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-body-encoding-base64)
+- [HTTPリダイレクト](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#w713aac27c55c25c17b9b3)
+
+
+[クエリ](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-query-string-examples):
+
+- [クエリによってヘッダーを追加](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-header-based-on-query-string)
+- [クエリを正規化してキャッシュヒットをあげる](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-normalize-query-string-parameters)
+- [匿名ユーザーをログインページに飛ばす](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirect-to-signin-page)
+
+[パーソナライズ(国/デバイス)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirecting-examples):
+- [Viewer Requestを国別URLにリダイレクト](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-redirect-based-on-country)
+- [デバイスとごとに別のバージョンのオブジェクトを返す](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-vary-on-device-type)
+
+[動的オリジン変更(Origin-Requestトリガ)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-routing-examples):
+- [でカスタムオリジンからS3オリジンへ変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-S3-origin-based-on-query)
+- [S3オリジンを切り替える](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-S3-origin-request-trigger)
+- [S3からカスタムオリジンへ変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-custom-origin-request-trigger)
+- [徐々にS3バケットへのトラフィックを別のバケットへ転送](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-gradual-traffic-transfer)
+- [Countryヘッダーでオリジンのドメイン名を変更する](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-content-based-geo-header)
+
+[エラーステータス更新(Origin-Requetsトリガ)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-update-error-status-examples):
+- [エラーを200に変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-custom-error-static-body)
+- [エラーを302 Not Foundに変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-custom-error-new-site)
+
+[リクエストボディ変更(Requestトリガ)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-access-request-body-examples):
+- [HTMLフォームを読む](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-access-request-body-examples-read) 
+- [HTMLフォームを変更](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-examples.html#lambda-examples-access-request-body-examples-replace)

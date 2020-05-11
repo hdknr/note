@@ -13,6 +13,10 @@ Edge(エッジ):
 
 - CloudFrontのサーバーのこと(負荷分散されています)
 
+デフォルトルートオブジェクト:
+
+- デフォルトページ (`index.html` など)
+
 ## トピック
 
 - [Wordpress](wordpress.md)
