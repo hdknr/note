@@ -2,9 +2,8 @@
 
 - [install cx_oracle for python](https://stackoverflow.com/questions/4307479/install-cx-oracle-for-python)
 
-- [
-Instant Client Downloads](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html) > [Instant Client Downloads
-for Linux AMD64](http://www.oracle.com/technetwork/topics/linux-amd64-093390.html)
+- [Instant Client Downloads](http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html) 
+- [Instant Client Downloads for Linux AMD64](http://www.oracle.com/technetwork/topics/linux-amd64-093390.html)
 
 ~~~bash
 $ export ORACLE_HOME=/opt/ora

@@ -1,6 +1,6 @@
 # Oracle
 
-- [インストール](oracle.install)
+- [インストール](oracle.install.md)
 
 
 ## 起動
