@@ -1,0 +1,7 @@
+- [http://www.flaticon.com/](http://www.flaticon.com/)
+- [マイクロソフトが提供しているアイコンセットまとめ](http://pronama.azurewebsites.net/2015/05/08/microsoft-icon-set/)
+- [GruntでWebFont作成を自動化](http://atsu666.com/entry-53.html)
+- [gulpでWebFont作成を自動化](http://atsu666.com/entry-78.html)
+- [SVG から Webfont を生成する](http://qiita.com/elbowroomer/items/b4749fb2aedf8397df8b)
+- [無料でできる！オリジナルアイコンフォントを作ってみよう](http://liginc.co.jp/web/design/font/33237)
+- http://fontello.com/
