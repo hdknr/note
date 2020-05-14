@@ -4,6 +4,7 @@
 
 ## Topic
 
+- [設定](mysql.conf.md)
 - [pytz](mysql.pytz.md)
 - [照合順序](mysql.collate.md)
 - [rootパスワード変更](mysql.password.md)
