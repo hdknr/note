@@ -12,6 +12,7 @@
 | [config](git.config.md)              |   |
 | [diff](git.diff.md)                  | 差分 |
 | [filter-branch](git.filter-branch.md)   |                       |
+| [fsck](git.fsck.md)                   | DBのオブジェクトの妥当性の検証/接続の検証 |
 | [log](git.log.md)                     |   |
 | [ls-files](git.ls-files.md)           |   | 
 | [merge](git.merge.md)                  | |
