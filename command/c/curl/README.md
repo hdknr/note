@@ -4,7 +4,8 @@
 
 - [認証](curl.auth.md)
 - [クッキー](curl.cookie.md)
-- [CORS](cur.cors.md)
+- [CORS](curl.cors.md)
+- [OPTIONS](curl.options.md)
 
 ## 統計情報を出さない (-s)
 
