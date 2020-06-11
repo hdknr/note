@@ -30,6 +30,18 @@ Last login: Tue Jan 13 23:46:58 2015 from 10.0.2.2
 ~~~
 
 
+## ポートを固定する
+
+
+~~~ruby
+Vagrant.configure(2) do |config|
+  # ...
+  config.vm.network "forwarded_port", guest: 22, host: 2200, id: "ssh"
+  # ...
+end
+~~~
+
+
 ## 参考
 
 - [Vagrant FILE PROVISIONER](http://docs.vagrantup.com/v2/provisioning/file.html)
