@@ -82,4 +82,19 @@ PATH=/usr/bin:/bin
 ~~~bash
 SHELL=/bin/bash
 ...
-~~~~
+~~~
+
+## ログファイル
+
+- [Where is the cron / crontab log?](https://askubuntu.com/questions/56683/where-is-the-cron-crontab-log)
+
+Ubuntu:
+
+~~~bash
+$ sudo zless /var/log/syslog* | grep CRON
+~~~
+
+## 記事
+
+
+- [Cronの使い方とテクニックと詰まったところ](https://qiita.com/UNILORN/items/a1a3f62409cdb4256219)

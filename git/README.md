@@ -49,7 +49,22 @@ $ sudo apt-get install tig
 ~~~bash
 $ brew install tig
 .
-~~~~
+~~~
+
+## How To
+
+- [特定のブランチからファイルの変更をマージする](git.checkout.md)
+- [削除してしまったファイルを戻す](git.checkout.md)
+- [他のブランチへ特定のコミットをマージする](git.cherry-pick.md)
+- [コミット間で変更のあるファイル名を一覧する](git.diff.md)
+- [error: remote unpack failed: eof before pack header was fully read](git.fsck.md)
+- [特定のファイルの変更記録を見る](git.log.md)
+- [削除したファイルを取り除く](git.ls-files.md)
+- [リモートにある br-remote1 ブランチを ローカルの br-local2 にpull](git.pull.md)
+- [ローカルを指定したコミットのところまで戻す](git.reset.md)
+- [sshのキーを指定する](git.ssh.md)
+- [ファイル名:大文字・小文字の変更を検知するようにする](git.config.md)
+
 
 ## トピック
 

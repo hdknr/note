@@ -9,6 +9,15 @@ $ env HOMEBREW_INSTALL_CLEANUP=1 brew upgrade
 .
 ~~~
 
+## 一覧: `list`
+
+- [List of all packages installed using Homebrew](https://apple.stackexchange.com/questions/101090/list-of-all-packages-installed-using-homebrew)
+
+~~~zsh
+% brew list
+% brew list --cask
+~~~
+
 ## tap / untap
 
 - [これは便利！Homebrewに追加されたtapコマンドはリポジトリを追加して簡単にフォーミュラを増やせる - Macとかの雑記帳](http://tukaikta.blog135.fc2.com/blog-entry-204.html)

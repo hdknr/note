@@ -1,3 +1,15 @@
+
+
+##  Homebrew
+
+~~~zsh
+% brew cask install virtualbox
+% brew cask install virtualbox-extension-pack
+% brew cask install vagrant
+~~~
+
+
+
 ## RubyGem でインストールされない
 
 ~~~

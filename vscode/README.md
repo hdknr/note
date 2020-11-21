@@ -2,6 +2,13 @@
 
 - [#84](https://github.com/hdknr/scriptogr.am/issues/84)
 
+## scoop
+
+
+~~~ps1
+PS> scoop bucket add extras
+~~~
+
 ## extensions
 
 - コマンドパレット(`⌘ + shirt + P`)

@@ -66,3 +66,28 @@ if ( !defined( 'WP_CLI' ) ) {
     add_filter( 'auto_update_translation', '__return_false' );
 }
 ~~~
+
+
+## アップデート
+
+
+~~~bash
+$ ../../bin/wp-cli.phar core update
+PHP Notice:  Undefined index: HTTP_HOST in phar:///home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1197) : eval()'d code on line 87
+PHP Stack trace:
+PHP   1. {main}() /home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar:0
+PHP   2. include() /home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar:4
+PHP   3. include() phar:///home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar/php/boot-phar.php:11
+PHP   4. WP_CLI\bootstrap() phar:///home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar/vendor/wp-cli/wp-cli/php/wp-cli.php:27
+PHP   5. WP_CLI\Bootstrap\LaunchRunner->process() phar:///home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar/vendor/wp-cli/wp-cli/php/bootstrap.php:74
+PHP   6. WP_CLI\Runner->start() phar:///home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Bootstrap/LaunchRunner.php:23
+PHP   7. WP_CLI\Runner->load_wordpress() phar:///home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1158
+PHP   8. eval() phar:///home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php:1197
+Updating to version 5.5 (ja)...
+https://downloads.wordpress.org/release/ja/wordpress-5.5.zip から更新をダウンロード中...
+更新を展開しています…
+Cleaning up files...
+No files found that need cleaning up.
+Success: WordPress updated successfully.
+~~~
+

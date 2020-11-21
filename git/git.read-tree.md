@@ -1,7 +1,5 @@
 
-[git-read-tree - Reads tree information into the index
-
-](https://git-scm.com/docs/git-read-tree)
+[git-read-tree - Reads tree information into the index](https://git-scm.com/docs/git-read-tree)
 
 ## サブディレクトリのマージ
 

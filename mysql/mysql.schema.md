@@ -1,6 +1,6 @@
-## スキーマ情報を調べる
+# スキーマ情報を調べる
 
-~~~
+~~~sql
 mysql> desc information_schema.COLUMNS ;
 +--------------------------+---------------------+------+-----+---------+-------+
 | Field                    | Type                | Null | Key | Default | Extra |
@@ -27,7 +27,8 @@ mysql> desc information_schema.COLUMNS ;
 +--------------------------+---------------------+------+-----+---------+-------+
 19 rows in set (0.00 sec)
 ~~~
-~~~
+
+~~~sql
 SELECT * 
 	FROM information_schema.COLUMNS 
 WHERE
@@ -37,8 +38,7 @@ WHERE
 
 - データタイプ
 
-~~~
-mysql> 
+~~~sql
 SELECT 
 	DATA_TYPE  
 FROM 

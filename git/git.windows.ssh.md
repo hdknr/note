@@ -4,6 +4,8 @@
 
 ## ChocolateyでNugetのGitインストール
 
+- `scoop` をおすすめ
+
 - [gitパッケージ](https://chocolatey.org/packages/git)
 
 ~~~bat

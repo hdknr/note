@@ -1,5 +1,6 @@
-## 設定確認
+# 設定
 
+## 設定確認
 
 ~~~bash
 $ sudo nginx -t -c /path/to/nginx.conf

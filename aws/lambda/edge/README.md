@@ -1,5 +1,7 @@
 # Lambda@Edge
 
+- [Lambda 関数の要件と制限: Requirements and Restrictions on Lambda Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-requirements-limits.html)
+
 ## lambda
 
 ### リクエスト, レスポンス, ヘッダー

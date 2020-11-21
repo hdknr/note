@@ -38,6 +38,9 @@ S3バケット`my-media` の `バケットポリシー`:
 
 - `Path Pattern`: `/media*`
 - `Origin or Origin Group`: 作成したS3オリジン
+
+Lambda Edgeを作成したら:
+
 - `Lambda Function Associations` に　`CloudFront Event` として `Viewer Request`の　Lambda@Edge をアサインする 
 - `Include Body`  にチェックをいれる
 

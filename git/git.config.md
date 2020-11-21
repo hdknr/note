@@ -43,6 +43,17 @@ fatal: HTTP request failed
 $ export GIT_SSL_NO_VERIFY=true  
 ~~~
 
+## ファイル名の大文字・小文字の変更を検知するようにする
+
+~~~zsh
+% git config -l --local | grep core.ignorecase
+core.ignorecase=true
+
+% git config core.ignorecase false
+
+% git config -l --local | grep core.ignorecase
+core.ignorecase=false
+~~~
 ## その他
 
 - [.gitignore をグローバル設定する](git.ignore.md)

@@ -69,13 +69,13 @@ aws_access_key_id = XKIXIQXL35DTBNISJZGQ
 aws_secret_access_key = yG9tmKOT85ACdFYHTA/mO/Y1OAksurhsGIl6U0yh
 ~~~
 
-# プロファイル
+## プロファイル
 
 
 プロファイルを追加:
 
 ~~~bash
-$ aws config --profile ictact
+$ aws configure --profile ictact
 
 $ aws configure --profile unitedly
 AWS Access Key ID [None]: AAAAAAAAAAATZAZDZR4Q

@@ -9,9 +9,8 @@
 
 ## その他
 
-- [Visual Studio Code インストール](vscode)
-- [chocolatey](chocolatey) インストール
-- [git](git) インストール
+- [Visual Studio Code インストール](vscode/README.md)
+- [scoop](scoop/README.md) インストール
 - [WSL(Windows Subsystem for Linux)を使えるようにする](wsl)
 - [リモート管理](remote.md)
 

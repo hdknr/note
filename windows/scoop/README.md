@@ -5,6 +5,7 @@
 
 ## インストール
 
+
 ~~~ps1
 PS C:\Users\hdknr> Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
@@ -30,6 +31,13 @@ Scoop was installed successfully!
 Type 'scoop help' for instructions.
 ~~~
 
+あるいは:
+
+~~~ps1
+iex (new-object net.webclient).downloadstring(‘https://get.scoop.sh’)
+~~~
+
+
 `curl`コマンドインストール:
 
 ~~~cmd
@@ -45,9 +53,9 @@ C:¥Users¥hdknr¥scoop¥shime¥curl.exe
 
 - [https://github.com/lukesampson/scoop/wiki/SSH-on-Windows](https://github.com/lukesampson/scoop/wiki/SSH-on-Windows)
 
-~~~bash
-scoop install openssh
-scoop install git-with-openssh
+~~~PS1
+PS> scoop install openssh
+PS> scoop install git-with-openssh
 ~~~
 
 
@@ -84,6 +92,12 @@ Fetching: vagrant-winnfsd-1.4.0.gem (100%)
 Installed the plugin 'vagrant-winnfsd (1.4.0)'!
 ~~~
 
+### VSCode
+
+~~~ps1
+PS> scoop bucket add extras
+PS> scoop install vscode
+~~~
 
 ## 記事
 

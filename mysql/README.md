@@ -14,6 +14,7 @@
 - [チューニング](mysql.tuning.md)
 - [トラブル](trouble)
 - [データストレージ](mysql.data.md)
+- [テーブル定義](mysql.table.md)
 
 
 ## ツール
