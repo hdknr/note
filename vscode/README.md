@@ -7,6 +7,13 @@
 
 ~~~ps1
 PS> scoop bucket add extras
+PS> scoop install vscode
+~~~
+
+## Homebrew
+
+~~~zsh
+% brew cask install visual-studio-code
 ~~~
 
 ## extensions
@@ -105,3 +112,12 @@ HTMLだけ2タブにする:
 - [Mac版 Visual Studio Codeを使ってみます](http://qiita.com/akiko-pusu/items/185f4fd8484ecd3b3243)
 - [ターミナルからVisual Studio Codeを起動する方法【公式の方法】](http://qiita.com/naru0504/items/c2ed8869ffbf7682cf5c)
 - [Visual Studio CodeでSSHごしにファイルを編集する - Qiita](https://qiita.com/informationsea/items/5c9f05c81a41fb885460)
+
+
+## Python: Pyinstaller
+
+- https://qiita.com/takanorimutoh/items/53bf44d6d5b37190e7d1
+
+# Swift
+
+- https://www.isoroot.jp/blog/2381/
