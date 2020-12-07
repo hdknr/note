@@ -13,6 +13,7 @@
 - [scoop](scoop/README.md) インストール
 - [WSL(Windows Subsystem for Linux)を使えるようにする](wsl)
 - [リモート管理](remote.md)
+- [スタートアップ](startup.md)
 
 ## 記事
 
