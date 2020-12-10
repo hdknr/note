@@ -9,6 +9,7 @@
 
 ## コマンド
 
+- [box](vagrant.box.md)
 - [reload](vagrant.reload.md)
 - [ssh, ssh-config](vagrant.ssh.md)
 - [global-status](vagrant.global-status.md)
