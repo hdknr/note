@@ -3,7 +3,7 @@
 - [#45](https://github.com/hdknr/note/issues/45)
 - [Vagrant Documentation](https://www.vagrantup.com/docs/index.html)
 - [AWS](vagrant.aws.md)
-
+- [Windows](vagrant.windows.md)
 
 ## コマンド
 
