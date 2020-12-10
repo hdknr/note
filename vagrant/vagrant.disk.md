@@ -1,8 +1,25 @@
-VirtualBox: /homeをLVMにして増やす
+# ディスク
+
+## vagrant-disksize
+
+- [Vagrantfileに一行書くだけでVMのディスク容量を増やす方法](https://qiita.com/yut_h1979/items/c84c490053877beee5c1)
+
+~~~zsh
+$ vagrant plugin install vagrant-disksize
+~~~
+
+~~~ruby
+Vagrant.configure('2') do |config|
+  #....
+  config.disksize.size = '100GB' # <- この設定を書く
+end
+~~~
+
+## VirtualBox: /homeをLVMにして増やす
 
 - Vagrant で作ったDebian Jessieの/homeを増やす
 
-## VMDK -> VDI (VBoxManage clonehd)
+### VMDK -> VDI (VBoxManage clonehd)
 
 
 ~~~

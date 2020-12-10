@@ -5,28 +5,12 @@
 - [AWS](vagrant.aws.md)
 - [Windows](vagrant.windows.md)
 - [macOS](vagrant.mac.md)
+- [Ubuntu](vagrant.ubuntu.md)
 
 ## コマンド
 
-### [reload](vagrant.reload.md)
-
-- 再起動
-
-### [ssh, ssh-config](vagrant.ssh.md)
-
-- ssh設定
-- ssh接続
-
-### [global-status](vagrant.global-status.md)
-
-- 状態確認
-
-### [package](vagrant.package.md)
-
-- イメージを引越しする
-
-## プラグイン
-
-### [vbguest](vagrant.vbguest.md)
-
-- Guest Additionsのアップデート
+- [reload](vagrant.reload.md)
+- [ssh, ssh-config](vagrant.ssh.md)
+- [global-status](vagrant.global-status.md)
+- [package](vagrant.package.md) (引越しなど)
+- [vbguest](vagrant.vbguest.md) (Guest Additionsのアップデート)
