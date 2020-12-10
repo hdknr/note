@@ -1,11 +1,11 @@
-
+# VitualBox macOS
 
 ##  Homebrew
 
 ~~~zsh
-% brew cask install virtualbox
-% brew cask install virtualbox-extension-pack
-% brew cask install vagrant
+% brew install --cask virtualbox
+% brew install --cask virtualbox-extension-pack
+% brew install --cask vagrant
 ~~~
 
 
