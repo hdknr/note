@@ -25,6 +25,12 @@
 
 ![acf](acf.2.png)
 
+日付の書式:
+
+
+![acf](acf.5.png)
+
+
 ### 投稿の編集と`開催日時`の追加
 
 ![acf](acf.3.png)
@@ -67,7 +73,7 @@ curl -s http://bpw:8800/wp-json/wp/v2/posts/914 | jq ".acf"
 
 ~~~json
 {
-  "meeting_date": "31/01/2021 2:00 pm"
+  "meeting_date": "2021-01-31 14:00:00"
 }
 ~~~
 
@@ -110,7 +116,7 @@ query MyQuery {
           "node": {
             "id": "cG9zdDo4ODk=",
             "meeting_date": {
-              "meetingDate": "30/01/2021 3:00 pm"
+              "meetingDate": "2021-01-31 14:00:00"
             }
           }
         }
