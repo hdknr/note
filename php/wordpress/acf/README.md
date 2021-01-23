@@ -120,6 +120,13 @@ query MyQuery {
 }
 ~~~
 
+タイムゾーンはシステムロケール見ているので変更すると問題ない:
+
+~~~bash
+$ sudo timedatectl set-timezone Asia/Tokyo
+~~~
+
+
 
 ### 参考記事
 
