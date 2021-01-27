@@ -174,6 +174,20 @@ crontab:
 00 05 01 * * sudo letsencrypt renew
 ~~~
 
+### nginx 再起動
+
+~~~bash
+$ sudo cat /etc/letsencrypt/cli.ini 
+~~~
+
+~~~ini
+# Because we are using logrotate for greater flexibility, disable the
+# internal certbot logrotation.
+max-log-backups = 0
+deploy-hook = systemctl reload nginx
+~~~
+
+
 ## Too many failed authorizations recently
 
 ~~~bash
