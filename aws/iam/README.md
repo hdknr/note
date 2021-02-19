@@ -2,6 +2,23 @@
 
 - [AWS IAMアカウントの作成、設定、IAMアカウントでのログイン](http://qiita.com/akkisu/items/5e3439ba9c47b9a7f094)
 
+## アカウント
+
+- [AWS アカウント ID](https://docs.aws.amazon.com/ja_jp/general/latest/gr/acct-identifiers.html)
+
+| **項目**          | **内容**                         |
+| ----------------- | -------------------------------- |
+| AWS アカウント ID | 12 桁の数値                      |
+| 正規ユーザー ID   | アカウント ID の難読化された形式 |
+
+~~~bash
+aws sts get-caller-identity --query Account --output text --profile spindd
+~~~
+~~~
+695*****8753
+~~~
+
+
 ## IAM ログイン
 
 - URL
