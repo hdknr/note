@@ -31,3 +31,11 @@
 
 4 directories, 19 files
 ~~~
+
+複数除外:
+
+- [tree command for multiple includes and excludes](https://unix.stackexchange.com/questions/61074/tree-command-for-multiple-includes-and-excludes)
+
+~~~zsh
+% tree -f -I "bin|unitTest" -P "*.[ch]|*.[ch]pp." your_dir/
+~~~

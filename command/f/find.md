@@ -25,7 +25,7 @@ $ sudo find . -type f \( -name "*~" -o -name "*bk" \) -prune -o -name "*" -exec 
 find ../ -name .svn -prune -o -type f -name "*" -exec grep -H error404 {} \;
 ```
 
-node_modules を叙階:
+node_modules を除外:
 
 ~~~bash 
 $ find . -type d -name "node_modules" -prune -o -type f -exec grep -H WebAuth  {} \;
@@ -60,6 +60,12 @@ $ find / -type f -size +10000k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
 
 ~~~bash
 $ find . -maxdepth 1 -type d
+~~~
+
+## 7日より前に作られたファイルを消す
+
+~~~bash
+% find ~/ -mtime +7 -type f -delete
 ~~~
 
 ## find -exec rm in Windows
