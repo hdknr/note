@@ -46,3 +46,20 @@ c2c789d2d3c5: Pushed
 8803ef42039d: Pushed 
 latest: digest: sha256:b410dc2bcfe41cedc9d6a0a770731ff1279c29f6238b352d144bf336627e77b2 size: 3264
 ~~~
+
+### bash
+
+~~~bash
+#!/bin/bash
+REPO=djdocker
+PROFILE=spindd
+AWS_ID=123456789012
+#
+REGION=ap-northeast-1
+ECR=$AWS_ID.dkr.ecr.$REGION.amazonaws.com
+#
+aws ecr get-login-password --profile $PROFILE --region $REGION  | docker login --username AWS --password-stdin $ECR
+docker build -t $REPO . 
+docker tag $REPO:latest $ECR/$REPO:latest
+docker push $ECR/$REPO:latest
+~~~
