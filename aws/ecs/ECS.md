@@ -1,6 +1,10 @@
 # ECS
 
 - [環境変数の取得](ECS.environ.md)
+
+ログ:
+
+- [CloudWatch Logs](ECS.awslogs.md)
 ## サービスのタスクを再起動
 
 - [AWS ECS restart Service with the same task definition and image with no downtime](https://stackoverflow.com/questions/42735328/aws-ecs-restart-service-with-the-same-task-definition-and-image-with-no-downtime)
