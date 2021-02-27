@@ -21,3 +21,8 @@ $ sudo apt-get install xsel
 $ alias pbcopy='xsel --clipboard --input'
 $ alias pbpaste='xsel --clipboard --output'
 ~~~
+
+
+## clip (Windows)
+
+- [［clip / pbcopy・pbpaste］クリップボードにコピー](https://xtech.nikkei.com/it/atcl/column/15/042000103/080400036/)
