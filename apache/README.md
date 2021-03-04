@@ -1,5 +1,10 @@
 # apache メモ
 
+## Redhat系
+
+~~~bash
+% sudo systemctl stop httpd
+~~~
 ## SSL
 
 - [ApacheでOpenSSLのセキュリティを強化する](http://qiita.com/sion_cojp/items/99fee211ceace3f76cff)
