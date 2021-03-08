@@ -2,7 +2,7 @@
 
 ## Sysmtem Manager に環境情報を設定する
 
-1. [AmazonECSTaskExecutionRolePolicy:Amazon ECS タスク実行 IAM ロールポリシー](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/task_execution_IAM_role.html)  
+1. [AmazonECSTaskExecutionRolePolicy:Amazon ECS タスク実行 IAM ロールポリシー](https://docs.aws.amazon.com/ja_jp/AmazonECS/l    atest/developerguide/task_execution_IAM_role.html)  
 
 - 追加されているはず
   
