@@ -59,3 +59,21 @@ Congratulations, all renewals succeeded. The following certs have been renewed:
 **          (The test certificates above have not been saved.)
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ~~~
+
+
+## 自動更新
+
+~~~bash
+% crontab -l
+~~~
+
+~~~
+00 05 01 * * sudo letsencrypt renew
+~~~ 
+
+/etc/letsencrypt/cli.ini:
+
+~~~ini
+max-log-backups = 0
+deploy-hook = systemctl reload nginx
+~~~
