@@ -58,6 +58,17 @@ PS> scoop install openssh
 PS> scoop install git-with-openssh
 ~~~
 
+## Bucket
+
+~~~PS1
+PS> sccop bucket add extras
+~~~
+
+### VSCode
+
+~~~PS1
+PS> scoop install vscode
+~~~~
 
 ### Vagrant
 
