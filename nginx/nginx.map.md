@@ -25,3 +25,28 @@ server {
   }
 }
 ~~~
+
+## `$proxy_add_x_forwarded_for` にカンマ区切りで複数のアドレスが指定された時の最初のアドレス
+
+~~~
+map $proxy_add_x_forwarded_for $client_ip {
+    "~(?<IP>([0-9]{1,3}\.){3}[0-9]{1,3}),.*" $IP;
+    default '';
+}
+
+server {
+    ...
+            location ~ \.php$ {
+            include snippets/fastcgi-php.conf;
+
+            fastcgi_param REMOTE_ADDR  $client_ip;
+            fastcgi_param HTTP_X_FORWARDED_PROTO $protocol;
+            fastcgi_param HTTP_X_FORWARDED_PORT $port;
+            fastcgi_param HTTP_X_FORWARDED_FOR $proxy_add_x_forwarded_for;
+            fastcgi_param HTTPS $https_on;
+
+            fastcgi_pass app;
+            fastcgi_param SCRIPT_FILENAME $request_filename;
+        }
+}
+~~~
