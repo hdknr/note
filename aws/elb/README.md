@@ -1,3 +1,6 @@
+# ELB
+
+- https://aws.amazon.com/jp/elasticloadbalancing/
 ## SSLの強制
 
 - [How to force HTTPS behind AWS ELB](https://oanhnn.github.io/2016-02-29/how-to-force-https-behind-aws-elb.html)
@@ -36,6 +39,11 @@ server {
 
 - [Request a Certificate](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-request.html)
 - [Validate Domain Ownership](https://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate.html)
+- [ACM SSL/TLS 証明書を Classic Load Balancer、Application Load Balancer、または Network Load Balancer と関連付ける方法を教えてください。 ](https://aws.amazon.com/jp/premiumsupport/knowledge-center/associate-acm-certificate-alb-nlb/)
+
+ACM:
+
+- ロードバランサーと同じリージョンで証明書を取得すること
 
 送信メアド:
 
