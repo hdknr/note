@@ -41,7 +41,7 @@ build-error: 0 (30 days)
 
 
 ~~~zsh
-% mysql.server star t
+% mysql.server start
 Starting MySQL
 ..... SUCCESS! 
 ~~~
