@@ -21,6 +21,11 @@
 
 - [Sequel Proを超えるGUIツールが出てきたぞ - Qiita](https://qiita.com/shunichi_com/items/b07ae8c678aa7c0e2ff6)
 
+## サーバー
+
+~~~sql
+show variables like 'hostname';
+~~~
 
 ## 重複を削除
 
