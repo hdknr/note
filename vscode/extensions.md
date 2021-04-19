@@ -1,5 +1,9 @@
 # 拡張
 
+~~~zsh
+% code --list-extensions | xargs -L 1 echo code --install-extension
+~~~
+
 ## [言語](https://marketplace.visualstudio.com/search?target=VSCode&category=Programming%20Languages&sortBy=Installs)
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
