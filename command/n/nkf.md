@@ -44,3 +44,9 @@ $ echo 'テスト' | nkf -WwMQ | tr = %
 $ echo %E3%83%86%E3%82%B9%E3%83%88 | nkf -w --url-input
 テスト
 ~~~
+
+## nkf: BOM付きUTF-8にする
+
+~~~zsh
+% nkf --overwrite --oc=UTF-8-BOM ~/Downloads/invoice.csv 
+~~~
