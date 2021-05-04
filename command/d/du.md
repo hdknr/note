@@ -26,7 +26,7 @@ find: /proc/self/fd/4: そのようなファイルやディレクトリはあり
 ## サイズの上位10の一覧
 
 ~~~
-$ du -k / | sort -n | tail -10
+$ du -k . | sort -n | tail -10
 ~~~
 
 
