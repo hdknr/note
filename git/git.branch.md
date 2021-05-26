@@ -56,3 +56,11 @@ To git@bitbucket.org:hidelafoglia/myproj.git
  * [new branch]      beta1 -> beta1
 
 ~~~
+
+## すでにリモートに存在するブンランチにpushする
+
+
+~~~bash
+% git branch --set-upstream-to=origin/fix/acceptancetemp-batch-purchase fix/acceptancetemp-batch-purchase
+% git push 
+~~~
