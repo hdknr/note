@@ -80,3 +80,7 @@ C:\>for /F "usebackq" %i in  (`dir /s /b *.config`) do del %i
 
 - [ファイルなどを検索する！findコマンドの詳細まとめ【Linuxコマンド集】](https://eng-entrance.com/linux-command-find)
 - [fd - Powerful Alternative to Linux Find Command](https://linoxide.com/linux-how-to/fd-alternative-linux-find-command/)
+
+## 関連
+
+- [fd](fd.md)
