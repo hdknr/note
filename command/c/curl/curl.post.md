@@ -19,6 +19,10 @@ $ curl http://dev.mysite.com/articles/wp-json/wp/v2/posts -X POST -d 'title=titl
 .
 ~~~
 
+~~~bash
+$ curl -X POST -H "Content-Type: application/json"  -d @TC-00001.json  http://localhost:8182/order
+~~~
+
 ## JSON 送信
 
 JSON:
