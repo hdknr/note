@@ -5,6 +5,17 @@
 
 - [PostfixからSESにリレーする](aws.postfix.md)
 
+
+## SPF
+
+- https://mxtoolbox.com/
+- キャリアのメールサーバーがSPFを見る
+
+`TXT` レコード:
+
+~~~
+v=spf1 +mx include:amazonses.com ~all
+~~~
 ## 記事
 
 - [SendGridとAmazon SESを比較してみる](http://qiita.com/nakansuke/items/0642d7c8a3c6b1790a6d)
