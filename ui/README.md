@@ -25,3 +25,12 @@
 - Bulma: https://bulma.io/
 - Typography.js: https://kyleamathews.github.io/typography.js/ (フォント周りのスタイルを簡単に提供できるようになった API)
 
+
+## Web サイト分析
+
+- SimilarWeb https://www.similarweb.com/ja/
+- aguse.jp https://www.aguse.jp/
+- Netcraft https://toolbar.netcraft.com/
+- Wappalyzer https://www.wappalyzer.com/
+- BuiltWith https://builtwith.com/
+- urlscan.io https://urlscan.io/
