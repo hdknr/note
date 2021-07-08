@@ -4,11 +4,11 @@
 
 - [nginx.conf](nginx.conf.md)
 - [location](nginx.location.md)
-- [502エラー](nginx.502.md)
 - [allow/deny](nginx.access.md)
 - [map](nginx.map.md)
 - [fastcgi](nginx.fastcgi.md)
 - [ログ](nginx.log.md)
+- [ステータスコード](nginx.staus.md)
 - [proxy_method](nginx.proxy_method.md)
 - [bot対策](nginx.bot.md)
 - [SSL](nginx.ssl.md)
