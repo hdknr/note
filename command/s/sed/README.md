@@ -1,3 +1,5 @@
+# sed (stream edito)
+
 ## 行の削除
 
 ### 行番号
