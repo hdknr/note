@@ -1,3 +1,10 @@
+# git config (git-config - Get and set repository or global options)
+
+## SSHキーの設定
+
+~~~bash
+$ git config core.sshCommand "ssh -i ~/.ssh/id_rsa -F /dev/null"
+~~~
 ## パスワードの保存
 
 - [Git push: username, password, how to avoid?](http://stackoverflow.com/questions/8588768/git-push-username-password-how-to-avoid)
@@ -57,3 +64,5 @@ core.ignorecase=false
 ## その他
 
 - [.gitignore をグローバル設定する](git.ignore.md)
+- [gitconfig の基本を理解する](https://qiita.com/shionit/items/fb4a1a30538f8d335b35)
+- [git-config - Get and set repository or global options](https://git-scm.com/docs/git-config)
