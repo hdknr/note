@@ -20,3 +20,16 @@ Output:
 ~~~json
 {"id": "second", "val": 2}
 ~~~
+
+## 結果をリスト化 (jq -s)
+
+~~~bash
+$ cat input | jq '.[] | select(.id == "second")' | jq -s
+
+[
+  {
+    "id": "second",
+    "val": 2
+  }
+]
+~~~
