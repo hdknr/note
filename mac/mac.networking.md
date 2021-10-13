@@ -27,6 +27,13 @@ $ sudo ifconfig en0 down ; sudo ifconfig en0 up;
 $ echo "add State:/Network/Interface/en0/RefreshConfiguration temporary" | sudo scutil
 ```
 
+## DNS
+
+### キャッシュクリア
+
+~~~zsh
+% sudo killall -HUP mDNSResponder
+~~~
 
 ## その他
 
