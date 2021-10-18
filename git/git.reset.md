@@ -6,6 +6,13 @@
 $ git reset HEAD src
 ~~~
 
+- コミットしたけど取り消す
+
+~~~bash
+$ git reset --soft HEAD^
+~~~
+
+
 - pull したけど、一つ前にもどす
 
 ~~~bash
