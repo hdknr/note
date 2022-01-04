@@ -1,0 +1,115 @@
+カテゴリ,関数,内容
+数値関数,abs,絶対値
+数値関数,ceil,切り上げ
+数値関数,floor,切り捨て
+数値関数,log,対数
+数値関数,max,最大値
+数値関数,min,最小値
+数値関数,parseint,整数値に変換
+数値関数,pow,乗数
+数値関数,signum,正/負を返す
+文字列関数,chomp,改行削除
+文字列関数,format,書式化
+文字列関数,formatlist,書式化リスト
+文字列関数,indent,先頭に文字を埋める
+文字列関数,join,連結
+文字列関数,lower,英小文字化
+文字列関数,regex,正規表現
+文字列関数,regexall,正規表現を複数適用
+文字列関数,replace,変換
+文字列関数,split,分割
+文字列関数,strrev,逆順に並べる
+文字列関数,substr,抽出
+文字列関数,title,先頭文字だけ英大文字化
+文字列関数,trim,前後から文字を削除
+文字列関数,trimprefix,先頭から文字を削除
+文字列関数,trimsuffix,後ろから文字を削除
+文字列関数,trimspace,前後から空白を削除
+文字列関数,upper,英大文字化
+コレクション関数,alltrue,全てが真 => 真
+コレクション関数,anytrue,どれかが真 => 真
+コレクション関数,chunklist,固定サイズの配列に分解
+コレクション関数,coalesce,null でも 空でもない文字列の最初の要素を返す
+コレクション関数,coalescelist,nullか空を抜いたリストに変換
+コレクション関数,compact,空を抜いた文字列リストに変換
+コレクション関数,concat,リストの連結
+コレクション関数,contains,リストに値が入っている => 真
+コレクション関数,distinct,重複要素を１つにして返す( set )
+コレクション関数,element,0ベースの要素番号の要素を返す
+コレクション関数,flatten,多次元リストを１次元にする
+コレクション関数,index,０ベースの要素番号を返す
+コレクション関数,keys,マップのキー配列を返す
+コレクション関数,length,リスト/マップ/文字列の長さを返す
+コレクション関数,list,-> tolist() を使う
+コレクション関数,lookup,マップから要素を取得。なかったら指定したデフォルト。(pythonの getと同じ)
+コレクション関数,map,-> tomap() を使う
+コレクション関数,matchkeys,対比したリストに対して、指定した値と同じ要素番号の要素をぬきだす(python: zip してできたdictから指定した valuesに一致したした要素のキーだけを返す)
+コレクション関数,merge,マップ/オブジェクトのマージ。 (pythonの dict のスプレッド生成と同じ動き)
+コレクション関数,one, 入力=(リスト/タプル/ セット) 1)要素がない => null  2)  要素が１つだけ=> 先頭 3) 要素が複数 => エラー
+コレクション関数,range,配列生成( pythonの range)
+コレクション関数,reverse,逆順に並び替える
+コレクション関数,setintersection,積集合
+コレクション関数,setproduct,組み合わせセット
+コレクション関数,setsubtract,補集合
+コレクション関数,setunion,和集合
+コレクション関数,slice,部分リスト
+コレクション関数,sort,並び替え
+コレクション関数,sum,合計
+コレクション関数,transpose,マップのキーと値を逆にしたマップを返す
+コレクション関数,values,マップの値リスト
+コレクション関数,zipmap,配列のマップ化 (python の zip)
+エンコーディング関数,base64decode,デコード
+エンコーディング関数,base64encode,エンコード
+エンコーディング関数,base64gzip,gzipしてエンコード
+エンコーディング関数,csvdecode,CSV -> マップ
+エンコーディング関数,jsondecode,JSONからオブジェクト
+エンコーディング関数,jsonencode,JSON文字列化
+エンコーディング関数,textdecodebase64,デコードして文字列化
+エンコーディング関数,textencodebase64,Unicode文字列をエンコード
+エンコーディング関数,urlencode,RFC3986エンコード
+エンコーディング関数,yamldecode,YAMLからオブジェクト
+エンコーディング関数,yamlencode,YAML文字列化
+ファイルシステム関数,abspath,絶対パス
+ファイルシステム関数,dirname,ディレクトリ
+ファイルシステム関数,pathexpand,~(チルダ)をエクスパンドする
+ファイルシステム関数,basename,パス文字列の最後の部分
+ファイルシステム関数,file,ファイルを読み込んで文字列へ
+ファイルシステム関数,fileexists,存在チェック
+ファイルシステム関数,fileset,パスとパターンで指定されたものに一致するファイルの一覧
+ファイルシステム関数,filebase64,ファイルを読み込んでbase64化
+ファイルシステム関数,templatefile,指定されたパスと変数で、テンプレートをレンダリングする
+日時関数,formatdate,タイムスタンプを書式化
+日時関数,timeadd,タイムスタンプに値を追加
+日時関数,timestamp,RFC3339の現在時刻
+ハッシュ暗号化関数,base64sha256,SHA256してbase64にして返す
+ハッシュ暗号化関数,base64sha512,SHA512してbase64にして返す
+ハッシュ暗号化関数,bcrypt,bcrypt暗号化
+ハッシュ暗号化関数,filebase64sha256,ファイルを指定してbase64sha256
+ハッシュ暗号化関数,filebase64sha512,ファイルを指定してbase64sha512
+ハッシュ暗号化関数,filemd5,ファイルを指定してmd5
+ハッシュ暗号化関数,filesha1,ファイルを指定してsha1
+ハッシュ暗号化関数,filesha256,ファイルを指定してsha256
+ハッシュ暗号化関数,filesha512,ファイルを指定してsha512
+ハッシュ暗号化関数,md5,md5
+ハッシュ暗号化関数,rsadecrypt,プライベートキーを指定指定して RSA 復号
+ハッシュ暗号化関数,sha1,sha1
+ハッシュ暗号化関数,sha256,sha256
+ハッシュ暗号化関数,sha512,sha512
+ハッシュ暗号化関数,uuid,uuid
+ハッシュ暗号化関数,uuidv5,RFC 4122 Section 4.3  UUID
+IPネットワーク関数,cidrhost,CIDRからIPアドレスを返す
+IPネットワーク関数,cidrnetmask,CIDRからマスクIPを返す
+IPネットワーク関数,cidrsubnet,CIDRから指定したサブネットを返す
+IPネットワーク関数,cidrsubnets,CIDRから指定したサブネットの一覧を作る
+型変換関数,can,指定された値が評価可能 => 真 (オブジェクトの属性が存在するかの判定などに使う)
+型変換関数,defaults,指定された変数が評価されなかったら、指定された値を返す
+型変換関数,nonsensitive,sensitive値を通常の値として返す
+型変換関数,sensitive,指定された値をsensitiveとしてラップする
+型変換関数,tobool,論理変数に変換
+型変換関数,tolist,リストに変換
+型変換関数,tomap,マップに変換
+型変換関数,tonumber,数値に変換
+型変換関数,toset,セットに変換
+型変換関数,tostring,文字列に変換
+型変換関数,try,要素を評価して先頭を返す。なかったら指定した値を返す。
+型変換関数,type,型を返す
