@@ -116,3 +116,8 @@
 | 型変換関数           | tostring         | 文字列に変換                                                                                                                                      |
 | 型変換関数           | try              | 要素を評価して先頭を返す。なかったら指定した値を返す。                                                                                            |
 | 型変換関数           | type             | 型を返す                                                                                                                                          |
+
+
+## 資料
+
+- [CSV](https://docs.google.com/spreadsheets/d/1YtpEtGqiXGNkVSilRs1ArYbCkVtfCTs7P8aXNAf2fyo/edit?usp=sharing)
