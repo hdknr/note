@@ -1,40 +1,57 @@
 # awscli
 
-- インストール
+## インストール
+
+### 公式
+
+- [Installing or updating the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+#### macOS
+
+- GUIインストーラでよい
 
 ~~~bash
+% tree  /usr/local/aws-cli -L 1 -I "*.so|*egg*|*dylib|*.zip"
+~~~
 
-$  pip install awscli
-Collecting awscli
-  Downloading awscli-1.9.12-py2.py3-none-any.whl (848kB)
-    100% |████████████████████████████████| 851kB 471kB/s
-Collecting botocore==1.3.12 (from awscli)
-  Downloading botocore-1.3.12-py2.py3-none-any.whl (2.1MB)
-    100% |████████████████████████████████| 2.1MB 179kB/s
-Requirement already satisfied (use --upgrade to upgrade): rsa<=3.3.0,>=3.1.2 in /Users/hide/ve/tact/lib/python2.7/site-packages (from awscli)
-Collecting colorama<=0.3.3,>=0.2.5 (from awscli)
-  Downloading colorama-0.3.3.tar.gz
-Requirement already satisfied (use --upgrade to upgrade): docutils>=0.10 in /Users/hide/ve/tact/lib/python2.7/site-packages (from awscli)
-Collecting jmespath<1.0.0,>=0.7.1 (from botocore==1.3.12->awscli)
-  Downloading jmespath-0.9.0-py2.py3-none-any.whl
-Collecting python-dateutil<3.0.0,>=2.1 (from botocore==1.3.12->awscli)
-  Downloading python_dateutil-2.4.2-py2.py3-none-any.whl (188kB)
-    100% |████████████████████████████████| 192kB 2.1MB/s
-Requirement already satisfied (use --upgrade to upgrade): pyasn1>=0.1.3 in /Users/hide/ve/tact/lib/python2.7/site-packages (from rsa<=3.3.0,>=3.1.2->awscli)
-Requirement already satisfied (use --upgrade to upgrade): six>=1.5 in /Users/hide/ve/tact/lib/python2.7/site-packages (from python-dateutil<3.0.0,>=2.1->botocore==1.3.12->awscli)
-Installing collected packages: jmespath, python-dateutil, botocore, colorama, awscli
-  Found existing installation: python-dateutil 1.5
-    Uninstalling python-dateutil-1.5:
-      Successfully uninstalled python-dateutil-1.5
-  Running setup.py install for colorama
-Successfully installed awscli-1.9.12 botocore-1.3.12 colorama-0.3.3 jmespath-0.9.0 python-dateutil-2.4.2
+~~~
+/usr/local/aws-cli
+├── Python
+├── _struct
+├── aws
+├── aws_completer
+├── awscli
+├── cryptography
+├── docutils
+├── include
+├── lib
+└── zlib
 ~~~
 
 ~~~bash
+% /usr/local/aws-cli/aws --help
+~~~ 
 
-$ which aws
-/Users/hide/ve/tact/bin/aws
+~~~ 
+usage: aws [-h] [--profile PROFILE] [--debug]
+
+optional arguments:
+  -h, --help         show this help message and exit
+  --profile PROFILE
+  --debug
+~~~ 
+
+~~~bash
+% ls -l /usr/local/bin/aws
+lrwxr-xr-x  1 root  admin  22  1  7 12:07 /usr/local/bin/aws -> /usr/local/aws-cli/aws
 ~~~
+
+~~~bash
+% aws --version
+aws-cli/2.4.9 Python/3.8.8 Darwin/21.2.0 exe/x86_64 prompt/off
+~~~
+
+
 
 - 設定
 
