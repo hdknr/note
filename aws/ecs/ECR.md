@@ -63,3 +63,17 @@ docker build -t $REPO .
 docker tag $REPO:latest $ECR/$REPO:latest
 docker push $ECR/$REPO:latest
 ~~~
+
+## lastest の確認
+
+
+~~~bash
+% aws ecr list-images --profile cloud --registry-id 726533500155 --repository-name ffs-prod | jq '.imageIds[] | select(.imageTag == "latest")'
+~~~
+
+~~~json
+{
+  "imageDigest": "sha256:d3a16b0c20248f4b57677bebe22170e5ee5460a1b06a56c7f4084fbca1ab624c",
+  "imageTag": "latest"
+}
+~~~ 
