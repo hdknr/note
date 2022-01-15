@@ -49,7 +49,7 @@ What is Cyrus IMAP:
 | [/usr/sbin/sasldblistusers2](sasldblistusers2.md) | list users in sasldb(/etc/sasldb2)                                       |
 | /usr/sbin/saslpasswd2                             | set a user's sasl password                                               |
 | /usr/sbin/saslpluginviewer                        | list loadable SASL plugins and their properties                          |
-| /usr/sbin/testsaslauthd                           | test utility for the SASL authentication server                          |
+| /usr/sbin/[testsaslauthd](testsaslauthd.md)       | test utility for the SASL authentication server                          |
 
 
 
