@@ -1,10 +1,10 @@
 # HTTP ステータスコード
 
 
+- [502エラー](nginx.502.md)
 - [HTTP レスポンスステータスコード](https://developer.mozilla.org/ja/docs/Web/HTTP/Status)
 - [Module ngx_http_stub_status_module](https://nginx.org/en/docs/http/ngx_http_stub_status_module.html)
 - [Module ngx_http_api_module](https://nginx.org/en/docs/http/ngx_http_api_module.html)
-
 
 
 
