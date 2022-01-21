@@ -33,3 +33,8 @@ $ cat input | jq '.[] | select(.id == "second")' | jq -s
   }
 ]
 ~~~
+
+
+## 記事
+
+- [jqを使って少し複雑な条件式でフィルタリングする方法をまとめてみた](https://qiita.com/ttiger55/items/150e9a18313a55841a32)
