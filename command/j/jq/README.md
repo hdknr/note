@@ -5,6 +5,10 @@
 - [インストール](jq.install.md)
 - [基本フィルター](jq.basic_filter.md)
 
+## オプション
+
+- [--slup/-s](jq.select.md): 入力を一旦配列に変換してからフィルターを実行する (再JSON化ができる)
+
 ## Cookbook
 
 - [Wordpress](jp.wordpress.md)
