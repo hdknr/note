@@ -17,3 +17,7 @@
 - [関数](functions.md)
 - [terraform: 設定](settings.md)
 - [状態](statte.md)
+
+リソース:
+
+- [メタ引数](meta-argument.md)
