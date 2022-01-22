@@ -1,27 +1,14 @@
 # Lambda@Edge
 
+## トピック
+
+- [ロール](role.md)
+- [SPA対応](spa.md)
+
+## docs
+
 - [Lambda 関数の要件と制限: Requirements and Restrictions on Lambda Functions](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-requirements-limits.html)
 
-## ロール
-
-信頼関係 に `edgelambda.amazonaws.com` サービスプリンシパルが必要
-~~~
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": [
-          "edgelambda.amazonaws.com",
-          "lambda.amazonaws.com"
-        ]
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-~~~
 
 ## lambda
 
