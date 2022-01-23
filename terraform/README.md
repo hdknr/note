@@ -14,7 +14,7 @@
 - [変数/アウトプット](values.md)
 - [モジュール](moduels.md)
 - [式](expressions.md)
-- [関数](functions.md)
+- [関数](functions/README.md)
 - [terraform: 設定](settings.md)
 - [状態](statte.md)
 
