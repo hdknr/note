@@ -1,5 +1,8 @@
 
-# [AWS 関連: #75](https://github.com/hdknr/scriptogr.am/issues/75)
+# AWS
+
+- [証明書:ACM](acm/README.md)
+
 
 ## [ガイド](https://docs.aws.amazon.com/)
 
@@ -19,3 +22,4 @@
 - [sshトラブル](aws.ssh.md)
 - [コスト](aws.cost.md)
 - [準仮想化（PV）](aws.pv-grub.md)
+- [クエリ言語:JMSpath](jmspath.md)
