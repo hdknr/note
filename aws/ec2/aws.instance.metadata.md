@@ -1,4 +1,6 @@
-## メタデータ
+# インスタンス
+
+## メタデータ の取得
 
 - [インスタンスメタデータとユーザーデータ](http://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ec2-instance-metadata.html)
 
