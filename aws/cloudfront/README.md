@@ -39,6 +39,7 @@ Edge(エッジ):
 ## API
 
 - [Amazon CloudFront API Reference](https://docs.aws.amazon.com/ja_jp/cloudfront/latest/APIReference/Welcome.html)
+- [awscli > cloudfront](awscli.cloudfront.md)
 
 ## 記事
 
