@@ -21,3 +21,7 @@
 リソース:
 
 - [メタ引数](meta-argument.md)
+
+## How To
+
+- [条件分岐](howto/conditional.md)
