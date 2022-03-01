@@ -43,6 +43,14 @@ groups.rioja.jp. TXT "v=spf1 include:amazonses.com +mx ~all"
 - Step 5: [Move out of the Amazon SES sandbox](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html)
 
 
+## DNS設定など
+
+- [【AWS】SESをキャリアメールに対応させるためにやったこと](https://ryurinblog.com/aws/post-514/)
+
+1. DKIM
+2. カスタムのMAIL FROM Domain
+3. DMARCポリシーの設定
+
 ## SNS
 
 - [Amazon SES Notifications Through Amazon SNS](

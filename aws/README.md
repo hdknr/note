@@ -15,7 +15,7 @@
 - カスタマーエンゲージメント: [SES:メール](ses/README.md)
 - 暗号化と PKI: [ACM: 証明書サービス](aws.acm.md)
 
-# ツール
+## ツール
 
 - [boto3](boto3.md)
 - [awscli:python aws コマンド](aws.awscli.md)
@@ -23,3 +23,8 @@
 - [コスト](aws.cost.md)
 - [準仮想化（PV）](aws.pv-grub.md)
 - [クエリ言語:JMSpath](jmspath.md)
+
+
+## 資料
+
+- [AWSアカウント作成時にやるべきこと](https://tech.nri-net.com/entry/aws_first_security)

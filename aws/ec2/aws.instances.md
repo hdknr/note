@@ -4,10 +4,28 @@
 ## インスタンスのIPアドレス取得
 
 ~~~bash
-aws describe-instances --filters Name=tag:site-deploy,Values=prod \
+aws ec2 describe-instances --filters Name=tag:site-deploy,Values=prod \
     | jq ".Reservations[].Instances[]|[.PublicIpAddress, ((.Tags | from_entries) | .Name)]"
 ~~~ 
 
+[CSVにする](https://csvkit.readthedocs.io/en/latest/)スクリプト:
+
+~~~bash
+#!/bin/bash
+PROFILE=$1
+TAG=$2
+DEPLOY=$3
+#
+# 実行中のみ
+FILTER="Name=tag:$TAG,Values=$DEPLOY Name=instance-state-name,Values=running"
+PROFILE=taiheicloud
+#
+TRANS='.Reservations[].Instances[]|(.Tags | from_entries) as $tags | {ip: .PublicIpAddress, server: $tags["taiheicloud-server"]}'
+#
+aws --profile $PROFILE ec2 describe-instances \
+    --filters $FILTER \
+| jq "$TRANS" | jq --slurp -r | in2csv -k data
+~~~ 
 
 ## インスタンスID一覧
 

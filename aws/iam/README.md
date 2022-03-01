@@ -31,6 +31,15 @@ https://{{ your_alias }}.signin.aws.amazon.com/console
 
 - [Amazon EC2 のキーペア](http://docs.aws.amazon.com/ja_jp/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair)
 
+## aws configure import (CLI ver2)
+
+[aws configure](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/configure/import.html):
+
+~~~bash
+$ aws configure import --csv file://credentials.csv
+~~~
+
+
 
 ## 請求情報
 
