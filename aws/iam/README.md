@@ -1,5 +1,6 @@
 # AWS: iam
 
+- [アクセスユーザー: STS](sts.md)
 - [AWS IAMアカウントの作成、設定、IAMアカウントでのログイン](http://qiita.com/akkisu/items/5e3439ba9c47b9a7f094)
 
 ## アカウント
