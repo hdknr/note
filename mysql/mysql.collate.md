@@ -58,3 +58,14 @@ mysql> show variables like "chara%";
 +--------------------------+----------------------------+
 8 rows in set (0.00 sec)
 ~~~
+
+## SHOW TABLE STATUS where name like 'TABLE_NAME'
+
+
+
+## utf8mb4_0900_ai_ci
+
+- [MySQL 8.0の照合順序で標準になった「utf8mb4_0900_ai_ci」とは](https://qiita.com/seltzer/items/8b5d8a61591e72715d5b)
+- [MySQL8.0: 日本語のutf8bm4のCollation(文字照合順)](https://dev.mysql.com/blog-archive/mysql-8-0-1-japanese-collation-for-utf8mb4-ja_jp/)
+
+
