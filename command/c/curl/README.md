@@ -46,6 +46,14 @@ $ curl https://chromedriver.storage.googleapis.com/2.45/chromedriver_linux64.zip
 .
 ~~~
 
+## 証明書の確認
+
+~~~bash
+% curl -svI https://admin.tss.devel.mydomain.com 2>&1 | grep subject
+*  subject: CN=www.devel.mydomain.com
+*  subjectAltName: host "admin.tss.devel.mydomain.com" matched cert's "*.tss.devel.mydomain.com"
+~~~
+
 ## macos: curl: (35) SSL peer handshake failed, the server most likely requires a client certificate to connect
 
 - [homebrewでinstallしたcurlがbrew cask install時のTLS1.2ではOSX標準のcurlが邪魔をしてうまく反映されなかった時の対処法 - production.log](http://blog.naoshihoshi.com/entry/2016/11/10/083000)
