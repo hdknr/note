@@ -22,6 +22,7 @@ Edge(エッジ):
 - [Wordpress](wordpress.md)
 - [SSL/証明書](ssl.md)
 - [ヘッダー送信](Cache_Based_on_Selected_Request_Headers)
+- [CNAME](aws.cloudfront.cname.md)
 
 ## [ガイド](https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
 
