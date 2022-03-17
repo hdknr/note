@@ -16,7 +16,8 @@ JSONの指定方法:
 ~~~tf
 resource "aws_iam_policy" "file" {
   name = "file"
-  policy = file("./ddb-allow-policy.json")
+  # モジュールの位置から相対パス
+  policy = file("${path.module}/ddb-allow-policy.json")
 }
 ~~~
 
