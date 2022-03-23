@@ -4,6 +4,7 @@
 - [SSH接続](../../docker/docker.ssh.md)
 - [ロール](ECS.role.md)
 - [Fargat](ECS.farget.md)
+- [タスク定義](ECS.task_definition.md)
 
 ログ:
 
@@ -18,3 +19,4 @@
 
 - [nginx](ECS.nginx.md)
 - [EFSマウント](ECS.efs.md)
+- [How To](ECS.howto.md)
