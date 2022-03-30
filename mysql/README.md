@@ -14,6 +14,10 @@
 - [テーブル定義](mysql.table.md)
 - [Howto](howto/README.md)
 - [トラブルシュート](trouble/README.md)
+
+OS:
+
+- [CentOS](mysql.centos.md)
 ## サーバー情報
 
 - [ホスト名](mysql.hostname.md)
