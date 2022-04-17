@@ -13,7 +13,7 @@
 - [provider: プロバイダ](providers.md)
 - [変数/アウトプット](values.md)
 - [モジュール](moduels.md)
-- [式](expressions.md)
+- [式](expressions/README.md)
 - [関数](functions/README.md)
 - [terraform: 設定](settings.md)
 - [状態](statte.md)
