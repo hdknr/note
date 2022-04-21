@@ -1,5 +1,6 @@
 # Route53
 
+- [ドメイン登録](domain.md)
 
 ## Zone Apex Alias
 
