@@ -5,6 +5,7 @@
 - [ロール](ECS.role.md)
 - [Fargat](ECS.farget.md)
 - [タスク定義](ECS.task_definition.md)
+- [シークレットマネージャ](ECS.secretmanager.md)
 
 ログ:
 
