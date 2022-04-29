@@ -1,5 +1,7 @@
 # `imports`
 
+- [ポリシーを定義するライブラリ](policies/README.md)
+
 
 ## 資料
 
