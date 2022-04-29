@@ -26,6 +26,10 @@
 
 - [メタ引数](meta-argument.md)
 
+## 概念
+
+- [センチネル](sentinel/README.md)
+
 ## How To
 
 - [条件分岐](howto/conditional.md)

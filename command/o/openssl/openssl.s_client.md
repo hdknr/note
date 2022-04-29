@@ -72,6 +72,15 @@ SSL-Session:
 echo|openssl s_client -connect $1:443 -servername $1 -showcerts | openssl x509 -noout -text | grep "Subject Alternative Name" -A2 | grep -Eo "DNS:[a-zA-Z 0-9.*-]*" |  sed "s/DNS://g" 
 ~~~
 
+
+curlで確認:
+
+~~~bash
+% curl -svI https://admin.tss.devel.mydomain.com 2>&1 | grep subject
+*  subject: CN=www.devel.mydomain.com
+*  subjectAltName: host "admin.tss.devel.mydomain.com" matched cert's "*.tss.devel.mydomain.com"
+~~~
+
 ## リンク
 
 - [HTTPS調べるときに便利なOpenSSLの使い方 <s_client編>](https://hideharaaws.hatenablog.com/entry/2018/06/18/110053)

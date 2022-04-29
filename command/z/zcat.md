@@ -1,10 +1,11 @@
 # zcat
 
 
-macOS:
+macOS(FreeBSD):
 
-- gzcat を使う
-- `gunzip -c` をつかう
+- gzcat
+- `gunzip -c` 
+- `gzip -cd`
   
 ~~~
 zcat は、 gunzip -c と同一です。 
