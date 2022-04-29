@@ -5,6 +5,10 @@
 ## 基本
 
 - [インストール](install.md)
+
+## CLI
+
+- [plan](cli/plan.md)
 ## 言語
 
 - [シンタックス](syntax.md)
