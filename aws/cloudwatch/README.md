@@ -3,6 +3,7 @@
 - [CloudWatch Logs エージェント](aws.cloudwatch.log.md)
 - [料金請求/アラート](billing.md)
 - [aws logs](awscli.logs.md)
+- [aws logs tail](awscli.logs.tail.md)
 
 ## ドキュメント
 
