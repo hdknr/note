@@ -61,3 +61,8 @@ resource "aws_iam_policy_attachment" "sfn" {
 }
 # その他のポリシーを付与する
 ~~~
+
+
+## 統合サービスの IAM ポリシー
+
+[統合サービスの IAM ポリシー](https://docs.aws.amazon.com/ja_jp/step-functions/latest/dg/service-integration-iam-templates.html) にあるように必要なポリシーを付与する必要がある
