@@ -46,3 +46,4 @@ Edge(エッジ):
 
 - [Lambda@Edge Design Best Practices - Networking & Content Delivery](https://aws.amazon.com/jp/blogs/networking-and-content-delivery/lambdaedge-design-best-practices/)
 - [Resizing Images with Amazon CloudFront & Lambda@Edge - AWS CDN Blog - Networking & Content Delivery](https://aws.amazon.com/jp/blogs/networking-and-content-delivery/resizing-images-with-amazon-cloudfront-lambdaedge-aws-cdn-blog/)
+- [代替ドメイン名での * ワイルドカードの使用](https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/CNAMEs.html#alternate-domain-names-wildcard)
