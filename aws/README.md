@@ -14,6 +14,7 @@
 - セキュリティ、アイデンティティ、コンプライアンス: [EC2セキュリティグループ](ec2/aws.securitygroup.md), [WAF](waf), [IAM](aws.iam.md)
 - カスタマーエンゲージメント: [SES:メール](ses/README.md)
 - 暗号化と PKI: [ACM: 証明書サービス](aws.acm.md)
+- ステートマシン([Step Function](sfn/README.md))
 
 ## ツール
 
