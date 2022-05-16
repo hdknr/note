@@ -5,6 +5,14 @@
 - [インストール](jq.install.md)
 - [基本フィルター](jq.basic_filter.md)
 
+
+[オペレータ/関数](https://stedolan.github.io/jq/manual/#Builtinoperatorsandfunctions):
+
+- [tojson/fromjson](jq.fromjson.md)
+- [to_entries/from_entries/with_entries](jq.from_entries.md)
+- [書式化: @text, @json, @html, @uri, @csv, @tsv, @sh, @base64, @base64d](jq.csv.md)
+
+
 ## オプション
 
 - [--slup/-s](jq.select.md): 入力を一旦配列に変換してからフィルターを実行する (再JSON化ができる)
