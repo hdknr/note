@@ -1,6 +1,23 @@
 # ポリシー
 
 
+## ポリシー一覧(`list-policies`)
+
+~~~bash
+% env $(cat .env|xargs) aws iam list-policies --scope Local --only-attached  | jq -r ".Policies[]|[.PolicyName,.Arn]|@tsv" | grep legacy
+~~~
+
+
+## ポリシードキュメント(`get-policy-version`)
+
+~~~bash
+POLICY=our-policy
+ARN=$(aws iam list-policies --scope Local --only-attached  | jq -r '.Policies[]|select(.PolicyName == "'$POLICY'")|.Arn')
+aws iam get-policy-version \
+  --policy-arn $ARN \
+  --version-id $(aws iam get-policy --policy-arn $ARN | jq -r '.Policy.DefaultVersionId') | jq -r '.PolicyVersion.Document' 
+~~~
+
 ## ロールポリシーの表示 (`get-role-policy`)
 
 ~~~bash
@@ -32,3 +49,9 @@
     }
 }
 ~~~
+
+## 資料
+
+- [aws-cliで効率よくIAMのポリシードキュメント更新を行ってみた](https://dev.classmethod.jp/articles/iam-policy-document-update-on-terminal/)
+
+
