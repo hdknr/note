@@ -66,3 +66,13 @@ datetime.datetime(2015, 12, 19, 23, 13, 28, 601598)
 >>> datetime.now().strftime('%w %A')
 '6 Saturday'
 ~~~
+
+日付相対指定:
+
+~~~bash
+% date --date '7 days ago'
+~~~
+
+## 資料
+
+- [date コマンドの日付指定頻出パターン](https://qiita.com/suzuki-kei/items/cb0a78a655fef37cb59d)
