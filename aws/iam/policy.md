@@ -1,6 +1,12 @@
 # ポリシー
 
 
+## ポリシー数の上限引き上げ(デフォルト=10)
+
+- https://console.aws.amazon.com/servicequotas/
+- **バージニア北部リージョン** から申請を行う必要がある(グローバルサービス)
+- `Service Quotas` > `AWS のサービス` > `AWS Identity and Access Management (IAM)` > `Managed policies per role`
+
 ## ポリシー一覧(`list-policies`)
 
 ~~~bash
@@ -53,5 +59,7 @@ aws iam get-policy-version \
 ## 資料
 
 - [aws-cliで効率よくIAMのポリシードキュメント更新を行ってみた](https://dev.classmethod.jp/articles/iam-policy-document-update-on-terminal/)
+- [CodeBuildプロジェクトをコード化する時のServiceRoleのハマりポイント](https://www.soudegesu.com/post/aws/codebuild_error_with_exceed_policy_num/)
+- [Service Quotas から IAM 上限管理が可能になりました！](https://dev.classmethod.jp/articles/manage-iam-limit-by-service-quotas/)
 
 
