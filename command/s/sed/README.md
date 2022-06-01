@@ -1,6 +1,6 @@
 # sed (stream edito)
 
-## 行の削除
+## 行の削除 (`d`)
 
 ### 行番号
 
@@ -24,6 +24,12 @@ $ sed '$d'
 ~~~
 
 [how to use sed to remove last n lines of a file](http://stackoverflow.com/questions/13380607/how-to-use-sed-to-remove-last-n-lines-of-a-file)
+
+### 削除して保存(-I 拡張子)
+
+~~~bash
+% sed -I .bk '1d' /tmp/files.txt
+~~~
 
 ###  パターンまで
 
