@@ -9,6 +9,8 @@
 ## CLI
 
 - [plan](cli/plan.md)
+- [console](cli/console.md)(REPL)
+- [destroy](cli/destroy.md)
 ## 言語
 
 - [シンタックス](syntax.md)
@@ -20,7 +22,7 @@
 - [式](expressions/README.md)
 - [関数](functions/README.md)
 - [terraform: 設定](settings.md)
-- [状態](statte.md)
+- [状態](state.md)
 
 リソース:
 
