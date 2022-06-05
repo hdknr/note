@@ -134,6 +134,14 @@ export HISTSIZE=1000
 export SAVEHIST=100000
 ~~~
 
+### 例
+
+全ての履歴:
+
+~~~zsh
+% history 1
+~~~
+
 ## 資料
 
 - `man zshbuiltins`
