@@ -32,8 +32,32 @@ $ sudo  /usr/sbin/logrotate -f /etc/logrotate.d/nginx
 "/backups/exports/wordpress.log" 2017-8-26-6:25:2
 ~~~
 
+
+## 一般ユーザーのcrontabでローテーションする
+
+ステータスファイルを作る
+
+~~~bash
+touch $HOME/bin/logrotate.status
+~~~
+
+設定(/home/ubuntu/bin/rotate/conf)
+
+~~~bash
+/home/ubuntu/backups/*.sql {
+     daily
+     rotate 7
+     missingok
+     compress
+}
+~~~
+
+crontab:
+~~~
+00 5 *  * *  logrotate -s /home/ubuntu/bin/logrotate.status  /home/ubuntu/bin/rotate.conf 
+~~~
+
 ## サンプル
 
-- [Nginxログローテートの設定の実例
-](http://qiita.com/koudaiii/items/23322bf7037c6a7b1cea)
+- [Nginxログローテートの設定の実例](http://qiita.com/koudaiii/items/23322bf7037c6a7b1cea)
 - [任意のログをlogrotateを使って管理する](https://qiita.com/Esfahan/items/a8058f1eb593170855a1)
