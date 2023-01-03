@@ -29,3 +29,9 @@ i-06d15d4c353a9e0c8
 ## 関連
 
 - [tr](../t/tr.md)
+
+
+## 資料
+
+- [cutコマンドでtsvファイルを処理するには。](https://cufl.hateblo.jp/entry/2020/07/07/231725)
+- [cut - ファイルの各行から一部分を切り出す - Linuxコマンド](https://webkaru.net/linux/cut-command/)
