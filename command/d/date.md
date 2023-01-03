@@ -1,3 +1,14 @@
+# date
+
+書式化:
+
+~~~bash
+$ echo $(date +%Y-%m-%d)
+~~~
+
+
+
+
 ## 曜日
 
 - Sunday = 0 , Saturday=6 の序数がいい
