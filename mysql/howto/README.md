@@ -1,5 +1,7 @@
 # HOWTO
 
+- [テーブル全削除](drop_all.md)
+
 ## 重複を削除
 
 - [Delete all Duplicate Rows except for One in MySQL? [duplicate]](http://stackoverflow.com/questions/4685173/delete-all-duplicate-rows-except-for-one-in-mysql)
