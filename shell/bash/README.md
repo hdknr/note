@@ -5,6 +5,9 @@
 - [配列](bash.arrays.md)
 - [補完](bash.completion.md)
 
+## 変数
+
+- [IFS](bash.IFS.md)(Internal Filed Separator: 区切り文字)
 ##  OS
 
 - [OSX](bash.osx.md)
@@ -199,3 +202,8 @@ darwin14
 ## その他
 
 - [たった一行で bash の代入式がスマートに書けるようになる関数](http://qiita.com/mattintosh4/items/959517399d5993e34ef7)
+
+
+## stdout, stderr
+
+- [bash: 標準出力、標準エラー出力をファイル、画面それぞれに出力する方法](https://qiita.com/laikuaut/items/e1cc312ffc7ec2c872fc)
