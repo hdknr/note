@@ -18,6 +18,7 @@
 OS:
 
 - [CentOS](mysql.centos.md)
+- [macOS](mysql.macos.md)
 ## サーバー情報
 
 - [ホスト名](mysql.hostname.md)
