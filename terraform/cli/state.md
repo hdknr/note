@@ -7,6 +7,12 @@
 
 ## [state mv](https://www.terraform.io/cli/commands/state/mv)
 
+特定のリソースを外す:
+
+~~~
+terraform state rm <リソースタイプ>.<リソース名>
+~~~
+
 ## [state pull](https://www.terraform.io/cli/commands/state/pull)
 
 ## [state replace-provider](https://www.terraform.io/cli/commands/state/replace-provider)

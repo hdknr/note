@@ -4,7 +4,7 @@
 
 
 ~~~bas
-% env $(cat ../.env|xargs) terraform -chdir=stage consoleh
+% env $(cat ../.env|xargs) terraform -chdir=stage console
 ~~~
 
 `locals`*

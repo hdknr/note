@@ -23,3 +23,10 @@ Options:
 ~~~json
 $ terraform % terraform -chdir=prod show -json all.plan  | jq "." > ~/Downloads/plan.json
 ~~~
+
+
+AMIを確認:
+
+~~~bash
+terraform -chdir=prod show -json all.plan |  jq -r '.resource_changes[] | select(.type == "aws_instance")|[.address,.change.before.ami,.change.after.ami]|@tsv'
+~~~
