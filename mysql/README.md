@@ -19,6 +19,10 @@ OS:
 
 - [CentOS](mysql.centos.md)
 - [macOS](mysql.macos.md)
+
+ファイル出力:
+
+- [ndjson出力](mysql.ndjson.md)([Newline Delimited JSON](http://ndjson.org/))
 ## サーバー情報
 
 - [ホスト名](mysql.hostname.md)
