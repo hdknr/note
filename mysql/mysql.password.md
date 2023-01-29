@@ -94,3 +94,10 @@ Rows matched: 1  Changed: 1  Warnings: 1
 $ sudo kill -9 12301; sudo kill -9 12685
 $ sudo /etc/init.d/mysql start
 ~~~
+
+
+## ユーザーのパスワード変更
+
+~~~sql
+alter user admin identified by 'uanew7Choh1uQui3jee';
+~~~
