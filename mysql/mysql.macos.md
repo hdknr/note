@@ -5,6 +5,21 @@ $ brew update
 $ brew install mysql
 ~~~
 
+~~~
+mysql-client is keg-only, which means it was not symlinked into /opt/homebrew,
+because it conflicts with mysql (which contains client libraries).
+
+If you need to have mysql-client first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find mysql-client you may need to set:
+  export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+
+For pkg-config to find mysql-client you may need to set:
+  export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
+~~~
+
 ~~~zsh
 % brew info mysql
 mysql: stable 8.0.22 (bottled)
