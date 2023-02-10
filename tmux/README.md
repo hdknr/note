@@ -13,6 +13,19 @@ set -g prefix C-a            # [prefix] = Ctrl + A
 setw -g mode-keys vi         # コピーモード(viキーバインド)
 ~~~
 
+## 起動
+
+~~~bash
+% tmux new -s hdknr
+~~~
+
+再度アタッチ:
+
+~~~bash
+% tmux a -t hdknr -d
+~~~
+
+
 ## 機能
 
 ### [DEFAULT KEY BINDINGS](default_key_bindings)
