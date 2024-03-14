@@ -19,7 +19,6 @@ pip install redshift_connector
 - [Use SQLAlchemy ORMs to Access Redshift Data in Python](https://www.cdata.com/kb/tech/redshift-python-sqlalchemy.rst)
 - [Use the Amazon Redshift SQLAlchemy dialect to interact with Amazon Redshift](https://aws.amazon.com/jp/blogs/big-data/use-the-amazon-redshift-sqlalchemy-dialect-to-interact-with-amazon-redshift/)
 
-
 ## Django
 
 - https://github.com/jazzband/django-redshift-backend

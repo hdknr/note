@@ -12,6 +12,12 @@ $ cat ec2-instance.json | jq -r ".[] |[.InstanceId, .Tags[0].Value, .NetworkInte
 ... | sed s/\"//g 
 ~~~
 
+## tsv -> csv
+
+~~~bash
+cat file | tr "\\t" ","
+~~~
+
 
 ## 関連
 

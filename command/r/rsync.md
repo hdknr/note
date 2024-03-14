@@ -1,7 +1,6 @@
 # rsync
 
-- [rsyncオプション](http://qiita.com/bezeklik/items/22e791df7187958d76c1)
-
+- [rsync オプション](http://qiita.com/bezeklik/items/22e791df71 87958d76c1)
 
 | オプション | 別名                   | 意味                                                                             |
 | ---------- | ---------------------- | -------------------------------------------------------------------------------- |
@@ -19,7 +18,6 @@
 |            | `--delete`             | 転送元に存在しないファイルは削除                                                 |
 |            | `--exclude=PATTERN`    | 同期から除外                                                                     |
 
-
 アーカイブ `-a` の個別設定:
 
 | オプション | 別名          | 意味                                                       |
@@ -34,10 +32,10 @@
 |            | `--devices`   | ブロックデバイスをコピー (root のみ有効)                   |
 |            | `--specials`  | 名前付きパイプや FIFO などの特殊ファイルをコピー           |
 
-~~~bash 
+```bash
 $ time rsync -av --delete --exclude-from ${PATTERNFILE} -e "ssh -i /root/.ssh/id_rsync" ${SOURCEDIR} ${DESTDIR} 2>&1 | tee -a ${LOGFILE}
 .
-~~~
+```
 
 ## 記事
 

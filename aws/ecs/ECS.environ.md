@@ -1,8 +1,14 @@
 # ECS: パラメータストアから環境変数を設定する
 
+## 方法
+
+1. タスク定義に明示的に定義
+2. S3に置いた.envファイル
+3. パラメータストア/Secrets Managerからインポート
+
 ## Sysmtem Manager に環境情報を設定する
 
-1. [AmazonECSTaskExecutionRolePolicy:Amazon ECS タスク実行 IAM ロールポリシー](https://docs.aws.amazon.com/ja_jp/AmazonECS/l    atest/developerguide/task_execution_IAM_role.html)  
+1. [AmazonECSTaskExecutionRolePolicy:Amazon ECS タスク実行 IAM ロールポリシー](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/task_execution_IAM_role.html)  
 
 - 追加されているはず
   
@@ -46,3 +52,8 @@
 
 - `ValueFrom` としてアプリケーションから参照する環境変数名を`Key`として定義する( `DATABASE_PARAMS`とか)
 - `Value` には、パラメータストアに定義した`名前` を入れる(`docker-database-params`とか)
+
+
+## 資料
+
+- [コンテナへの環境変数の受け渡し](https://docs.aws.amazon.com/ja_jp/AmazonECS/latest/developerguide/taskdef-envfiles.html)

@@ -35,3 +35,9 @@ $ ssh-keygen -R myserver.com
 /Users/hide/.ssh/known_hosts updated.
 Original contents retained as /Users/hide/.ssh/known_hosts.old
 ~~~
+
+## 公開鍵をエクスポート
+
+~~~bash
+ssh-keygen -f ~/.ssh/id_rsa -y > ~/.ssh/id_rsa.pub
+~~~

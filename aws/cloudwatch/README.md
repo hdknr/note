@@ -4,6 +4,7 @@
 - [料金請求/アラート](billing.md)
 - [aws logs](awscli.logs.md)
 - [aws logs tail](awscli.logs.tail.md)
+- [Internet Monitor](internetmonitor.md)
 
 ## ドキュメント
 

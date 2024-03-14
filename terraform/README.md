@@ -22,7 +22,7 @@
 - [式](expressions/README.md)
 - [関数](functions/README.md)
 - [terraform: 設定](settings.md)
-- [状態](state.md)
+- [状態](state/README.md)
 
 リソース:
 

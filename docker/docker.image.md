@@ -48,6 +48,12 @@ $ docker image rm -f $(docker image ls -f "dangling=true" -q)
 docker images -aq | xargs docker rmi
 ~~~
 
+## `down` して全削除
+
+~~~bash
+docker-compose down --rmi all --volumes --remove-orphans
+~~~
+
 ## 記事
 
 -[ docker images を全削除する](https://qiita.com/fist0/items/2fb1c7f894b5bdff79f4)
