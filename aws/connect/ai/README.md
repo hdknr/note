@@ -1,4 +1,4 @@
-# AWS Conect GenAI
+# AWS Connect GenAI
 
 - Bedlock を使って生成 AI による自動返答
 
