@@ -21,3 +21,11 @@ mysqldump -u root -p -d db_name --lock-tables=false > db_name.sql
 `--skip-lock-tables`:
 
 - [InnoDB データベースで mysqldump する時は、single-transaction と skip-lock-tables のオプションをつけよう](https://masyus.work/articles/if-using-mysqldump-add-single-transaction-skip-lock-table/)
+
+`--set-gtid-purged=OFF`:
+
+- MariaDB には存在しません ([今日は、mysqldump コマンドで「unknown variable 'set-gtid-purged=OFF'」が出るの日。](https://updraft.hatenadiary.com/entry/2023/05/23/070029))
+
+## 資料
+
+- [Python でシェルコマンドを実行する](https://tech.mobilefactory.jp/entry/2018/12/27/150000)
