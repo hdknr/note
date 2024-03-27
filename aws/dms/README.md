@@ -1,0 +1,87 @@
+# MySQL: CDC(Change Data Capture)
+
+- [AWS Database Migration Service による Change Data Capture: 前編](https://ts223.hatenablog.com/entry/cdc-rds-bq/part1)
+- [AWS Database Migration Service による Change Data Capture: 後編](https://ts223.hatenablog.com/entry/cdc-rds-bq/part2)
+- https://github.com/tosh2230/cdc-rds-bq/tree/main/templates
+
+- [AWS DatabaseMigrationService での DB 移行構築ハンズオン](https://qiita.com/i3no29/items/73363a7e1ca1c99000f8)
+
+## RDS MySQL
+
+- [AWS DMS のソースとして AWS が管理する MySQL 互換データベースの使用](https://docs.aws.amazon.com/ja_jp/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged)
+
+  - バイナリログ(`binlog_format` == `ROW`)
+  - `binlog_row_image` == `Full`
+  - `binlog_checksum` == `NONE`
+
+## DMS
+
+- [AWS Database Migration Service](https://aws.amazon.com/jp/dms/)
+- [DMS で AWS RDS へ継続的に移行してみた](https://dev.classmethod.jp/articles/rdb-dms-rds/)
+- [DMS Endpoint Connection Test Failed with Secret Manager](https://repost.aws/questions/QUSjXHLPIgSyuTSfETynK0Cg/dms-endpoint-connection-test-failed-with-secret-manager)
+- [Manage your AWS DMS endpoint credentials with AWS Secrets Manager](https://aws.amazon.com/jp/blogs/database/manage-your-aws-dms-endpoint-credentials-with-aws-secrets-manager/)
+- [How to connect to AWS Secrets Manager service within a Virtual Private Cloud](https://aws.amazon.com/jp/blogs/security/how-to-connect-to-aws-secrets-manager-service-within-a-virtual-private-cloud/)
+- [AWS Database Migration Service (AWS DMS) の CDC レプリケーションを使ってみた](https://www.skyarch.net/blog/aws-database-migration-service-aws-dms-%E3%81%AE-cdc-%E3%83%AC%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/)
+
+サーバーレス:
+
+- [AWS DMS Serverless を使ってみた](https://www.skyarch.net/blog/aws-dms-serverless-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F/)
+- [AWS DMS サーバーレスの制約](https://docs.aws.amazon.com/ja_jp/dms/latest/userguide/CHAP_Serverless.Limitations.html)
+
+### `The parameter ReplicationSubnetGroupDescription must not contain non-printable control characters.`
+
+- サブネットグループを先に作ること
+
+### KMS
+
+- [AWS KMS リソースにアクセスするための IAM ポリシーの作成](https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/AuroraUserGuide/AuroraMySQL.Integrating.Authorizing.IAM.KMSCreatePolicy.html)
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["kms:Decrypt"],
+      "Resource": "arn:aws:kms:<region>:<123456789012>:key/<key-ID>"
+    }
+  ]
+}
+```
+
+## S3
+
+- [AWS Database Migration Service のターゲットに Amazon S3 を使用する](https://docs.aws.amazon.com/ja_jp/dms/latest/userguide/CHAP_Target.S3.html)
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:PutObject", "s3:DeleteObject", "s3:PutObjectTagging"],
+      "Resource": ["arn:aws:s3:::buckettest2/*"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::buckettest2"]
+    }
+  ]
+}
+```
+
+- [DMS を使って SQL Server のデータを S3 に出力する](https://dev.classmethod.jp/articles/dms-sql-server-s3/)
+- [[AWS]AWS DMS で Aurora MySQL を S3 にデータ移行](https://zenn.dev/third_tech/articles/002ca4e4a9ac98)
+- [AWS DMS の使用時に Amazon S3 エンドポイントの接続テスト障害をトラブルシューティングするにはどうすればよいですか。](https://repost.aws/ja/knowledge-center/dms-connection-test-fail-s3)
+
+## VPC エンｄポイント
+
+VPC エンドポイントには、インターフェイスエンドポイント、ゲートウェイロードバランサーのエンドポイント、およびゲートウェイエンドポイントの 3 種類があります。
+
+インターフェイスエンドポイントとゲートウェイロードバランサーのエンドポイントは AWS PrivateLink を使用し、サービスを送信先とするトラフィックのためのエントリポイントとして Elastic Network Interface (ENI) を使用します。
+
+インターフェイスエンドポイントは通常、サービスに関連付けられたパブリックまたはプライベート DNS 名を使用してアクセスされ、
+ゲートウェイエンドポイントとゲートウェイロードバランサーのエンドポイントは、サービスを送信先とするトラフィックのためのルートテーブル内のルートのターゲットとして機能します。
+
+- [VPC エンドポイントの設定 AWSDMS ソースエンドポイントとターゲットエンドポイント](https://docs.aws.amazon.com/ja_jp/dms/latest/userguide/CHAP_VPC_Endpoints.html)
