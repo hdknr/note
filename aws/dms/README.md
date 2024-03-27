@@ -1,20 +1,9 @@
-# MySQL: CDC(Change Data Capture)
+# DMS
 
-- [AWS Database Migration Service による Change Data Capture: 前編](https://ts223.hatenablog.com/entry/cdc-rds-bq/part1)
-- [AWS Database Migration Service による Change Data Capture: 後編](https://ts223.hatenablog.com/entry/cdc-rds-bq/part2)
-- https://github.com/tosh2230/cdc-rds-bq/tree/main/templates
+- [エンドポイント:MySQL](endpoint_mysql.md)
+- [エンドポイント:S3](endpoint_s3.md)
 
-- [AWS DatabaseMigrationService での DB 移行構築ハンズオン](https://qiita.com/i3no29/items/73363a7e1ca1c99000f8)
-
-## RDS MySQL
-
-- [AWS DMS のソースとして AWS が管理する MySQL 互換データベースの使用](https://docs.aws.amazon.com/ja_jp/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged)
-
-  - バイナリログ(`binlog_format` == `ROW`)
-  - `binlog_row_image` == `Full`
-  - `binlog_checksum` == `NONE`
-
-## DMS
+## 資料
 
 - [AWS Database Migration Service](https://aws.amazon.com/jp/dms/)
 - [DMS で AWS RDS へ継続的に移行してみた](https://dev.classmethod.jp/articles/rdb-dms-rds/)
@@ -48,32 +37,6 @@
   ]
 }
 ```
-
-## S3
-
-- [AWS Database Migration Service のターゲットに Amazon S3 を使用する](https://docs.aws.amazon.com/ja_jp/dms/latest/userguide/CHAP_Target.S3.html)
-
-```json
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": ["s3:PutObject", "s3:DeleteObject", "s3:PutObjectTagging"],
-      "Resource": ["arn:aws:s3:::buckettest2/*"]
-    },
-    {
-      "Effect": "Allow",
-      "Action": ["s3:ListBucket"],
-      "Resource": ["arn:aws:s3:::buckettest2"]
-    }
-  ]
-}
-```
-
-- [DMS を使って SQL Server のデータを S3 に出力する](https://dev.classmethod.jp/articles/dms-sql-server-s3/)
-- [[AWS]AWS DMS で Aurora MySQL を S3 にデータ移行](https://zenn.dev/third_tech/articles/002ca4e4a9ac98)
-- [AWS DMS の使用時に Amazon S3 エンドポイントの接続テスト障害をトラブルシューティングするにはどうすればよいですか。](https://repost.aws/ja/knowledge-center/dms-connection-test-fail-s3)
 
 ## VPC エンｄポイント
 
