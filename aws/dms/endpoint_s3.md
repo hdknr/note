@@ -36,27 +36,26 @@
 
 [Endpoint settings when using Amazon S3 as a target for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html#CHAP_Target.S3.Configuring)
 
-```yaml
-S3Settings:
-  BucketName:
-    Fn::ImportValue: !Sub ${S3Stack}-S3BucketName
-  ServiceAccessRoleArn:
-    Fn::ImportValue: !Sub ${S3Stack}-DmsS3EndpointAccessRoleArn
-  EncryptionMode: SSE_S3
-  DataFormat: parquet
-  ParquetVersion: PARQUET_2_0
-  CompressionType: GZIP
-  EnableStatistics: true
-  EncodingType: rle-dictionary
-  CdcMaxBatchInterval: 60
-  DataPageSize: 1024000
-  RowGroupLength: 10024
-  DictPageSizeLimit: 1024000
-  AddColumnName: true
-  TimestampColumnName: CdcTimestamp
-  DatePartitionEnabled: true
-  DatePartitionSequence: YYYYMMDD
-  DatePartitionDelimiter: SLASH
+```json
+{
+  "CsvRowDelimiter": "\\n",
+  "CsvDelimiter": ",",
+  "CompressionType": "GZIP",
+  "EncryptionMode": "SSE_S3",
+  "DataFormat": "parquet",
+  "EncodingType": "rle-dictionary",
+  "DictPageSizeLimit": 1024000,
+  "RowGroupLength": 10024,
+  "DataPageSize": 1024000,
+  "ParquetVersion": "parquet-2-0",
+  "EnableStatistics": true,
+  "TimestampColumnName": "CdcTimestamp",
+  "DatePartitionEnabled": true,
+  "DatePartitionSequence": "yyyymmdd",
+  "DatePartitionDelimiter": "slash",
+  "AddColumnName": true,
+  "CdcMaxBatchInterval": 60
+}
 ```
 
 ## pyarrow で読み込み
