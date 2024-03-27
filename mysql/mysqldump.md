@@ -1,19 +1,18 @@
 # mysqldump
 
-
 ## データだけ( --no-create-info, -t)
 
-~~~bash
+```bash
 $ mysqldump -u $DBU --password=$DBP -t $DBN events_event
-~~~
+```
 
-##  テーブルごとダンプ
+## テーブルごとダンプ
 
 ```
 mysqldump -u ユーザ名 -p -t データベース名 テーブル1 テーブル2...> ファイル名
 ```
 
-## mysqldumpがStored Procudureを吐き出さない
+## mysqldump が Stored Procudure を吐き出さない
 
 - デフォルトで `—routines` が `False` だからです。
 
@@ -25,13 +24,13 @@ $ mysqldump -u dbu --password=dbp dbn --routines | grep PROCEDURE
 CREATE DEFINER=`dbu`@`localhost` PROCEDURE `insert_users`()
 ```
 
-## INSERT文
+## INSERT 文
 
 `-c` : `--complete-insert`
 
-~~~bash
+```bash
 $ mysqldump -c --skip-extended-insert
-~~~
+```
 
 ## index 一覧
 
@@ -42,4 +41,4 @@ $ echo "show tables" | Q -N | while read T ; do Q -t -e "show index from $T" ; d
 
 ## 記事
 
-- [mysqldumpまとめ](http://qiita.com/PlanetMeron/items/3a41e14607a65bc9b60c)
+- [mysqldump まとめ](http://qiita.com/PlanetMeron/items/3a41e14607a65bc9b60c)
