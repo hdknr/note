@@ -1,5 +1,8 @@
 # Claude
 
+- [Bedrock での利用](claude.bedrock.md)
+- [プロンプト](claude.prompt.md)
+
 ## Claude3
 
 [Amazon Bedrock で Claude 3 Sonnet が利用可能になりました](https://blog.serverworks.co.jp/bedrock-claude3-sonnet)
