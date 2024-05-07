@@ -28,7 +28,7 @@ Python:
 - You can set up routing rules to determine where to send your data to build application architectures that react in real time to all of your data sources.
 - EventBridge enables you to build event-driven architectures that are loosely coupled and distributed.
 
-## [Logs](https://docs.aws.amazon.com/ja_jp/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
+## [Logs](cloudwatch_logs/README.md)
 
 ### Logs 機能
 
@@ -43,12 +43,12 @@ EC2 インスタンスのログのモニタリング:
 
 CloudTrail のログに記録されたイベントのモニタリング:
 
-- CloudWatchにアラームを作成して、CloudTrail がキャプチャした特定の API アクティビティの通知を受け取り、通知をトラブルシューティングの実行に使用できます。
+- CloudWatch にアラームを作成して、CloudTrail がキャプチャした特定の API アクティビティの通知を受け取り、通知をトラブルシューティングの実行に使用できます。
 
 ログの保持期間:
 
 - デフォルトでは、ログは無制限に保持され、失効しません。
-- ロググループごとに保持ポリシーを調整し、無制限の保持期間を維持するか、1 日間～10 年間の保持期間を選択することができます。
+- ロググループごとに保持ポリシーを調整し、無制限の保持期間を維持するか、1 日間～ 10 年間の保持期間を選択することができます。
 
 ログデータをアーカイブする:
 
@@ -59,5 +59,3 @@ CloudTrail のログに記録されたイベントのモニタリング:
 Route 53 DNS クエリのログ:
 
 – Route 53 が受け取る DNS クエリに関するログ情報を使用できます。
-
-
