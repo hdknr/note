@@ -1,22 +1,26 @@
+# .gitignore
+
+- [gitignore.io](https://www.toptal.com/developers/gitignore/)
+
 ## グローバル
 
-~~~bash
+```bash
 $ git config --global core.excludesfile ~/.gitignore_global
-~~~
+```
 
-~~~bash
+```bash
 $ more ~/.gitconfig
 [user]
         email = gmail@hoge.com
         name = hdknr
 [core]
         excludesfile = /home/vagrant/.gitignore_global
-~~~        
+```
 
-~~~bash
+```bash
 $ cat ~/.gitignore_global
 .DS_Store
-~~~
+```
 
 ## リソース
 
