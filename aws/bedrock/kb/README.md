@@ -80,3 +80,7 @@ note:
 | Claude           | 0.00800 USD                       | 0.02400 USD                       |
 
 1000 ファイル -> 1M トークン -> 0.008 x 1000 = 80 ドル
+
+## サンプル
+
+- [langchain で RAG](kb_lc.py)
