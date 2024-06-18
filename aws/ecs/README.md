@@ -7,6 +7,7 @@
 ## トピック
 
 - [定期](aws.ecs.cron.md)
+
 ## ECS
 
 ３要素:
@@ -15,17 +16,16 @@
 - サービス
 - クラスター
 
-
 ### タスク
 
-| ECS        | Docker         | 補足                       |
-| ---------- | -------------- | -------------------------- |
-| タスク     | コンテナ       |                            |
-| タスク定義 | ンテナ起動設定 | docker-compose.yml的なもの |
+| ECS        | Docker         | 補足                        |
+| ---------- | -------------- | --------------------------- |
+| タスク     | コンテナ       |                             |
+| タスク定義 | ンテナ起動設定 | docker-compose.yml 的なもの |
 
 ### サービス
 
-ECSでの概念:
+ECS での概念:
 
 - サービス = デーモンプロセス = タスク + ALB + AutoScale
 - タスクの起動管理をするタスク
@@ -37,8 +37,7 @@ ECSでの概念:
 - EC2
 - Farget
 
-Kubernetesクラスタよりも単純なクラスタ(=Dockerのホスティング環境)
-
+Kubernetes クラスタよりも単純なクラスタ(=Docker のホスティング環境)
 
 ## [ECR](ECR.md)
 
@@ -46,4 +45,8 @@ Kubernetesクラスタよりも単純なクラスタ(=Dockerのホスティン�
 
 ## 記事
 
-- [決めろ最強のECS! 〜起動タイプ × 負荷分散 × デプロイ方法で自分だけのアーキテクチャ〜](https://qiita.com/hiroga/items/4229d5d6f20f33ab7435)
+- [決めろ最強の ECS! 〜起動タイプ × 負荷分散 × デプロイ方法で自分だけのアーキテクチャ〜](https://qiita.com/hiroga/items/4229d5d6f20f33ab7435)
+
+EventBridge:
+
+- [【AWS】EventBridge で FargateECS を自動停止/起動する](https://k9s.hatenablog.jp/entry/2022/09/28/161359)
