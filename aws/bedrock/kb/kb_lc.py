@@ -28,6 +28,7 @@ def create_llm(bedrock_client=None, model_version_id=None, region_name=None):
 
 
 def create_retriever(knowledge_base_id=None):
+    # https://api.python.langchain.com/en/latest/retrievers/langchain_community.retrievers.bedrock.AmazonKnowledgeBasesRetriever.html
     knowledge_base_id = knowledge_base_id or os.environ["BEDROCK_KB_ID"]
     retriever = AmazonKnowledgeBasesRetriever(
         knowledge_base_id=knowledge_base_id,

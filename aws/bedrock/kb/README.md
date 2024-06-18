@@ -84,3 +84,7 @@ note:
 ## サンプル
 
 - [langchain で RAG](kb_lc.py)
+
+## メタデータフィルタリング
+
+- [Knowledge Base for Amazon Bedrock でメタデータフィルタリングが可能に](https://qiita.com/hayao_k/items/f486b7d1385c8d5f897c)

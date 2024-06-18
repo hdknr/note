@@ -7,6 +7,32 @@ Anthropic:
 - [クイックスタートガイド](https://docs.anthropic.com/claude/docs/quickstart-guide)
 - [プロンプトの概要 ](https://docs.anthropic.com/claude/docs/intro-to-prompting)
 
+## 言語化の方法論
+
+- ChatGPT と共通する方法論:
+
+  - ペルソナ (「あなたは...の専門家です」)
+  - 思考,回答の手順
+
+## 学習データの形式
+
+- LLM が対象としているデータの形式
+- ネットのテキスト + 会話文章の例(LLM の会社で指向が異なる)
+
+XML タグ:
+
+- document, instructions(要約の方針: 小学生にわかるように...), example
+- あまりネストされると性能が落ちる(5 段以上とか)
+
+コンテキスト、追加ドキュメントを先に、質問を最後にする:
+
+- ドキュメント, コンテキスト、指示を先に例示する
+- 最後に質問を行う
+
+注意深く読ませる:
+
+- 「文章をよく読んで回答してください」
+
 ## メッセージ API
 
 - テキスト補完 API から[メッセージ API](https://docs.anthropic.com/claude/reference/messages_post) に変更された
@@ -106,3 +132,4 @@ def compose_message(user_prompt, referrence):
 - [【LLM】Claude に基づく超長文プロンプトの上手な書き方](https://qiita.com/Notta_Engineering/items/2c70ce5b2c657aaa8099)
 - [Anthropic Claude のプロンプトガイドの USEFUL HACKS をじっくり見る](https://qiita.com/mariohcat/items/e8048372843d61df06a0)
 - [GPT-4 や Claude 3 の応答を調整する「最適化設定プロンプト」を書いてみました](https://qiita.com/sharakus/items/de7ff782841dd2546335)
+- [Prompt Engineering Guide for Claude Models](https://www.vellum.ai/blog/prompt-engineering-tips-for-claude)

@@ -12,7 +12,13 @@ aws-samples:
 
 - https://github.com/aws-samples/rag-using-langchain-amazon-bedrock-and-opensearch
 
+トピック:
+
+- [RetrievalQA](RetrievalQA.md)
+- [AmazonKnowledgeBasesRetriever](AmazonKnowledgeBasesRetriever.md)
+
 ## LangChain
 
+- https://github.com/langchain-ai/langchain
 - [Retrievers> Bedrock (Knowledge Bases)](https://python.langchain.com/docs/integrations/retrievers/bedrock/)
 - [Templates.rag-aws-bedrock](https://python.langchain.com/docs/templates/rag-aws-bedrock)
