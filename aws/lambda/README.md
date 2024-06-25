@@ -1,8 +1,11 @@
 # AWS Lambda
 
+- [API Gateway](apigw/README.md)
+- [SAM: Severless Application Model](sam/README.md)
+
 ## Python 3.7
 
-~~~json
+```json
 {
   "statusCode": 200,
   "body": {
@@ -31,7 +34,7 @@
     ]
   }
 }
-~~~
+```
 
 - https://pypi.org/project/jmespath/
 - https://pypi.org/project/boto3/
