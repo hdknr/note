@@ -17,6 +17,8 @@ installer: The install was successful.
 SAM CLI, version 1.119.0
 ```
 
+## 初期化
+
 ## 記事
 
 - [AWS: AWS Serverless Application Model (AWS SAM) とは何ですか?](https://docs.aws.amazon.com/ja_jp/serverless-application-model/latest/developerguide/what-is-sam.html)
