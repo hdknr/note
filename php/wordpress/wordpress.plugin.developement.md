@@ -1,4 +1,6 @@
-~~~bash
+# Wordpress プラグイン開発
+
+```bash
 $ vendor/bin/wp plugin list
 +--------------------+----------+--------+---------+
 | name               | status   | update | version |
@@ -7,20 +9,22 @@ $ vendor/bin/wp plugin list
 | hello              | inactive | none   | 1.6     |
 | wp-multibyte-patch | inactive | none   | 2.3.1   |
 +--------------------+----------+--------+---------+
-~~~
+```
 
-~~~bash
+[scaffold コマンド](https://developer.wordpress.org/cli/commands/scaffold/)
+
+```bash
 $ vendor/bin/wp scaffold plugin wp-authmod
 Success: Created /home/vagrant/projects/wphome/wordpress/wp-content/plugins/wp-authmod
 Success: Created test files.
 
-~~~
+```
 
-~~~bash
+```bash
 $ ln -s wordpress/wp-content/plugins/wp-authmod .
-~~~
+```
 
-~~~bash
+```bash
 $ vendor/bin/wp plugin list
 +--------------------+----------+--------+-----------+
 | name               | status   | update | version   |
@@ -45,21 +49,21 @@ wp-authmod
 │   └── test-sample.php
 └── wp-authmod.php
 
-~~~
-
+```
 
 ## phpunit
 
-~~~
+```
 $ ./composer.phar require phpunit/phpunit
 $ ln -s $PWD/www/wordpress/wp-content/plugins/wp-authmod .
 $ cd wp-authmod
-~~~
+```
 
-~~~
+```
 $ bin/install-wp-tests.sh wpauth_test $DBROOT_USER $DBROOT_PASSWD
-~~~
-~~~
+```
+
+```
 $ tree /tmp/wordpress-tests-lib/
 /tmp/wordpress-tests-lib/
 ├── includes
@@ -79,10 +83,10 @@ $ tree /tmp/wordpress-tests-lib/
 │   ├── utils.php
 │   └── wp-profiler.php
 └── wp-tests-config.php
-~~~
+```
 
-~~~
-$ /vagrant/projects/wpauth/vendor/bin/phpunit 
+```
+$ /vagrant/projects/wpauth/vendor/bin/phpunit
 Installing...
 Running as single site... To run multisite, use -c tests/phpunit/multisite.xml
 Not running ajax tests. To execute these, use --group ajax.
@@ -95,6 +99,4 @@ PHPUnit 4.8.2 by Sebastian Bergmann and contributors.
 Time: 4.3 seconds, Memory: 26.75Mb
 
 OK (1 test, 1 assertion)
-~~~
-
-
+```
