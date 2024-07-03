@@ -31,6 +31,10 @@
 - [フィルターフック](https://developer.wordpress.org/apis/hooks/filter-reference/)
 - [アクションフック](https://developer.wordpress.org/apis/hooks/action-reference/)
 
+## Javascript
+
+- [Include js files in Custom Wordpress Plugin](https://stackoverflow.com/questions/56209135/include-js-files-in-custom-wordpress-plugin)
+
 ## 開発リソース
 
 - [プラグイン・リソース](http://wpdocs.osdn.jp/Plugin_Resources)
