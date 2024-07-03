@@ -25,7 +25,7 @@
 
 ## Plugin API
 
-- https://developer.wordpress.org/reference/
+- https://developer.wordpress.org/apis/
 - [Plugin API の訳](https://wp.tekapo.com/2008/01/30/wordpress-plugin-api/)
 - [プラガブル関数](https://codex.wordpress.org/Pluggable_Functions)
 - [フィルターフック](https://developer.wordpress.org/apis/hooks/filter-reference/)
