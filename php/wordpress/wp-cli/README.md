@@ -1,30 +1,34 @@
+# wp-cli
+
+- [Config](https://make.wordpress.org/cli/handbook/references/config/) (wp-cli.yml に関して)
+
 ## インストール
 
-- [WP-CLIの使い方](http://qiita.com/IK12_info/items/4a9190119be2a0f347a0)
+- [WP-CLI の使い方](http://qiita.com/IK12_info/items/4a9190119be2a0f347a0)
 
-
-~~~bash 
+```bash
 $ mkdir bin
 $ curl -o bin/wp-cli.phar https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 $ chmod +x bin/wp-cli.phar
-~~~
+```
 
-## Wordpressインストール
+## Wordpress インストール
 
-~~~bash 
+```bash
 $ bin/wp-cli.phar core download  --locale=ja --path=$PWD/wordpress
-~~~
+```
 
 バージョン指定:
-~~~bash
+
+```bash
 $ bin/wp-cli.phar core download --version=4.7.10  --locale=ja --path=$PWD/wordpress
-~~~
+```
 
 ビルトインサーバー:
 
-~~~bash 
+```bash
 $ cd wordpress; php -S 0.0.0.0:8800
-~~~
+```
 
 ### Pretty Permilnk
 
@@ -32,7 +36,7 @@ $ cd wordpress; php -S 0.0.0.0:8800
 
 ## プラグインリスト
 
-~~~bash
+```bash
 $ bin/wp plugin list
 
 +-------------------------+----------+-----------+--------------+
@@ -42,12 +46,11 @@ $ bin/wp plugin list
 .....
 | rest-api                | active   | none      | 2.0-beta13.1 |
 +-------------------------+----------+-----------+--------------+
-~~~
-
+```
 
 ## wp-config.php
 
-~~~php
+```php
 if ( defined( 'WP_CLI' ) ) {
     $_SERVER['HTTP_HOST'] = 'localhost';
 }
@@ -65,13 +68,11 @@ if ( !defined( 'WP_CLI' ) ) {
     });
     add_filter( 'auto_update_translation', '__return_false' );
 }
-~~~
-
+```
 
 ## アップデート
 
-
-~~~bash
+```bash
 $ ../../bin/wp-cli.phar core update
 PHP Notice:  Undefined index: HTTP_HOST in phar:///home/vagrant/projects/sample/gpress/django-gpress/bin/wp-cli.phar/vendor/wp-cli/wp-cli/php/WP_CLI/Runner.php(1197) : eval()'d code on line 87
 PHP Stack trace:
@@ -89,5 +90,8 @@ https://downloads.wordpress.org/release/ja/wordpress-5.5.zip から更新をダ�
 Cleaning up files...
 No files found that need cleaning up.
 Success: WordPress updated successfully.
-~~~
+```
 
+## カスタムコマンド
+
+- [【wp-cli の使い方】WordPress でバッチを作る方法](https://pecopla.net/web-column/wp-cli)
