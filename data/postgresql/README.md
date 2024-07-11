@@ -2,6 +2,7 @@
 
 - [#77](https://github.com/hdknr/scriptogr.am/issues/77)
 - [psql](postgresql.psql.md)
+- [pg_dump](pgsql.pg_dump.md)
 - [スキーマ](postgresql.psql.md)
 
 ## パフォーマンス
