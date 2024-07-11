@@ -88,3 +88,21 @@ note:
 ## メタデータフィルタリング
 
 - [Knowledge Base for Amazon Bedrock でメタデータフィルタリングが可能に](https://qiita.com/hayao_k/items/f486b7d1385c8d5f897c)
+
+## ベクトル化
+
+### [データソース](https://docs.aws.amazon.com/ja_jp/bedrock/latest/userguide/knowledge-base-ds.html) (ファイル)
+
+| 形式                             | 拡張機能   |
+| -------------------------------- | ---------- |
+| プレーンテキスト                 | .txt       |
+| マークダウン                     | .md        |
+| HyperText マークアップ言語       | .html      |
+| Microsoft Word ドキュメント      | .doc/.docx |
+| カンマで区切られた値             | .csv       |
+| Microsoft Excel スプレッドシート | .xls/.xlsx |
+| ポータブルドキュメント           | .pdf       |
+
+サイズ:
+
+- 50 Mbyte が最大
