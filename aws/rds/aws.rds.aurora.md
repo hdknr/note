@@ -1,6 +1,11 @@
+# Aurora
+
 - [Aurora](http://dev.classmethod.jp/cloud/aws/cm-advent-calendar-2015-aws-re-entering-rds/#aurora)
 - [Amazon RDS での Aurora](https://docs.aws.amazon.com/ja_jp/AmazonRDS/latest/UserGuide/CHAP_Aurora.html)
 
+## ネットワーク
+
+![](img/aurora-serverless.drawio.png)
 
 ## Amazon Aurora のストレージ
 
