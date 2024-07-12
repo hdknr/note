@@ -1,5 +1,7 @@
 # Cloudformation
 
+- [former2](former2.md)
+
 ## 記事
 
 - [【初心者必見】はじめての AWS CloudFormation](https://www.ctc-g.co.jp/solutions/cloud/column/article/07.html)
