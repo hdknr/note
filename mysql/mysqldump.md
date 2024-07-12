@@ -1,5 +1,23 @@
 # mysqldump
 
+## `--defaults-file`
+
+```ini
+[client]
+password = oj6aeDe9aik9AiK9
+host = myaws-prod-db-instance.caoopx8dbdd0.ap-northeast-1.rds.amazonaws.com
+user = myaws
+
+[mysqldump]
+password = oj6aeDe9aik9AiK9
+host = myaws-prod-db-instance.caoopx8dbdd0.ap-northeast-1.rds.amazonaws.com
+user = myaws
+```
+
+```bash
+mysqldump --defaults-file=../.secrets/mysql-rds.ini --skip-extended-insert --set-gtid-purged=OFF  --complete-insert myapp
+```
+
 ## データだけ( --no-create-info, -t)
 
 ```bash
