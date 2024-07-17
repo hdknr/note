@@ -121,7 +121,11 @@ def create_schema(ctx):
 @group.command()
 @click.pass_context
 def create_table(ctx):
-    """テーブル作成"""
+    """テーブル作成
+
+    categories, docuemnt はメタ検索するための追加フィールド
+    """
+
     sql = """
     CREATE TABLE {schema}.{table}(
         id uuid PRIMARY KEY,
