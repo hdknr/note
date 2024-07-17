@@ -6,6 +6,10 @@ PostgreSQL 拡張機能(Extension):
 - ベクトル関数（距離計算など）・オペレータ
 - 近似最近傍探索用のインデックス
 
+## セットアップ
+
+- [pgvector.py](pgvector.py)
+
 ## 資料
 
 - [pgvector を使って ChatGPT と PostgreSQL を連携してみよう！（PostgreSQL Conference Japan 2023 発表資料）](https://www.slideshare.net/nttdata-tech/postgresql-pgvector-chatgpt-pgcon23j-nttdata)
