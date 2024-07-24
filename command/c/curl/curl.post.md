@@ -2,42 +2,48 @@
 
 ## フォーム送信: `-F` オプション
 
-- [curlコマンドから HTTP POST する方法
-](https://qiita.com/letsspeak/items/8c7266742371699ab45e)
+- [curl コマンドから HTTP POST する方法
+  ](https://qiita.com/letsspeak/items/8c7266742371699ab45e)
 
 FORM:
 
-~~~bash
+```bash
 $ curl -F "name1=value1" -F "name2=value2" http://yourdomain/execute.script
 .
-~~~
+```
 
 ## データ送信: `-d`
 
-~~~bash
+```bash
 $ curl http://dev.mysite.com/articles/wp-json/wp/v2/posts -X POST -d 'title=title' -d 'content=sample content' -d 'slug=api-sample'
 .
-~~~
+```
 
-~~~bash
+```bash
 $ curl -X POST -H "Content-Type: application/json"  -d @TC-00001.json  http://localhost:8182/order
-~~~
+```
+
+ファイル
+
+```bash
+curl -d @your_file.json -H "Content-Type: application/json" http://example.com
+```
 
 ## JSON 送信
 
 JSON:
 
-~~~bash
+```bash
 $ curl -X POST -H "Content-Type: application/json" -d '
 {
     "name": "Manager",
     "description": "someone who manages"
 }'
-~~~
+```
 
 ## 応答ヘッダーを表示 (`--dump-header -`)
 
-~~~bash
+```bash
 $ curl --dump-header - --user 'articles:@articles!1998@' http://dev.mysite.com/articles/wp-json/wp/v2/posts -X POST -d 'title=title' -d 'content=sample content' -d 'slug=api-sample'
 
 HTTP/1.1 403 Forbidden
@@ -54,4 +60,4 @@ Connection: keep-alive
 <hr><center>nginx/1.14.0 (Ubuntu)</center>
 </body>
 </html>
-~~~
+```
