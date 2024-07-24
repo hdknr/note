@@ -42,3 +42,49 @@ ENTRYPOINT ["uvicorn"]
 # 6. エントリポイントの引数
 CMD [ "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
+
+## FastAPI サンプル
+
+```py
+from fastapi import FastAPI, Request
+from pydantic import BaseModel
+import json
+from typing import Union
+
+app = FastAPI()
+
+
+def deserialize(request: Request):
+    """ AWSコンテキスト"""
+    keys = ["request", "lambda"]
+    return dict(map(lambda i: (i, json.loads(request.headers[f"x-amzn-{i}-context"])), keys))
+
+
+class Query(BaseModel):
+    question: str
+    document: Union[str, None] = None
+    doc_class: Union[str, None] = None
+
+
+def response(request: Request, query: Query):
+    try:
+        context = deserialize(request)
+        return dict(
+            context=context,
+            cookie=request.headers.get("Cookie", ""),
+            query=dict(query),
+        )
+
+    except Exception as e:
+        return {"error": str(e)}
+
+@app.get("/echo")
+async def echo_get(request: Request, q: str, d: str = None, c: str = None):
+    query = Query(question=q, document=d, doc_class=c)
+    return response(request, query)
+
+
+@app.post("/echo")
+async def echo_post(request: Request, query: Query):
+    return response(request, query)
+```
