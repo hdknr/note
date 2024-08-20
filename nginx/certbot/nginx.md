@@ -1,6 +1,6 @@
-# nginx
+# nginx での更新
 
-~~~bash
+```bash
 $ sudo apt install python3-certbot-nginx -y
 Reading package lists... Done
 Building dependency tree
@@ -26,9 +26,9 @@ Preparing to unpack .../python3-certbot-nginx_0.23.0-1_all.deb ...
 Unpacking python3-certbot-nginx (0.23.0-1) ...
 Setting up python3-pyparsing (2.2.0+dfsg1-2) ...
 Setting up python3-certbot-nginx (0.23.0-1) ...
-~~~
+```
 
-~~~bash
+```bash
 $ sudo certbot renew --dry-run --nginx
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 
@@ -58,22 +58,21 @@ Congratulations, all renewals succeeded. The following certs have been renewed:
 ** DRY RUN: simulating 'certbot renew' close to cert expiry
 **          (The test certificates above have not been saved.)
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-~~~
-
+```
 
 ## 自動更新
 
-~~~bash
+```bash
 % crontab -l
-~~~
+```
 
-~~~
+```
 00 05 01 * * sudo letsencrypt renew
-~~~ 
+```
 
 /etc/letsencrypt/cli.ini:
 
-~~~ini
+```ini
 max-log-backups = 0
 deploy-hook = systemctl reload nginx
-~~~
+```
