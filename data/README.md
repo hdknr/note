@@ -4,7 +4,7 @@
 - [MS SQLServer](ms_sql.md)
 - [Oracle](oracle.md)
 - [PostgreSQL](postgresql.md)
-- [Redis](redis.md)
+- [Redis](../aws/easticache/redis/README.md)
 - [MySQL](../mysql/README.md)
 
 # Public Data
