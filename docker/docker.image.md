@@ -1,6 +1,5 @@
 # イメージ管理
 
-
 ## 一覧(ls)
 
 ~~~bash
@@ -20,7 +19,6 @@ k8s.gcr.io/k8s-dns-kube-dns-amd64          1.14.8              80cc5ea4b547     
 k8s.gcr.io/pause-amd64                     3.1                 da86e6ba6ca1        7 months ago        742k
 ~~~
 
-
 ## イメージの削除(rm)
 
 ~~~bash
@@ -33,13 +31,13 @@ Error response from daemon: conflict: unable to delete ce0df70629a6 (must be for
 古いコマンド:
 
 ~~~bash
-$ docker rmi -f $(docker images -f "dangling=true" -q)
+docker rmi -f $(docker images -f "dangling=true" -q)
 ~~~
 
 新しいコマンド：
 
 ~~~bash
-$ docker image rm -f $(docker image ls -f "dangling=true" -q)
+docker image rm -f $(docker image ls -f "dangling=true" -q)
 ~~~
 
 ## 全削除
@@ -56,4 +54,4 @@ docker-compose down --rmi all --volumes --remove-orphans
 
 ## 記事
 
--[ docker images を全削除する](https://qiita.com/fist0/items/2fb1c7f894b5bdff79f4)
+-[docker images を全削除する](https://qiita.com/fist0/items/2fb1c7f894b5bdff79f4)
