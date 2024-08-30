@@ -28,6 +28,10 @@
 - [coLinux](http://www.colinux.org/)
 - [cygwin](http://www.cygwin.com/)
 
+## イメージ
+
+- [nginx公式:debian](https://github.com/nginxinc/docker-nginx/blob/master/Dockerfile-debian.template)
+
 ## AWS
 
 - [ECR パブリックリポジトリからイメージがプルできない場合の対処法](https://zenn.dev/akari0519/articles/ec711817d1462a) (一旦ログアウトしてログインしなおす(`docker logout public.ecr.aws`))
