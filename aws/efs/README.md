@@ -8,15 +8,16 @@ EFS_ID="fs-0f90bd97a364a6e94"
 #
 PKG=amazon-efs-utils
 RES=$(dpkg --get-selections | grep $PKG)
-MOUNT_PATH="/efs"
+MOUNT_PATH="/storage"
 
 if [ -z "${RES}" ]; then
-        apt update && apt upgrade -y && apt autoremove -y
-        apt-get -y install binutils
-        git clone https://github.com/aws/efs-utils
-        cd efs-utils
-        ./build-deb.sh
-        apt-get install -y ./build/amazon-efs-utils*deb
+    # https://github.com/aws/efs-utils?tab=readme-ov-file#on-other-linux-distributions
+    apt update && apt upgrade -y && apt autoremove -y
+    apt-get -y install git binutils rustc cargo pkg-config libssl-dev
+    git clone https://github.com/aws/efs-utils
+    cd efs-utils
+    ./build-deb.sh
+    apt-get install -y ./build/amazon-efs-utils*deb
 fi
 #
 if [ ! -d $MOUNT_PATH ]; then
@@ -28,17 +29,20 @@ mount -t efs $EFS_ID:/ $MOUNT_PATH
 
 ## fstab
 
-マウントヘルパー:
+マウントヘルパーをつかって /storageに EFS(DNS名をIDとして指定)をマウント:
 
 ```txt
-fs-0f90bd97a364a6e94 /efs  efs _netdev 0 0
+fs-0f80bd87a364a6e84.efs.ap-northeast-1.amazonaws.com:/ /storage  efs _netdev 0 0
 ```
+
+`mount` コマンドで確認:
 
 ```bash
 $ sudo mount -fav
-/                        : 無視しました
-swap                     : 無視しました
-/efs                     : successfully mounted
+/                        : ignored
+swap                     : ignored
+/storage is already mounted, please run 'mount' command to verify
+/storage                 : successfully mounted
 ```
 
 ## 資料
