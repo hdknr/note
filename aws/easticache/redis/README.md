@@ -1,6 +1,5 @@
 # Redis
 
-
 - [C# や PowerShell から　Redis を直接操作する RespClient というクライアント](http://tech.guitarrapc.com/entry/2014/09/01/073504)
 - [redisドキュメント日本語訳](http://redis.shibu.jp/)
 
@@ -8,7 +7,7 @@
 
 - [Redis-64](https://gist.github.com/hdknr/ecf1cb51339d7447a19e)
 
-~~~
+~~~ps
 C:¥> choco install redis-64
 ~~~
 
@@ -27,7 +26,7 @@ C:¥> choco install redis-64
 <?xml version="1.0" encoding="utf-8"?>
 <packages>
   <package id="StackExchange.Redis"
-  	version="1.0.414" targetFramework="net45" />
+   version="1.0.414" targetFramework="net45" />
 </packages>
 ~~~
 
@@ -57,7 +56,7 @@ namespace AppSupport
         public static void Add(string key, string value
             string connection="localhost")
         {
-        	  // Set
+           // Set
             Database(connection).SetAdd(key, value);
         }
     }
@@ -68,7 +67,6 @@ namespace AppSupport
 
 - [C#のRedisライブラリ「BookSleeve」の利用法](http://www.buildinsider.net/small/rediscshap/01)
 - [RxとRedisを用いたリモートPub/Sub通信](http://neue.cc/2013/04/24_404.html)
-
 
 ## Debian
 
@@ -146,11 +144,10 @@ s$ redis-server
 > keys *
 ~~~
 
-
 ## CentOS
 
 ~~~
-$ sudo rpm --import http://vault.centos.org/RPM-GPG-KEY-CentOS-6
+sudo rpm --import http://vault.centos.org/RPM-GPG-KEY-CentOS-6
 ~~~
 
 ~~~~
@@ -235,7 +232,6 @@ COMMAND     PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 redis-ser 41695 redis    4u  IPv4 315652      0t0  TCP localhost:6379 (LISTEN)
 ~~~~
 
-
 ## コマンド
 
 - [コマンドリファレンス](http://redis.shibu.jp/commandreference/)
@@ -259,3 +255,7 @@ $ redis-cli keys "const*"
 $ redis-cli get "constance:THE_ANSWER"
 "I50\n."
 ~~~
+
+## 記事
+
+- [Redisでデータベースを切り替える方法](https://blog.shimar.me/2016/11/20/redis-select-database) (`-n` オプション, `SELECT {n}`)
