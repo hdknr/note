@@ -13,3 +13,10 @@ scriptcs_packages*
 _book
 *.log
 *.bkp
+
+# secrets
+.env
+temp
+
+# jupyter
+.ipynb_checkpoints
