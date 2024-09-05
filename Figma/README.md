@@ -31,3 +31,10 @@ print(response.json())
 ## JSON to HTML
 
 - <https://github.com/abhaykatheria/json2tree>
+
+## データ
+
+### ノード
+
+- [Plugin API:Node Types](https://www.figma.com/plugin-docs/api/nodes/)
+- [REST API: Node types](https://www.figma.com/developers/api#node-types)
