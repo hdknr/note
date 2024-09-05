@@ -21,4 +21,13 @@ response = requests.get(url, headers=headers)
 print(response.json())
 ~~~
 
-イメージ
+## コード
+
+- <https://github.com/Amatobahn/FigmaPy>
+- <https://github.com/the-dataface/figma2html?tab=readme-ov-file#how-it-works> (OpneAI使ってる) (<https://www.builder.io/>)
+- <https://github.com/px2code/Figma-to-HTML?tab=readme-ov-file>
+- <https://github.com/ayush013/fig-gen>
+
+## JSON to HTML
+
+- <https://github.com/abhaykatheria/json2tree>
