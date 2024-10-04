@@ -1,5 +1,13 @@
+# psql
+
 - [PostgreSQLとMySQLで、僕がよく使うシステムコマンドのメモ](http://qiita.com/tamano/items/be43de7bb733ad38362c)
 
+## インストール
+
+```
+brew update
+brew install libpq
+```
 
 ## テーブル一覧
 
@@ -17,7 +25,7 @@ public   | auth_group                           | table    | ecoroute
 ## テーブル定義
 
 ~~~
-$ echo "\\d drivers_activity" | DJ dbshell
+echo "\\d drivers_activity" | DJ dbshell
 ~~~
 
 ## 古いレコード
