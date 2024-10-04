@@ -1,6 +1,6 @@
 # AWS Lambda
 
-- [API Gateway](apigw/README.md)
+- [API Gateway](../apigateway/README.md)
 - [SAM: Severless Application Model](sam/README.md)
 
 ## Python 3.7
@@ -36,6 +36,6 @@
 }
 ```
 
-- https://pypi.org/project/jmespath/
-- https://pypi.org/project/boto3/
-- https://pypi.org/project/python-dateutil/
+- <https://pypi.org/project/jmespath/>
+- <https://pypi.org/project/boto3/>
+- <https://pypi.org/project/python-dateutil/>
