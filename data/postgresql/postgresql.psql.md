@@ -4,9 +4,21 @@
 
 ## インストール
 
-```
+```sh
 brew update
 brew install libpq
+```
+
+```txt
+If you need to have libpq first in your PATH, run:
+  echo 'export PATH="/usr/local/opt/libpq/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find libpq you may need to set:
+  export LDFLAGS="-L/usr/local/opt/libpq/lib"
+  export CPPFLAGS="-I/usr/local/opt/libpq/include"
+
+For pkg-config to find libpq you may need to set:
+  export PKG_CONFIG_PATH="/usr/local/opt/libpq/lib/pkgconfig"
 ```
 
 ## テーブル一覧
