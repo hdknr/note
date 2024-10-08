@@ -1,5 +1,9 @@
 # スキーマ
 
+- 名前空間
+
+## コマンド
+
 スキーマ一覧
 
 ```sql
@@ -17,3 +21,7 @@ select current_schema();
 ```sql
 SET search_path = my_schema;
 ```
+
+## 記事
+
+- [PostgreSQLのスキーマについて](https://qiita.com/kkk777/items/3ac148176cfee80bcc33)
