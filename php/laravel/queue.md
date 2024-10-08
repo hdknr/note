@@ -1,5 +1,7 @@
 # ジョブとキュー
 
+- [Queues](https://laravel.com/docs/11.x/queues)
+
 ## `database`
 
 Laravelで`queue connections`に`database`を指定した場合、キューの受け渡しは以下のような仕組みで行われます
