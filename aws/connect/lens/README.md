@@ -1,5 +1,7 @@
 # [AWS Connect Contact Lens](https://docs.aws.amazon.com/ja_jp/connect/latest/adminguide/contact-lens.html)
 
+- [Kinesis Data Stream](kinesis.md)
+
 ## 記事
 
 - [Amazon Connect Contact Lensで、通話後とリアルタイムの文字起こし精度を確認してみた[2024年7月]](https://dev.classmethod.jp/articles/amazon-connect-contact-lens-transcription-accuracy-2024-7/)
