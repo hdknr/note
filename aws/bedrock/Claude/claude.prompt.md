@@ -5,7 +5,7 @@ Anthropic:
 - [プロンプトライブラリ](https://docs.anthropic.com/claude/prompt-library)
 - [クロードへようこそ](https://docs.anthropic.com/claude/docs/intro-to-claude)
 - [クイックスタートガイド](https://docs.anthropic.com/claude/docs/quickstart-guide)
-- [プロンプトの概要 ](https://docs.anthropic.com/claude/docs/intro-to-prompting)
+- [プロンプトの概要](https://docs.anthropic.com/claude/docs/intro-to-prompting)
 
 ## 言語化の方法論
 
@@ -133,3 +133,8 @@ def compose_message(user_prompt, referrence):
 - [Anthropic Claude のプロンプトガイドの USEFUL HACKS をじっくり見る](https://qiita.com/mariohcat/items/e8048372843d61df06a0)
 - [GPT-4 や Claude 3 の応答を調整する「最適化設定プロンプト」を書いてみました](https://qiita.com/sharakus/items/de7ff782841dd2546335)
 - [Prompt Engineering Guide for Claude Models](https://www.vellum.ai/blog/prompt-engineering-tips-for-claude)
+
+## プロンプトジェネレータ
+
+- [Automatically generate first draft prompt templates](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-generator)
+- <https://github.com/aws-samples/claude-prompt-generator>
