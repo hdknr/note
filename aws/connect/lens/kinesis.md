@@ -8,3 +8,5 @@
 
 - [Amazon Connect エージェントのイベントストリーム](https://docs.aws.amazon.com/ja_jp/connect/latest/adminguide/agent-event-streams.html)
 - [エージェントイベントストリームのデータモデル](https://docs.aws.amazon.com/ja_jp/connect/latest/adminguide/agent-event-stream-model.html)
+
+- <https://docs.aws.amazon.com/pdfs/contact-lens/latest/APIReference/contact-lens.pdf>
