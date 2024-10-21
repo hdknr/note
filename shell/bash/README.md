@@ -8,26 +8,25 @@
 ## 変数
 
 - [IFS](bash.IFS.md)(Internal Filed Separator: 区切り文字)
-##  OS
+
+## OS
 
 - [OSX](bash.osx.md)
 
 ## 記事
-
-
 
 ## 履歴(!)
 
 - `!` を無効にする
 
 ~~~bash
-$ set +H
+set +H
 ~~~
 
 - 有効にする
 
 ~~~bash
-$ set +H
+set +H
 ~~~
 
 ## `$$` : PID
@@ -52,7 +51,6 @@ $ date +'%m%d%H%M%S'.$$
 ~~~
 THIS=$(realpath $0)
 ~~~
-
 
 ## 置換
 
@@ -86,8 +84,8 @@ filename=${basename%.*}
 ~~~
 
 ## プロンプト
-- [PS1](http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html)
 
+- [PS1](http://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html)
 
 ## 配列の要素を削除
 
@@ -103,11 +101,11 @@ filename=${basename%.*}
    let "X=X*37";
    echo $X;
 ```
+
 ```
 2
 74
 ```
-
 
 ## 関数
 
@@ -116,7 +114,6 @@ filename=${basename%.*}
 ## 複数行に渡る文字列
 
 [c++,bash,python,perl : 複数行にわたる文字列](http://www.hci.iis.u-tokyo.ac.jp/~ogaki/blog/blog/2012/02/14/cbashpython-%E8%A4%87%E6%95%B0%E8%A1%8C%E3%81%AB%E3%82%8F%E3%81%9F%E3%82%8B%E6%96%87%E5%AD%97%E5%88%97/)
-
 
 ~~~bash
 DOC='
@@ -132,7 +129,6 @@ hoge.bash
 ## 文字列を分割して配列に入れる
 
 [How do I split a string on a delimiter in bash?](https://stackoverflow.com/questions/918886/how-do-i-split-a-string-on-a-delimiter-in-bash)
-
 
 ```bash
 Q="mysql -N -u root --password=password apps"
@@ -193,17 +189,18 @@ $ echo $OSTYPE
 darwin14
 ~~~
 
-
 ## ヒアドキュメント
 
 - [bashのヒアドキュメントを活用する - Qiita](https://qiita.com/take4s5i/items/e207cee4fb04385a9952)
-
 
 ## その他
 
 - [たった一行で bash の代入式がスマートに書けるようになる関数](http://qiita.com/mattintosh4/items/959517399d5993e34ef7)
 
-
 ## stdout, stderr
 
 - [bash: 標準出力、標準エラー出力をファイル、画面それぞれに出力する方法](https://qiita.com/laikuaut/items/e1cc312ffc7ec2c872fc)
+
+## while
+
+- [シェルスクリプト「whileの中の変数が見えない」解決方法5選 〜 パイプ・サブシェル問題](https://qiita.com/ko1nksm/items/e23d43a7194a388fd850)s
