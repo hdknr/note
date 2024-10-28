@@ -38,6 +38,20 @@ apt install autossh     # debian/ubuntu
 - ServerAliveInterval (null パケット送信間隔)
 - ServerAliveCountMax (null パケットの戻りを待つ回数)
 
+## サーバー側のポートフォワーディング
+
+/etc/ssh/sshd_config:
+
+```ini
+AllowTcpForwarding yes
+GatewayPorts yes
+
+```
+
+```bash
+sudo systemctl restart sshd
+```
+
 ## 記事
 
 - [ssh ポートフォワーディング - Qiita](https://qiita.com/mechamogera/items/b1bb9130273deb9426f5)
