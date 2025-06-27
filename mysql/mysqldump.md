@@ -16,7 +16,10 @@ user = myaws
 
 ```bash
 mysqldump --defaults-file=../.secrets/mysql-rds.ini --skip-extended-insert --set-gtid-purged=OFF  --complete-insert myapp
+mysqldump --defaults-file=../.secrets/mysql-rds.ini -c --set-gtid-purged=OFF -i myapp
 ```
+- ` --skip-extended-insert` : `-c`
+- ` --complete-insert` : `-i`
 
 ## データだけ( --no-create-info, -t)
 
