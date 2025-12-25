@@ -17,3 +17,9 @@ wget --mirror --convert-links --adjust-extension --page-requisites --no-parent h
 例えば、`https://example.com` をダウンロードする場合は、上記のコマンドをそのまま使用できます
 [1](https://qiita.com/suin/items/7241135f1684636652ac)
 [2](https://stysk.com/posts/2024/04/01/download_entire_website_using_wget/)。
+
+
+
+```bash
+wget -mkEpnp https://example.com/
+```
